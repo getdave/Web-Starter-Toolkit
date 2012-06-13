@@ -1,6 +1,14 @@
+// --------------------------------------------------
+// 
+// MASTER SASS
+//
+// Master file to rule them all. Imports all require files for project.
+//
+// --------------------------------------------------
 
-
-// 1. ROOT 					==============================
+// ==========================================================================
+// ROOT
+// ==========================================================================
 
 // Compass
 @import "compass";
@@ -9,41 +17,75 @@
 @import "_variables";
 @import "_mixins";
 
-// Normalize 
+// Normalize (we prefer this over CSS resets)
 @import "_normalize.scss";
 
+// Helper classes
 @import "_helpers.scss";
-@import "_grid.scss";
 
 
-// 2. TYPOGRAPHY 			==============================
+// ==========================================================================
+// TYPOGRAPHY 
+// ==========================================================================
 
 // Block level (h1, p) and text-level (em, strong) type
 @import "_typo.scss";
 
 
-// 4. TEXTURE 				==============================
+// ==========================================================================
+// GRID
+// ==========================================================================
 
-// Font Awesome icon fonts (optional)
-@import "_font-awesome";
+// Custom grid system designed by David Smith (@get_dave)
+@import "_grid.scss";
 
 
-// 5. ELEMENTS 				==============================
+// ==========================================================================
+// ELEMENTS
+// ==========================================================================
 
-// Structures and standard elements
+// Layout structures
 @import "_structure.scss";
+
+// Standard nav patterns
 @import "_nav.scss";
+
+
+// ==========================================================================
+// FORMS
+// ==========================================================================
 
 // Standard form controls
 //@import "_forms.scss";
 
+
+// ==========================================================================
+// TEXTURE
+// ==========================================================================
+
+// Font Awesome icon fonts (optional)
+//@import "_font-awesome";
+
 // Button styles (optional)
-@import "_buttons.scss";
+//@import "_buttons.scss";
 
 
-// 6. LAYOUT 			==============================
+// ==========================================================================
+// LAYOUT
+// ==========================================================================
 
 // Page level layout styles (banner, navigation, content, contentinfo)
 @import "site/_page.scss";
+
+// PAGES
+// Individual stylesheets for unique pages on the site/application
+// ==========================================================================
+
+// Home (example)
+//@import "site/pages/_home.scss";
+
+
+
+
 
 
