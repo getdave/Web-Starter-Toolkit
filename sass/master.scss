@@ -1,0 +1,63 @@
+/*  Bones CSS Framework
+ *	v 0.1 - 2012
+ *  Copyright(c) 2012 David Smith | www.aheadcreative.com
+ *
+ *  This work is licenced under the Creative Commons Attribution-No Derivative Works 3.0 Unported License. 
+ *	http://creativecommons.org/licenses/by-nd/3.0/ 
+ *
+ *--------------------------------------------------------------------------*/
+  
+/* DOCUMENT INFORMATION
+	- Document: 			MASTER CSS
+	- Description: 			Master file for the website
+	- Version:  			0.1
+	- Author:   			David Smith
+*/
+
+// 1. ROOT 					==============================
+
+// Compass
+@import "compass";
+
+// Variables and mixins
+@import "_variables";
+@import "_mixins";
+
+// Normalize 
+@import "_normalize.scss";
+
+@import "_helpers.scss";
+@import "_grid.scss";
+
+
+// 2. TYPOGRAPHY 			==============================
+
+// Block level (h1, p) and text-level (em, strong) type
+@import "_typo.scss";
+
+
+// 4. TEXTURE 				==============================
+
+// Font Awesome icon fonts (optional)
+@import "_font-awesome";
+
+
+// 5. ELEMENTS 				==============================
+
+// Structures and standard elements
+@import "_structure.scss";
+@import "_nav.scss";
+
+// Standard form controls
+//@import "_forms.scss";
+
+// Button styles (optional)
+@import "_buttons.scss";
+
+
+// 6. LAYOUT 			==============================
+
+// Page level layout styles (banner, navigation, content, contentinfo)
+@import "site/_page.scss";
+
+

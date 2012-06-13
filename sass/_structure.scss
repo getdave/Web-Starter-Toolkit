@@ -1,0 +1,94 @@
+/*  Bones CSS Framework
+ *	v 0.1 - 2012
+ *  Copyright(c) 2012 David Smith | www.aheadcreative.com
+ *
+ *  This work is licenced under the Creative Commons Attribution-No Derivative Works 3.0 Unported License. 
+ *	http://creativecommons.org/licenses/by-nd/3.0/ 
+ *
+ *--------------------------------------------------------------------------*/
+  
+/* DOCUMENT INFORMATION
+	- Document: 			Structure
+	- Description:			Standard structures for common layouts and page division
+	- Version:  			0.1
+	- Author:   			David Smith
+	- Acknowledgements		Twitter Bootstrap 2
+						
+*/
+
+
+/* ####################################### */
+/* ################ LOGO ################# */
+/* ####################################### */
+
+.site-logo {
+	display: block;
+	border: 0;
+	padding: 20px 0;
+	margin: 0;
+	vertical-align: bottom;
+	a {
+		text-indent: -999em; 
+		text-align:left;
+		direction:ltr;
+		display: block;
+		position: relative;
+		background-repeat: no-repeat;
+		background-position: 0 0;
+		background-image: image-url("logo.gif");
+		width: image-width("logo.gif");
+		height: image-height("logo.gif");
+
+		&:hover,
+		&:focus {
+			@include opacity(0.8);	
+
+			-webkit-transition: opacity 0.5s ease-out;
+			-moz-transition: opacity 0.5s ease-out;
+			-o-transition: opacity 0.5s ease-out;
+			transition: opacity 0.5s ease-out;
+		}
+	}
+}
+
+/* ####################################### */
+/* ############# CONTAINERS ############## */
+/* ####################################### */
+
+.container,
+.container-inner {
+	@include pie-clearfix;
+}
+
+.container-inner {
+	width: 960px;
+	margin: 0 auto;	
+}
+
+/* add "container-fluid" class to get fluid/flexible layout */
+.page-fluid .container-inner,
+.container-fluid .container-inner {
+	//@extend .container-inner;
+	width: 90%;
+}
+
+div[role="main"] .container-inner,
+.content .container-inner {
+	padding-top: 30px;
+	padding-bottom: 30px;
+}
+
+
+/* ####################################### */
+/* ############ COLUMN CONFIG ############ */
+/* ####################################### */
+
+.col {
+	padding: 20px 30px;
+	@include box-sizing(border-box);
+}
+
+
+
+
+

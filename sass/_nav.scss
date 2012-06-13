@@ -1,0 +1,113 @@
+/*  Bones CSS Framework
+ *	v 0.1 - 2012
+ *  Copyright(c) 2012 David Smith | www.aheadcreative.com
+ *
+ *  This work is licenced under the Creative Commons Attribution-No Derivative Works 3.0 Unported License. 
+ *	http://creativecommons.org/licenses/by-nd/3.0/ 
+ *
+ *--------------------------------------------------------------------------*/
+  
+/* DOCUMENT INFORMATION
+	- Document: 			Navigation
+	- Description:			Default navigation styles
+	- Version:  			0.1
+	- Author:   			David Smith
+	- Acknowledgements		Twitter Bootstrap 2
+						
+*/
+
+.nav,
+.nav ul,
+.nav ol {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+.nav li {
+	position: relative;
+}
+
+.nav li a {
+	display: block;
+	width: auto;
+	text-decoration: none;
+	padding: 0.76923076923076923076923076923077em 20px;
+}
+
+/* ####################################### */
+/* ############## =NAVBAR ################ */
+/* ####################################### */
+
+.navbar {
+	@extend .nav;
+	overflow: visible;
+	background-color: $navbarBackground;
+	@include pie-clearfix;
+ 	
+ 	li {
+		float: left;		
+	}
+
+	a {
+		text-align: center;
+		color: $navbarLinkColor;
+
+		&:hover {
+			color: $navbarLinkColorHover;
+		}
+	}	
+}
+
+
+.navbar li:hover .sub-menu {
+	left: 0;
+}
+
+/* FIXED NAVBAR
+------------------------------------------------*/
+
+.navbar-fixed {
+	@extend .navbar;
+	position: fixed;
+	top: 0;
+	right: 0;
+	left: 0;
+	z-index: $zindexFixedNavbar;
+}
+
+
+/* ####################################### */
+/* ########### =NAV DROPDOWN ############# */
+/* ####################################### */
+
+.sub-menu {
+	position: absolute;
+	top: auto;
+	left: -999em;
+	z-index: $zindexDropdown;
+	text-align: left;
+	direction:ltr;
+	background-color: $navbarBackground;
+
+	li {
+		vertical-align: bottom; /* This fixes the IE5 Win gap (no harm done to modern browsers) */
+		white-space: nowrap;
+		width: 100%;	/* inherit the width of the parent <ul> */
+		clear: both;
+
+
+		a {
+			white-space: nowrap; /* forces drop down to stretch to accommodate length of text (and not wrap) */
+			padding: 0.4615384615384615em 20px;
+			text-align: left;
+		}
+	}
+}
+
+
+
+
+
+
+

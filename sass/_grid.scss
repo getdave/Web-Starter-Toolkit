@@ -1,0 +1,181 @@
+/*  Bones CSS Framework
+ *	v 0.1 - 2012
+ *  Copyright(c) 2012 David Smith | www.aheadcreative.com
+ *
+ *  This work is licenced under the Creative Commons Attribution-No Derivative Works 3.0 Unported License. 
+ *	http://creativecommons.org/licenses/by-nd/3.0/ 
+ *
+ *--------------------------------------------------------------------------*/
+  
+/* DOCUMENT INFORMATION
+	- Document: 			"Grids" CSS
+	- Description: 			Set of grid classes
+	- Version:  			0.1
+	- Author:   			David Smith
+	- Acknowledgements		OOCSS - https://github.com/stubbornella/oocss
+							1140 CSS GRID - http://cssgrid.net/
+							Twitter Bootstrap Grid
+							Deep Blue Sky Grid System
+*/
+
+/* ####################################### */
+/* ########### STANDARD GRID ############# */
+/* ####################################### */
+
+/* GRID LINES (for clearing grid lines/rows)
+------------------------------------------------*/
+	
+.line {
+	margin: 0 30px;
+	/* trigger new block formatting context in all browsers */
+	overflow:hidden; 
+	*overflow:visible;
+	*zoom:1;
+}
+
+
+/* GRID UNITS
+------------------------------------------------*/
+
+/* main */		/* alias */
+.onecol, 
+.twocol, 
+.threecol, 		.size1of4,
+.fourcol, 		.size1of3,
+.fivecol, 
+.sixcol, 		.size1of2,
+.sevencol, 
+.eightcol, 		.size2of3,
+.ninecol, 		.size3of4,
+.tencol, 
+.elevencol {
+	margin-left: $gutter_width; /* equal to 20px at 1024px */
+	float: left;
+	min-height: 1px;
+	position: relative;
+}
+
+
+/* GRID COLUMNS
+------------------------------------------------*/
+$count: 1;
+@each $col in $cols_as_string {
+	@if ($cols % $count == 0) {
+		.size1of#{$cols/$count},
+		.#{$col}col {
+			width: grid-width($count);
+		}
+	} @else if ($count == 8) {
+		.size2of3,
+		.#{$col}col {
+			width: grid-width($count);
+		}
+	} @else if ($count == 9) {
+		.size3of4,
+		.#{$col}col {
+			width: grid-width($count);
+		}
+	} @else {
+		.#{$col}col {
+			width: grid-width($count);
+		}		
+	}
+	$count: $count + 1;
+}
+$count: 1;
+
+
+/* GRID PUSH CLASSES
+------------------------------------------------*/
+$count: 1;
+@each $col in $cols_as_string {
+	
+	@if ($cols % $count == 0) {
+		.push-size1of#{$cols/$count},
+		.push-#{$col}col {
+			left: grid-width($count) + $gutter_width;
+		}
+	} @else if ($count == 8) {
+		.push-size2of3,
+		.push-#{$col}col {
+			left: grid-width($count) + $gutter_width;
+		}
+	} @else if ($count == 9) {
+		.push-size3of4,
+		.push-#{$col}col {
+			left: grid-width($count) + $gutter_width;
+		}
+	} @else {
+		.push-#{$col}col {
+			left: grid-width($count) + $gutter_width;
+		}		
+	}
+	$count: $count + 1;
+}
+$count: 1;
+
+
+/* GRID PULL CLASSES
+------------------------------------------------*/
+$count: 1;
+@each $col in $cols_as_string {
+	
+	@if ($cols % $count == 0) {
+		.pull-size1of#{$cols/$count},
+		.pull-#{$col}col {
+			right: grid-width($count) + $gutter_width;
+		}
+	} @else if ($count == 8) {
+		.pull-size2of3,
+		.pull-#{$col}col {
+			right: grid-width($count) + $gutter_width;
+		}
+	} @else if ($count == 9) {
+		.pull-size3of4,
+		.pull-#{$col}col {
+			right: grid-width($count) + $gutter_width;
+		}
+	} @else {
+		.pull-#{$col}col {
+			right: grid-width($count) + $gutter_width;
+		}		
+	}
+	$count: $count + 1;
+}
+$count: 1;
+
+
+
+
+
+/* To can avoid having to add .lastcol 
+   1) uncomment the CSS3 selectors below
+   2) comment out the .lastcol selector
+   3) make sure you don't need to support <=IE8 cos it won't work!
+*/
+
+  
+[class*="col"]:first-child:not(:only-child),
+[class*="size"]:first-child:not(:only-child),
+.lastcol {
+	margin-left: 0;
+}
+
+.full-col {
+	width: auto;
+	float: none;
+}
+
+/* centered column */
+.centered {
+    margin: 0 auto;
+    float: none;
+}
+
+
+
+
+
+
+
+

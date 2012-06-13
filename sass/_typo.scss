@@ -1,0 +1,142 @@
+/*  Bones CSS Framework
+ *	v 0.1 - 2012
+ *  Copyright(c) 2012 David Smith | www.aheadcreative.com
+ *
+ *  This work is licenced under the Creative Commons Attribution-No Derivative Works 3.0 Unported License. 
+ *	http://creativecommons.org/licenses/by-nd/3.0/ 
+ *
+ *--------------------------------------------------------------------------*/
+  
+/* DOCUMENT INFORMATION
+	- Document: 			Typo
+	- Description:			Default typography styles
+	- Version:  			0.1
+	- Author:   			David Smith
+	- Acknowledgements		Twitter Bootstrap 2
+						
+*/
+
+
+/* ####################################### */
+/* ################ BASE ################# */
+/* ####################################### */
+
+body {
+	font-family: $baseFontFamily;
+	font-size: $baseFontSize;
+	line-height: $baseLineHeight;
+	color: $grayDark;
+}
+
+p {
+	margin: 0 0 $baseLineHeight / 2;
+	font-family: $baseFontFamily;
+	font-size: $baseFontSize;
+	line-height: $baseLineHeight;
+}
+
+
+/* ####################################### */
+/* ############## HEADINGS ############### */
+/* ####################################### */
+
+h1, h2, h3, h4, h5, h6 { 
+	font-weight: bold; 
+	margin: 0;
+}
+
+h1,.h1 {
+	color: $grayDarker;
+	font-size:2.5em;
+	line-height:1;
+	margin-bottom:.5em;
+  	text-rendering: optimizelegibility; // Fix the character spacing for headings
+}
+
+h2,.h2 {
+	color: $grayDarker;
+	font-size:2em;
+	line-height:1;
+	margin-bottom:.75em;
+}
+
+h3,.h3 {
+	color:$grayDark;
+	font-size:1.5em;
+	line-height:1;
+	margin-bottom:.5em;
+	padding-top:.5em;
+}
+
+h4,.h4 {
+	color:$grayDark;
+	font-size:1.2em;
+	line-height:1;
+	margin-bottom:.5em;
+	padding-top:1em;
+}
+
+h5,.h5 {
+	font-size:1em;
+	line-height:1;
+	margin-bottom:.8em;
+	padding-top:.7em;
+}
+
+h6,.h6 {
+	font-size:1em;
+	line-height:1;
+}
+
+
+
+
+
+
+
+/* ####################################### */
+/* ################ LINKS ################ */
+/* ####################################### */
+
+a {
+	color: $linkColor;
+}
+
+a:hover,
+a:focus {
+	color: $linkColorHover;	
+}
+
+a:focus {
+    outline: thin dotted;
+}
+
+a:hover, a:active { 
+	outline: none; 
+}
+
+
+/* ####################################### */
+/* ################ LISTS ################ */
+/* ####################################### */
+
+
+ul, ol {
+  	padding: 0;
+  	margin: 0 0 $baseLineHeight / 2 25px;
+}
+ul ul,
+ul ol,
+ol ol,
+ol ul {
+  	margin-bottom: 0;
+}
+ul {
+  	list-style: disc;
+}
+ol {
+  	list-style: decimal;
+}
+li {
+  	line-height: $baseLineHeight;
+}

@@ -1,0 +1,318 @@
+/*  DBS CSS Framework
+ *	v 1.0 - April, 2011
+ *  Copyright(c) 2011 DeepBlueSky Digital | www.deepbluesky.com
+ *
+ *  This work is licenced under the Creative Commons Attribution-No Derivative Works 3.0 Unported License. 
+ *	http://creativecommons.org/licenses/by-nd/3.0/ 
+ *
+ *--------------------------------------------------------------------------*/
+  
+/* DOCUMENT INFORMATION
+	- Document: 			"Helpers" CSS
+	- Description: 			Set of simple classes to implement common CSS patterns
+	- Version:  			1.0
+	- Author:   			DeepBlueSky
+	- Acknowledgements		HTML5 ✰ Boilerplate 
+*/
+
+
+/* ####################################### */
+/* ############## CLEARFIX ############### */
+/* ####################################### */
+
+.clear {
+	clear: both;
+}
+
+.clear-l {
+	clear: left;
+}
+
+.clear-r {
+	clear: right;
+}
+
+/* The Magnificent Clearfix: Updated to prevent margin-collapsing on child elements in most situations.
+nicolasgallagher.com/micro-clearfix-hack/ */
+.clearfix:before, 
+.clearfix:after { 
+	content: ""; 
+	display: table; 	
+}
+
+.clearfix:after { 
+	clear: both; 	
+}
+.clearfix { 
+	zoom: 1; 	
+}
+
+
+
+/* ####################################### */
+/* ################ LISTS ################ */
+/* ####################################### */
+
+.list-reset {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+
+.h-list,
+.v-list {
+	margin: 0 0 1.5em 0;
+	padding: 0;
+	list-style: none;
+}
+
+/* HORIZONTAL LIST
+------------------------------------------------*/
+
+.h-list li {
+	float: left;
+	margin-right: 1em;
+}
+
+
+/* VERTICAL LIST
+------------------------------------------------*/
+
+.v-list li {
+	margin-bottom: 1em;
+}
+
+/* ARROW LIST
+------------------------------------------------*/
+
+.arrow-list {
+	margin: 0 0 1.5em 0;
+	padding: 0;
+	list-style: none;
+}
+
+.arrow-list li {
+	display:block;
+	background: url(/r/i/css_framework/graphics/arrow.gif) no-repeat 0 50%;
+	padding: 0.2307692307692308em 12px;
+}
+
+
+/* ####################################### */
+/* ############# POSITIONING ############# */
+/* ####################################### */
+
+.fr {
+	float: right;
+}
+
+.fl {
+	float: left;
+}
+
+.tc {
+	text-align: center;
+}
+
+
+/* ####################################### */
+/* ############## IMAGERY ################ */
+/* ####################################### */
+
+.img-left,
+.img-l,
+.alignleft {
+	display: block;
+	float: none;
+	margin: 0 auto 1.5em auto;
+	@media screen and (min-width: 768px) {
+		float: left;
+		display: inline-block;
+		margin: 0 20px 1.5em 0;
+	}
+}
+
+.img-right,
+.img-r,
+.alignright {
+	display: block;
+	float: none;
+	margin: 0 auto 1.5em auto;
+	@media screen and (min-width: 768px) {
+		float: right;
+		display: inline-block;
+		margin: 0 0 1.5em 20px;
+	}
+}
+
+.img-replace,
+.ir {
+	display:inline-block;
+	text-indent:-999em;
+	overflow:hidden;
+	background-repeat:no-repeat;
+	text-align:left;
+	direction:ltr;
+}
+
+
+/* ####################################### */
+/* ############ MEDAI BLOCK ############## */
+/* ####################################### */
+
+.m-block,.m-block .m-content {
+	overflow:hidden;*overflow:visible;zoom:1;
+}
+
+
+
+.m-block .m-img {	
+	float:left;	
+	margin-right: 20px;
+	@media screen and (max-width: 690px){
+		float: none;
+		margin: 0 auto 0.5em auto;
+	}
+}
+
+.m-block .m-img-alt {
+	float:right;
+	margin-left: 20px;	
+}
+
+.m-block .m-img img {
+	display:block;	
+}
+
+@media screen and (max-width: 690px){
+	.m-block .m-content {
+		text-align: center;
+	}
+}
+
+/* ####################################### */
+/* ################ =BASE ################ */
+/* ####################################### */
+
+.block-cards {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	display: block; 
+	overflow: hidden;
+}
+	
+
+.block-cards > li,
+.block-cards .card { 
+	display: block; 
+	height: auto; 
+	float: left; 
+}
+
+.block-cards-two { 
+	margin-left: -4% 
+}
+
+.block-cards-two > li,
+.block-cards-two .card { 
+	margin-left: 4%; 
+	width: 46%; 
+}
+
+.block-cards-two > li:nth-child(2n+1),
+.block-cards-two .card:nth-child(2n+1) {
+	clear: left;
+} 
+
+.block-cards-three { 
+	margin-left: -2% 
+}
+
+.block-cards-three > li,
+.block-cards-three .card { 
+	margin-left: 2%; 
+	width: 31.3%; 
+}
+
+.block-cards-three > li:nth-child(3n+1),
+.block-cards-three .card:nth-child(3n+1) {
+	clear: left;
+}
+
+.block-cards-four > li,
+.block-cards-four .card { 
+	@extend .size1of4;
+}
+
+.block-cards-four > li:nth-child(4n),
+.block-cards-four .card:nth-child(4n) {
+	@extend .lastcol;
+} 
+
+.block-cards-four > li:nth-child(4n+1),
+.block-cards-four .card:nth-child(4n+1) {
+	clear: left;
+} 
+
+.block-cards-five { 
+	margin-left: -1.5% 
+}
+
+.block-cards-five > li,
+.block-cards-five .card { 
+	margin-left: 1.5%; 
+	width: 18.5%; 
+}
+
+.block-cards-five > li:nth-child(5n+1),
+.block-cards-five .card:nth-child(5n+1) {
+	clear: left;
+} 
+
+/* ####################################### */
+/* ########### HIDDEN CONTENT ############ */
+/* ####################################### */
+
+/* HIDE: SCREENREADERS & BROWSERS
+------------------------------------------------*/
+
+.hidden { /* css-discuss.incutio.com/wiki/Screenreader_Visibility */
+	display:none;
+	visibility:hidden;
+}
+
+/* HIDE: VISUALLY FOR BROWSERS
+------------------------------------------------*/
+
+/* Hide only visually, but have it available for screenreaders: by Jon Neal.
+  www.webaim.org/techniques/css/invisiblecontent/  &  j.mp/visuallyhidden */
+.vh,
+.v-hidden,
+.screen-reader-text {
+	position: absolute !important;
+	clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
+	clip: rect(1px, 1px, 1px, 1px);
+}
+
+.vh.focusable:active,
+.vh.focusable:focus
+.v-hidden.focusable:active,
+.v-hidden.focusable:focus {
+	clip:auto;
+	height:auto;
+	overflow:visible;
+	position:static;
+	width:auto;
+	margin:0;
+}
+
+
+/* HIDE: VISUALLY FROM ALL + MAINTAIN LAYOUT
+------------------------------------------------*/
+
+/* Hide visually and from screenreaders, but maintain layout */
+.invisible {
+	visibility:hidden;
+}
