@@ -55,15 +55,15 @@
 }
 
 .container-inner {
-	width: 960px;
+	width: 90%;
 	margin: 0 auto;	
 }
 
 /* add "container-fluid" class to get fluid/flexible layout */
-.page-fluid .container-inner,
-.container-fluid .container-inner {
+.page-statuc .container-inner,
+.container-static .container-inner {
 	//@extend .container-inner;
-	width: 90%;
+	width: 960px;
 }
 
 // Page Column config

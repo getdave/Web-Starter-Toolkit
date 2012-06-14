@@ -43,3 +43,15 @@ window.log = function f() {
 }());
 
 // place any jQuery/helper plugins in here, instead of separate, slower script files.
+
+
+
+
+jQuery(document).ready(function($) {
+    
+    // Responsive Nav
+    if ($(window).width() <= 480) {
+        $('.nav-primary').narrowNavMenu();
+    }
+});
+    
