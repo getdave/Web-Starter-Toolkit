@@ -885,18 +885,18 @@ li {
 .pull-twelvecol {
   right: 103.8%; }
 
-/* line 160, ../sass/_grid.scss */
+/* line 161, ../sass/_grid.scss */
 [class*="col"]:first-child:not(:only-child),
 [class*="size"]:first-child:not(:only-child),
-.lastcol {
+.firstcol {
   margin-left: 0; }
 
-/* line 169, ../sass/_grid.scss */
+/* line 170, ../sass/_grid.scss */
 .full-col {
   width: auto;
   float: none; }
 
-/* line 175, ../sass/_grid.scss */
+/* line 176, ../sass/_grid.scss */
 .centered {
   margin: 0 auto;
   float: none; }
