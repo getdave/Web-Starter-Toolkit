@@ -1103,15 +1103,5 @@ div[role="main"] .container-inner,
       padding: 0.4615384615384615em 20px;
       text-align: left; }
 
-/* line 2, ../sass/site/_page.scss */
-body {
-  background-color: #f4f4f4; }
-
-/* line 7, ../sass/site/_page.scss */
-.ancillary-content {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  background-color: #555555;
-  padding: 4px 0; }
+/* ============================================================ */
+/* ============================================================ */
