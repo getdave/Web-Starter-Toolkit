@@ -949,6 +949,134 @@ img {
   margin: 0 auto;
   float: none; }
 
+@media only screen and (max-width : 768px) {
+  /* line 194, ../sass/_grid.scss */
+  .size1of12,
+  .onecol {
+    float: none;
+    clear: both;
+    display: block;
+    width: auto !important;
+    margin: 0;
+    left: auto !important;
+    right: auto !important; }
+
+  /* line 194, ../sass/_grid.scss */
+  .size1of6,
+  .twocol {
+    float: none;
+    clear: both;
+    display: block;
+    width: auto !important;
+    margin: 0;
+    left: auto !important;
+    right: auto !important; }
+
+  /* line 194, ../sass/_grid.scss */
+  .size1of4,
+  .threecol {
+    float: none;
+    clear: both;
+    display: block;
+    width: auto !important;
+    margin: 0;
+    left: auto !important;
+    right: auto !important; }
+
+  /* line 194, ../sass/_grid.scss */
+  .size1of3,
+  .fourcol {
+    float: none;
+    clear: both;
+    display: block;
+    width: auto !important;
+    margin: 0;
+    left: auto !important;
+    right: auto !important; }
+
+  /* line 227, ../sass/_grid.scss */
+  .fivecol {
+    float: none;
+    clear: both;
+    display: block;
+    width: auto !important;
+    margin: 0;
+    left: auto !important;
+    right: auto !important; }
+
+  /* line 194, ../sass/_grid.scss */
+  .size1of2,
+  .sixcol {
+    float: none;
+    clear: both;
+    display: block;
+    width: auto !important;
+    margin: 0;
+    left: auto !important;
+    right: auto !important; }
+
+  /* line 227, ../sass/_grid.scss */
+  .sevencol {
+    float: none;
+    clear: both;
+    display: block;
+    width: auto !important;
+    margin: 0;
+    left: auto !important;
+    right: auto !important; }
+
+  /* line 206, ../sass/_grid.scss */
+  .size2of3,
+  .eightcol {
+    float: none;
+    clear: both;
+    display: block;
+    width: auto !important;
+    margin: 0;
+    left: auto !important;
+    right: auto !important; }
+
+  /* line 217, ../sass/_grid.scss */
+  .size3of4,
+  .ninecol {
+    float: none;
+    clear: both;
+    display: block;
+    width: auto !important;
+    margin: 0;
+    left: auto !important;
+    right: auto !important; }
+
+  /* line 227, ../sass/_grid.scss */
+  .tencol {
+    float: none;
+    clear: both;
+    display: block;
+    width: auto !important;
+    margin: 0;
+    left: auto !important;
+    right: auto !important; }
+
+  /* line 227, ../sass/_grid.scss */
+  .elevencol {
+    float: none;
+    clear: both;
+    display: block;
+    width: auto !important;
+    margin: 0;
+    left: auto !important;
+    right: auto !important; }
+
+  /* line 194, ../sass/_grid.scss */
+  .size1of1,
+  .twelvecol {
+    float: none;
+    clear: both;
+    display: block;
+    width: auto !important;
+    margin: 0;
+    left: auto !important;
+    right: auto !important; } }
 /* ============================================================ */
 /* ============================================================ */
 /* line 15, ../sass/_structure.scss */
@@ -1008,6 +1136,10 @@ img {
   -moz-box-sizing: border-box;
   box-sizing: border-box; }
 
+@media only screen and (max-width: 30em) {
+  /* line 78, ../sass/_structure.scss */
+  .col {
+    padding: 15px 15px; } }
 /* ============================================================ */
 /* ============================================================ */
 /* line 17, ../sass/_nav.scss */
