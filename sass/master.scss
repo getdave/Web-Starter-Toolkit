@@ -1,0 +1,150 @@
+/* ============================================================ */
+
+// BONES CSS FRAMEWORK
+// Version: 1.0
+// URL: 
+// Apache License: v2.0. http://www.apache.org/licenses/LICENSE-2.0
+// Author: David Smith (@get_dave)
+
+// This projects aims to be a starter kit for building websites using
+// CSS, SASS (scss) and Compass. You should only include the files you
+// require in order to produce your site. Anything else should be left
+// commented out.
+
+/* ============================================================ */
+
+
+
+// ==========================================================================
+// ROOT
+// ==========================================================================
+
+// Libs and Frameworks
+// ==========================================================================
+
+// Compass
+@import "compass";
+
+// Variables and mixins
+@import "_variables";
+@import "_mixins";
+
+
+// Resets and Helpers
+// ==========================================================================
+
+// Normalize (we prefer this over CSS resets)
+@import "_normalize.scss";
+
+// Helper classes
+@import "_helpers.scss";
+
+
+// ==========================================================================
+// TYPOGRAPHY 
+// ==========================================================================
+
+// Block level (h1, p) and text-level (em, strong) type...etc
+@import "_typo.scss";
+
+
+// ==========================================================================
+// GRID
+// ==========================================================================
+
+// Custom grid system generator. Can be customised via _variables file
+@import "_grid.scss";
+
+
+// ==========================================================================
+// ELEMENTS
+// ==========================================================================
+
+// Layout structures (columns, page layouts...etc)
+@import "_structure.scss";
+
+// Standard nav patterns
+@import "_nav.scss";
+
+
+// ==========================================================================
+// FORMS
+// ==========================================================================
+
+// Standard form controls
+//@import "_forms.scss";
+
+
+// ==========================================================================
+// TEXTURE
+// ==========================================================================
+
+// Font Awesome icon fonts (optional)
+//@import "_font-awesome";
+
+// Button styles (optional)
+//@import "_buttons.scss";
+
+
+// ==========================================================================
+// LAYOUT
+// ==========================================================================
+
+// Page level layout styles (banner, navigation, content, contentinfo)
+@import "site/_page.scss";
+
+// PAGES
+// Individual stylesheets for unique pages on the site/application
+// ==========================================================================
+
+// Home (example)
+//@import "site/pages/_home.scss";
+
+
+
+// ==========================================================================
+// MEDIA QUERIES (RESPONSIVE)
+// ==========================================================================
+
+//
+// You should customise your breakpoints based on where your *design* requires them
+// Basing breakpoints on devices is an unsustainable approach and should be avoided
+// Ideally all breakpoints should be set using em's rather than pixels.
+// Use the Media Query bookmarklet at http://seesparkbox.com/foundry/media_query_bookmarklet
+//
+
+// EXAMPLE BREAKPOINTS - you should be customising these
+// ==========================================================================
+
+// 480px
+@media only screen and (min-width: 30em) {
+	//@import "mq/480";
+}
+
+// 600px
+@media only screen and (min-width: 37.5em) {
+	//@import "mq/600";
+}
+
+// 768px
+@media only screen and (min-width: 48em) {
+	//@import "mq/768";
+}
+
+// 992px
+@media only screen and (min-width: 62em) {
+	///@import "mq/992";
+}
+
+// 1382px
+@media only screen and (min-width: 86.375em) {
+	//@import "mq/1382";
+}
+
+// 2x (Retina!)
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min--moz-device-pixel-ratio: 1.5), only screen and (min-device-pixel-ratio: 1.5) {
+	//@import "mq/2x"; 
+}
+
+
+
