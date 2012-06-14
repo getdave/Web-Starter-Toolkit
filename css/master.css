@@ -420,114 +420,77 @@ table {
   border-collapse: collapse;
   border-spacing: 0; }
 
-/*  DBS CSS Framework
- *	v 1.0 - April, 2011
- *  Copyright(c) 2011 DeepBlueSky Digital | www.deepbluesky.com
- *
- *  This work is licenced under the Creative Commons Attribution-No Derivative Works 3.0 Unported License. 
- *	http://creativecommons.org/licenses/by-nd/3.0/ 
- *
- *--------------------------------------------------------------------------*/
-/* DOCUMENT INFORMATION
-	- Document: 			"Helpers" CSS
-	- Description: 			Set of simple classes to implement common CSS patterns
-	- Version:  			1.0
-	- Author:   			DeepBlueSky
-	- Acknowledgements		HTML5 ✰ Boilerplate 
-*/
-/* ####################################### */
-/* ############## CLEARFIX ############### */
-/* ####################################### */
-/* line 23, ../sass/_helpers.scss */
+/* ============================================================ */
+/* ============================================================ */
+/* line 19, ../sass/_helpers.scss */
 .clear {
   clear: both; }
 
-/* line 27, ../sass/_helpers.scss */
+/* line 23, ../sass/_helpers.scss */
 .clear-l {
   clear: left; }
 
-/* line 31, ../sass/_helpers.scss */
+/* line 27, ../sass/_helpers.scss */
 .clear-r {
   clear: right; }
 
-/* The Magnificent Clearfix: Updated to prevent margin-collapsing on child elements in most situations.
-nicolasgallagher.com/micro-clearfix-hack/ */
-/* line 38, ../sass/_helpers.scss */
+/* line 36, ../sass/_helpers.scss */
 .clearfix:before,
 .clearfix:after {
   content: "";
   display: table; }
 
-/* line 43, ../sass/_helpers.scss */
+/* line 41, ../sass/_helpers.scss */
 .clearfix:after {
   clear: both; }
 
-/* line 46, ../sass/_helpers.scss */
+/* line 44, ../sass/_helpers.scss */
 .clearfix {
   zoom: 1; }
 
-/* ####################################### */
-/* ################ LISTS ################ */
-/* ####################################### */
-/* line 56, ../sass/_helpers.scss */
+/* line 55, ../sass/_helpers.scss */
 .list-reset {
   margin: 0;
   padding: 0;
   list-style: none; }
 
-/* line 64, ../sass/_helpers.scss */
+/* line 63, ../sass/_helpers.scss */
 .h-list,
 .v-list {
   margin: 0 0 1.5em 0;
   padding: 0;
   list-style: none; }
 
-/* HORIZONTAL LIST
-------------------------------------------------*/
-/* line 73, ../sass/_helpers.scss */
+/* line 72, ../sass/_helpers.scss */
 .h-list li {
   float: left;
   margin-right: 1em; }
 
-/* VERTICAL LIST
-------------------------------------------------*/
-/* line 82, ../sass/_helpers.scss */
+/* line 81, ../sass/_helpers.scss */
 .v-list li {
   margin-bottom: 1em; }
 
-/* ARROW LIST
-------------------------------------------------*/
-/* line 89, ../sass/_helpers.scss */
-.arrow-list {
-  margin: 0 0 1.5em 0;
-  padding: 0;
-  list-style: none; }
-
-/* line 95, ../sass/_helpers.scss */
-.arrow-list li {
-  display: block;
-  background: url(/r/i/css_framework/graphics/arrow.gif) no-repeat 0 50%;
-  padding: 0.2307692307692308em 12px; }
-
-/* ####################################### */
-/* ############# POSITIONING ############# */
-/* ####################################### */
-/* line 106, ../sass/_helpers.scss */
+/* line 96, ../sass/_helpers.scss */
 .fr {
   float: right; }
 
-/* line 110, ../sass/_helpers.scss */
+/* line 100, ../sass/_helpers.scss */
 .fl {
   float: left; }
 
+/* line 106, ../sass/_helpers.scss */
+.text-right {
+  text-align: right; }
+
+/* line 110, ../sass/_helpers.scss */
+.text-left {
+  text-align: left; }
+
 /* line 114, ../sass/_helpers.scss */
-.tc {
+.text-center {
   text-align: center; }
 
-/* ####################################### */
-/* ############## IMAGERY ################ */
-/* ####################################### */
-/* line 125, ../sass/_helpers.scss */
+/* line 128, ../sass/_helpers.scss */
 .img-left,
 .img-l,
 .alignleft {
@@ -535,7 +498,7 @@ nicolasgallagher.com/micro-clearfix-hack/ */
   float: none;
   margin: 0 auto 1.5em auto; }
   @media screen and (min-width: 768px) {
-    /* line 125, ../sass/_helpers.scss */
+    /* line 128, ../sass/_helpers.scss */
     .img-left,
     .img-l,
     .alignleft {
@@ -543,7 +506,7 @@ nicolasgallagher.com/micro-clearfix-hack/ */
       display: inline-block;
       margin: 0 20px 1.5em 0; } }
 
-/* line 138, ../sass/_helpers.scss */
+/* line 141, ../sass/_helpers.scss */
 .img-right,
 .img-r,
 .alignright {
@@ -551,7 +514,7 @@ nicolasgallagher.com/micro-clearfix-hack/ */
   float: none;
   margin: 0 auto 1.5em auto; }
   @media screen and (min-width: 768px) {
-    /* line 138, ../sass/_helpers.scss */
+    /* line 141, ../sass/_helpers.scss */
     .img-right,
     .img-r,
     .alignright {
@@ -559,7 +522,7 @@ nicolasgallagher.com/micro-clearfix-hack/ */
       display: inline-block;
       margin: 0 0 1.5em 20px; } }
 
-/* line 150, ../sass/_helpers.scss */
+/* line 156, ../sass/_helpers.scss */
 .img-replace,
 .ir {
   display: inline-block;
@@ -569,122 +532,32 @@ nicolasgallagher.com/micro-clearfix-hack/ */
   text-align: left;
   direction: ltr; }
 
-/* ####################################### */
-/* ############ MEDAI BLOCK ############## */
-/* ####################################### */
-/* line 164, ../sass/_helpers.scss */
-.m-block, .m-block .m-content {
+/* line 179, ../sass/_helpers.scss */
+.m-block,
+.m-block .m-content {
   overflow: hidden;
   *overflow: visible;
   zoom: 1; }
 
-/* line 170, ../sass/_helpers.scss */
+/* line 190, ../sass/_helpers.scss */
 .m-block .m-img {
   float: left;
   margin-right: 20px; }
-  @media screen and (max-width: 690px) {
-    /* line 170, ../sass/_helpers.scss */
-    .m-block .m-img {
-      float: none;
-      margin: 0 auto 0.5em auto; } }
-
-/* line 179, ../sass/_helpers.scss */
+/* line 196, ../sass/_helpers.scss */
 .m-block .m-img-alt {
   float: right;
   margin-left: 20px; }
 
-/* line 184, ../sass/_helpers.scss */
+/* line 203, ../sass/_helpers.scss */
 .m-block .m-img img {
   display: block; }
 
-@media screen and (max-width: 690px) {
-  /* line 189, ../sass/_helpers.scss */
-  .m-block .m-content {
-    text-align: center; } }
-/* ####################################### */
-/* ################ =BASE ################ */
-/* ####################################### */
-/* line 198, ../sass/_helpers.scss */
-.block-cards {
-  margin: 0;
-  padding: 0;
-  list-style: none;
-  display: block;
-  overflow: hidden; }
-
-/* line 208, ../sass/_helpers.scss */
-.block-cards > li,
-.block-cards .card {
-  display: block;
-  height: auto;
-  float: left; }
-
-/* line 214, ../sass/_helpers.scss */
-.block-cards-two {
-  margin-left: -4%; }
-
-/* line 219, ../sass/_helpers.scss */
-.block-cards-two > li,
-.block-cards-two .card {
-  margin-left: 4%;
-  width: 46%; }
-
-/* line 225, ../sass/_helpers.scss */
-.block-cards-two > li:nth-child(2n+1),
-.block-cards-two .card:nth-child(2n+1) {
-  clear: left; }
-
-/* line 229, ../sass/_helpers.scss */
-.block-cards-three {
-  margin-left: -2%; }
-
-/* line 234, ../sass/_helpers.scss */
-.block-cards-three > li,
-.block-cards-three .card {
-  margin-left: 2%;
-  width: 31.3%; }
-
-/* line 240, ../sass/_helpers.scss */
-.block-cards-three > li:nth-child(3n+1),
-.block-cards-three .card:nth-child(3n+1) {
-  clear: left; }
-
-/* line 255, ../sass/_helpers.scss */
-.block-cards-four > li:nth-child(4n+1),
-.block-cards-four .card:nth-child(4n+1) {
-  clear: left; }
-
-/* line 259, ../sass/_helpers.scss */
-.block-cards-five {
-  margin-left: -1.5%; }
-
-/* line 264, ../sass/_helpers.scss */
-.block-cards-five > li,
-.block-cards-five .card {
-  margin-left: 1.5%;
-  width: 18.5%; }
-
-/* line 270, ../sass/_helpers.scss */
-.block-cards-five > li:nth-child(5n+1),
-.block-cards-five .card:nth-child(5n+1) {
-  clear: left; }
-
-/* ####################################### */
-/* ########### HIDDEN CONTENT ############ */
-/* ####################################### */
-/* HIDE: SCREENREADERS & BROWSERS
-------------------------------------------------*/
-/* line 281, ../sass/_helpers.scss */
+/* line 217, ../sass/_helpers.scss */
 .hidden {
-  /* css-discuss.incutio.com/wiki/Screenreader_Visibility */
   display: none;
   visibility: hidden; }
 
-/* HIDE: VISUALLY FOR BROWSERS
-------------------------------------------------*/
-/* Hide only visually, but have it available for screenreaders: by Jon Neal.
-  www.webaim.org/techniques/css/invisiblecontent/  &  j.mp/visuallyhidden */
-/* line 293, ../sass/_helpers.scss */
+/* line 229, ../sass/_helpers.scss */
 .vh,
 .v-hidden,
 .screen-reader-text {
@@ -693,7 +566,7 @@ nicolasgallagher.com/micro-clearfix-hack/ */
   /* IE6, IE7 */
   clip: rect(1px, 1px, 1px, 1px); }
 
-/* line 302, ../sass/_helpers.scss */
+/* line 238, ../sass/_helpers.scss */
 .vh.focusable:active,
 .vh.focusable:focus
 .v-hidden.focusable:active,
@@ -705,10 +578,7 @@ nicolasgallagher.com/micro-clearfix-hack/ */
   width: auto;
   margin: 0; }
 
-/* HIDE: VISUALLY FROM ALL + MAINTAIN LAYOUT
-------------------------------------------------*/
-/* Hide visually and from screenreaders, but maintain layout */
-/* line 316, ../sass/_helpers.scss */
+/* line 251, ../sass/_helpers.scss */
 .invisible {
   visibility: hidden; }
 
@@ -827,30 +697,9 @@ ol {
 li {
   line-height: 1.667em; }
 
-/*  Bones CSS Framework
- *	v 0.1 - 2012
- *  Copyright(c) 2012 David Smith | www.aheadcreative.com
- *
- *  This work is licenced under the Creative Commons Attribution-No Derivative Works 3.0 Unported License. 
- *	http://creativecommons.org/licenses/by-nd/3.0/ 
- *
- *--------------------------------------------------------------------------*/
-/* DOCUMENT INFORMATION
-	- Document: 			"Grids" CSS
-	- Description: 			Set of grid classes
-	- Version:  			0.1
-	- Author:   			David Smith
-	- Acknowledgements		OOCSS - https://github.com/stubbornella/oocss
-							1140 CSS GRID - http://cssgrid.net/
-							Twitter Bootstrap Grid
-							Deep Blue Sky Grid System
-*/
-/* ####################################### */
-/* ########### STANDARD GRID ############# */
-/* ####################################### */
-/* GRID LINES (for clearing grid lines/rows)
-------------------------------------------------*/
-/* line 28, ../sass/_grid.scss */
+/* ============================================================ */
+/* ============================================================ */
+/* line 24, ../sass/_grid.scss */
 .line {
   margin: 0 30px;
   /* trigger new block formatting context in all browsers */
@@ -858,15 +707,12 @@ li {
   *overflow: visible;
   *zoom: 1; }
 
-/* GRID UNITS
-------------------------------------------------*/
 /* main */
 /* alias */
-/* line 51, ../sass/_grid.scss */
+/* line 47, ../sass/_grid.scss */
 .onecol,
 .twocol,
-.threecol, .size1of4, .block-cards-four > li,
-.block-cards-four .card,
+.threecol, .size1of4,
 .fourcol, .size1of3,
 .fivecol,
 .sixcol, .size1of2,
@@ -881,201 +727,186 @@ li {
   min-height: 1px;
   position: relative; }
 
-/* GRID COLUMNS
-------------------------------------------------*/
-/* line 65, ../sass/_grid.scss */
+/* line 62, ../sass/_grid.scss */
 .size1of12,
 .onecol {
   width: 4.85%; }
 
-/* line 65, ../sass/_grid.scss */
+/* line 62, ../sass/_grid.scss */
 .size1of6,
 .twocol {
   width: 13.5%; }
 
-/* line 65, ../sass/_grid.scss */
-.size1of4, .block-cards-four > li,
-.block-cards-four .card,
+/* line 62, ../sass/_grid.scss */
+.size1of4,
 .threecol {
   width: 22.15%; }
 
-/* line 65, ../sass/_grid.scss */
+/* line 62, ../sass/_grid.scss */
 .size1of3,
 .fourcol {
   width: 30.8%; }
 
-/* line 79, ../sass/_grid.scss */
+/* line 76, ../sass/_grid.scss */
 .fivecol {
   width: 39.45%; }
 
-/* line 65, ../sass/_grid.scss */
+/* line 62, ../sass/_grid.scss */
 .size1of2,
 .sixcol {
   width: 48.1%; }
 
-/* line 79, ../sass/_grid.scss */
+/* line 76, ../sass/_grid.scss */
 .sevencol {
   width: 56.75%; }
 
-/* line 70, ../sass/_grid.scss */
+/* line 67, ../sass/_grid.scss */
 .size2of3,
 .eightcol {
   width: 65.4%; }
 
-/* line 75, ../sass/_grid.scss */
+/* line 72, ../sass/_grid.scss */
 .size3of4,
 .ninecol {
   width: 74.05%; }
 
-/* line 79, ../sass/_grid.scss */
+/* line 76, ../sass/_grid.scss */
 .tencol {
   width: 82.7%; }
 
-/* line 79, ../sass/_grid.scss */
+/* line 76, ../sass/_grid.scss */
 .elevencol {
   width: 91.35%; }
 
-/* line 65, ../sass/_grid.scss */
+/* line 62, ../sass/_grid.scss */
 .size1of1,
 .twelvecol {
   width: 100%; }
 
-/* GRID PUSH CLASSES
-------------------------------------------------*/
-/* line 95, ../sass/_grid.scss */
+/* line 93, ../sass/_grid.scss */
 .push-size1of12,
 .push-onecol {
   left: 8.65%; }
 
-/* line 95, ../sass/_grid.scss */
+/* line 93, ../sass/_grid.scss */
 .push-size1of6,
 .push-twocol {
   left: 17.3%; }
 
-/* line 95, ../sass/_grid.scss */
+/* line 93, ../sass/_grid.scss */
 .push-size1of4,
 .push-threecol {
   left: 25.95%; }
 
-/* line 95, ../sass/_grid.scss */
+/* line 93, ../sass/_grid.scss */
 .push-size1of3,
 .push-fourcol {
   left: 34.6%; }
 
-/* line 109, ../sass/_grid.scss */
+/* line 107, ../sass/_grid.scss */
 .push-fivecol {
   left: 43.25%; }
 
-/* line 95, ../sass/_grid.scss */
+/* line 93, ../sass/_grid.scss */
 .push-size1of2,
 .push-sixcol {
   left: 51.9%; }
 
-/* line 109, ../sass/_grid.scss */
+/* line 107, ../sass/_grid.scss */
 .push-sevencol {
   left: 60.55%; }
 
-/* line 100, ../sass/_grid.scss */
+/* line 98, ../sass/_grid.scss */
 .push-size2of3,
 .push-eightcol {
   left: 69.2%; }
 
-/* line 105, ../sass/_grid.scss */
+/* line 103, ../sass/_grid.scss */
 .push-size3of4,
 .push-ninecol {
   left: 77.85%; }
 
-/* line 109, ../sass/_grid.scss */
+/* line 107, ../sass/_grid.scss */
 .push-tencol {
   left: 86.5%; }
 
-/* line 109, ../sass/_grid.scss */
+/* line 107, ../sass/_grid.scss */
 .push-elevencol {
   left: 95.15%; }
 
-/* line 95, ../sass/_grid.scss */
+/* line 93, ../sass/_grid.scss */
 .push-size1of1,
 .push-twelvecol {
   left: 103.8%; }
 
-/* GRID PULL CLASSES
-------------------------------------------------*/
-/* line 125, ../sass/_grid.scss */
+/* line 124, ../sass/_grid.scss */
 .pull-size1of12,
 .pull-onecol {
   right: 8.65%; }
 
-/* line 125, ../sass/_grid.scss */
+/* line 124, ../sass/_grid.scss */
 .pull-size1of6,
 .pull-twocol {
   right: 17.3%; }
 
-/* line 125, ../sass/_grid.scss */
+/* line 124, ../sass/_grid.scss */
 .pull-size1of4,
 .pull-threecol {
   right: 25.95%; }
 
-/* line 125, ../sass/_grid.scss */
+/* line 124, ../sass/_grid.scss */
 .pull-size1of3,
 .pull-fourcol {
   right: 34.6%; }
 
-/* line 139, ../sass/_grid.scss */
+/* line 138, ../sass/_grid.scss */
 .pull-fivecol {
   right: 43.25%; }
 
-/* line 125, ../sass/_grid.scss */
+/* line 124, ../sass/_grid.scss */
 .pull-size1of2,
 .pull-sixcol {
   right: 51.9%; }
 
-/* line 139, ../sass/_grid.scss */
+/* line 138, ../sass/_grid.scss */
 .pull-sevencol {
   right: 60.55%; }
 
-/* line 130, ../sass/_grid.scss */
+/* line 129, ../sass/_grid.scss */
 .pull-size2of3,
 .pull-eightcol {
   right: 69.2%; }
 
-/* line 135, ../sass/_grid.scss */
+/* line 134, ../sass/_grid.scss */
 .pull-size3of4,
 .pull-ninecol {
   right: 77.85%; }
 
-/* line 139, ../sass/_grid.scss */
+/* line 138, ../sass/_grid.scss */
 .pull-tencol {
   right: 86.5%; }
 
-/* line 139, ../sass/_grid.scss */
+/* line 138, ../sass/_grid.scss */
 .pull-elevencol {
   right: 95.15%; }
 
-/* line 125, ../sass/_grid.scss */
+/* line 124, ../sass/_grid.scss */
 .pull-size1of1,
 .pull-twelvecol {
   right: 103.8%; }
 
-/* To can avoid having to add .lastcol 
-   1) uncomment the CSS3 selectors below
-   2) comment out the .lastcol selector
-   3) make sure you don't need to support <=IE8 cos it won't work!
-*/
 /* line 160, ../sass/_grid.scss */
 [class*="col"]:first-child:not(:only-child),
 [class*="size"]:first-child:not(:only-child),
-.lastcol,
-.block-cards-four > li:nth-child(4n),
-.block-cards-four .card:nth-child(4n) {
+.lastcol {
   margin-left: 0; }
 
-/* line 164, ../sass/_grid.scss */
+/* line 169, ../sass/_grid.scss */
 .full-col {
   width: auto;
   float: none; }
 
-/* centered column */
-/* line 170, ../sass/_grid.scss */
+/* line 175, ../sass/_grid.scss */
 .centered {
   margin: 0 auto;
   float: none; }
