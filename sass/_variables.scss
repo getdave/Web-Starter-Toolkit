@@ -1,84 +1,110 @@
-// --------------------------------------------------
-// 
+/* ============================================================ */
+
 // VARIABLES
-//
-// --------------------------------------------------
+
+// This file allows you to set variables which will be reused
+// throughout your project to save you time and energy. 
+
+/* ============================================================ */
 
 
+// ==========================================================================
 // GLOBAL VALUES
-// --------------------------------------------------
+// ==========================================================================
+
+// COLORS
+// ==========================================================================
 
 // Links
-$linkColor:             #08c;
-$linkColorHover:        darken($linkColor, 15%);
+$linkColor:             		#08c;
+$linkColorHover:        		darken($linkColor, 15%);
 
 // Grays
-$black:                 #000;
-$grayDarker:            #222;
-$grayDark:              #333;
-$gray:                  #555;
-$grayLight:             #999;
-$grayLighter:           #eee;
-$white:                 #fff;
+$black:                 		#000;
+$grayDarker:            		#222;
+$grayDark:              		#333;
+$gray:                  		#555;
+$grayLight:             		#999;
+$grayLighter:           		#eee;
+$white:                 		#fff;
 
 // Accent colors
-$blue:                  #049cdb;
-$blueDark:              #0064cd;
-$green:                 #46a546;
-$red:                   #9d261d;
-$yellow:                #ffc40d;
-$orange:                #f89406;
-$pink:                  #c3325f;
-$purple:                #7a43b6;
+$blue:                  		#049cdb;
+$blueDark:              		#0064cd;
+$green:                 		#46a546;
+$red:                   		#9d261d;
+$yellow:                		#ffc40d;
+$orange:                		#f89406;
+$pink:                  		#c3325f;
+$purple:                		#7a43b6;
 
 
-// TYPOGRAPHY VARIABLES
-// --------------------------------------------------
-$baseFontSize:          16px;
-$baseFontFamily:        "Helvetica Neue", Helvetica, Arial, sans-serif;
-$baseLineHeight:        1.667em;
+// ==========================================================================
+// TYPOGRAPHY
+// ==========================================================================
 
-// LOGOS
-$logo_path: "/img/logo.gif";
-
-
-// GRID VARIABLES
-// --------------------------------------------------
-$cols			: 12;
-$gutter_width	: 3.8%;
-$col_width		: 4.85%;
-$cols_as_string	: one two three four five six seven eight nine ten eleven twelve;
+$baseFontSize:          		16px;
+$baseFontFamily:        		"Helvetica Neue", Helvetica, Arial, sans-serif;
+$baseLineHeight:        		1.667em;
 
 
+// ==========================================================================
+// GRID
+// ==========================================================================
 
-// COMPONENT VARIABLES
-// --------------------------------------------------
+// Column Configuration
+$cols: 							12;
+$gutter_width: 					3.8%;
+$col_width: 					4.85%;
 
-// Z-index master list
+// We loop thorugh this string to produce our written grid classes
+$cols_as_string: 				one two three four five six seven eight nine ten eleven twelve;
+
+
+
+// ==========================================================================
+// ELEMENTS & COMPONENTS
+// ==========================================================================
+
+
+// LOGO
+// ==========================================================================
+
+$logo_path: 					"/img/logo.gif";
+
+
+// MASTER Z-INDEX
+// ==========================================================================
+
 // Used for a bird's eye view of components dependent on the z-axis
-// Try to avoid customizing these :)
-$zindexDropdown:        1000;
-$zindexPopover:         1010;
-$zindexTooltip:         1020;
-$zindexFixedNavbar:     1030;
-$zindexModalBackdrop:   1040;
-$zindexModal:           1050;
+$zindexDropdown:        		1000;
+$zindexPopover:         		1010;
+$zindexTooltip:         		1020;
+$zindexFixedNavbar:     		1030;
+$zindexModalBackdrop:   		1040;
+$zindexModal:           		1050;
+
+
+// FORMS
+// ==========================================================================
 
 // Input placeholder text color
-$placeholderText:       $grayLight;
+$placeholderText:       		$grayLight;
 
-// Navbar
-$navbarBackground: 			$grayLight;
-$navbarBackgroundHighlight: $grayDark;
 
-$navbarText: 				$white;
-$navbarLinkColor: 			$grayDark;
-$navbarLinkColorHover: 		$white;
+// NAVBAR
+// ==========================================================================
 
+$navbarBackground: 				$grayLight;
+$navbarBackgroundHighlight: 	$grayDark;
+
+$navbarText: 					$white;
+$navbarLinkColor: 				$grayDark;
+$navbarLinkColorHover: 			$white;
 
 
 // BUTTONS
-// --------------------------------------------------
+// ==========================================================================
 
 $button_background				: $linkColor;
 $button_background_shader		: linear-gradient(top, rgba(0,0,0,0), rgba(0,0,0,0.25)); // standard bg shader 

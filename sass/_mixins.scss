@@ -1,12 +1,15 @@
-// --------------------------------------------------
-//
+/* ============================================================ */
+
 // MIXINS
-//
-// --------------------------------------------------
+
+// Standard mixins and functions to help make life easier
+
+/* ============================================================ */
 
 
+// ==========================================================================
 // GRID MIXINS
-// --------------------------------------------------
+// ==========================================================================
 
 // GRID WIDTH - returns a grid unit's width
 @function grid-width($n) {
@@ -14,9 +17,11 @@
 }
 
 
+// ==========================================================================
 // HELPERS
-// --------------------------------------------------
+// ==========================================================================
 
+// Clear fix
 @mixin clearfix {
     zoom: 1; 
     
@@ -32,28 +37,39 @@
     }
 }
 
-@function rsize($pxval, $baseline : $baseFontSize) {
-    @return ($pxval/$baseline) + em;
-}
-    
+
+// Font Size
 @mixin fsize($pxval, $baseline : $baseFontSize) {
     font-size: ($pxval / $baseline) * 100%
 }
 
+// Relative Size
+@function rsize($pxval, $baseline : $baseFontSize) {
+    @return ($pxval/$baseline) + em;
+}
 
 
 
-// MISC STYLE MIXINS
-// --------------------------------------------------
+
+// ==========================================================================
+// TEXTURE
+// ==========================================================================
+
 
 // ARROWS
-// 	$direction: top, left, right, bottom, top-left, top-right, bottom-left, bottom-right
+// ==========================================================================
+
+// 	
+//  $direction: top, left, right, bottom, top-left, top-right, bottom-left, bottom-right
 // 	$color: hex, rgb or rbga
 // 	$size: px or em
+//  
 // 	@example
 // 	.element{
 //  	 @include arrow(top, #000, 50px);   
 // 	}
+//
+
 @mixin arrow($direction, $color, $size){
     display: block;
     height: 0;
