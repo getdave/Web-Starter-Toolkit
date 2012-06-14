@@ -582,118 +582,108 @@ table {
 .invisible {
   visibility: hidden; }
 
-/* ####################################### */
-/* ################ BASE ################# */
-/* ####################################### */
-/* line 5, ../sass/_typo.scss */
+/* ============================================================ */
+/* ============================================================ */
+/* line 14, ../sass/_typo.scss */
 body {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 16px;
   line-height: 1.667em;
   color: #333333; }
 
-/* line 12, ../sass/_typo.scss */
-p {
-  margin: 0 0 0.834em;
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-size: 16px;
-  line-height: 1.667em; }
-
-/* ####################################### */
-/* ############## HEADINGS ############### */
-/* ####################################### */
-/* line 24, ../sass/_typo.scss */
+/* line 32, ../sass/_typo.scss */
 h1, h2, h3, h4, h5, h6 {
   font-weight: bold;
   margin: 0; }
 
-/* line 29, ../sass/_typo.scss */
+/* line 37, ../sass/_typo.scss */
 h1, .h1 {
+  font-size: 2.25em;
   color: #222222;
-  font-size: 2.5em;
   line-height: 1;
   margin-bottom: .5em;
   text-rendering: optimizelegibility; }
 
-/* line 37, ../sass/_typo.scss */
+/* line 45, ../sass/_typo.scss */
 h2, .h2 {
+  font-size: 1.5em;
   color: #222222;
-  font-size: 2em;
   line-height: 1;
   margin-bottom: .75em; }
 
-/* line 44, ../sass/_typo.scss */
+/* line 52, ../sass/_typo.scss */
 h3, .h3 {
+  font-size: 1.313em;
   color: #333333;
-  font-size: 1.5em;
   line-height: 1;
   margin-bottom: .5em;
   padding-top: .5em; }
 
-/* line 52, ../sass/_typo.scss */
+/* line 60, ../sass/_typo.scss */
 h4, .h4 {
+  font-size: 1em;
   color: #333333;
-  font-size: 1.2em;
   line-height: 1;
   margin-bottom: .5em;
   padding-top: 1em; }
 
-/* line 60, ../sass/_typo.scss */
+/* line 68, ../sass/_typo.scss */
 h5, .h5 {
   font-size: 1em;
   line-height: 1;
   margin-bottom: .8em;
   padding-top: .7em; }
 
-/* line 67, ../sass/_typo.scss */
+/* line 75, ../sass/_typo.scss */
 h6, .h6 {
   font-size: 1em;
   line-height: 1; }
 
-/* ####################################### */
-/* ################ LINKS ################ */
-/* ####################################### */
-/* line 82, ../sass/_typo.scss */
+/* line 84, ../sass/_typo.scss */
+p {
+  margin: 0 0 1.667em;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.667em; }
+
+/* line 97, ../sass/_typo.scss */
 a {
   color: #0088cc; }
 
-/* line 87, ../sass/_typo.scss */
+/* line 102, ../sass/_typo.scss */
 a:hover,
 a:focus {
   color: #005580; }
 
-/* line 91, ../sass/_typo.scss */
+/* line 106, ../sass/_typo.scss */
 a:focus {
   outline: thin dotted; }
 
-/* line 95, ../sass/_typo.scss */
+/* line 110, ../sass/_typo.scss */
 a:hover, a:active {
   outline: none; }
 
-/* ####################################### */
-/* ################ LISTS ################ */
-/* ####################################### */
-/* line 105, ../sass/_typo.scss */
+/* line 120, ../sass/_typo.scss */
 ul, ol {
   padding: 0;
   margin: 0 0 0.834em 25px; }
 
-/* line 112, ../sass/_typo.scss */
+/* line 129, ../sass/_typo.scss */
 ul ul,
 ul ol,
 ol ol,
 ol ul {
   margin-bottom: 0; }
 
-/* line 115, ../sass/_typo.scss */
+/* line 133, ../sass/_typo.scss */
 ul {
   list-style: disc; }
 
-/* line 118, ../sass/_typo.scss */
+/* line 137, ../sass/_typo.scss */
 ol {
   list-style: decimal; }
 
-/* line 121, ../sass/_typo.scss */
+/* line 141, ../sass/_typo.scss */
 li {
   line-height: 1.667em; }
 
@@ -911,33 +901,16 @@ li {
   margin: 0 auto;
   float: none; }
 
-/*  Bones CSS Framework
- *	v 0.1 - 2012
- *  Copyright(c) 2012 David Smith | www.aheadcreative.com
- *
- *  This work is licenced under the Creative Commons Attribution-No Derivative Works 3.0 Unported License. 
- *	http://creativecommons.org/licenses/by-nd/3.0/ 
- *
- *--------------------------------------------------------------------------*/
-/* DOCUMENT INFORMATION
-	- Document: 			Structure
-	- Description:			Standard structures for common layouts and page division
-	- Version:  			0.1
-	- Author:   			David Smith
-	- Acknowledgements		Twitter Bootstrap 2
-						
-*/
-/* ####################################### */
-/* ################ LOGO ################# */
-/* ####################################### */
-/* line 24, ../sass/_structure.scss */
+/* ============================================================ */
+/* ============================================================ */
+/* line 15, ../sass/_structure.scss */
 .site-logo {
   display: block;
   border: 0;
   padding: 20px 0;
   margin: 0;
   vertical-align: bottom; }
-  /* line 30, ../sass/_structure.scss */
+  /* line 21, ../sass/_structure.scss */
   .site-logo a {
     text-indent: -999em;
     text-align: left;
@@ -949,7 +922,7 @@ li {
     background-image: url('/images/logo.gif?1339662808');
     width: 200px;
     height: 60px; }
-    /* line 43, ../sass/_structure.scss */
+    /* line 34, ../sass/_structure.scss */
     .site-logo a:hover, .site-logo a:focus {
       filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=80);
       opacity: 0.8;
@@ -958,10 +931,7 @@ li {
       -o-transition: opacity 0.5s ease-out;
       transition: opacity 0.5s ease-out; }
 
-/* ####################################### */
-/* ############# CONTAINERS ############## */
-/* ####################################### */
-/* line 59, ../sass/_structure.scss */
+/* line 53, ../sass/_structure.scss */
 .container,
 .container-inner {
   *zoom: 1; }
@@ -972,103 +942,73 @@ li {
     display: table;
     clear: both; }
 
-/* line 63, ../sass/_structure.scss */
+/* line 57, ../sass/_structure.scss */
 .container-inner {
   width: 960px;
   margin: 0 auto; }
 
 /* add "container-fluid" class to get fluid/flexible layout */
-/* line 70, ../sass/_structure.scss */
+/* line 64, ../sass/_structure.scss */
 .page-fluid .container-inner,
 .container-fluid .container-inner {
   width: 90%; }
 
-/* line 76, ../sass/_structure.scss */
-div[role="main"] .container-inner,
-.content .container-inner {
-  padding-top: 30px;
-  padding-bottom: 30px; }
-
-/* ####################################### */
-/* ############ COLUMN CONFIG ############ */
-/* ####################################### */
-/* line 86, ../sass/_structure.scss */
+/* line 72, ../sass/_structure.scss */
 .col {
-  padding: 20px 30px;
+  padding: 10px 20px;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box; }
 
-/*  Bones CSS Framework
- *	v 0.1 - 2012
- *  Copyright(c) 2012 David Smith | www.aheadcreative.com
- *
- *  This work is licenced under the Creative Commons Attribution-No Derivative Works 3.0 Unported License. 
- *	http://creativecommons.org/licenses/by-nd/3.0/ 
- *
- *--------------------------------------------------------------------------*/
-/* DOCUMENT INFORMATION
-	- Document: 			Navigation
-	- Description:			Default navigation styles
-	- Version:  			0.1
-	- Author:   			David Smith
-	- Acknowledgements		Twitter Bootstrap 2
-						
-*/
-/* line 21, ../sass/_nav.scss */
-.nav, .navbar, .navbar-fixed,
+/* ============================================================ */
+/* ============================================================ */
+/* line 17, ../sass/_nav.scss */
+.nav, .nav-primary,
 .nav ul,
-.navbar ul,
-.navbar-fixed ul,
+.nav-primary ul,
 .nav ol,
-.navbar ol,
-.navbar-fixed ol {
+.nav-primary ol {
   margin: 0;
   padding: 0;
   list-style: none; }
 
-/* line 27, ../sass/_nav.scss */
-.nav li, .navbar li, .navbar-fixed li {
+/* line 23, ../sass/_nav.scss */
+.nav li, .nav-primary li {
   position: relative; }
 
-/* line 31, ../sass/_nav.scss */
-.nav li a, .navbar li a, .navbar-fixed li a {
+/* line 27, ../sass/_nav.scss */
+.nav li a, .nav-primary li a {
   display: block;
   width: auto;
-  text-decoration: none;
-  padding: 0.76923076923076923076923076923077em 20px; }
+  padding: 0.625em 20px;
+  text-decoration: none; }
 
-/* ####################################### */
-/* ############## =NAVBAR ################ */
-/* ####################################### */
-/* line 42, ../sass/_nav.scss */
-.navbar, .navbar-fixed {
+/* line 38, ../sass/_nav.scss */
+.nav-primary {
+  *zoom: 1;
   overflow: visible;
-  background-color: #999999;
-  *zoom: 1; }
+  background-color: #999999; }
   /* line 38, ../../../../../CodeKit.app/Contents/Resources/engines/compass/frameworks/compass/stylesheets/compass/utilities/general/_clearfix.scss */
-  .navbar:after, .navbar-fixed:after {
+  .nav-primary:after {
     content: "";
     display: table;
     clear: both; }
-  /* line 48, ../sass/_nav.scss */
-  .navbar li, .navbar-fixed li {
+  /* line 45, ../sass/_nav.scss */
+  .nav-primary li {
     float: left; }
-  /* line 52, ../sass/_nav.scss */
-  .navbar a, .navbar-fixed a {
+  /* line 49, ../sass/_nav.scss */
+  .nav-primary a {
     text-align: center;
     color: #333333; }
-    /* line 56, ../sass/_nav.scss */
-    .navbar a:hover, .navbar-fixed a:hover {
+    /* line 54, ../sass/_nav.scss */
+    .nav-primary a:hover, .nav-primary a:focus {
       color: white; }
 
 /* line 63, ../sass/_nav.scss */
-.navbar li:hover .sub-menu, .navbar-fixed li:hover .sub-menu {
+.nav-primary li:hover .sub-menu, .nav-primary li:focus .sub-menu {
   left: 0; }
 
-/* FIXED NAVBAR
-------------------------------------------------*/
-/* line 70, ../sass/_nav.scss */
+/* line 72, ../sass/_nav.scss */
 .navbar-fixed {
   position: fixed;
   top: 0;
@@ -1076,10 +1016,7 @@ div[role="main"] .container-inner,
   left: 0;
   z-index: 1030; }
 
-/* ####################################### */
-/* ########### =NAV DROPDOWN ############# */
-/* ####################################### */
-/* line 84, ../sass/_nav.scss */
+/* line 85, ../sass/_nav.scss */
 .sub-menu {
   position: absolute;
   top: auto;
@@ -1088,7 +1025,7 @@ div[role="main"] .container-inner,
   text-align: left;
   direction: ltr;
   background-color: #999999; }
-  /* line 93, ../sass/_nav.scss */
+  /* line 94, ../sass/_nav.scss */
   .sub-menu li {
     vertical-align: bottom;
     /* This fixes the IE5 Win gap (no harm done to modern browsers) */
@@ -1096,7 +1033,7 @@ div[role="main"] .container-inner,
     width: 100%;
     /* inherit the width of the parent <ul> */
     clear: both; }
-    /* line 100, ../sass/_nav.scss */
+    /* line 101, ../sass/_nav.scss */
     .sub-menu li a {
       white-space: nowrap;
       /* forces drop down to stretch to accommodate length of text (and not wrap) */

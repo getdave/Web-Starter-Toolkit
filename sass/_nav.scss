@@ -1,20 +1,16 @@
-/*  Bones CSS Framework
- *	v 0.1 - 2012
- *  Copyright(c) 2012 David Smith | www.aheadcreative.com
- *
- *  This work is licenced under the Creative Commons Attribution-No Derivative Works 3.0 Unported License. 
- *	http://creativecommons.org/licenses/by-nd/3.0/ 
- *
- *--------------------------------------------------------------------------*/
-  
-/* DOCUMENT INFORMATION
-	- Document: 			Navigation
-	- Description:			Default navigation styles
-	- Version:  			0.1
-	- Author:   			David Smith
-	- Acknowledgements		Twitter Bootstrap 2
-						
-*/
+/* ============================================================ */
+
+// NAVIGATION
+
+// Description:			Default navigation styles for Global nav
+//						elements
+// Acknowledgements		Twitter Bootstrap 2
+
+/* ============================================================ */
+
+// ==========================================================================
+// GLOBAL
+// ==========================================================================
 
 .nav,
 .nav ul,
@@ -31,19 +27,20 @@
 .nav li a {
 	display: block;
 	width: auto;
+	padding: rsize(10px) 20px;
 	text-decoration: none;
-	padding: 0.76923076923076923076923076923077em 20px;
 }
 
-/* ####################################### */
-/* ############## =NAVBAR ################ */
-/* ####################################### */
+// ==========================================================================
+// NAV PRIMARY
+// ==========================================================================
 
-.navbar {
+.nav-primary {
 	@extend .nav;
+	@include pie-clearfix;
 	overflow: visible;
 	background-color: $navbarBackground;
-	@include pie-clearfix;
+
  	
  	li {
 		float: left;		
@@ -53,19 +50,24 @@
 		text-align: center;
 		color: $navbarLinkColor;
 
-		&:hover {
+		&:hover,
+		&:focus {
 			color: $navbarLinkColorHover;
 		}
 	}	
 }
 
-
-.navbar li:hover .sub-menu {
-	left: 0;
+// Show submenu on :hover/:focus
+.nav-primary li {
+	&:hover .sub-menu,
+	&:focus .sub-menu {
+		left: 0;
+	}
 }
 
-/* FIXED NAVBAR
-------------------------------------------------*/
+
+// STATE: FIXED POSITION
+// ==========================================================================
 
 .navbar-fixed {
 	@extend .navbar;
@@ -77,9 +79,8 @@
 }
 
 
-/* ####################################### */
-/* ########### =NAV DROPDOWN ############# */
-/* ####################################### */
+// SUBMENUS
+// ==========================================================================
 
 .sub-menu {
 	position: absolute;
@@ -104,6 +105,9 @@
 		}
 	}
 }
+
+
+
 
 
 
