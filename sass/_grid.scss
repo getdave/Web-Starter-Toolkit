@@ -1,30 +1,26 @@
-/*  Bones CSS Framework
- *	v 0.1 - 2012
- *  Copyright(c) 2012 David Smith | www.aheadcreative.com
- *
- *  This work is licenced under the Creative Commons Attribution-No Derivative Works 3.0 Unported License. 
- *	http://creativecommons.org/licenses/by-nd/3.0/ 
- *
- *--------------------------------------------------------------------------*/
-  
-/* DOCUMENT INFORMATION
-	- Document: 			"Grids" CSS
-	- Description: 			Set of grid classes
-	- Version:  			0.1
-	- Author:   			David Smith
-	- Acknowledgements		OOCSS - https://github.com/stubbornella/oocss
-							1140 CSS GRID - http://cssgrid.net/
-							Twitter Bootstrap Grid
-							Deep Blue Sky Grid System
-*/
+/* ============================================================ */
 
-/* ####################################### */
-/* ########### STANDARD GRID ############# */
-/* ####################################### */
+// GRIDS
 
-/* GRID LINES (for clearing grid lines/rows)
-------------------------------------------------*/
-	
+// Description:			Standard layout grid system. Can be customised via Variables
+
+// Acknowledgements:	OOCSS - https://github.com/stubbornella/oocss
+//						1140 CSS GRID - http://cssgrid.net/
+//						Twitter Bootstrap Grid
+
+/* ============================================================ */
+
+
+
+
+// ==========================================================================
+// STANDARD GRID
+// ==========================================================================
+
+
+// GRID LINES (for clearing grid lines/rows)
+// ==========================================================================
+
 .line {
 	margin: 0 30px;
 	/* trigger new block formatting context in all browsers */
@@ -34,8 +30,8 @@
 }
 
 
-/* GRID UNITS
-------------------------------------------------*/
+// GRID UNITS
+// ==========================================================================
 
 /* main */		/* alias */
 .onecol, 
@@ -56,8 +52,9 @@
 }
 
 
-/* GRID COLUMNS
-------------------------------------------------*/
+// GRID COLUMNS
+// ==========================================================================
+
 $count: 1;
 @each $col in $cols_as_string {
 	@if ($cols % $count == 0) {
@@ -85,8 +82,9 @@ $count: 1;
 $count: 1;
 
 
-/* GRID PUSH CLASSES
-------------------------------------------------*/
+// GRID PUSH CLASSES
+// ==========================================================================
+
 $count: 1;
 @each $col in $cols_as_string {
 	
@@ -115,8 +113,9 @@ $count: 1;
 $count: 1;
 
 
-/* GRID PULL CLASSES
-------------------------------------------------*/
+// GRID PULL CLASSES
+// ==========================================================================
+
 $count: 1;
 @each $col in $cols_as_string {
 	
@@ -146,27 +145,34 @@ $count: 1;
 
 
 
+// LASTCOL 
+// ==========================================================================
 
+//
+// To can avoid having to add .lastcol 
+// 1) uncomment the CSS3 selectors below
+// 2) comment out the .lastcol selector
+// 3) make sure you don't need to support <=IE8 cos it won't work!
+//
 
-/* To can avoid having to add .lastcol 
-   1) uncomment the CSS3 selectors below
-   2) comment out the .lastcol selector
-   3) make sure you don't need to support <=IE8 cos it won't work!
-*/
-
-  
+// We use :first-child because it has better support
 [class*="col"]:first-child:not(:only-child),
 [class*="size"]:first-child:not(:only-child),
-.lastcol {
+.firstcol {
 	margin-left: 0;
 }
 
+
+// COLUMN OVERIDES
+// ==========================================================================
+
+// When you want a column to be full width
 .full-col {
 	width: auto;
 	float: none;
 }
 
-/* centered column */
+// When you want a centered column
 .centered {
     margin: 0 auto;
     float: none;

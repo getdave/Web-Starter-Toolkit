@@ -34,7 +34,7 @@
 // ==========================================================================
 
 // Normalize (we prefer this over CSS resets)
-@import "_normalize.scss";
+@import "normalize.scss";
 
 // Helper classes
 @import "_helpers.scss";
@@ -66,6 +66,11 @@
 // Standard nav patterns
 @import "_nav.scss";
 
+// Button styles (optional)
+@import "_buttons.scss";
+
+
+
 
 // ==========================================================================
 // FORMS
@@ -75,15 +80,17 @@
 //@import "_forms.scss";
 
 
+
 // ==========================================================================
 // TEXTURE
 // ==========================================================================
 
-// Font Awesome icon fonts (optional)
-//@import "_font-awesome";
+// ICONS
+// ==========================================================================
 
-// Button styles (optional)
-//@import "_buttons.scss";
+// Font Awesome icon fonts (optional)
+@import "_font-awesome";
+
 
 
 // ==========================================================================
@@ -112,9 +119,24 @@
 // Ideally all breakpoints should be set using em's rather than pixels.
 // Use the Media Query bookmarklet at http://seesparkbox.com/foundry/media_query_bookmarklet
 //
+// TODO: set media queries as variables when Sass 3.2 is out
+//
 
 // EXAMPLE BREAKPOINTS - you should be customising these
 // ==========================================================================
+
+//
+// DRY Media Queries
+// For each media query we set a content property which can be read by Javascript to determine breakpoints
+// This way we keep the breakpoint definitions in a single place
+// https://github.com/JoshBarr/js-media-queries
+//
+
+// The first media query is the abscence of a media query!
+body:after {
+    content: 'mobile';
+    display: none;
+}
 
 // 480px
 @media only screen and (min-width: 30em) {
@@ -124,6 +146,9 @@
 // 600px
 @media only screen and (min-width: 37.5em) {
 	//@import "mq/600";
+	body:after {
+        content: 'tablet'
+    }
 }
 
 // 768px
@@ -144,6 +169,9 @@
 // 2x (Retina!)
 @media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min--moz-device-pixel-ratio: 1.5), only screen and (min-device-pixel-ratio: 1.5) {
 	//@import "mq/2x"; 
+	body:after {
+		content: 'retina'
+	}
 }
 
 

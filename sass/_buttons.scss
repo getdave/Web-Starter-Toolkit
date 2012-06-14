@@ -168,7 +168,7 @@
 	border-top: 4px solid #fff;
 	background: 0;
 	margin-left: 4px;
-	margin-top: 9px;
+	margin-top: rsize(12px);
 	content: "\2193";
 	@include opacity(0.75);	
 }
@@ -188,7 +188,7 @@
 }
 
 .dropdown-toggle .caret {
-	margin-top: 9px;
+	margin-top: rsize(12px);
 	margin-left: 0;
 }
 

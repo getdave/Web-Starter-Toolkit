@@ -1,25 +1,16 @@
-/*  Bones CSS Framework
- *	v 0.1 - 2012
- *  Copyright(c) 2012 David Smith | www.aheadcreative.com
- *
- *  This work is licenced under the Creative Commons Attribution-No Derivative Works 3.0 Unported License. 
- *	http://creativecommons.org/licenses/by-nd/3.0/ 
- *
- *--------------------------------------------------------------------------*/
-  
-/* DOCUMENT INFORMATION
-	- Document: 			Structure
-	- Description:			Standard structures for common layouts and page division
-	- Version:  			0.1
-	- Author:   			David Smith
-	- Acknowledgements		Twitter Bootstrap 2
-						
-*/
+/* ============================================================ */
+
+// STRUCTURE
+
+// Description:			Standard structures for common layouts and page division.
+//						Common layout elements (eg: logo...etc)
+
+/* ============================================================ */
 
 
-/* ####################################### */
-/* ################ LOGO ################# */
-/* ####################################### */
+// ==========================================================================
+// SITE LOGO
+// ==========================================================================
 
 .site-logo {
 	display: block;
@@ -51,9 +42,12 @@
 	}
 }
 
-/* ####################################### */
-/* ############# CONTAINERS ############## */
-/* ####################################### */
+// ==========================================================================
+// PAGE LAYOUT STRUCTURES
+// ==========================================================================
+
+// Page "section" containers
+// ==========================================================================
 
 .container,
 .container-inner {
@@ -61,30 +55,22 @@
 }
 
 .container-inner {
-	width: 960px;
+	width: 90%;
 	margin: 0 auto;	
 }
 
 /* add "container-fluid" class to get fluid/flexible layout */
-.page-fluid .container-inner,
-.container-fluid .container-inner {
+.page-statuc .container-inner,
+.container-static .container-inner {
 	//@extend .container-inner;
-	width: 90%;
+	width: 960px;
 }
 
-div[role="main"] .container-inner,
-.content .container-inner {
-	padding-top: 30px;
-	padding-bottom: 30px;
-}
-
-
-/* ####################################### */
-/* ############ COLUMN CONFIG ############ */
-/* ####################################### */
+// Page Column config
+// ==========================================================================
 
 .col {
-	padding: 20px 30px;
+	padding: $colPadding;
 	@include box-sizing(border-box);
 }
 

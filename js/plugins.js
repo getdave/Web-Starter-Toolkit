@@ -43,3 +43,21 @@ window.log = function f() {
 }());
 
 // place any jQuery/helper plugins in here, instead of separate, slower script files.
+
+
+
+
+jQuery(document).ready(function($) {
+    
+    // Get the active Media Query passed in via the CSS as pseudo element
+    var activeMQ = window.getComputedStyle(document.body,':after').getPropertyValue('content');
+
+    if (activeMQ === 'mobile') {
+        $('.nav-primary').narrowNavMenu();
+    }
+
+
+    // Responsive Nav
+    
+});
+    

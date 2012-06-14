@@ -1,6 +1,15 @@
-/* ####################################### */
-/* ################ BASE ################# */
-/* ####################################### */
+/* ============================================================ */
+
+// TYPOGRAPHY
+
+// Description:			Site-wide styles for block level (h1, p) and text-level (em, strong) type...etc
+
+/* ============================================================ */
+
+
+// ==========================================================================
+// GLOBAL
+// ==========================================================================
 
 body {
 	font-family: $baseFontFamily;
@@ -9,17 +18,16 @@ body {
 	color: $grayDark;
 }
 
-p {
-	margin: 0 0 $baseLineHeight / 2;
-	font-family: $baseFontFamily;
-	font-size: $baseFontSize;
-	line-height: $baseLineHeight;
-}
 
 
-/* ####################################### */
-/* ############## HEADINGS ############### */
-/* ####################################### */
+// ==========================================================================
+// HEADERS
+// ==========================================================================
+
+//
+// Based on the ancient Typographic scale
+// http://www.markboulton.co.uk/journal/comments/five-simple-steps-to-better-typography-part-4
+// 
 
 h1, h2, h3, h4, h5, h6 { 
 	font-weight: bold; 
@@ -27,31 +35,31 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1,.h1 {
+	font-size: rsize(36px,12px);
 	color: $grayDarker;
-	font-size:2.5em;
 	line-height:1;
 	margin-bottom:.5em;
-  	text-rendering: optimizelegibility; // Fix the character spacing for headings
+  	text-rendering: optimizelegibility; 
 }
 
 h2,.h2 {
+	font-size: rsize(24px,12px);
 	color: $grayDarker;
-	font-size:2em;
 	line-height:1;
 	margin-bottom:.75em;
 }
 
 h3,.h3 {
+	font-size: rsize(21px,12px);
 	color:$grayDark;
-	font-size:1.5em;
 	line-height:1;
 	margin-bottom:.5em;
 	padding-top:.5em;
 }
 
 h4,.h4 {
+	font-size: rsize(16px,12px);
 	color:$grayDark;
-	font-size:1.2em;
 	line-height:1;
 	margin-bottom:.5em;
 	padding-top:1em;
@@ -69,15 +77,22 @@ h6,.h6 {
 	line-height:1;
 }
 
+// ==========================================================================
+// PARAGRAPHS
+// ==========================================================================
+
+p {
+	margin: 0 0 $baseLineHeight;
+	font-family: $baseFontFamily;
+	font-size: $baseFontSize;
+	line-height: $baseLineHeight;
+}
 
 
 
-
-
-
-/* ####################################### */
-/* ################ LINKS ################ */
-/* ####################################### */
+// ==========================================================================
+// LINKS
+// ==========================================================================
 
 a {
 	color: $linkColor;
@@ -97,27 +112,62 @@ a:hover, a:active {
 }
 
 
-/* ####################################### */
-/* ################ LISTS ################ */
-/* ####################################### */
+// ==========================================================================
+// LISTS
+// ==========================================================================
 
-
+// Typical lists
 ul, ol {
   	padding: 0;
   	margin: 0 0 $baseLineHeight / 2 25px;
 }
+
+// Nested lists
 ul ul,
 ul ol,
 ol ol,
 ol ul {
   	margin-bottom: 0;
 }
+
 ul {
   	list-style: disc;
 }
+
 ol {
   	list-style: decimal;
 }
+
 li {
   	line-height: $baseLineHeight;
 }
+
+// ==========================================================================
+// BLOCKQUOTES
+// ==========================================================================
+
+
+blockquote, blockquote p { line-height: 1.5; color: #777; }
+blockquote { margin: 0 0 ms(1); padding: 9px 20px 0 19px; border-left: 1px solid #ddd; }
+blockquote cite { display: block; font-size: ms(0) - 1; color: #555; }
+blockquote cite:before { content: "\2014 \0020"; }
+blockquote cite a, blockquote cite a:visited { color: #555; }
+
+
+// ==========================================================================
+// IMAGES
+// ==========================================================================
+
+// Set things up for responsive
+img {
+	max-width: 100%;
+	vertical-align: middle;
+	border: 0;
+	-ms-interpolation-mode: bicubic;
+}
+
+// We need to revert these for Google maps cos else it breaks!
+#googlemap img, object, embed { max-width: none; }
+#map_canvas embed { max-width: none; }
+#map_canvas img { max-width: none; }
+#map_canvas object { max-width: none; }
