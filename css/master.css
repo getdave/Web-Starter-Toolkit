@@ -1088,25 +1088,26 @@ img {
       padding: 0.4615384615384615em 20px;
       text-align: left; }
 
+/* line 113, ../sass/_nav.scss */
+.nav-menu-narrow button {
+  display: none; }
+
 /* Styling for the vertical state. This media query uses an arbitrary width of 480px. In real world cases this would be adjusted to a suitable value for the design and the number of options in the menu. */
 @media only screen and (max-width:480px) {
-  /* line 120, ../sass/_nav.scss */
+  /* line 124, ../sass/_nav.scss */
   .nav-primary {
     overflow: visible; }
-    /* line 123, ../sass/_nav.scss */
+    /* line 127, ../sass/_nav.scss */
     .nav-primary li {
       display: block;
       float: none; }
-    /* line 128, ../sass/_nav.scss */
-    .nav-primary button {
-      display: none; }
-    /* line 132, ../sass/_nav.scss */
+    /* line 134, ../sass/_nav.scss */
     .nav-primary a {
       text-align: left; }
-      /* line 135, ../sass/_nav.scss */
+      /* line 137, ../sass/_nav.scss */
       .nav-primary a .caret {
         display: none; }
-    /* line 140, ../sass/_nav.scss */
+    /* line 142, ../sass/_nav.scss */
     .nav-primary .sub-menu {
       position: absolute !important;
       clip: rect(1px, 1px, 1px, 1px) !important;
@@ -1116,11 +1117,12 @@ img {
       width: 1px !important;
       overflow: hidden !important; }
 
-  /* line 158, ../sass/_nav.scss */
+  /* line 160, ../sass/_nav.scss */
   .nav-menu-narrow {
     position: relative; }
-    /* line 162, ../sass/_nav.scss */
+    /* line 164, ../sass/_nav.scss */
     .nav-menu-narrow button {
+      display: inline-block;
       position: absolute;
       top: 0;
       right: 0;
@@ -1131,23 +1133,27 @@ img {
       border: 0;
       border-left: 1px solid rgba(255, 255, 255, 0.6);
       color: #fff;
-      background: #970601 url(/i/nav-tab.png) repeat-x;
       cursor: pointer;
       font-size: 16px;
+      background-color: #0088cc;
       line-height: 1.667em; }
-      /* line 178, ../sass/_nav.scss */
+      /* line 181, ../sass/_nav.scss */
       .nav-menu-narrow button:focus {
         outline: 1px solid rgba(0, 0, 0, 0.5); }
-      /* line 183, ../sass/_nav.scss */
+      /* line 186, ../sass/_nav.scss */
       .nav-menu-narrow button:after {
         display: inline-block;
         width: 15px;
         height: 11px;
         margin-left: 6px;
-        background: url(expand-contract.png) no-repeat;
+        font-family: FontAwesome;
+        font-weight: normal;
+        font-style: normal;
         opacity: 0.8;
-        content: ""; }
-      /* line 194, ../sass/_nav.scss */
+        vertical-align: top;
+        margin-top: 0.125em;
+        content: "\f0c9"; }
+      /* line 202, ../sass/_nav.scss */
       .nav-menu-narrow button span {
         position: absolute;
         clip: rect(1px, 1px, 1px, 1px);
@@ -1156,24 +1162,24 @@ img {
         height: 1px;
         width: 1px;
         overflow: hidden; }
-    /* line 206, ../sass/_nav.scss */
+    /* line 214, ../sass/_nav.scss */
     .nav-menu-narrow li {
       display: none; }
 
-  /* line 214, ../sass/_nav.scss */
+  /* line 222, ../sass/_nav.scss */
   .nav-menu-narrow button::-moz-focus-inner {
     padding: 0;
     border: 0; }
 
-  /* line 219, ../sass/_nav.scss */
+  /* line 227, ../sass/_nav.scss */
   .nav-menu-narrow.expanded button:after {
     background-position: -100px 0; }
 
-  /* line 223, ../sass/_nav.scss */
+  /* line 231, ../sass/_nav.scss */
   .nav-menu-narrow button:focus:after {
     opacity: 1; }
 
-  /* line 230, ../sass/_nav.scss */
+  /* line 238, ../sass/_nav.scss */
   .nav-menu-narrow.expanded li,
   .nav-menu-narrow li.sel {
     display: block; } }
@@ -1407,6 +1413,673 @@ img {
 /* line 195, ../sass/_buttons.scss */
 .btn-small .caret {
   border-top-width: 3px; }
+
+/*  Font Awesome
+    the iconic font designed for use with Twitter Bootstrap
+    -------------------------------------------------------
+    The full suite of pictographic icons, examples, and documentation
+    can be found at: http://fortawesome.github.com/Font-Awesome/
+
+    License
+    -------------------------------------------------------
+    The Font Awesome webfont, CSS, and LESS files are licensed under CC BY 3.0:
+    http://creativecommons.org/licenses/by/3.0/ A mention of
+    'Font Awesome - http://fortawesome.github.com/Font-Awesome' in human-readable
+    source code is considered acceptable attribution (most common on the web).
+    If human readable source code is not available to the end user, a mention in
+    an 'About' or 'Credits' screen is considered acceptable (most common in desktop
+    or mobile software).
+
+    Contact
+    -------------------------------------------------------
+    Email: dave@davegandy.com
+    Twitter: http://twitter.com/fortaweso_me
+    Work: http://lemonwi.se co-founder
+
+    */
+@font-face {
+  font-family: "FontAwesome";
+  src: url(/fonts/fontawesome-webfont.eot);
+  src: url(/fonts/fontawesome-webfont.eot?#iefix) format('eot'), url(/fonts/fontawesome-webfont.woff) format('woff'), url(/fonts/fontawesome-webfont.ttf) format('truetype'), url(/fonts/fontawesome-webfont.otf) format('opentype'), url(/fonts/fontawesome-webfont.svgz#FontAwesomeRegular) format('svg'), url(/fonts/fontawesome-webfont.svg#FontAwesomeRegular) format('svg');
+  font-weight: normal;
+  font-style: normal; }
+
+/* sprites.less reset */
+/* line 42, ../sass/_font-awesome.scss */
+[class^="icon-"],
+[class*=" icon-"] {
+  display: inline;
+  width: auto;
+  height: auto;
+  line-height: inherit;
+  vertical-align: baseline;
+  background-image: none;
+  background-position: 0% 0%;
+  background-repeat: repeat; }
+
+/* line 53, ../sass/_font-awesome.scss */
+li[class^="icon-"],
+li[class*=" icon-"] {
+  display: block; }
+
+/*  Font Awesome styles
+    ------------------------------------------------------- */
+/* line 60, ../sass/_font-awesome.scss */
+[class^="icon-"]:before,
+[class*=" icon-"]:before {
+  font-family: FontAwesome;
+  font-weight: normal;
+  font-style: normal;
+  display: inline-block;
+  text-decoration: inherit; }
+
+/* line 69, ../sass/_font-awesome.scss */
+a [class^="icon-"],
+a [class*=" icon-"] {
+  display: inline-block;
+  text-decoration: inherit; }
+
+/* makes the font 33% larger relative to the icon container */
+/* line 75, ../sass/_font-awesome.scss */
+.icon-large:before {
+  vertical-align: top;
+  font-size: 4/3em; }
+
+/* line 82, ../sass/_font-awesome.scss */
+.btn [class^="icon-"],
+.btn [class*=" icon-"] {
+  /* keeps button heights with and without icons the same */
+  line-height: .9em; }
+
+/* line 90, ../sass/_font-awesome.scss */
+li [class^="icon-"],
+li [class*=" icon-"] {
+  display: inline-block;
+  width: 1.25em;
+  text-align: center; }
+/* line 96, ../sass/_font-awesome.scss */
+li .icon-large[class^="icon-"],
+li .icon-large[class*=" icon-"] {
+  /* 1.5 increased font size for icon-large * 1.25 width */
+  width: 1.875em; }
+
+/* line 103, ../sass/_font-awesome.scss */
+li[class^="icon-"],
+li[class*=" icon-"] {
+  margin-left: 0;
+  list-style-type: none; }
+  /* line 107, ../sass/_font-awesome.scss */
+  li[class^="icon-"]:before,
+  li[class*=" icon-"]:before {
+    text-indent: -2em;
+    text-align: center; }
+  /* line 111, ../sass/_font-awesome.scss */
+  li[class^="icon-"].icon-large:before,
+  li[class*=" icon-"].icon-large:before {
+    text-indent: -4/3em; }
+
+/*  Font Awesome uses the Unicode Private Use Area (PUA) to ensure screen
+    readers do not read off random characters that represent icons */
+/* line 118, ../sass/_font-awesome.scss */
+.icon-glass:before {
+  content: "\f000"; }
+
+/* line 119, ../sass/_font-awesome.scss */
+.icon-music:before {
+  content: "\f001"; }
+
+/* line 120, ../sass/_font-awesome.scss */
+.icon-search:before {
+  content: "\f002"; }
+
+/* line 121, ../sass/_font-awesome.scss */
+.icon-envelope:before {
+  content: "\f003"; }
+
+/* line 122, ../sass/_font-awesome.scss */
+.icon-heart:before {
+  content: "\f004"; }
+
+/* line 123, ../sass/_font-awesome.scss */
+.icon-star:before {
+  content: "\f005"; }
+
+/* line 124, ../sass/_font-awesome.scss */
+.icon-star-empty:before {
+  content: "\f006"; }
+
+/* line 125, ../sass/_font-awesome.scss */
+.icon-user:before {
+  content: "\f007"; }
+
+/* line 126, ../sass/_font-awesome.scss */
+.icon-film:before {
+  content: "\f008"; }
+
+/* line 127, ../sass/_font-awesome.scss */
+.icon-th-large:before {
+  content: "\f009"; }
+
+/* line 128, ../sass/_font-awesome.scss */
+.icon-th:before {
+  content: "\f00a"; }
+
+/* line 129, ../sass/_font-awesome.scss */
+.icon-th-list:before {
+  content: "\f00b"; }
+
+/* line 130, ../sass/_font-awesome.scss */
+.icon-ok:before {
+  content: "\f00c"; }
+
+/* line 131, ../sass/_font-awesome.scss */
+.icon-remove:before {
+  content: "\f00d"; }
+
+/* line 132, ../sass/_font-awesome.scss */
+.icon-zoom-in:before {
+  content: "\f00e"; }
+
+/* line 134, ../sass/_font-awesome.scss */
+.icon-zoom-out:before {
+  content: "\f010"; }
+
+/* line 135, ../sass/_font-awesome.scss */
+.icon-off:before {
+  content: "\f011"; }
+
+/* line 136, ../sass/_font-awesome.scss */
+.icon-signal:before {
+  content: "\f012"; }
+
+/* line 137, ../sass/_font-awesome.scss */
+.icon-cog:before {
+  content: "\f013"; }
+
+/* line 138, ../sass/_font-awesome.scss */
+.icon-trash:before {
+  content: "\f014"; }
+
+/* line 139, ../sass/_font-awesome.scss */
+.icon-home:before {
+  content: "\f015"; }
+
+/* line 140, ../sass/_font-awesome.scss */
+.icon-file:before {
+  content: "\f016"; }
+
+/* line 141, ../sass/_font-awesome.scss */
+.icon-time:before {
+  content: "\f017"; }
+
+/* line 142, ../sass/_font-awesome.scss */
+.icon-road:before {
+  content: "\f018"; }
+
+/* line 143, ../sass/_font-awesome.scss */
+.icon-download-alt:before {
+  content: "\f019"; }
+
+/* line 144, ../sass/_font-awesome.scss */
+.icon-download:before {
+  content: "\f01a"; }
+
+/* line 145, ../sass/_font-awesome.scss */
+.icon-upload:before {
+  content: "\f01b"; }
+
+/* line 146, ../sass/_font-awesome.scss */
+.icon-inbox:before {
+  content: "\f01c"; }
+
+/* line 147, ../sass/_font-awesome.scss */
+.icon-play-circle:before {
+  content: "\f01d"; }
+
+/* line 148, ../sass/_font-awesome.scss */
+.icon-repeat:before {
+  content: "\f01e"; }
+
+/* \f020 is not a valid unicode character. all shifted one down */
+/* line 151, ../sass/_font-awesome.scss */
+.icon-refresh:before {
+  content: "\f021"; }
+
+/* line 152, ../sass/_font-awesome.scss */
+.icon-list-alt:before {
+  content: "\f022"; }
+
+/* line 153, ../sass/_font-awesome.scss */
+.icon-lock:before {
+  content: "\f023"; }
+
+/* line 154, ../sass/_font-awesome.scss */
+.icon-flag:before {
+  content: "\f024"; }
+
+/* line 155, ../sass/_font-awesome.scss */
+.icon-headphones:before {
+  content: "\f025"; }
+
+/* line 156, ../sass/_font-awesome.scss */
+.icon-volume-off:before {
+  content: "\f026"; }
+
+/* line 157, ../sass/_font-awesome.scss */
+.icon-volume-down:before {
+  content: "\f027"; }
+
+/* line 158, ../sass/_font-awesome.scss */
+.icon-volume-up:before {
+  content: "\f028"; }
+
+/* line 159, ../sass/_font-awesome.scss */
+.icon-qrcode:before {
+  content: "\f029"; }
+
+/* line 160, ../sass/_font-awesome.scss */
+.icon-barcode:before {
+  content: "\f02a"; }
+
+/* line 161, ../sass/_font-awesome.scss */
+.icon-tag:before {
+  content: "\f02b"; }
+
+/* line 162, ../sass/_font-awesome.scss */
+.icon-tags:before {
+  content: "\f02c"; }
+
+/* line 163, ../sass/_font-awesome.scss */
+.icon-book:before {
+  content: "\f02d"; }
+
+/* line 164, ../sass/_font-awesome.scss */
+.icon-bookmark:before {
+  content: "\f02e"; }
+
+/* line 165, ../sass/_font-awesome.scss */
+.icon-print:before {
+  content: "\f02f"; }
+
+/* line 167, ../sass/_font-awesome.scss */
+.icon-camera:before {
+  content: "\f030"; }
+
+/* line 168, ../sass/_font-awesome.scss */
+.icon-font:before {
+  content: "\f031"; }
+
+/* line 169, ../sass/_font-awesome.scss */
+.icon-bold:before {
+  content: "\f032"; }
+
+/* line 170, ../sass/_font-awesome.scss */
+.icon-italic:before {
+  content: "\f033"; }
+
+/* line 171, ../sass/_font-awesome.scss */
+.icon-text-height:before {
+  content: "\f034"; }
+
+/* line 172, ../sass/_font-awesome.scss */
+.icon-text-width:before {
+  content: "\f035"; }
+
+/* line 173, ../sass/_font-awesome.scss */
+.icon-align-left:before {
+  content: "\f036"; }
+
+/* line 174, ../sass/_font-awesome.scss */
+.icon-align-center:before {
+  content: "\f037"; }
+
+/* line 175, ../sass/_font-awesome.scss */
+.icon-align-right:before {
+  content: "\f038"; }
+
+/* line 176, ../sass/_font-awesome.scss */
+.icon-align-justify:before {
+  content: "\f039"; }
+
+/* line 177, ../sass/_font-awesome.scss */
+.icon-list:before {
+  content: "\f03a"; }
+
+/* line 178, ../sass/_font-awesome.scss */
+.icon-indent-left:before {
+  content: "\f03b"; }
+
+/* line 179, ../sass/_font-awesome.scss */
+.icon-indent-right:before {
+  content: "\f03c"; }
+
+/* line 180, ../sass/_font-awesome.scss */
+.icon-facetime-video:before {
+  content: "\f03d"; }
+
+/* line 181, ../sass/_font-awesome.scss */
+.icon-picture:before {
+  content: "\f03e"; }
+
+/* line 183, ../sass/_font-awesome.scss */
+.icon-pencil:before {
+  content: "\f040"; }
+
+/* line 184, ../sass/_font-awesome.scss */
+.icon-map-marker:before {
+  content: "\f041"; }
+
+/* line 185, ../sass/_font-awesome.scss */
+.icon-adjust:before {
+  content: "\f042"; }
+
+/* line 186, ../sass/_font-awesome.scss */
+.icon-tint:before {
+  content: "\f043"; }
+
+/* line 187, ../sass/_font-awesome.scss */
+.icon-edit:before {
+  content: "\f044"; }
+
+/* line 188, ../sass/_font-awesome.scss */
+.icon-share:before {
+  content: "\f045"; }
+
+/* line 189, ../sass/_font-awesome.scss */
+.icon-check:before {
+  content: "\f046"; }
+
+/* line 190, ../sass/_font-awesome.scss */
+.icon-move:before {
+  content: "\f047"; }
+
+/* line 191, ../sass/_font-awesome.scss */
+.icon-step-backward:before {
+  content: "\f048"; }
+
+/* line 192, ../sass/_font-awesome.scss */
+.icon-fast-backward:before {
+  content: "\f049"; }
+
+/* line 193, ../sass/_font-awesome.scss */
+.icon-backward:before {
+  content: "\f04a"; }
+
+/* line 194, ../sass/_font-awesome.scss */
+.icon-play:before {
+  content: "\f04b"; }
+
+/* line 195, ../sass/_font-awesome.scss */
+.icon-pause:before {
+  content: "\f04c"; }
+
+/* line 196, ../sass/_font-awesome.scss */
+.icon-stop:before {
+  content: "\f04d"; }
+
+/* line 197, ../sass/_font-awesome.scss */
+.icon-forward:before {
+  content: "\f04e"; }
+
+/* line 199, ../sass/_font-awesome.scss */
+.icon-fast-forward:before {
+  content: "\f050"; }
+
+/* line 200, ../sass/_font-awesome.scss */
+.icon-step-forward:before {
+  content: "\f051"; }
+
+/* line 201, ../sass/_font-awesome.scss */
+.icon-eject:before {
+  content: "\f052"; }
+
+/* line 202, ../sass/_font-awesome.scss */
+.icon-chevron-left:before {
+  content: "\f053"; }
+
+/* line 203, ../sass/_font-awesome.scss */
+.icon-chevron-right:before {
+  content: "\f054"; }
+
+/* line 204, ../sass/_font-awesome.scss */
+.icon-plus-sign:before {
+  content: "\f055"; }
+
+/* line 205, ../sass/_font-awesome.scss */
+.icon-minus-sign:before {
+  content: "\f056"; }
+
+/* line 206, ../sass/_font-awesome.scss */
+.icon-remove-sign:before {
+  content: "\f057"; }
+
+/* line 207, ../sass/_font-awesome.scss */
+.icon-ok-sign:before {
+  content: "\f058"; }
+
+/* line 208, ../sass/_font-awesome.scss */
+.icon-question-sign:before {
+  content: "\f059"; }
+
+/* line 209, ../sass/_font-awesome.scss */
+.icon-info-sign:before {
+  content: "\f05a"; }
+
+/* line 210, ../sass/_font-awesome.scss */
+.icon-screenshot:before {
+  content: "\f05b"; }
+
+/* line 211, ../sass/_font-awesome.scss */
+.icon-remove-circle:before {
+  content: "\f05c"; }
+
+/* line 212, ../sass/_font-awesome.scss */
+.icon-ok-circle:before {
+  content: "\f05d"; }
+
+/* line 213, ../sass/_font-awesome.scss */
+.icon-ban-circle:before {
+  content: "\f05e"; }
+
+/* line 215, ../sass/_font-awesome.scss */
+.icon-arrow-left:before {
+  content: "\f060"; }
+
+/* line 216, ../sass/_font-awesome.scss */
+.icon-arrow-right:before {
+  content: "\f061"; }
+
+/* line 217, ../sass/_font-awesome.scss */
+.icon-arrow-up:before {
+  content: "\f062"; }
+
+/* line 218, ../sass/_font-awesome.scss */
+.icon-arrow-down:before {
+  content: "\f063"; }
+
+/* line 219, ../sass/_font-awesome.scss */
+.icon-share-alt:before {
+  content: "\f064"; }
+
+/* line 220, ../sass/_font-awesome.scss */
+.icon-resize-full:before {
+  content: "\f065"; }
+
+/* line 221, ../sass/_font-awesome.scss */
+.icon-resize-small:before {
+  content: "\f066"; }
+
+/* line 222, ../sass/_font-awesome.scss */
+.icon-plus:before {
+  content: "\f067"; }
+
+/* line 223, ../sass/_font-awesome.scss */
+.icon-minus:before {
+  content: "\f068"; }
+
+/* line 224, ../sass/_font-awesome.scss */
+.icon-asterisk:before {
+  content: "\f069"; }
+
+/* line 225, ../sass/_font-awesome.scss */
+.icon-exclamation-sign:before {
+  content: "\f06a"; }
+
+/* line 226, ../sass/_font-awesome.scss */
+.icon-gift:before {
+  content: "\f06b"; }
+
+/* line 227, ../sass/_font-awesome.scss */
+.icon-leaf:before {
+  content: "\f06c"; }
+
+/* line 228, ../sass/_font-awesome.scss */
+.icon-fire:before {
+  content: "\f06d"; }
+
+/* line 229, ../sass/_font-awesome.scss */
+.icon-eye-open:before {
+  content: "\f06e"; }
+
+/* line 231, ../sass/_font-awesome.scss */
+.icon-eye-close:before {
+  content: "\f070"; }
+
+/* line 232, ../sass/_font-awesome.scss */
+.icon-warning-sign:before {
+  content: "\f071"; }
+
+/* line 233, ../sass/_font-awesome.scss */
+.icon-plane:before {
+  content: "\f072"; }
+
+/* line 234, ../sass/_font-awesome.scss */
+.icon-calendar:before {
+  content: "\f073"; }
+
+/* line 235, ../sass/_font-awesome.scss */
+.icon-random:before {
+  content: "\f074"; }
+
+/* line 236, ../sass/_font-awesome.scss */
+.icon-comment:before {
+  content: "\f075"; }
+
+/* line 237, ../sass/_font-awesome.scss */
+.icon-magnet:before {
+  content: "\f076"; }
+
+/* line 238, ../sass/_font-awesome.scss */
+.icon-chevron-up:before {
+  content: "\f077"; }
+
+/* line 239, ../sass/_font-awesome.scss */
+.icon-chevron-down:before {
+  content: "\f078"; }
+
+/* line 240, ../sass/_font-awesome.scss */
+.icon-retweet:before {
+  content: "\f079"; }
+
+/* line 241, ../sass/_font-awesome.scss */
+.icon-shopping-cart:before {
+  content: "\f07a"; }
+
+/* line 242, ../sass/_font-awesome.scss */
+.icon-folder-close:before {
+  content: "\f07b"; }
+
+/* line 243, ../sass/_font-awesome.scss */
+.icon-folder-open:before {
+  content: "\f07c"; }
+
+/* line 244, ../sass/_font-awesome.scss */
+.icon-resize-vertical:before {
+  content: "\f07d"; }
+
+/* line 245, ../sass/_font-awesome.scss */
+.icon-resize-horizontal:before {
+  content: "\f07e"; }
+
+/* line 247, ../sass/_font-awesome.scss */
+.icon-bar-chart:before {
+  content: "\f080"; }
+
+/* line 248, ../sass/_font-awesome.scss */
+.icon-twitter-sign:before {
+  content: "\f081"; }
+
+/* line 249, ../sass/_font-awesome.scss */
+.icon-facebook-sign:before {
+  content: "\f082"; }
+
+/* line 250, ../sass/_font-awesome.scss */
+.icon-camera-retro:before {
+  content: "\f083"; }
+
+/* line 251, ../sass/_font-awesome.scss */
+.icon-key:before {
+  content: "\f084"; }
+
+/* line 252, ../sass/_font-awesome.scss */
+.icon-cogs:before {
+  content: "\f085"; }
+
+/* line 253, ../sass/_font-awesome.scss */
+.icon-comments:before {
+  content: "\f086"; }
+
+/* line 254, ../sass/_font-awesome.scss */
+.icon-thumbs-up:before {
+  content: "\f087"; }
+
+/* line 255, ../sass/_font-awesome.scss */
+.icon-thumbs-down:before {
+  content: "\f088"; }
+
+/* line 256, ../sass/_font-awesome.scss */
+.icon-star-half:before {
+  content: "\f089"; }
+
+/* line 257, ../sass/_font-awesome.scss */
+.icon-heart-empty:before {
+  content: "\f08a"; }
+
+/* line 258, ../sass/_font-awesome.scss */
+.icon-signout:before {
+  content: "\f08b"; }
+
+/* line 259, ../sass/_font-awesome.scss */
+.icon-linkedin-sign:before {
+  content: "\f08c"; }
+
+/* line 260, ../sass/_font-awesome.scss */
+.icon-pushpin:before {
+  content: "\f08d"; }
+
+/* line 261, ../sass/_font-awesome.scss */
+.icon-external-link:before {
+  content: "\f08e"; }
+
+/* line 263, ../sass/_font-awesome.scss */
+.icon-signin:before {
+  content: "\f090"; }
+
+/* line 264, ../sass/_font-awesome.scss */
+.icon-trophy:before {
+  content: "\f091"; }
+
+/* line 265, ../sass/_font-awesome.scss */
+.icon-github-sign:before {
+  content: "\f092"; }
+
+/* line 266, ../sass/_font-awesome.scss */
+.icon-upload-alt:before {
+  content: "\f093"; }
+
+/* line 267, ../sass/_font-awesome.scss */
+.icon-lemon:before {
+  content: "\f094"; }
 
 /* ============================================================ */
 /* ============================================================ */

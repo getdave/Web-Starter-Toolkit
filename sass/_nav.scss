@@ -110,6 +110,10 @@
 // RESPONSIVE NAV
 // ==========================================================================
 
+.nav-menu-narrow button {
+	display: none;
+}
+
 /* Styling for the vertical state. This media query uses an arbitrary width of 480px. In real world cases this would be adjusted to a suitable value for the design and the number of options in the menu. */
 @media only screen and (max-width:480px) {
 
@@ -125,9 +129,7 @@
 			float:none;
 		}
 
-		button {
-			display: none;
-		}
+		
 
 		a {
 			text-align: left;
@@ -160,6 +162,7 @@
 
 		// Style the button (see http://www.456bereastreet.com/archive/201110/styling_button_elements_to_look_like_links/ for details) 
 		button {
+			display: inline-block;
 			position:absolute;
 			top:0;
 			right:0;
@@ -170,9 +173,9 @@
 			border:0;
 			border-left:1px solid rgba(255,255,255,0.6);
 			color:#fff;
-			background:#970601 url(/i/nav-tab.png) repeat-x;
 			cursor:pointer;
 			font-size: $baseFontSize;
+			background-color: $linkColor;
 			line-height: $baseLineHeight;
 
 			&:focus {
@@ -184,10 +187,15 @@
 				display:inline-block;
 				width:15px;
 				height:11px;
-				margin-left:6px;
-				background:url(expand-contract.png) no-repeat;
+				margin-left:6px;				
+				font-family: FontAwesome;
+			    font-weight: normal;
+			    font-style: normal;
 				opacity:0.8;
-				content:"";
+				vertical-align: top;
+				margin-top: rsize(2px);
+				//content: "\f039";
+				content: "\f0c9";
 			}
 
 			// Hide some text visually but not from screen readers. See http://yaccessibilityblog.com/library/css-clip-hidden-content.html. 
