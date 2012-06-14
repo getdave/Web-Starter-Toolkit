@@ -1,3 +1,5 @@
+/* ============================================================ */
+/* ============================================================ */
 /* normalize.css 2012-01-31T16:06 UTC - http://github.com/necolas/normalize.css */
 /* =============================================================================
    HTML5 display definitions
@@ -712,7 +714,7 @@ nicolasgallagher.com/micro-clearfix-hack/ */
 /* line 5, ../sass/_typo.scss */
 body {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-size: 13px;
+  font-size: 16px;
   line-height: 1.667em;
   color: #333333; }
 
@@ -720,7 +722,7 @@ body {
 p {
   margin: 0 0 0.834em;
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-size: 13px;
+  font-size: 16px;
   line-height: 1.667em; }
 
 /* ####################################### */

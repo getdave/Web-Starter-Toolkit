@@ -32,11 +32,11 @@
     }
 }
 
-@function rsize($pxval, $baseline : $base_font_size) {
+@function rsize($pxval, $baseline : $baseFontSize) {
     @return ($pxval/$baseline) + em;
 }
     
-@mixin fsize($pxval, $baseline : $base_font_size) {
+@mixin fsize($pxval, $baseline : $baseFontSize) {
     font-size: ($pxval / $baseline) * 100%
 }
 
