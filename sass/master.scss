@@ -34,7 +34,7 @@
 // ==========================================================================
 
 // Normalize (we prefer this over CSS resets)
-@import "_normalize.scss";
+@import "normalize.scss";
 
 // Helper classes
 @import "_helpers.scss";
@@ -66,6 +66,11 @@
 // Standard nav patterns
 @import "_nav.scss";
 
+// Button styles (optional)
+//@import "_buttons.scss";
+
+
+
 
 // ==========================================================================
 // FORMS
@@ -75,15 +80,17 @@
 //@import "_forms.scss";
 
 
+
 // ==========================================================================
 // TEXTURE
+// ==========================================================================
+
+// ICONS
 // ==========================================================================
 
 // Font Awesome icon fonts (optional)
 //@import "_font-awesome";
 
-// Button styles (optional)
-//@import "_buttons.scss";
 
 
 // ==========================================================================
@@ -111,6 +118,8 @@
 // Basing breakpoints on devices is an unsustainable approach and should be avoided
 // Ideally all breakpoints should be set using em's rather than pixels.
 // Use the Media Query bookmarklet at http://seesparkbox.com/foundry/media_query_bookmarklet
+//
+// TODO: set media queries as variables when Sass 3.2 is out
 //
 
 // EXAMPLE BREAKPOINTS - you should be customising these

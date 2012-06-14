@@ -141,3 +141,33 @@ ol {
 li {
   	line-height: $baseLineHeight;
 }
+
+// ==========================================================================
+// BLOCKQUOTES
+// ==========================================================================
+
+
+blockquote, blockquote p { line-height: 1.5; color: #777; }
+blockquote { margin: 0 0 ms(1); padding: 9px 20px 0 19px; border-left: 1px solid #ddd; }
+blockquote cite { display: block; font-size: ms(0) - 1; color: #555; }
+blockquote cite:before { content: "\2014 \0020"; }
+blockquote cite a, blockquote cite a:visited { color: #555; }
+
+
+// ==========================================================================
+// IMAGES
+// ==========================================================================
+
+// Set things up for responsive
+img {
+	max-width: 100%;
+	vertical-align: middle;
+	border: 0;
+	-ms-interpolation-mode: bicubic;
+}
+
+// We need to revert these for Google maps cos else it breaks!
+#googlemap img, object, embed { max-width: none; }
+#map_canvas embed { max-width: none; }
+#map_canvas img { max-width: none; }
+#map_canvas object { max-width: none; }
