@@ -49,9 +49,15 @@ window.log = function f() {
 
 jQuery(document).ready(function($) {
     
-    // Responsive Nav
-    if ($(window).width() <= 480) {
+    // Get the active Media Query passed in via the CSS as pseudo element
+    var activeMQ = window.getComputedStyle(document.body,':after').getPropertyValue('content');
+
+    if (activeMQ === 'mobile') {
         $('.nav-primary').narrowNavMenu();
     }
+
+
+    // Responsive Nav
+    
 });
     
