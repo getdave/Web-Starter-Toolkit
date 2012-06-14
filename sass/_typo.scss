@@ -35,7 +35,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1,.h1 {
-	font-size: rsize(36px);
+	font-size: rsize(36px,12px);
 	color: $grayDarker;
 	line-height:1;
 	margin-bottom:.5em;
@@ -43,14 +43,14 @@ h1,.h1 {
 }
 
 h2,.h2 {
-	font-size: rsize(24px);
+	font-size: rsize(24px,12px);
 	color: $grayDarker;
 	line-height:1;
 	margin-bottom:.75em;
 }
 
 h3,.h3 {
-	font-size: rsize(21px);
+	font-size: rsize(21px,12px);
 	color:$grayDark;
 	line-height:1;
 	margin-bottom:.5em;
@@ -58,7 +58,7 @@ h3,.h3 {
 }
 
 h4,.h4 {
-	font-size: rsize(16px);
+	font-size: rsize(16px,12px);
 	color:$grayDark;
 	line-height:1;
 	margin-bottom:.5em;
