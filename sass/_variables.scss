@@ -52,11 +52,6 @@ $purple:                		#7a43b6;
 // TYPOGRAPHY
 // ==========================================================================
 
-$baseFontSize:          		16px;
-$baseFontFamily:        		"Helvetica Neue", Helvetica, Arial, sans-serif;
-$baseLineHeight:        		1.667em;
-
-
 // Font Stacks
 // https://github.com/tokokoo/pondasee
 // http://unitinteractive.com/blog/2008/06/26/better-css-font-stacks/
@@ -105,6 +100,13 @@ $consolas			: Consolas, "Andale Mono WT", "Andale Mono", "Lucida Console", "Luci
 $cursive			: "Bradley Hand ITC", "Apple Chancery", "URW Chancery L", cursive !default;
 
 
+// WEBSITE FONT
+// ==========================================================================
+
+$baseFontSize:          		16px;
+$baseFontFamily:        		$helvetica;
+$baseLineHeight:        		1.667em;
+
 // ==========================================================================
 // GRID
 // ==========================================================================
@@ -124,17 +126,20 @@ $cols_as_string: 				one two three four five six seven eight nine ten eleven twe
 // ==========================================================================
 // 
 
-// STRUCTURE COLUMNS
+// STRUCTURE & COLUMNS
 // ==========================================================================
+
+// Width of primary width container elements
+$containerWidth:				90%;
 
 // Padding for main page columns. This is not for the grid-system
 $colPaddingTB:					30px;
 $colPaddingLR:					30px;
 
-// LOGO
+// WEBSITE LOGO
 // ==========================================================================
 
-$logo_path: 					"/img/logo.gif";
+$logo: 							"logo.gif";
 
 
 // MASTER Z-INDEX
