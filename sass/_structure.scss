@@ -26,9 +26,9 @@
 		position: relative;
 		background-repeat: no-repeat;
 		background-position: 0 0;
-		background-image: image-url("logo.gif");
-		width: image-width("logo.gif");
-		height: image-height("logo.gif");
+		background-image: image-url($logo);
+		width: image-width($logo);
+		height: image-height($logo);
 
 		&:hover,
 		&:focus {
@@ -55,7 +55,7 @@
 }
 
 .container-inner {
-	width: 90%;
+	width: $containerWidth;
 	margin: 0 auto;	
 }
 
