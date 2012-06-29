@@ -1,0 +1,42 @@
+# The humans responsible & technology colophon
+# humanstxt.org
+                            
+/* TEAM */
+
+                            
+Your title: David Smith
+
+                            
+Site: getdavemail@gmail.com
+
+                            
+Twitter: @get_dave
+
+                            
+Location: Bath, UK
+
+                         
+					
+/* THANKS */
+
+					
+
+HTML5 Boilerplate: https://github.com/h5bp/html5-boilerplate
+320andup: https://github.com/malarkey/320andup
+Twitter Bootstrap: https://github.com/twitter/bootstrap
+Zurb Foundation: https://github.com/zurb/foundation
+Pondasee: https://github.com/tokokoo/pondasee
+             
+
+                            
+/* SITE */
+
+                            
+                          
+Standards: HTML5, CSS3, Javascript
+
+                            
+Components: Modernizr, jQuery, Sass, Compass
+
+                            
+Software: Sublime Text 2, CodeKit
