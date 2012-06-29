@@ -26,8 +26,8 @@
 @import "compass";
 
 // Variables and mixins
-@import "_variables";
-@import "_mixins";
+@import "partials/_variables";
+@import "partials/_mixins";
 
 
 // Resets and Helpers
@@ -37,7 +37,7 @@
 @import "normalize.scss";
 
 // Helper classes
-@import "_helpers.scss";
+@import "partials/_helpers.scss";
 
 
 // ==========================================================================
@@ -45,7 +45,7 @@
 // ==========================================================================
 
 // Block level (h1, p) and text-level (em, strong) type...etc
-@import "_typo.scss";
+@import "partials/_typo.scss";
 
 
 // ==========================================================================
@@ -53,7 +53,7 @@
 // ==========================================================================
 
 // Custom grid system generator. Can be customised via _variables file
-@import "_grid.scss";
+@import "partials/_grid.scss";
 
 
 // ==========================================================================
@@ -61,13 +61,13 @@
 // ==========================================================================
 
 // Layout structures (columns, page layouts...etc)
-@import "_structure.scss";
+@import "partials/_structure.scss";
 
 // Standard nav patterns
-@import "_nav.scss";
+@import "partials/_nav.scss";
 
 // Button styles (optional)
-@import "_buttons.scss";
+@import "partials/_buttons.scss";
 
 
 
@@ -77,7 +77,7 @@
 // ==========================================================================
 
 // Standard form controls
-@import "_forms.scss";
+@import "partials/_forms.scss";
 
 
 
@@ -89,7 +89,7 @@
 // ==========================================================================
 
 // Font Awesome icon fonts (optional)
-@import "_font-awesome";
+@import "partials/_font-awesome";
 
 
 
