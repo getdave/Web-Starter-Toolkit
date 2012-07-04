@@ -19,13 +19,13 @@
 // Grid Col - produces CSS selector based on input provided
 @function grid-col($column,$nColumn,$sPrepend) {
     @if ($cols % $nColumn == 0) {
-        @return "."#{$sPrepend}"size1of"#{$cols/$nColumn}",.#{$sPrepend}"#{$column}"col";
+        @return "."#{$sPrepend}"size1of"#{$cols/$nColumn}",.#{$sPrepend}"#{$column}"columns";
     } @else if ($nColumn == 8) {
-        @return ".#{$sPrepend}size2of3,.#{$sPrepend}"#{$column}"col";
+        @return ".#{$sPrepend}size2of3,.#{$sPrepend}"#{$column}"columns";
     } @else if ($nColumn == 9) {
-        @return ".#{$sPrepend}size3of4,.#{$sPrepend}"#{$column}"col";
+        @return ".#{$sPrepend}size3of4,.#{$sPrepend}"#{$column}"columns";
     } @else {
-        @return ".#{$sPrepend}"#{$column}"col";   
+        @return ".#{$sPrepend}"#{$column}"columns";   
     } 
 }
 
