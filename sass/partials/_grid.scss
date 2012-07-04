@@ -11,15 +11,26 @@
 /* ============================================================ */
 
 
+// Generate a CSS selector string for all the possibile grid classes
+$allGridClasses: #{grid-set()};
+
+
 
 
 // ==========================================================================
 // MOBILE GRID
 // ==========================================================================
 
-// Hack: use a @mixin to set common styles
-// see _mixins.scss
-@include addStylesToMobileGridUnits;
+// Add styles to all the grid classes
+#{$allGridClasses} {
+	float: none;
+	clear: both;
+	display: block;
+	width: auto;    
+	margin: 0;
+	left: auto;
+	right: auto;
+}
 
 // MOBILE COLUMNS
 // ==========================================================================
@@ -54,9 +65,14 @@
 
 @media only screen and (min-width: 62em) {
 
-	// Hack: use a @mixin to set common styles
-	// see _mixins.scss
-	@include addStylesToStandardGridUnits;
+	// Add styles to all the grid classes
+	#{$allGridClasses} {
+		margin-left: $gutter_width; // equal to 20px at 1024px 
+		float: left;
+		min-height: 1px;
+		position: relative;
+		clear: none;
+	}
 
 	// Common definition classes
 	// ==========================================================================
@@ -141,6 +157,7 @@
     margin: 0 auto;
     float: none;
 }
+
 
 
 

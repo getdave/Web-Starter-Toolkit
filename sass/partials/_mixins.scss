@@ -29,7 +29,7 @@
     } 
 }
 
-@function grid-set($go) {
+@function grid-set() {
     
     $count: 1;
     $selectorString: "";
@@ -44,33 +44,6 @@
         $count: $count + 1;
     }
     @return $selectorString;
-}
-
-
-// Add styles to all Grids on mobile devices
-// ==========================================================================
-@mixin addStylesToMobileGridUnits() {
-    #{grid-set('')} {
-        float: none;
-        clear: both;
-        display: block;
-        width: auto;    
-        margin: 0;
-        left: auto;
-        right: auto;
-    } 
-}
-
-// Add styles to all Grids on larger devices
-// ==========================================================================
-@mixin addStylesToStandardGridUnits() {
-    #{grid-set('')} {
-        margin-left: $gutter_width; /* equal to 20px at 1024px */
-        float: left;
-        min-height: 1px;
-        position: relative;
-        clear: none;
-    } 
 }
 
 
