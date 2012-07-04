@@ -17,19 +17,9 @@
 // MOBILE GRID
 // ==========================================================================
 
-$count: 1;
-@each $col in $cols_as_string {
-	#{grid-col($col,$count,'')} {
-		float: none;
-		clear: both;
-		display: block;
-		width: auto;	
-		margin: 0;
-		left: auto;
-		right: auto;
-	}
-	$count: $count + 1;
-}
+// Hack: use a @mixin to set common styles
+// see _mixins.scss
+@include addStylesToMobileGridUnits;
 
 // MOBILE COLUMNS
 // ==========================================================================
@@ -55,6 +45,8 @@ $count: 1;
 
 
 
+
+
 // ==========================================================================
 // STANDARD GRID
 // ==========================================================================
@@ -62,17 +54,16 @@ $count: 1;
 
 @media only screen and (min-width: 62em) {
 
+	// Hack: use a @mixin to set common styles
+	// see _mixins.scss
+	@include addStylesToStandardGridUnits;
+
 	// Common definition classes
 	// ==========================================================================
 	$count: 1;
 	@each $col in $cols_as_string {
 		#{grid-col($col,$count,'')} {
 			width: #{grid-width($count)};
-			margin-left: $gutter_width; /* equal to 20px at 1024px */
-			float: left;
-			min-height: 1px;
-			position: relative;
-			clear: none;
 		}
 		$count: $count + 1;
 	}
@@ -150,6 +141,7 @@ $count: 1;
     margin: 0 auto;
     float: none;
 }
+
 
 
 
