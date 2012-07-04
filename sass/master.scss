@@ -53,7 +53,7 @@
 // ==========================================================================
 
 // Custom grid system generator. Can be customised via _variables file
-@import "partials/_grid.scss";
+//@import "partials/_grid.scss";
 
 
 // ==========================================================================
@@ -197,5 +197,7 @@ body:after {
 	}
 }
 
+
+@import "partials/_grid.scss";
 
 

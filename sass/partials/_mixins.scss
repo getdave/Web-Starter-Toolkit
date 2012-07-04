@@ -16,6 +16,29 @@
 	@return $n * $col_width + ($n - 1) * $gutter_width;
 }
 
+@mixin grid-col($column,$nColumn) {
+    @if ($cols % $nColumn == 0) {
+        .size1of#{$cols/$nColumn},
+        .#{$column}col {
+            width: grid-width($nColumn);
+        }
+    } @else if ($nColumn == 8) {
+        .size2of3,
+        .#{$column}col {
+            width: grid-width($nColumn);
+        }
+    } @else if ($nColumn == 9) {
+        .size3of4,
+        .#{$column}col {
+            width: grid-width($nColumn);
+        }
+    } @else {
+        .#{$column}col {
+            width: grid-width($nColumn);
+        }      
+    } 
+}
+
 
 // ==========================================================================
 // HELPERS
