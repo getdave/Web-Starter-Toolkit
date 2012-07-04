@@ -11,9 +11,48 @@
 // GRID MIXINS
 // ==========================================================================
 
+
+
 // GRID WIDTH - returns a grid unit's width
-@function grid-width($n) {
-	@return $n * $col_width + ($n - 1) * $gutter_width;
+@function grid-width($n,$nCols:$cols) {
+	//@return $n * $col_width + ($n - 1) * $gutter_width;
+   
+    //$nCols : 5;
+    @if ($n == $nCols) {
+        @return ($n/$nCols*100) * 1%;
+    } @else {
+        @return ($n/$nCols*100) - ( $gutter_width*0.5 );
+    }
+    
+}
+
+// Grid Col - produces CSS selector for a single grid col/unit based on input provided
+@function grid-col($column,$nColumn,$sPrepend) {
+    @if ($cols % $nColumn == 0) {
+        @return "."#{$sPrepend}"size1of"#{$cols/$nColumn}",.#{$sPrepend}"#{$column}"columns";
+    } @else if ($nColumn == 8) {
+        @return ".#{$sPrepend}size2of3,.#{$sPrepend}"#{$column}"columns";
+    } @else if ($nColumn == 9) {
+        @return ".#{$sPrepend}size3of4,.#{$sPrepend}"#{$column}"columns";
+    } @else {
+        @return ".#{$sPrepend}"#{$column}"columns";   
+    } 
+}
+
+// Returns a CSS selector string for all grid classes to be used in _grid.scss
+@function grid-set() {
+    
+    $count: 1;
+    $selectorString: "";
+    @each $col in $cols_as_string {
+        @if ($count == 1) {
+           $selectorString: $selectorString + "#{grid-col($col,$count,'')}"; 
+       } @else {
+            $selectorString: $selectorString + ",#{grid-col($col,$count,'')}";
+       }
+        $count: $count + 1;
+    }
+    @return $selectorString;
 }
 
 

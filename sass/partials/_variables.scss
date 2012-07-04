@@ -119,6 +119,14 @@ $col_width: 					4.85%;
 // We loop thorugh this string to produce our written grid classes
 $cols_as_string: 				one two three four five six seven eight nine ten eleven twelve;
 
+// Do we want to include "push-" and "pull-" classes for source reordering?
+$bGridPushClasses:				true;
+$bGridPullClasses:				true;
+
+// Do we want to use mobile grid classes for specific mobile grids?
+$bMobileCols:					true;
+
+
 
 
 // ==========================================================================

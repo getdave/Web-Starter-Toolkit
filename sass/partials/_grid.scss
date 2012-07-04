@@ -11,6 +11,46 @@
 /* ============================================================ */
 
 
+// Generate a CSS selector string for all the possibile grid classes
+$allGridClasses: #{grid-set()};
+
+
+
+
+// ==========================================================================
+// MOBILE GRID
+// ==========================================================================
+
+// Add styles to all the grid classes
+#{$allGridClasses} {
+	float: none;
+	clear: both;
+	display: block;
+	width: auto;    
+	margin: 0;
+	left: auto;
+	right: auto;
+}
+
+// MOBILE COLUMNS
+// ==========================================================================
+
+@if($bMobileCols) {
+	$count: 1;
+	@each $col in $cols_as_string {
+		#{grid-col($col,$count,'mobile-')} {
+			width: #{grid-width($count)};
+			margin-left: $gutter_width; /* equal to 20px at 1024px */
+			float: left;
+			min-height: 1px;
+			clear: none;
+		}
+		$count: $count + 1;
+	}
+}
+
+
+
 
 
 // ==========================================================================
@@ -18,131 +58,66 @@
 // ==========================================================================
 
 
-// GRID LINES (for clearing grid lines/rows)
-// ==========================================================================
+@media only screen and (min-width: 62em) {
 
-.line {
-	margin: 0 30px;
-	/* trigger new block formatting context in all browsers */
-	overflow:hidden; 
-	*overflow:visible;
-	*zoom:1;
-}
-
-
-// GRID UNITS
-// ==========================================================================
-
-/* main */		/* alias */
-.onecol, 
-.twocol, 
-.threecol, 		.size1of4,
-.fourcol, 		.size1of3,
-.fivecol, 
-.sixcol, 		.size1of2,
-.sevencol, 
-.eightcol, 		.size2of3,
-.ninecol, 		.size3of4,
-.tencol, 
-.elevencol {
-	margin-left: $gutter_width; /* equal to 20px at 1024px */
-	float: left;
-	min-height: 1px;
-	position: relative;
-}
-
-
-// GRID COLUMNS
-// ==========================================================================
-
-$count: 1;
-@each $col in $cols_as_string {
-	@if ($cols % $count == 0) {
-		.size1of#{$cols/$count},
-		.#{$col}col {
-			width: grid-width($count);
-		}
-	} @else if ($count == 8) {
-		.size2of3,
-		.#{$col}col {
-			width: grid-width($count);
-		}
-	} @else if ($count == 9) {
-		.size3of4,
-		.#{$col}col {
-			width: grid-width($count);
-		}
-	} @else {
-		.#{$col}col {
-			width: grid-width($count);
-		}		
+	// Add styles to all the grid classes
+	#{$allGridClasses} {
+		margin-left: $gutter_width; // equal to 20px at 1024px 
+		float: left;
+		min-height: 1px;
+		position: relative;
+		clear: none;
 	}
-	$count: $count + 1;
-}
-$count: 1;
 
-
-// GRID PUSH CLASSES
-// ==========================================================================
-
-$count: 1;
-@each $col in $cols_as_string {
-	
-	@if ($cols % $count == 0) {
-		.push-size1of#{$cols/$count},
-		.push-#{$col}col {
-			left: grid-width($count) + $gutter_width;
+	// Common definition classes
+	// ==========================================================================
+	$count: 1;
+	@each $col in $cols_as_string {
+		#{grid-col($col,$count,'')} {
+			width: #{grid-width($count)};
 		}
-	} @else if ($count == 8) {
-		.push-size2of3,
-		.push-#{$col}col {
-			left: grid-width($count) + $gutter_width;
-		}
-	} @else if ($count == 9) {
-		.push-size3of4,
-		.push-#{$col}col {
-			left: grid-width($count) + $gutter_width;
-		}
-	} @else {
-		.push-#{$col}col {
-			left: grid-width($count) + $gutter_width;
-		}		
+		$count: $count + 1;
 	}
-	$count: $count + 1;
-}
-$count: 1;
 
 
-// GRID PULL CLASSES
-// ==========================================================================
-
-$count: 1;
-@each $col in $cols_as_string {
-	
-	@if ($cols % $count == 0) {
-		.pull-size1of#{$cols/$count},
-		.pull-#{$col}col {
-			right: grid-width($count) + $gutter_width;
+	// Push classes
+	// ==========================================================================
+	@if($bGridPushClasses) {
+		$count: 1;
+		@each $col in $cols_as_string {
+			// Omit full width columns from "push" classes
+			@if ($count != 12) { 	
+				#{grid-col($col,$count,'push-')} {
+					left: #{grid-width($count) + $gutter_width};
+				}
+				$count: $count + 1;
+			}
 		}
-	} @else if ($count == 8) {
-		.pull-size2of3,
-		.pull-#{$col}col {
-			right: grid-width($count) + $gutter_width;
-		}
-	} @else if ($count == 9) {
-		.pull-size3of4,
-		.pull-#{$col}col {
-			right: grid-width($count) + $gutter_width;
-		}
-	} @else {
-		.pull-#{$col}col {
-			right: grid-width($count) + $gutter_width;
-		}		
 	}
-	$count: $count + 1;
-}
-$count: 1;
 
+	// Pull classes
+	// ==========================================================================
+	@if($bGridPushClasses) {
+		$count: 1;
+		@each $col in $cols_as_string {
+			// Omit full width columns from "push" classes
+			@if ($count != 12) { 	
+				#{grid-col($col,$count,'pull-')} {
+					right: #{grid-width($count) + $gutter_width};
+				}
+				$count: $count + 1;
+			}
+		}
+	}
+}
+
+
+
+
+
+// ==========================================================================
+// OVERIDES
+// ==========================================================================
 
 
 // LASTCOL 
@@ -156,14 +131,14 @@ $count: 1;
 //
 
 // We use :first-child because it has better support
-[class*="col"]:first-child:not(:only-child),
+[class*="columns"]:first-child:not(:only-child),
 [class*="size"]:first-child:not(:only-child),
 .firstcol {
 	margin-left: 0;
 }
 
 
-// COLUMN OVERIDES
+// COLUMN VARIANTS
 // ==========================================================================
 
 // When you want a column to be full width
@@ -177,68 +152,6 @@ $count: 1;
     margin: 0 auto;
     float: none;
 }
-
-
-
-// ==========================================================================
-// RESPONSIVE GRIDS
-// ==========================================================================
-
-
-@media only screen and (max-width : 768px) {	
-
-	$count: 1;
-	@each $col in $cols_as_string {
-		@if ($cols % $count == 0) {
-			.size1of#{$cols/$count},
-			.#{$col}col {
-				float: none;
-				clear: both;
-				display: block;
-				width: auto !important;	
-				margin: 0;
-				left: auto !important;
-				right: auto !important;
-
-			}
-		} @else if ($count == 8) {
-			.size2of3,
-			.#{$col}col {
-				float: none;
-				clear: both;
-				display: block;
-				width: auto !important;	
-				margin: 0;
-				left: auto !important;
-				right: auto !important;
-			}
-		} @else if ($count == 9) {
-			.size3of4,
-			.#{$col}col {
-				float: none;
-				clear: both;
-				display: block;
-				width: auto !important;	
-				margin: 0;
-				left: auto !important;
-				right: auto !important;
-			}
-		} @else {
-			.#{$col}col {
-				float: none;
-				clear: both;
-				display: block;
-				width: auto !important;	
-				margin: 0;
-				left: auto !important;
-				right: auto !important;
-			}		
-		}
-		$count: $count + 1;
-	}
-	$count: 1;
-}
-
 
 
 
