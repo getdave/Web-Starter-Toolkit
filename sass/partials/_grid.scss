@@ -38,19 +38,14 @@ $allGridClasses: #{grid-set()};
 @if($bMobileCols) {
 	$count: 1;
 	@each $col in $cols_as_string {
-
-		$mobileColNumber: $mobileCols - 1;
-
-		@if ($count <= $mobileCols) { // we don't all cols. Only the number specified in the _variables file
-			#{grid-col($col,$count,'mobile-')} {
-				width: #{grid-width($count*$mobileColNumber)};
-				margin-left: $gutter_width; /* equal to 20px at 1024px */
-				float: left;
-				min-height: 1px;
-				clear: none;
-			}
-			$count: $count + 1;
+		#{grid-col($col,$count,'mobile-')} {
+			width: #{grid-width($count)};
+			margin-left: $gutter_width; /* equal to 20px at 1024px */
+			float: left;
+			min-height: 1px;
+			clear: none;
 		}
+		$count: $count + 1;
 	}
 }
 
