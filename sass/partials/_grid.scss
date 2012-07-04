@@ -14,10 +14,89 @@
 
 
 // ==========================================================================
+// MOBILE GRID
+// ==========================================================================
+
+$count: 1;
+@each $col in $cols_as_string {
+	#{grid-col($col,$count,'')} {
+		float: none;
+		clear: both;
+		display: block;
+		width: auto;	
+		margin: 0;
+		left: auto;
+		right: auto;
+	}
+	$count: $count + 1;
+}
+
+
+// ==========================================================================
 // STANDARD GRID
 // ==========================================================================
 
 
-@include grid-col(four,4);
+@media only screen and (min-width: 62em) {
 
-@include grid-col(eight,8);
+	// Generate grid
+	$count: 1;
+	@each $col in $cols_as_string {
+		#{grid-col($col,$count,'')} {
+			width: #{grid-width($count)};
+			margin-left: $gutter_width; /* equal to 20px at 1024px */
+			float: left;
+			min-height: 1px;
+			position: relative;
+			clear: none;
+		}
+		$count: $count + 1;
+	}
+
+}
+
+
+
+
+
+// ==========================================================================
+// OVERIDES
+// ==========================================================================
+
+
+// LASTCOL 
+// ==========================================================================
+
+//
+// To can avoid having to add .lastcol 
+// 1) uncomment the CSS3 selectors below
+// 2) comment out the .lastcol selector
+// 3) make sure you don't need to support <=IE8 cos it won't work!
+//
+
+// We use :first-child because it has better support
+[class*="col"]:first-child:not(:only-child),
+[class*="size"]:first-child:not(:only-child),
+.firstcol {
+	margin-left: 0;
+}
+
+
+// COLUMN VARIANTS
+// ==========================================================================
+
+// When you want a column to be full width
+.full-col {
+	width: auto;
+	float: none;
+}
+
+// When you want a centered column
+.centered {
+    margin: 0 auto;
+    float: none;
+}
+
+
+
+

@@ -16,26 +16,16 @@
 	@return $n * $col_width + ($n - 1) * $gutter_width;
 }
 
-@mixin grid-col($column,$nColumn) {
+// Grid Col - produces CSS selector based on input provided
+@function grid-col($column,$nColumn,$sPrepend) {
     @if ($cols % $nColumn == 0) {
-        .size1of#{$cols/$nColumn},
-        .#{$column}col {
-            width: grid-width($nColumn);
-        }
+        @return "."#{$sPrepend}"size1of"#{$cols/$nColumn}",.#{$sPrepend}"#{$column}"col";
     } @else if ($nColumn == 8) {
-        .size2of3,
-        .#{$column}col {
-            width: grid-width($nColumn);
-        }
+        @return ".#{$sPrepend}size2of3,.#{$sPrepend}"#{$column}"col";
     } @else if ($nColumn == 9) {
-        .size3of4,
-        .#{$column}col {
-            width: grid-width($nColumn);
-        }
+        @return ".#{$sPrepend}size3of4,.#{$sPrepend}"#{$column}"col";
     } @else {
-        .#{$column}col {
-            width: grid-width($nColumn);
-        }      
+        @return ".#{$sPrepend}"#{$column}"col";   
     } 
 }
 
