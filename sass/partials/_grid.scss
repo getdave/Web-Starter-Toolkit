@@ -38,8 +38,6 @@ $count: 1;
 
 
 @media only screen and (min-width: 62em) {
-
-	// Generate grid
 	$count: 1;
 	@each $col in $cols_as_string {
 		#{grid-col($col,$count,'')} {
@@ -53,6 +51,38 @@ $count: 1;
 		$count: $count + 1;
 	}
 
+
+	
+	@if($bGridPushClasses) {
+		// Push classes
+		// ==========================================================================
+		$count: 1;
+		@each $col in $cols_as_string {
+			// Omit full width columns from "push" classes
+			@if ($count != 12) { 	
+				#{grid-col($col,$count,'push-')} {
+					left: #{grid-width($count) + $gutter_width};
+				}
+				$count: $count + 1;
+			}
+		}
+	}
+
+	@if($bGridPullClasses) {
+		// Pull classes
+		// ==========================================================================
+
+		$count: 1;
+		@each $col in $cols_as_string {
+			// Omit full width columns from "push" classes
+			@if ($count != 12) { 	
+				#{grid-col($col,$count,'pull-')} {
+					right: #{grid-width($count) + $gutter_width};
+				}
+				$count: $count + 1;
+			}
+		}
+	}
 }
 
 
