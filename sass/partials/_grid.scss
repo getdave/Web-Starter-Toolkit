@@ -31,6 +31,27 @@ $count: 1;
 	$count: $count + 1;
 }
 
+// MOBILE COLUMNS
+// ==========================================================================
+
+$count: 1;
+@each $col in $cols_as_string {
+
+	$mobileColNumber: $mobileCols - 1;
+
+	@if ($count <= $mobileCols) { // we don't all cols. Only the number specified in the _variables file
+		#{grid-col($col,$count,'mobile-')} {
+			width: #{grid-width($count*$mobileColNumber)};
+			margin-left: $gutter_width; /* equal to 20px at 1024px */
+			float: left;
+			min-height: 1px;
+			clear: none;
+		}
+		$count: $count + 1;
+	}
+}
+
+
 
 // ==========================================================================
 // STANDARD GRID
@@ -38,6 +59,9 @@ $count: 1;
 
 
 @media only screen and (min-width: 62em) {
+
+	// Common definition classes
+	// ==========================================================================
 	$count: 1;
 	@each $col in $cols_as_string {
 		#{grid-col($col,$count,'')} {
@@ -52,10 +76,9 @@ $count: 1;
 	}
 
 
-	
+	// Push classes
+	// ==========================================================================
 	@if($bGridPushClasses) {
-		// Push classes
-		// ==========================================================================
 		$count: 1;
 		@each $col in $cols_as_string {
 			// Omit full width columns from "push" classes
@@ -68,10 +91,9 @@ $count: 1;
 		}
 	}
 
-	@if($bGridPullClasses) {
-		// Pull classes
-		// ==========================================================================
-
+	// Pull classes
+	// ==========================================================================
+	@if($bGridPushClasses) {
 		$count: 1;
 		@each $col in $cols_as_string {
 			// Omit full width columns from "push" classes
@@ -109,6 +131,19 @@ $count: 1;
 [class*="size"]:first-child:not(:only-child),
 .firstcol {
 	margin-left: 0;
+}
+
+
+// COLLAPSE NESTED COLS FOR MOBILE
+// ==========================================================================
+
+// If you think about it you rarely want grids within grids on smaller screens
+@media only screen and (max-width: 62em) {
+	[class*="col"] [class*="col"],
+	[class*="size"] [class*="col"] {
+		width: auto;
+		float: none;
+	}
 }
 
 
