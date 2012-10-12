@@ -123,16 +123,8 @@
 
 
 // ==========================================================================
-// MEDIA QUERY BREAKPOINTS
+// MEDIA QUERY INLINE
 // ==========================================================================
-
-// Placeholders - alter these to suit your design.
-// Do not rely on device widths to define your breakpoints!
-$break-tiny:            480px;
-$break-small:           600px;
-$break-medium:          768px;
-$break-large:           992px;
-$break-xlarge:          1382px;
 
 @mixin respond-to($media) {
   @if $media == tiny {

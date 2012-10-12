@@ -215,3 +215,20 @@ $button_background_shader_h		: linear-gradient(top, rgba(0,0,0,0.05), rgba(0,0,0
 $button_background_shader_i		: linear-gradient(top, rgba(0,0,0,0.25), rgba(0,0,0,0)); // inverted bg shader 
 $button_background_shader-f		: url(../images/site/button-shader.png) left center repeat-x; // fallback bg shader 
 
+
+
+// ==========================================================================
+// MEDIA QUERY BREAKPOINTS
+// ==========================================================================
+
+// Note: these are placeholders! 
+// Alter these to suit the breakpoints as dictated by your design.
+// Do not rely on device widths to define your breakpoints! It's a bad idea.
+// 
+$break-tiny:            480px;
+$break-small:           600px;
+$break-medium:          768px;
+$break-large:           992px;
+$break-xlarge:          1382px;
+
+
