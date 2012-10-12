@@ -1,7 +1,10 @@
-// ALERT STYLES
-// ------------
+/* ==========================================================================
+   ALERTS
 
-// Base alert styles
+   Styles for standard alerts. Includes various types of alert styles
+   including success, danger, error and info.
+   ========================================================================== */
+
 .alert {
     padding: rsize(8px) 35px rsize(8px) 14px;
     margin-bottom: $baseLineHeight;
@@ -11,6 +14,7 @@
     @include border-radius(4px);
     color: $warningText;
 }
+
 .alert-heading {
     color: inherit;
 }
@@ -27,9 +31,8 @@
     line-height: $baseLineHeight;
 }
 
-// Alternate styles
-// ----------------
-
+/* Alert Extensions
+   ========================================================================== */
 .alert-success {
     background-color: $successBackground;
     border-color: $successBorder;  
@@ -47,8 +50,9 @@
     color: $infoText;
 }
 
-// Block alerts
-// ------------------------
+
+/* Block Alerts
+   ========================================================================== */
 .alert-block {
     padding-top: rsize(14px);
     padding-bottom: rsize(14px);
