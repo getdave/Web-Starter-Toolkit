@@ -55,7 +55,7 @@
 // ==========================================================================
 
 // Custom grid system generator. Can be customised via _variables file
-//@import "partials/_grid.scss";
+@import "partials/_grid.scss";
 
 
 // ==========================================================================
@@ -143,72 +143,8 @@
 
 
 
-// ==========================================================================
-// MEDIA QUERIES (RESPONSIVE)
-// ==========================================================================
-
-//
-// You should customise your breakpoints based on where your *design* requires them
-// Basing breakpoints on devices is an unsustainable approach and should be avoided
-// Ideally all breakpoints should be set using em's rather than pixels.
-// Use the Media Query bookmarklet at http://seesparkbox.com/foundry/media_query_bookmarklet
-//
-// TODO: set media queries as variables when Sass 3.2 is out
-//
-
-// EXAMPLE BREAKPOINTS - you should be customising these
-// ==========================================================================
-
-//
-// DRY Media Queries
-// For each media query we set a content property which can be read by Javascript to determine breakpoints
-// This way we keep the breakpoint definitions in a single place
-// https://github.com/JoshBarr/js-media-queries
-//
-
-// The first media query is the abscence of a media query!
-body:after {
-    content: 'mobile';
-    display: none;
-}
-
-// 480px
-@media only screen and (min-width: 30em) {
-	//@import "mq/480";
-}
-
-// 600px
-@media only screen and (min-width: 37.5em) {
-	//@import "mq/600";
-	body:after {
-        content: 'tablet'
-    }
-}
-
-// 768px
-@media only screen and (min-width: 48em) {
-	//@import "mq/768";
-}
-
-// 992px
-@media only screen and (min-width: 62em) {
-	///@import "mq/992";
-}
-
-// 1382px
-@media only screen and (min-width: 86.375em) {
-	//@import "mq/1382";
-}
-
-// 2x (Retina!)
-@media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min--moz-device-pixel-ratio: 1.5), only screen and (min-device-pixel-ratio: 1.5) {
-	//@import "mq/2x"; 
-	body:after {
-		content: 'retina'
-	}
-}
 
 
-@import "partials/_grid.scss";
+
 
 
