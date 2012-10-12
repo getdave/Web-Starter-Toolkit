@@ -38,6 +38,9 @@
 // Helper classes
 @import "partials/_helpers.scss";
 
+// Spacing classes
+//@import "partials/_spacing.scss";
+
 
 // ==========================================================================
 // TYPOGRAPHY 
@@ -67,6 +70,15 @@
 
 // Button styles (optional)
 @import "partials/_buttons.scss";
+
+// Standard Alert messages
+//@import "partials/_alerts.scss";
+
+// Standard Pagination and Paging controls
+//@import "partials/_pagination.scss";
+
+// Standard Breadcrumb navigation
+//@import "partials/_breadcrumbs.scss";
 
 
 
