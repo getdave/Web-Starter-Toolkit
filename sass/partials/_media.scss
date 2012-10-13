@@ -1,0 +1,42 @@
+/* ##MEDIA BLOCK */
+
+/* 
+	<div class="m-block">
+		<img class="m-img" />
+
+		<div class="m-content">
+			<p>This is the content of the Media Block</p>
+		</div>
+	</div>
+*/
+
+
+.m-block,
+.m-block .m-content {
+	overflow:hidden;
+	*overflow:visible;
+	zoom:1;
+}
+
+// Media "img"
+// ==========================================================================
+
+.m-block {
+	// Standard left layout
+	.m-img {	
+		float:left;	
+		margin-right: 20px;
+
+		img {
+			display: block;
+		}
+	}
+
+	// Reversed
+	.m-img-alt {
+		float:right;
+		margin-left: 20px;	
+	}
+}
+
+
