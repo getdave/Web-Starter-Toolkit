@@ -1,10 +1,11 @@
-/* ==========================================================================
-   ALERTS
+/* ##ALERTS */
 
-   Styles for standard alerts. Includes various types of alert styles
-   including success, danger, error and info.
+/* Standard alert styles with variations 
 
-   ========================================================================== */
+    <div class="alert">
+        <strong>Warning!</strong> Best check yo self, you're not looking too good.
+    </div>
+*/
 
 .alert {
     padding: rsize(8px) 35px rsize(8px) 14px;
@@ -32,20 +33,41 @@
     line-height: $baseLineHeight;
 }
 
-/* Alert Extensions
-   ========================================================================== */
+/* ###Alert Success */
+
+/* 
+    <div class="alert alert-success">
+        <strong>Success</strong> Looking good!
+    </div>
+*/
 
 .alert-success {
     background-color: $successBackground;
     border-color: $successBorder;  
     color: $successText;
 }
+
+/* ###Alert Danger/Error */
+
+/* 
+    <div class="alert alert-danger">
+        <strong>Danger!</strong> Best check yo self, you're not looking too good.
+    </div>
+*/
 .alert-danger,
 .alert-error {
     background-color: $errorBackground;
     border-color: $errorBorder;
     color: $errorText;
 }
+
+/* ###Alert Info */
+
+/* 
+    <div class="alert alert-info">
+        <strong>Notice</strong> Everything isn't what it seems...
+    </div>
+*/
 .alert-info {
     background-color: $infoBackground;
     border-color: $infoBorder;
@@ -53,8 +75,15 @@
 }
 
 
-/* Block Alerts
-   ========================================================================== */
+/* ###Alert Blocks */
+
+/* 
+    <div class="alert alert-block">
+        <h4>Warning!</h4>
+        Best check yo self, you're not...
+    </div>
+*/
+
 
 .alert-block {
     padding-top: rsize(14px);
