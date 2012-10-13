@@ -1,4 +1,4 @@
-/* ============================================================ */
+
 
 // BONES CSS FRAMEWORK
 // Version: 1.5
@@ -11,7 +11,6 @@
 // require in order to produce your site. Anything else should be left
 // commented out.
 
-/* ============================================================ */
 
 
 // ==========================================================================
@@ -32,11 +31,11 @@
 // Resets and Helpers
 // ==========================================================================
 
-// Normalize (we prefer this over CSS resets)
-@import "normalize.scss";
-
 // Helper classes
 @import "partials/_helpers.scss";
+
+// Media Block
+@import "partials/_media.scss";
 
 // Spacing classes
 //@import "partials/_spacing.scss";
@@ -47,7 +46,7 @@
 // ==========================================================================
 
 // Block level (h1, p) and text-level (em, strong) type...etc
-@import "partials/_typo.scss";
+//@import "partials/_typo.scss";
 
 
 // ==========================================================================
@@ -55,7 +54,7 @@
 // ==========================================================================
 
 // Custom grid system generator. Can be customised via _variables file
-@import "partials/_grid.scss";
+//@import "partials/_grid.scss";
 
 
 // ==========================================================================
@@ -63,13 +62,16 @@
 // ==========================================================================
 
 // Layout structures (columns, page layouts...etc)
-@import "partials/_structure.scss";
+//@import "partials/_structure.scss";
 
 // Standard nav patterns
-@import "partials/_nav.scss";
+//@import "partials/_nav.scss";
 
-// Button styles (optional)
+// Buttons (optional)
 @import "partials/_buttons.scss";
+
+// Dropdowns (optional)
+@import "partials/_dropdowns.scss";
 
 // Standard Alert messages
 //@import "partials/_alerts.scss";
@@ -78,7 +80,7 @@
 //@import "partials/_pagination.scss";
 
 // Standard Breadcrumb navigation
-//@import "partials/_breadcrumbs.scss";
+@import "partials/_breadcrumbs.scss";
 
 
 
@@ -88,7 +90,7 @@
 // ==========================================================================
 
 // Standard form controls
-@import "partials/_forms.scss";
+//@import "partials/_forms.scss";
 
 
 
@@ -100,7 +102,7 @@
 // ==========================================================================
 
 // Font Awesome icon fonts (optional)
-@import "partials/_font-awesome";
+//@import "partials/_font-awesome";
 
 
 
@@ -122,7 +124,7 @@
 // ==========================================================================
 
 // Page level layout styles (banner, navigation, content, contentinfo)
-@import "site/_page.scss";
+//@import "site/_page.scss";
 
 // PAGES
 // Individual stylesheets for unique pages on the site/application

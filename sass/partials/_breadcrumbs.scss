@@ -1,10 +1,25 @@
-/* ============================================================ */
+/* ##BREADCRUMBS */
 
-// BREADCRUMBS
+/* Standard Breadcrumb navigation for assisting users with establishing their position within the website hierarchy
 
-// Description:			Breadcrumb styles
-
-/* ============================================================ */
+	<ul class="breadcrumbs">
+	    <li>
+	        <a href="#">Home</a>
+	        <span>\</span>
+	    </li>
+	    <li>
+	        <a href="#">Crumb</a>
+	        <span>\</span>
+	    </li>
+	    <li>
+	        <a href="#">Crumb</a>
+	        <span>\</span>
+	    </li>
+	    <li class="current">
+	        <a href="#">Current Crumb</a>
+	    </li>
+	</ul>
+*/
 
 .breadcrumbs {
 	margin: rsize(20px) 0 0 0;

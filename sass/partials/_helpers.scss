@@ -1,11 +1,9 @@
-/* ============================================================ */
 
 // HELPERS
 
 // Description:			Set of simple classes to implement common CSS patterns
 // Acknowledgements:	HTML5 ✰ Boilerplate 
 
-/* ============================================================ */
 
 
 // ==========================================================================
@@ -162,47 +160,6 @@
 	direction:ltr;
 }
 
-
-// ==========================================================================
-// MEDIA BLOCK
-// ==========================================================================
-
-//
-// Building on excellent work by OOCSS
-// http://www.stubbornella.org/content/2010/06/25/the-media-object-saves-hundreds-of-lines-of-code/
-// https://github.com/stubbornella/oocss/tree/master/core/media
-
-// Media & "content"
-// ==========================================================================
-
-.m-block,
-.m-block .m-content {
-	overflow:hidden;
-	*overflow:visible;
-	zoom:1;
-}
-
-// Media "img"
-// ==========================================================================
-
-.m-block {
-	// Standard left layout
-	.m-img {	
-		float:left;	
-		margin-right: 20px;
-	}
-
-	// Reversed
-	.m-img-alt {
-		float:right;
-		margin-left: 20px;	
-	}
-}
-
-// Remove vertical-align issues
-.m-block .m-img img {
-	display:block;	
-}
 
 
 
