@@ -1,20 +1,16 @@
-/* ============================================================ */
+/* #SPACING */
 
-// SPACING (HELPER)
+/* Should be used to modify the default spacing between objects (not between nodes of the same object). Please use judiciously. You want to be using defaults most of the time, these are exceptions! */
 
-//	Should be used to modify the default spacing between objects (not between nodes of the same object)
-//	Please use judiciously. You want to be using defaults most of the time, these are exceptions! 
+/* ##Usage */
+/* p,m = padding,margin */
+/* a,t,r,b,l,h,v = all,top,right,bottom,left,horizontal,vertical */
+/* s,m,l,n = small(5px),medium(10px),large(20px),none(0px) */
 
-/* ============================================================ */
+/*
+    <p class="alert pvl mbl pls">Hey there! I'm a modified object with a large bottom margin and a large amount of vertical padding. Don't let me catch you doing this too often all you'll be in trouble!</p>
+*/
 
-
-// ==========================================================================
-// BASE
-// ==========================================================================
-
-//	p,m = padding,margin
-//	a,t,r,b,l,h,v = all,top,right,bottom,left,horizontal,vertical
-//	s,m,l,n = small(5px),medium(10px),large(20px),none(0px)
 
 .ptn,.pvn,.pan{padding-top:0px !important}
 .pts,.pvs,.pas{padding-top:5px !important}
