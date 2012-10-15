@@ -1,7 +1,8 @@
-/* ##PAGINATION */
+/* #PAGINATION */
 
-/* Standard controls for navigation between "paged" content.
+/* Standard controls for navigation between "paged" content. /*
 
+/* ##Base 
 	<div class="pagination">
 		<ul>
 			<li><a href="#">Prev</a></li>
@@ -92,7 +93,7 @@
 
 
 
-/* ###Pagination Centered */
+/* ## Centered */
 
 /* 
 	<div class="pagination pagination-centered">
@@ -114,7 +115,7 @@
 }
 
 
-/* ###Pagination Right */
+/* ##Right */
 
 /* 
 	<div class="pagination pagination-right">
@@ -138,30 +139,5 @@
 
 
 
-// ==========================================================================
-// PAGER
-// ==========================================================================
 
-.pager {
-	margin: 0;
-	padding:0;
-	list-style: none;
-
-	li {
-		display: inline;
-	}
-
-	a {
-		@include inline-block;
-			padding: 7px 12px 8px 12px;
-			text-decoration: none;
-			border: 1px solid #ccc;
-			line-height: 1;
-			float: left;
-	}
-
-	.next a {
-		float: right;
-	}
-}
 
