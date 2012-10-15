@@ -10,17 +10,18 @@
   clear: right;
 }
 
-.clearfix:before,
-.clearfix:after {
+.clearfix:before, .nav:before,
+.clearfix:after,
+.nav:after {
   content: "";
   display: table;
 }
 
-.clearfix:after {
+.clearfix:after, .nav:after {
   clear: both;
 }
 
-.clearfix {
+.clearfix, .nav {
   zoom: 1;
 }
 
@@ -638,8 +639,66 @@
   float: none;
 }
 
+/* #Nav */
+/* Nav abstraction as per: csswizardry.com/2011/09/the-nav-abstraction. When used on an `ol` or `ul`, this class throws the list into horizontal mode. */
+/* ##Base */
+/*
+    <ul class="nav">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Portfolio</a></li>
+        <li><a href="#">Contact</a></li>
+    </ul>
+ */
+.nav {
+  list-style: none;
+  margin-left: 0;
+}
+
+.nav > li,
+.nav > li > a {
+  display: -moz-inline-stack;
+  display: inline-block;
+  vertical-align: middle;
+  *vertical-align: auto;
+  zoom: 1;
+  *display: inline;
+}
+
+/* ##Stacked */
+/* `.nav-stacked` extends `.nav` and throws the list into vertical mode. */
+/*
+    <ul class="nav nav-stacked">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Portfolio</a></li>
+        <li><a href="#">Contact</a></li>
+    </ul>
+*/
+.nav-stacked > li {
+  display: list-item;
+}
+
+.nav-stacked > li > a {
+  display: block;
+}
+
+/* ##Banner */
+/* `.banner-nav` extends `.nav` and centres the list. */
+/*
+    <ul class="nav banner-nav">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Portfolio</a></li>
+        <li><a href="#">Contact</a></li>
+    </ul>
+  */
+.banner-nav {
+  text-align: center;
+}
+
 /* #BUTTONS */
-/* Provides extra visual weight and identifies the primary action in a set of buttons.
+/* Adding the class `.btn` to an anchor `<button>` or `<input>` provides extra visual weight and identifies the primary action in a set of buttons.
 
     <button class="btn primary">Primary</button>
 */
@@ -953,14 +1012,13 @@
 }
 
 /* #PAGINATION */
-/* Standard controls for navigation between "paged" content. /*
-
+/* Standard controls for navigation between "paged" content. */
 /* ##Base 
 	<div class="pagination">
 		<ul>
 			<li><a href="#">Prev</a></li>
 			<li class="active">
-			  <a href="#">1</a>
+		  		<a href="#">1</a>
 			</li>
 			<li><a href="#">2</a></li>
 			<li><a href="#">3</a></li>
