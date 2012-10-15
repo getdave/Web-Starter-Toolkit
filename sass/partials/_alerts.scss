@@ -1,4 +1,4 @@
-/* ##ALERTS */
+/* #ALERTS */
 
 /* Standard alert styles with variations 
 
@@ -33,7 +33,7 @@
     line-height: $baseLineHeight;
 }
 
-/* ###Alert Success */
+/* ##Alert Success */
 
 /* 
     <div class="alert alert-success">
@@ -47,7 +47,7 @@
     color: $successText;
 }
 
-/* ###Alert Danger/Error */
+/* ##Alert Danger/Error */
 
 /* 
     <div class="alert alert-danger">
@@ -61,7 +61,7 @@
     color: $errorText;
 }
 
-/* ###Alert Info */
+/* ##Alert Info */
 
 /* 
     <div class="alert alert-info">
@@ -75,7 +75,7 @@
 }
 
 
-/* ###Alert Blocks */
+/* ##Alert Blocks */
 
 /* 
     <div class="alert alert-block">
