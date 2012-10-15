@@ -1,6 +1,6 @@
 /* ============================================================ */
 
-// NAVIGATION
+// Menu
 
 // Description:			Default navigation styles for Global nav
 //						elements
@@ -8,28 +8,7 @@
 
 /* ============================================================ */
 
-// ==========================================================================
-// GLOBAL
-// ==========================================================================
 
-.nav,
-.nav ul,
-.nav ol {
-	margin: 0;
-	padding: 0;
-	list-style: none;
-}
-
-.nav li {
-	position: relative;
-}
-
-.nav li a {
-	display: block;
-	width: auto;
-	padding: rsize(10px) 20px;
-	text-decoration: none;
-}
 
 // ==========================================================================
 // NAV PRIMARY
