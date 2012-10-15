@@ -38,7 +38,7 @@
 @import "partials/_media.scss";
 
 // Spacing classes
-//@import "partials/_spacing.scss";
+@import "partials/_spacing.scss";
 
 
 // ==========================================================================
@@ -54,7 +54,7 @@
 // ==========================================================================
 
 // Custom grid system generator. Can be customised via _variables file
-//@import "partials/_grid.scss";
+@import "partials/_grid.scss";
 
 
 // ==========================================================================
@@ -73,14 +73,20 @@
 // Dropdowns (optional)
 @import "partials/_dropdowns.scss";
 
-// Standard Alert messages
+// Alerts 
 @import "partials/_alerts.scss";
 
-// Standard Pagination and Paging controls
+// Pagination 
 @import "partials/_pagination.scss";
 
-// Standard Breadcrumb navigation
+// Paging (controls for Next/Previous)
+@import "partials/_pager.scss";
+
+// Breadcrumb navigation
 @import "partials/_breadcrumbs.scss";
+
+// Complex (split) Link
+@import "partials/_complex-link.scss";
 
 
 

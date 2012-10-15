@@ -140,13 +140,16 @@
   visibility: hidden;
 }
 
-/* ##MEDIA BLOCK */
+/* #MEDIA BLOCK */
+/* The media object is an image to the left, with descriptive content to the right. The content area on the right can contain any other objects. */
+/* ##Base 
 /* 
 	<div class="m-block">
-		<img class="m-img" />
+		<img class="m-img" src="http://www.placehold.it/138x151" />
 
 		<div class="m-content">
-			<p>This is the content of the Media Block</p>
+			<p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
+			<p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
 		</div>
 	</div>
 */
@@ -164,12 +167,478 @@
 .m-block .m-img img {
   display: block;
 }
+
+/* ##Reversed */
+/* Image on right with content on the left */
+/* 
+	<div class="m-block">
+		<img class="m-img-alt" src="http://www.placehold.it/138x151" />
+
+		<div class="m-content">
+			<p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
+			<p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
+		</div>
+	</div>
+*/
 .m-block .m-img-alt {
   float: right;
   margin-left: 20px;
 }
 
-/* ##BUTTONS */
+/* #SPACING */
+/* Should be used to modify the default spacing between objects (not between nodes of the same object). Please use judiciously. You want to be using defaults most of the time, these are exceptions! */
+/* ##Usage */
+/* p,m = padding,margin */
+/* a,t,r,b,l,h,v = all,top,right,bottom,left,horizontal,vertical */
+/* s,m,l,n = small(5px),medium(10px),large(20px),none(0px) */
+/*
+    <p class="alert pvl mbl pls">Hey there! I'm a modified object with a large bottom margin and a large amount of vertical padding. Don't let me catch you doing this too often all you'll be in trouble!</p>
+*/
+.ptn, .pvn, .pan {
+  padding-top: 0px !important;
+}
+
+.pts, .pvs, .pas {
+  padding-top: 5px !important;
+}
+
+.ptm, .pvm, .pam {
+  padding-top: 10px !important;
+}
+
+.ptl, .pvl, .pal {
+  padding-top: 20px !important;
+}
+
+.prn, .phn, .pan {
+  padding-right: 0px !important;
+}
+
+.prs, .phs, .pas {
+  padding-right: 5px !important;
+}
+
+.prm, .phm, .pam {
+  padding-right: 10px !important;
+}
+
+.prl, .phl, .pal {
+  padding-right: 20px !important;
+}
+
+.pbn, .pvn, .pan {
+  padding-bottom: 0px !important;
+}
+
+.pbs, .pvs, .pas {
+  padding-bottom: 5px !important;
+}
+
+.pbm, .pvm, .pam {
+  padding-bottom: 10px !important;
+}
+
+.pbl, .pvl, .pal {
+  padding-bottom: 20px !important;
+}
+
+.pln, .phn, .pan {
+  padding-left: 0px !important;
+}
+
+.pls, .phs, .pas {
+  padding-left: 5px !important;
+}
+
+.plm, .phm, .pam {
+  padding-left: 10px !important;
+}
+
+.pll, .phl, .pal {
+  padding-left: 20px !important;
+}
+
+.mtn, .mvn, .man {
+  margin-top: 0px !important;
+}
+
+.mts, .mvs, .mas {
+  margin-top: 5px !important;
+}
+
+.mtm, .mvm, .mam {
+  margin-top: 10px !important;
+}
+
+.mtl, .mvl, .mal {
+  margin-top: 20px !important;
+}
+
+.mrn, .mhn, .man {
+  margin-right: 0px !important;
+}
+
+.mrs, .mhs, .mas {
+  margin-right: 5px !important;
+}
+
+.mrm, .mhm, .mam {
+  margin-right: 10px !important;
+}
+
+.mrl, .mhl, .mal {
+  margin-right: 20px !important;
+}
+
+.mbn, .mvn, .man {
+  margin-bottom: 0px !important;
+}
+
+.mbs, .mvs, .mas {
+  margin-bottom: 5px !important;
+}
+
+.mbm, .mvm, .mam {
+  margin-bottom: 10px !important;
+}
+
+.mbl, .mvl, .mal {
+  margin-bottom: 20px !important;
+}
+
+.mln, .mhn, .man {
+  margin-left: 0px !important;
+}
+
+.mls, .mhs, .mas {
+  margin-left: 5px !important;
+}
+
+.mlm, .mhm, .mam {
+  margin-left: 10px !important;
+}
+
+.mll, .mhl, .mal {
+  margin-left: 20px !important;
+}
+
+/* #GRID */
+/* Custom grid system for rapid prototyping and quick layout solutions.
+
+##Example 1 - fractions
+	<div class="size1of2 firstcol">
+		I'm the first of two grid items. I need an extra class to remove my gutter!
+	</div>
+	<div class="size1of2">
+		I'm the second of the two grid items. No need for a second class for me!
+	</div>
+
+
+##Example 2 - columns
+	<div class="sixcolumns firstcol">
+		I'm the first of two grid items. I need an extra class to remove my gutter!
+	</div>
+	<div class="sixcolumns">
+		I'm the second of the two grid items. No need for a second class for me!
+	</div>
+*/
+.size1of12, .onecolumns, .size1of6, .twocolumns, .size1of4, .threecolumns, .size1of3, .fourcolumns, .fivecolumns, .size1of2, .sixcolumns, .sevencolumns, .size2of3, .eightcolumns, .size3of4, .ninecolumns, .tencolumns, .elevencolumns, .size1of1, .twelvecolumns {
+  float: none;
+  clear: both;
+  display: block;
+  width: auto;
+  margin: 0;
+  left: auto;
+  right: auto;
+}
+
+.mobile-size1of12, .mobile-onecolumns {
+  width: 6.43333%;
+  margin-left: 3.8%;
+  /* equal to 20px at 1024px */
+  float: left;
+  min-height: 1px;
+  clear: none;
+}
+
+.mobile-size1of6, .mobile-twocolumns {
+  width: 14.76667%;
+  margin-left: 3.8%;
+  /* equal to 20px at 1024px */
+  float: left;
+  min-height: 1px;
+  clear: none;
+}
+
+.mobile-size1of4, .mobile-threecolumns {
+  width: 23.1%;
+  margin-left: 3.8%;
+  /* equal to 20px at 1024px */
+  float: left;
+  min-height: 1px;
+  clear: none;
+}
+
+.mobile-size1of3, .mobile-fourcolumns {
+  width: 31.43333%;
+  margin-left: 3.8%;
+  /* equal to 20px at 1024px */
+  float: left;
+  min-height: 1px;
+  clear: none;
+}
+
+.mobile-fivecolumns {
+  width: 39.76667%;
+  margin-left: 3.8%;
+  /* equal to 20px at 1024px */
+  float: left;
+  min-height: 1px;
+  clear: none;
+}
+
+.mobile-size1of2, .mobile-sixcolumns {
+  width: 48.1%;
+  margin-left: 3.8%;
+  /* equal to 20px at 1024px */
+  float: left;
+  min-height: 1px;
+  clear: none;
+}
+
+.mobile-sevencolumns {
+  width: 56.43333%;
+  margin-left: 3.8%;
+  /* equal to 20px at 1024px */
+  float: left;
+  min-height: 1px;
+  clear: none;
+}
+
+.mobile-size2of3, .mobile-eightcolumns {
+  width: 64.76667%;
+  margin-left: 3.8%;
+  /* equal to 20px at 1024px */
+  float: left;
+  min-height: 1px;
+  clear: none;
+}
+
+.mobile-size3of4, .mobile-ninecolumns {
+  width: 73.1%;
+  margin-left: 3.8%;
+  /* equal to 20px at 1024px */
+  float: left;
+  min-height: 1px;
+  clear: none;
+}
+
+.mobile-tencolumns {
+  width: 81.43333%;
+  margin-left: 3.8%;
+  /* equal to 20px at 1024px */
+  float: left;
+  min-height: 1px;
+  clear: none;
+}
+
+.mobile-elevencolumns {
+  width: 89.76667%;
+  margin-left: 3.8%;
+  /* equal to 20px at 1024px */
+  float: left;
+  min-height: 1px;
+  clear: none;
+}
+
+.mobile-size1of1, .mobile-twelvecolumns {
+  width: 100%;
+  margin-left: 3.8%;
+  /* equal to 20px at 1024px */
+  float: left;
+  min-height: 1px;
+  clear: none;
+}
+
+@media only screen and (min-width: 62em) {
+  .size1of12, .onecolumns, .size1of6, .twocolumns, .size1of4, .threecolumns, .size1of3, .fourcolumns, .fivecolumns, .size1of2, .sixcolumns, .sevencolumns, .size2of3, .eightcolumns, .size3of4, .ninecolumns, .tencolumns, .elevencolumns, .size1of1, .twelvecolumns {
+    margin-left: 3.8%;
+    float: left;
+    min-height: 1px;
+    position: relative;
+    clear: none;
+  }
+
+  .size1of12, .onecolumns {
+    width: 6.43333%;
+  }
+
+  .size1of6, .twocolumns {
+    width: 14.76667%;
+  }
+
+  .size1of4, .threecolumns {
+    width: 23.1%;
+  }
+
+  .size1of3, .fourcolumns {
+    width: 31.43333%;
+  }
+
+  .fivecolumns {
+    width: 39.76667%;
+  }
+
+  .size1of2, .sixcolumns {
+    width: 48.1%;
+  }
+
+  .sevencolumns {
+    width: 56.43333%;
+  }
+
+  .size2of3, .eightcolumns {
+    width: 64.76667%;
+  }
+
+  .size3of4, .ninecolumns {
+    width: 73.1%;
+  }
+
+  .tencolumns {
+    width: 81.43333%;
+  }
+
+  .elevencolumns {
+    width: 89.76667%;
+  }
+
+  .size1of1, .twelvecolumns {
+    width: 100%;
+  }
+
+  /* ##Push Classes */
+  /* 
+  	<div class="size3of4 firstcol push-size1of4">
+  		I'm a 3/4 width column that is pushed to the left by 1/4 column
+  	</div>
+  */
+  .push-size1of12, .push-onecolumns {
+    left: 10.23333%;
+  }
+
+  .push-size1of6, .push-twocolumns {
+    left: 18.56667%;
+  }
+
+  .push-size1of4, .push-threecolumns {
+    left: 26.9%;
+  }
+
+  .push-size1of3, .push-fourcolumns {
+    left: 35.23333%;
+  }
+
+  .push-fivecolumns {
+    left: 43.56667%;
+  }
+
+  .push-size1of2, .push-sixcolumns {
+    left: 51.9%;
+  }
+
+  .push-sevencolumns {
+    left: 60.23333%;
+  }
+
+  .push-size2of3, .push-eightcolumns {
+    left: 68.56667%;
+  }
+
+  .push-size3of4, .push-ninecolumns {
+    left: 76.9%;
+  }
+
+  .push-tencolumns {
+    left: 85.23333%;
+  }
+
+  .push-elevencolumns {
+    left: 93.56667%;
+  }
+
+  .pull-size1of12, .pull-onecolumns {
+    right: 10.23333%;
+  }
+
+  .pull-size1of6, .pull-twocolumns {
+    right: 18.56667%;
+  }
+
+  .pull-size1of4, .pull-threecolumns {
+    right: 26.9%;
+  }
+
+  .pull-size1of3, .pull-fourcolumns {
+    right: 35.23333%;
+  }
+
+  .pull-fivecolumns {
+    right: 43.56667%;
+  }
+
+  .pull-size1of2, .pull-sixcolumns {
+    right: 51.9%;
+  }
+
+  .pull-sevencolumns {
+    right: 60.23333%;
+  }
+
+  .pull-size2of3, .pull-eightcolumns {
+    right: 68.56667%;
+  }
+
+  .pull-size3of4, .pull-ninecolumns {
+    right: 76.9%;
+  }
+
+  .pull-tencolumns {
+    right: 85.23333%;
+  }
+
+  .pull-elevencolumns {
+    right: 93.56667%;
+  }
+}
+.firstcol {
+  margin-left: 0;
+}
+
+/* ##Column Extensions */
+/* ###Full Width */
+/* 
+	<div class="full-col">
+		I'm a full width column. You probably won't need to use me that often...
+	</div>
+*/
+.full-col {
+  width: auto;
+  float: none;
+}
+
+/* ###Centered */
+/* 
+	<div class="size1of3 centered-col">
+		I'm a centered column. Useful on the odd occassion you need to center a grid unit
+	</div>
+*/
+.centered-col {
+  margin: 0 auto;
+  float: none;
+}
+
+/* #BUTTONS */
 /* Provides extra visual weight and identifies the primary action in a set of buttons.
 
     <button class="btn primary">Primary</button>
@@ -234,7 +703,7 @@
   background-color: #0077b3;
 }
 
-/* ### Button Sizes */
+/* ## Button Sizes */
 /* Various sizes for buttons */
 /* 
 	<a href="#" class="btn btn-huge">Button Huge</a>
@@ -270,7 +739,7 @@
   font-size: 84.61538461538462%;
 }
 
-/* ### Button States */
+/* ## Button States */
 /* 
 	<a href="#" class="btn btn-disabled">Button Disabled</a>
 */
@@ -288,7 +757,7 @@
   box-shadow: none;
 }
 
-/* ### Button Groups */
+/* ## Button Groups */
 /* 
 	<div class="btn-group">
 	  <button class="btn">1</button>
@@ -350,7 +819,7 @@
   border-radius: 0 4px 4px 0;
 }
 
-/* ##DROPDOWNS */
+/* #DROPDOWNS */
 /* Create dropdown menus with caret arrow
 
     <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu">
@@ -389,7 +858,7 @@
   opacity: 1;
 }
 
-/* ##ALERTS */
+/* #ALERTS */
 /* Standard alert styles with variations 
 
     <div class="alert">
@@ -425,7 +894,7 @@
   line-height: 1.667em;
 }
 
-/* ###Alert Success */
+/* ##Alert Success */
 /* 
     <div class="alert alert-success">
         <strong>Success</strong> Looking good!
@@ -437,7 +906,7 @@
   color: #468847;
 }
 
-/* ###Alert Danger/Error */
+/* ##Alert Danger/Error */
 /* 
     <div class="alert alert-danger">
         <strong>Danger!</strong> Best check yo self, you're not looking too good.
@@ -450,7 +919,7 @@
   color: #b94a48;
 }
 
-/* ###Alert Info */
+/* ##Alert Info */
 /* 
     <div class="alert alert-info">
         <strong>Notice</strong> Everything isn't what it seems...
@@ -462,7 +931,7 @@
   color: #3a87ad;
 }
 
-/* ###Alert Blocks */
+/* ##Alert Blocks */
 /* 
     <div class="alert alert-block">
         <h4>Warning!</h4>
@@ -483,9 +952,10 @@
   margin-top: 0.3125em;
 }
 
-/* ##PAGINATION */
-/* Standard controls for navigation between "paged" content.
+/* #PAGINATION */
+/* Standard controls for navigation between "paged" content. /*
 
+/* ##Base 
 	<div class="pagination">
 		<ul>
 			<li><a href="#">Prev</a></li>
@@ -565,7 +1035,7 @@
   padding-right: 10px;
 }
 
-/* ###Pagination Centered */
+/* ## Centered */
 /* 
 	<div class="pagination pagination-centered">
 		<ul>
@@ -584,7 +1054,7 @@
   text-align: center;
 }
 
-/* ###Pagination Right */
+/* ##Right */
 /* 
 	<div class="pagination pagination-right">
 		<ul>
@@ -603,6 +1073,19 @@
   text-align: right;
 }
 
+/* #PAGER */
+/* Standard prev/next controls for navigation between "paged" content. /*
+
+/* ##Base 
+	<ul class="pager">
+		<li class="previous">
+			<a href="#">&larr; Older</a>
+		</li>
+		<li class="next">
+			<a href="#">Newer &rarr;</a>
+		</li>
+	</ul>
+*/
 .pager {
   margin: 0;
   padding: 0;
@@ -628,7 +1111,7 @@
   float: right;
 }
 
-/* ##BREADCRUMBS */
+/* #BREADCRUMBS */
 /* Standard Breadcrumb navigation for assisting users with establishing their position within the website hierarchy
 
 	<ul class="breadcrumbs">
@@ -722,4 +1205,23 @@
 .breadcrumbs li:first-child a,
 .breadcrumbs .first a {
   padding-left: 1em;
+}
+
+/* #COMPLEX LINK */
+/* Add hover behaviour to only selected items within links. Useful if you have are using icon fonts. */
+/*
+	<a href="http://www.google.com" class="complex-link">
+		<span>You should try and </span>
+		<span class="link-target">Login</span>
+	</a>
+*/
+.complex-link,
+.complex-link:hover,
+.complex-link:focus {
+  text-decoration: none;
+}
+.complex-link .link-target,
+.complex-link:hover .link-target,
+.complex-link:focus .link-target {
+  text-decoration: underline;
 }
