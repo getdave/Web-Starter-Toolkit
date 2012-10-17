@@ -1,38 +1,37 @@
-/* ============================================================ */
+/* #Containers */
 
-// STRUCTURE
+/* Standard structures for dividing pages into "sections" */
 
-// Description:			Standard structures for common layouts and page division.
-//						Common layout elements (eg: logo...etc)
+/* ##Standard Container */
+/*
+	<div class="container">
+		<p>I'm a section on the layout/page which should be centered in the window</p>
+	</div>  
+*/
 
-/* ============================================================ */
 
-
-
-
-// ==========================================================================
-// PAGE LAYOUT STRUCTURES
-// ==========================================================================
-
-// Page "section" containers
-// ==========================================================================
-
-.container,
-.container-inner {
+.container {
+	width: $containerWidth;
+	margin: 0 auto;	
 	@include pie-clearfix;
 }
 
-.container-inner {
-	width: $containerWidth;
-	margin: 0 auto;	
+
+/* ## Extended Container */
+/* Use to extend the content to be the full width of the window. Additional wrapping element around `.container`. */
+/*
+	<div class="container-extend" style="background: #f7f7f7f;">
+		<div class="container">
+			<p>A section of content where you need the background to extend to the full width of the browser whilst the content remains centered</p>
+		</div> 
+	</div>
+*/
+
+.container-extend {
+	width: auto;
+	@include pie-clearfix;
 }
 
-/* add "container-fluid" class to get fluid/flexible layout */
-.page-statuc .container-inner,
-.container-static .container-inner {
-	//@extend .container-inner;
-	width: 960px;
-}
 
 // Page Column config
 // ==========================================================================

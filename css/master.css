@@ -639,6 +639,56 @@
   float: none;
 }
 
+/* #Containers */
+/* Standard structures for dividing pages into "sections" */
+/* ##Standard Container */
+/*
+	<div class="container">
+		<p>I'm a section on the layout/page which should be centered in the window</p>
+	</div>  
+*/
+.container {
+  width: 90%;
+  margin: 0 auto;
+  *zoom: 1;
+}
+.container:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* ## Extended Container */
+/* Use to extend the content to be the full width of the window. Additional wrapping element around `.container`. */
+/*
+	<div class="container-extend" style="background: #f7f7f7f;">
+		<div class="container">
+			<p>A section of content where you need the background to extend to the full width of the browser whilst the content remains centered</p>
+		</div> 
+	</div>
+*/
+.container-extend {
+  width: auto;
+  *zoom: 1;
+}
+.container-extend:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.col {
+  padding: 30px 30px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+@media only screen and (max-width: 30em) {
+  .col {
+    padding: 15px 15px;
+  }
+}
 /* #Nav */
 /* Nav abstraction as per: csswizardry.com/2011/09/the-nav-abstraction. When used on an `ol` or `ul`, this class throws the list into horizontal mode. */
 /* ##Base */
@@ -1287,6 +1337,7 @@
 /* #MISC */
 /* Below are a number of miscellaneous items that don't quite fit anywhere else...yet */
 /* ##Site Logo 
+
 	<a href="/" class="site-logo" title="Return to website homepage">
 		<img src="http://www.placehold.it/200x100" alt="My Logo">
 	</a>    
@@ -1294,7 +1345,7 @@
 .site-logo {
   display: block;
   border: 0;
-  padding: 20px 0;
+  padding: 0;
   margin: 0;
   vertical-align: bottom;
 }

@@ -61,8 +61,8 @@
 // ELEMENTS
 // ==========================================================================
 
-// Layout structures (columns, page layouts...etc)
-//@import "partials/_structure.scss";
+// Containers - used to define "sections" on a layout/page
+@import "partials/_containers.scss";
 
 // Standard nav patterns
 @import "partials/_nav.scss";
