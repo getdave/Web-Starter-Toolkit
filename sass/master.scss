@@ -34,9 +34,6 @@
 // Helper classes
 @import "partials/_helpers.scss";
 
-// Media Block
-@import "partials/_media.scss";
-
 // Spacing classes
 @import "partials/_spacing.scss";
 
@@ -60,6 +57,9 @@
 // ==========================================================================
 // ELEMENTS
 // ==========================================================================
+
+// Media Block
+@import "partials/_media.scss";
 
 // Containers - used to define "sections" on a layout/page
 @import "partials/_containers.scss";

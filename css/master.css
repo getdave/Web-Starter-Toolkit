@@ -1,15 +1,41 @@
+/* #Helpers */
+/* Set of simple classes to implement common CSS patterns */
+/* ##Clearfix & Clearing */
+/* ###Clearing */
+/* 
+	<p class="clear">I will clear both sides</p>
+*/
 .clear {
   clear: both;
 }
 
+/* 	
+	<p class="clear-l">I will clear to the left</p> 
+*/
 .clear-l {
   clear: left;
 }
 
+/* 	
+	<p class="clear-r">I will clear to the right</p> 
+*/
 .clear-r {
   clear: right;
 }
 
+/* ###Clearfix */
+/* The Magnificent Clearfix: Updated to prevent margin-collapsing on child elements in most situations nicolasgallagher.com/micro-clearfix-hack/ */
+/* 	
+	<div class="wrapper clearfix">
+		<div class="floated-left">
+			<p>I'm floated but my parent has a clearfix so I am contained</p>
+		</div>
+
+		<div class="floated-right">
+			<p>I'm floated but my parent has a clearfix so I am contained</p>
+		</div>
+	</div>
+*/
 .clearfix:before, .nav:before,
 .clearfix:after,
 .nav:after {
@@ -25,48 +51,53 @@
   zoom: 1;
 }
 
-.list-reset {
-  margin: 0;
-  padding: 0;
-  list-style: none;
-}
-
-.h-list,
-.v-list {
-  margin: 0 0 1.5em 0;
-  padding: 0;
-  list-style: none;
-}
-
-.h-list li {
-  float: left;
-  margin-right: 1em;
-}
-
-.v-list li {
-  margin-bottom: 1em;
-}
-
+/* ##Floats and Alignment */
+/* ###Floats */
+/* 	
+	<p class="fr">I will float to the right.</p> 
+*/
 .fr {
   float: right;
 }
 
+/* 	
+	<p class="fl">I will float to the left.</p> 
+*/
 .fl {
   float: left;
 }
 
+/* ###Text Alignment */
+/* 	
+	<p class="text-right">My text is aligned right.</p> 
+*/
 .text-right {
   text-align: right;
 }
 
+/* 	
+	<p class="text-left">My text is aligned left.</p> 
+*/
 .text-left {
   text-align: left;
 }
 
+/* 	
+	<p class="text-center">My text is aligned centrally.</p> 
+*/
 .text-center {
   text-align: center;
 }
 
+/* ##Imagery */
+/* ###Image Positioning */
+/* 	
+	<img src="http://www.placehold.it/200x200" class="img-left" />
+	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+	tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+	quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+	consequat.</p> 
+*/
 .img-left,
 .img-l,
 .alignleft {
@@ -84,6 +115,13 @@
   }
 }
 
+/* 	
+	<img src="http://www.placehold.it/200x200" class="img-right" />
+	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+	tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+	quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+	consequat.</p> 
+*/
 .img-right,
 .img-r,
 .alignright {
@@ -101,6 +139,13 @@
   }
 }
 
+/* ###Image Replacement */
+/* This is a safe way to replace HTML content with an image. Advice is not to set width and height via the `style` attribute. Rather achieve this via an additional CSS rule where possible. */
+/* 	
+	<span class="img-replace" style="background-image: url(http://www.placehold.it/300x100); width: 300px; height: 100px;">
+		I should be replaced with an image
+	</span>
+*/
 .img-replace,
 .ir {
   display: inline-block;
@@ -111,11 +156,23 @@
   direction: ltr;
 }
 
+/* ##Hidden Content */
+/* ###Hide: Screenreaders & Browsers */
+/* css-discuss.incutio.com/wiki/Screenreader_Visibility */
+/* 	
+	<p>Lorem ipsum dolor sit amet, <strong class="hidden">Hah! You are stupid but you don't know it!</strong>consequat.</p> 
+*/
 .hidden {
   display: none;
   visibility: hidden;
 }
 
+/* ###Hide: Visually For Browsers */
+/* Hide only visually, but have it available for screenreaders: by Jon Neal. */
+/* www.webaim.org/techniques/css/invisiblecontent/  &  j.mp/visuallyhidden */
+/* 	
+	<p>Lorem ipsum dolor sit amet, <strong class="vh">Hah! You are stupid but you don't know it!</strong>consequat.</p> 
+*/
 .vh,
 .v-hidden,
 .screen-reader-text {
@@ -137,53 +194,13 @@
   margin: 0;
 }
 
+/* ###Hide: Visually From All + Maintain Layout */
+/* Hide visually and from screenreaders, but maintain layout  */
+/* 	
+	<p>Lorem ipsum dolor sit amet, <strong class="invisible">Hah! You are stupid but you don't know it!</strong>consequat.</p> 
+*/
 .invisible {
   visibility: hidden;
-}
-
-/* #MEDIA BLOCK */
-/* The media object is an image to the left, with descriptive content to the right. The content area on the right can contain any other objects. */
-/* ##Base 
-/* 
-	<div class="m-block">
-		<img class="m-img" src="http://www.placehold.it/138x151" />
-
-		<div class="m-content">
-			<p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
-			<p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
-		</div>
-	</div>
-*/
-.m-block,
-.m-block .m-content {
-  overflow: hidden;
-  *overflow: visible;
-  zoom: 1;
-}
-
-.m-block .m-img {
-  float: left;
-  margin-right: 20px;
-}
-.m-block .m-img img {
-  display: block;
-}
-
-/* ##Reversed */
-/* Image on right with content on the left */
-/* 
-	<div class="m-block">
-		<img class="m-img-alt" src="http://www.placehold.it/138x151" />
-
-		<div class="m-content">
-			<p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
-			<p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
-		</div>
-	</div>
-*/
-.m-block .m-img-alt {
-  float: right;
-  margin-left: 20px;
 }
 
 /* #SPACING */
@@ -323,7 +340,7 @@
   margin-left: 20px !important;
 }
 
-/* #GRID */
+/* #Grid */
 /* Custom grid system for rapid prototyping and quick layout solutions.
 
 ##Example 1 - fractions
@@ -639,6 +656,51 @@
   float: none;
 }
 
+/* #Media Block */
+/* The media object is an image to the left, with descriptive content to the right. The content area on the right can contain any other objects. */
+/* ##Base 
+/* 
+	<div class="m-block">
+		<img class="m-img" src="http://www.placehold.it/138x151" />
+
+		<div class="m-content">
+			<p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
+			<p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
+		</div>
+	</div>
+*/
+.m-block,
+.m-block .m-content {
+  overflow: hidden;
+  *overflow: visible;
+  zoom: 1;
+}
+
+.m-block .m-img {
+  float: left;
+  margin-right: 20px;
+}
+.m-block .m-img img {
+  display: block;
+}
+
+/* ##Reversed */
+/* Image on right with content on the left */
+/* 
+	<div class="m-block">
+		<img class="m-img-alt" src="http://www.placehold.it/138x151" />
+
+		<div class="m-content">
+			<p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
+			<p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
+		</div>
+	</div>
+*/
+.m-block .m-img-alt {
+  float: right;
+  margin-left: 20px;
+}
+
 /* #Containers */
 /* Standard structures for dividing pages into "sections" */
 /* ##Standard Container */
@@ -747,7 +809,7 @@
   text-align: center;
 }
 
-/* #BUTTONS */
+/* #Buttons */
 /* Adding the class `.btn` to an anchor `<button>` or `<input>` provides extra visual weight and identifies the primary action in a set of buttons.
 
     <button class="btn primary">Primary</button>
@@ -1061,7 +1123,7 @@
   margin-top: 0.3125em;
 }
 
-/* #PAGINATION */
+/* #Pagination */
 /* Standard controls for navigation between "paged" content. */
 /* ##Base 
 	<div class="pagination">
@@ -1334,7 +1396,7 @@
   text-decoration: underline;
 }
 
-/* #MISC */
+/* #Misc */
 /* Below are a number of miscellaneous items that don't quite fit anywhere else...yet */
 /* ##Site Logo 
 

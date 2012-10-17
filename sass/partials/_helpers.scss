@@ -1,35 +1,50 @@
+/* #Helpers */
 
-// HELPERS
-
-// Description:			Set of simple classes to implement common CSS patterns
-// Acknowledgements:	HTML5 ✰ Boilerplate 
+/* Set of simple classes to implement common CSS patterns */
 
 
+/* ##Clearfix & Clearing */
 
-// ==========================================================================
-// CLEARFIX & CLEARING
-// ==========================================================================
+/* ###Clearing */
 
-
-// CLEARING
-// ==========================================================================
+/* 
+	<p class="clear">I will clear both sides</p>
+*/
 
 .clear {
 	clear: both;
 }
 
+/* 	
+	<p class="clear-l">I will clear to the left</p> 
+*/
 .clear-l {
 	clear: left;
 }
 
+/* 	
+	<p class="clear-r">I will clear to the right</p> 
+*/
 .clear-r {
 	clear: right;
 }
 
-// CLEARFIX
-// ==========================================================================
+/* ###Clearfix */
 
-// The Magnificent Clearfix: Updated to prevent margin-collapsing on child elements in most situations nicolasgallagher.com/micro-clearfix-hack/
+/* The Magnificent Clearfix: Updated to prevent margin-collapsing on child elements in most situations nicolasgallagher.com/micro-clearfix-hack/ */
+
+/* 	
+	<div class="wrapper clearfix">
+		<div class="floated-left">
+			<p>I'm floated but my parent has a clearfix so I am contained</p>
+		</div>
+
+		<div class="floated-right">
+			<p>I'm floated but my parent has a clearfix so I am contained</p>
+		</div>
+	</div>
+*/
+
 .clearfix:before, 
 .clearfix:after { 
 	content: ""; 
@@ -45,82 +60,59 @@
 
 
 
-// ==========================================================================
-// LISTS
-// ==========================================================================
+/* ##Floats and Alignment */
 
+/* ###Floats */
 
-.list-reset {
-	margin: 0;
-	padding: 0;
-	list-style: none;
-}
-
-
-.h-list,
-.v-list {
-	margin: 0 0 1.5em 0;
-	padding: 0;
-	list-style: none;
-}
-
-// HORIZONTAL LIST
-// ==========================================================================
-
-.h-list li {
-	float: left;
-	margin-right: 1em;
-}
-
-
-// VERTICAL LIST
-// ==========================================================================
-
-.v-list li {
-	margin-bottom: 1em;
-}
-
-
-
-
-// ==========================================================================
-// POSITIONING
-// ========================================================================== 
-
-
-// Floats
-// ==========================================================================
-
+/* 	
+	<p class="fr">I will float to the right.</p> 
+*/
 .fr {
 	float: right;
 }
 
+/* 	
+	<p class="fl">I will float to the left.</p> 
+*/
 .fl {
 	float: left;
 }
 
-// Text alignment
-// ==========================================================================
+
+/* ###Text Alignment */
+
+/* 	
+	<p class="text-right">My text is aligned right.</p> 
+*/
 .text-right {
 	text-align: right;
 }
 
+/* 	
+	<p class="text-left">My text is aligned left.</p> 
+*/
 .text-left {
 	text-align: left;
 }
 
+/* 	
+	<p class="text-center">My text is aligned centrally.</p> 
+*/
 .text-center {
 	text-align: center;
 }
 
 
-// ==========================================================================
-// IMAGERY
-// ==========================================================================
+/* ##Imagery */
 
-// Image positioning
-// ==========================================================================
-
+/* ###Image Positioning */
+/* 	
+	<img src="http://www.placehold.it/200x200" class="img-left" />
+	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+	tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+	quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+	consequat.</p> 
+*/
 .img-left,
 .img-l,
 .alignleft {
@@ -134,6 +126,13 @@
 	}
 }
 
+/* 	
+	<img src="http://www.placehold.it/200x200" class="img-right" />
+	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+	tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+	quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+	consequat.</p> 
+*/
 .img-right,
 .img-r,
 .alignright {
@@ -147,8 +146,13 @@
 	}
 }
 
-// Image replacement
-// ==========================================================================
+/* ###Image Replacement */
+/* This is a safe way to replace HTML content with an image. Advice is not to set width and height via the `style` attribute. Rather achieve this via an additional CSS rule where possible. */
+/* 	
+	<span class="img-replace" style="background-image: url(http://www.placehold.it/300x100); width: 300px; height: 100px;">
+		I should be replaced with an image
+	</span>
+*/
 
 .img-replace,
 .ir {
@@ -163,24 +167,25 @@
 
 
 
-// ==========================================================================
-// HIDDEN CONTENT
-// ==========================================================================
+/* ##Hidden Content */
 
-// Hide: Screenreaders & Browsers
-// ==========================================================================
-
-// css-discuss.incutio.com/wiki/Screenreader_Visibility 
+/* ###Hide: Screenreaders & Browsers */
+/* css-discuss.incutio.com/wiki/Screenreader_Visibility */ 
+/* 	
+	<p>Lorem ipsum dolor sit amet, <strong class="hidden">Hah! You are stupid but you don't know it!</strong>consequat.</p> 
+*/
 .hidden { 
 	display:none;
 	visibility:hidden;
 }
 
-// Hide: Visually For Browsers
-// ==========================================================================
 
-// Hide only visually, but have it available for screenreaders: by Jon Neal.
-// www.webaim.org/techniques/css/invisiblecontent/  &  j.mp/visuallyhidden 
+/* ###Hide: Visually For Browsers */
+/* Hide only visually, but have it available for screenreaders: by Jon Neal. */
+/* www.webaim.org/techniques/css/invisiblecontent/  &  j.mp/visuallyhidden */ 
+/* 	
+	<p>Lorem ipsum dolor sit amet, <strong class="vh">Hah! You are stupid but you don't know it!</strong>consequat.</p> 
+*/
 .vh,
 .v-hidden,
 .screen-reader-text {
@@ -201,10 +206,11 @@
 	margin:0;
 }
 
-// Hide: Visually From All + Maintain Layout
-// ==========================================================================
-
-// Hide visually and from screenreaders, but maintain layout 
+/* ###Hide: Visually From All + Maintain Layout */
+/* Hide visually and from screenreaders, but maintain layout  */ 
+/* 	
+	<p>Lorem ipsum dolor sit amet, <strong class="invisible">Hah! You are stupid but you don't know it!</strong>consequat.</p> 
+*/
 .invisible {
 	visibility:hidden;
 }
