@@ -1,343 +1,80 @@
-/* #Helpers */
-/* Set of simple classes to implement common CSS patterns */
-/* ##Clearfix & Clearing */
-/* ###Clearing */
+/* #Headings */
+/* Based on the ancient Typographic scale */
+/* http://www.markboulton.co.uk/journal/comments/five-simple-steps-to-better-typography-part-4.
+
+/* ###Standard Headings */
+/* Note that all heading sizes are aliased via the `.hN` classes. So if you would like your `<h6>` to look like an `<h1>` then simply add the class `<h3 class="h1" />` */
 /* 
-	<p class="clear">I will clear both sides</p>
+	<h1>Heading 1</h1> 
 */
-.clear {
-  clear: both;
+h1, .h1 {
+  font-size: 3em;
+  color: #222222;
+  line-height: 1;
+  margin-bottom: .5em;
+  text-rendering: optimizelegibility;
 }
 
-/* 	
-	<p class="clear-l">I will clear to the left</p> 
+/* 
+	<h2>Heading 2</h1> 
 */
-.clear-l {
-  clear: left;
+h2, .h2 {
+  font-size: 2em;
+  color: #222222;
+  line-height: 1;
+  margin-bottom: .75em;
 }
 
-/* 	
-	<p class="clear-r">I will clear to the right</p> 
+/* 
+	<h3>Heading 3</h3> 
 */
-.clear-r {
-  clear: right;
+h3, .h3 {
+  font-size: 1.75em;
+  color: #333333;
+  line-height: 1;
+  margin-bottom: .5em;
 }
 
-/* ###Clearfix */
-/* The Magnificent Clearfix: Updated to prevent margin-collapsing on child elements in most situations nicolasgallagher.com/micro-clearfix-hack/ */
-/* 	
-	<div class="wrapper clearfix">
-		<div class="floated-left">
-			<p>I'm floated but my parent has a clearfix so I am contained</p>
-		</div>
-
-		<div class="floated-right">
-			<p>I'm floated but my parent has a clearfix so I am contained</p>
-		</div>
-	</div>
+/* 
+	<h4>Heading 4</h4> 
 */
-.clearfix:before, .nav:before,
-.clearfix:after,
-.nav:after {
-  content: "";
-  display: table;
+h4, .h4 {
+  font-size: 1.33333em;
+  color: #333333;
+  line-height: 1;
+  margin-bottom: .5em;
 }
 
-.clearfix:after, .nav:after {
-  clear: both;
-}
-
-.clearfix, .nav {
-  zoom: 1;
-}
-
-/* ##Floats and Alignment */
-/* ###Floats */
-/* 	
-	<p class="fr">I will float to the right.</p> 
+/* 
+	<h5>Heading 5</h3> 
 */
-.fr {
-  float: right;
+h5, .h5 {
+  font-size: 1em;
+  line-height: 1;
+  margin-bottom: .8em;
 }
 
-/* 	
-	<p class="fl">I will float to the left.</p> 
+/* 
+	<h6>Heading 6</h6> 
 */
-.fl {
-  float: left;
+h6, .h6 {
+  font-size: 1em;
+  line-height: 1;
 }
 
-/* ###Text Alignment */
-/* 	
-	<p class="text-right">My text is aligned right.</p> 
-*/
-.text-right {
-  text-align: right;
+/* ###Misc Headings */
+/* A series of classes for setting massive type; for use in heroes, mastheads, promos, etc. */
+/* CSS classes to use are `.giga` (massive!), `.mega` (giant) and `.kilo` (large) */
+.giga {
+  font-size: 8em;
 }
 
-/* 	
-	<p class="text-left">My text is aligned left.</p> 
-*/
-.text-left {
-  text-align: left;
+.mega {
+  font-size: 6em;
 }
 
-/* 	
-	<p class="text-center">My text is aligned centrally.</p> 
-*/
-.text-center {
-  text-align: center;
-}
-
-/* ##Imagery */
-/* ###Image Positioning */
-/* 	
-	<img src="http://www.placehold.it/200x200" class="img-left" />
-	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-	tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-	quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-	consequat.</p> 
-*/
-.img-left,
-.img-l,
-.alignleft {
-  display: block;
-  float: none;
-  margin: 0 auto 1.5em auto;
-}
-@media screen and (min-width: 768px) {
-  .img-left,
-  .img-l,
-  .alignleft {
-    float: left;
-    display: inline-block;
-    margin: 0 20px 1.5em 0;
-  }
-}
-
-/* 	
-	<img src="http://www.placehold.it/200x200" class="img-right" />
-	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-	tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-	quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-	consequat.</p> 
-*/
-.img-right,
-.img-r,
-.alignright {
-  display: block;
-  float: none;
-  margin: 0 auto 1.5em auto;
-}
-@media screen and (min-width: 768px) {
-  .img-right,
-  .img-r,
-  .alignright {
-    float: right;
-    display: inline-block;
-    margin: 0 0 1.5em 20px;
-  }
-}
-
-/* ###Image Replacement */
-/* This is a safe way to replace HTML content with an image. Advice is not to set width and height via the `style` attribute. Rather achieve this via an additional CSS rule where possible. */
-/* 	
-	<span class="img-replace" style="background-image: url(http://www.placehold.it/300x100); width: 300px; height: 100px;">
-		I should be replaced with an image
-	</span>
-*/
-.img-replace,
-.ir {
-  display: inline-block;
-  text-indent: -999em;
-  overflow: hidden;
-  background-repeat: no-repeat;
-  text-align: left;
-  direction: ltr;
-}
-
-/* ##Hidden Content */
-/* ###Hide: Screenreaders & Browsers */
-/* css-discuss.incutio.com/wiki/Screenreader_Visibility */
-/* 	
-	<p>Lorem ipsum dolor sit amet, <strong class="hidden">Hah! You are stupid but you don't know it!</strong>consequat.</p> 
-*/
-.hidden {
-  display: none;
-  visibility: hidden;
-}
-
-/* ###Hide: Visually For Browsers */
-/* Hide only visually, but have it available for screenreaders: by Jon Neal. */
-/* www.webaim.org/techniques/css/invisiblecontent/  &  j.mp/visuallyhidden */
-/* 	
-	<p>Lorem ipsum dolor sit amet, <strong class="vh">Hah! You are stupid but you don't know it!</strong>consequat.</p> 
-*/
-.vh,
-.v-hidden,
-.screen-reader-text {
-  position: absolute !important;
-  clip: rect(1px 1px 1px 1px);
-  /* IE6, IE7 */
-  clip: rect(1px, 1px, 1px, 1px);
-}
-
-.vh.focusable:active,
-.vh.focusable:focus
-.v-hidden.focusable:active,
-.v-hidden.focusable:focus {
-  clip: auto;
-  height: auto;
-  overflow: visible;
-  position: static;
-  width: auto;
-  margin: 0;
-}
-
-/* ###Hide: Visually From All + Maintain Layout */
-/* Hide visually and from screenreaders, but maintain layout  */
-/* 	
-	<p>Lorem ipsum dolor sit amet, <strong class="invisible">Hah! You are stupid but you don't know it!</strong>consequat.</p> 
-*/
-.invisible {
-  visibility: hidden;
-}
-
-/* #Spacing */
-/* Should be used to modify the default spacing between objects (not between nodes of the same object). Please use judiciously. You want to be using defaults most of the time, these are exceptions! */
-/* ##Usage */
-/* p,m = padding,margin */
-/* a,t,r,b,l,h,v = all,top,right,bottom,left,horizontal,vertical */
-/* s,m,l,n = small(5px),medium(10px),large(20px),none(0px) */
-/*
-    <p class="alert pvl mbl pls">Hey there! I'm a modified object with a large bottom margin and a large amount of vertical padding. Don't let me catch you doing this too often all you'll be in trouble!</p>
-*/
-.ptn, .pvn, .pan {
-  padding-top: 0px !important;
-}
-
-.pts, .pvs, .pas {
-  padding-top: 5px !important;
-}
-
-.ptm, .pvm, .pam {
-  padding-top: 10px !important;
-}
-
-.ptl, .pvl, .pal {
-  padding-top: 20px !important;
-}
-
-.prn, .phn, .pan {
-  padding-right: 0px !important;
-}
-
-.prs, .phs, .pas {
-  padding-right: 5px !important;
-}
-
-.prm, .phm, .pam {
-  padding-right: 10px !important;
-}
-
-.prl, .phl, .pal {
-  padding-right: 20px !important;
-}
-
-.pbn, .pvn, .pan {
-  padding-bottom: 0px !important;
-}
-
-.pbs, .pvs, .pas {
-  padding-bottom: 5px !important;
-}
-
-.pbm, .pvm, .pam {
-  padding-bottom: 10px !important;
-}
-
-.pbl, .pvl, .pal {
-  padding-bottom: 20px !important;
-}
-
-.pln, .phn, .pan {
-  padding-left: 0px !important;
-}
-
-.pls, .phs, .pas {
-  padding-left: 5px !important;
-}
-
-.plm, .phm, .pam {
-  padding-left: 10px !important;
-}
-
-.pll, .phl, .pal {
-  padding-left: 20px !important;
-}
-
-.mtn, .mvn, .man {
-  margin-top: 0px !important;
-}
-
-.mts, .mvs, .mas {
-  margin-top: 5px !important;
-}
-
-.mtm, .mvm, .mam {
-  margin-top: 10px !important;
-}
-
-.mtl, .mvl, .mal {
-  margin-top: 20px !important;
-}
-
-.mrn, .mhn, .man {
-  margin-right: 0px !important;
-}
-
-.mrs, .mhs, .mas {
-  margin-right: 5px !important;
-}
-
-.mrm, .mhm, .mam {
-  margin-right: 10px !important;
-}
-
-.mrl, .mhl, .mal {
-  margin-right: 20px !important;
-}
-
-.mbn, .mvn, .man {
-  margin-bottom: 0px !important;
-}
-
-.mbs, .mvs, .mas {
-  margin-bottom: 5px !important;
-}
-
-.mbm, .mvm, .mam {
-  margin-bottom: 10px !important;
-}
-
-.mbl, .mvl, .mal {
-  margin-bottom: 20px !important;
-}
-
-.mln, .mhn, .man {
-  margin-left: 0px !important;
-}
-
-.mls, .mhs, .mas {
-  margin-left: 5px !important;
-}
-
-.mlm, .mhm, .mam {
-  margin-left: 10px !important;
-}
-
-.mll, .mhl, .mal {
-  margin-left: 20px !important;
+.kilo {
+  font-size: 4em;
 }
 
 /* #Grid */
@@ -1444,4 +1181,346 @@
   -moz-transition: opacity 0.5s ease-out;
   -o-transition: opacity 0.5s ease-out;
   transition: opacity 0.5s ease-out;
+}
+
+/* #Helpers */
+/* Set of simple classes to implement common CSS patterns */
+/* ##Clearfix & Clearing */
+/* ###Clearing */
+/* 
+	<p class="clear">I will clear both sides</p>
+*/
+.clear {
+  clear: both;
+}
+
+/* 	
+	<p class="clear-l">I will clear to the left</p> 
+*/
+.clear-l {
+  clear: left;
+}
+
+/* 	
+	<p class="clear-r">I will clear to the right</p> 
+*/
+.clear-r {
+  clear: right;
+}
+
+/* ###Clearfix */
+/* The Magnificent Clearfix: Updated to prevent margin-collapsing on child elements in most situations nicolasgallagher.com/micro-clearfix-hack/ */
+/* 	
+	<div class="wrapper clearfix">
+		<div class="floated-left">
+			<p>I'm floated but my parent has a clearfix so I am contained</p>
+		</div>
+
+		<div class="floated-right">
+			<p>I'm floated but my parent has a clearfix so I am contained</p>
+		</div>
+	</div>
+*/
+.clearfix:before, .nav:before,
+.clearfix:after,
+.nav:after {
+  content: "";
+  display: table;
+}
+
+.clearfix:after, .nav:after {
+  clear: both;
+}
+
+.clearfix, .nav {
+  zoom: 1;
+}
+
+/* ##Floats and Alignment */
+/* ###Floats */
+/* 	
+	<p class="fr">I will float to the right.</p> 
+*/
+.fr {
+  float: right;
+}
+
+/* 	
+	<p class="fl">I will float to the left.</p> 
+*/
+.fl {
+  float: left;
+}
+
+/* ###Text Alignment */
+/* 	
+	<p class="text-right">My text is aligned right.</p> 
+*/
+.text-right {
+  text-align: right;
+}
+
+/* 	
+	<p class="text-left">My text is aligned left.</p> 
+*/
+.text-left {
+  text-align: left;
+}
+
+/* 	
+	<p class="text-center">My text is aligned centrally.</p> 
+*/
+.text-center {
+  text-align: center;
+}
+
+/* ##Imagery */
+/* ###Image Positioning */
+/* 	
+	<img src="http://www.placehold.it/200x200" class="img-left" />
+	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+	tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+	quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+	consequat.</p> 
+*/
+.img-left,
+.img-l,
+.alignleft {
+  display: block;
+  float: none;
+  margin: 0 auto 1.5em auto;
+}
+@media screen and (min-width: 768px) {
+  .img-left,
+  .img-l,
+  .alignleft {
+    float: left;
+    display: inline-block;
+    margin: 0 20px 1.5em 0;
+  }
+}
+
+/* 	
+	<img src="http://www.placehold.it/200x200" class="img-right" />
+	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+	tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+	quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+	consequat.</p> 
+*/
+.img-right,
+.img-r,
+.alignright {
+  display: block;
+  float: none;
+  margin: 0 auto 1.5em auto;
+}
+@media screen and (min-width: 768px) {
+  .img-right,
+  .img-r,
+  .alignright {
+    float: right;
+    display: inline-block;
+    margin: 0 0 1.5em 20px;
+  }
+}
+
+/* ###Image Replacement */
+/* This is a safe way to replace HTML content with an image. Advice is not to set width and height via the `style` attribute. Rather achieve this via an additional CSS rule where possible. */
+/* 	
+	<span class="img-replace" style="background-image: url(http://www.placehold.it/300x100); width: 300px; height: 100px;">
+		I should be replaced with an image
+	</span>
+*/
+.img-replace,
+.ir {
+  display: inline-block;
+  text-indent: -999em;
+  overflow: hidden;
+  background-repeat: no-repeat;
+  text-align: left;
+  direction: ltr;
+}
+
+/* ##Hidden Content */
+/* ###Hide: Screenreaders & Browsers */
+/* css-discuss.incutio.com/wiki/Screenreader_Visibility */
+/* 	
+	<p>Lorem ipsum dolor sit amet, <strong class="hidden">Hah! You are stupid but you don't know it!</strong>consequat.</p> 
+*/
+.hidden {
+  display: none;
+  visibility: hidden;
+}
+
+/* ###Hide: Visually For Browsers */
+/* Hide only visually, but have it available for screenreaders: by Jon Neal. */
+/* www.webaim.org/techniques/css/invisiblecontent/  &  j.mp/visuallyhidden */
+/* 	
+	<p>Lorem ipsum dolor sit amet, <strong class="vh">Hah! You are stupid but you don't know it!</strong>consequat.</p> 
+*/
+.vh,
+.v-hidden,
+.screen-reader-text {
+  position: absolute !important;
+  clip: rect(1px 1px 1px 1px);
+  /* IE6, IE7 */
+  clip: rect(1px, 1px, 1px, 1px);
+}
+
+.vh.focusable:active,
+.vh.focusable:focus
+.v-hidden.focusable:active,
+.v-hidden.focusable:focus {
+  clip: auto;
+  height: auto;
+  overflow: visible;
+  position: static;
+  width: auto;
+  margin: 0;
+}
+
+/* ###Hide: Visually From All + Maintain Layout */
+/* Hide visually and from screenreaders, but maintain layout  */
+/* 	
+	<p>Lorem ipsum dolor sit amet, <strong class="invisible">Hah! You are stupid but you don't know it!</strong>consequat.</p> 
+*/
+.invisible {
+  visibility: hidden;
+}
+
+/* #Spacing */
+/* Should be used to modify the default spacing between objects (not between nodes of the same object). Please use judiciously. You want to be using defaults most of the time, these are exceptions! */
+/* ##Usage */
+/* p,m = padding,margin */
+/* a,t,r,b,l,h,v = all,top,right,bottom,left,horizontal,vertical */
+/* s,m,l,n = small(5px),medium(10px),large(20px),none(0px) */
+/*
+    <p class="alert pvl mbl pls">Hey there! I'm a modified object with a large bottom margin and a large amount of vertical padding. Don't let me catch you doing this too often all you'll be in trouble!</p>
+*/
+.ptn, .pvn, .pan {
+  padding-top: 0px !important;
+}
+
+.pts, .pvs, .pas {
+  padding-top: 5px !important;
+}
+
+.ptm, .pvm, .pam {
+  padding-top: 10px !important;
+}
+
+.ptl, .pvl, .pal {
+  padding-top: 20px !important;
+}
+
+.prn, .phn, .pan {
+  padding-right: 0px !important;
+}
+
+.prs, .phs, .pas {
+  padding-right: 5px !important;
+}
+
+.prm, .phm, .pam {
+  padding-right: 10px !important;
+}
+
+.prl, .phl, .pal {
+  padding-right: 20px !important;
+}
+
+.pbn, .pvn, .pan {
+  padding-bottom: 0px !important;
+}
+
+.pbs, .pvs, .pas {
+  padding-bottom: 5px !important;
+}
+
+.pbm, .pvm, .pam {
+  padding-bottom: 10px !important;
+}
+
+.pbl, .pvl, .pal {
+  padding-bottom: 20px !important;
+}
+
+.pln, .phn, .pan {
+  padding-left: 0px !important;
+}
+
+.pls, .phs, .pas {
+  padding-left: 5px !important;
+}
+
+.plm, .phm, .pam {
+  padding-left: 10px !important;
+}
+
+.pll, .phl, .pal {
+  padding-left: 20px !important;
+}
+
+.mtn, .mvn, .man {
+  margin-top: 0px !important;
+}
+
+.mts, .mvs, .mas {
+  margin-top: 5px !important;
+}
+
+.mtm, .mvm, .mam {
+  margin-top: 10px !important;
+}
+
+.mtl, .mvl, .mal {
+  margin-top: 20px !important;
+}
+
+.mrn, .mhn, .man {
+  margin-right: 0px !important;
+}
+
+.mrs, .mhs, .mas {
+  margin-right: 5px !important;
+}
+
+.mrm, .mhm, .mam {
+  margin-right: 10px !important;
+}
+
+.mrl, .mhl, .mal {
+  margin-right: 20px !important;
+}
+
+.mbn, .mvn, .man {
+  margin-bottom: 0px !important;
+}
+
+.mbs, .mvs, .mas {
+  margin-bottom: 5px !important;
+}
+
+.mbm, .mvm, .mam {
+  margin-bottom: 10px !important;
+}
+
+.mbl, .mvl, .mal {
+  margin-bottom: 20px !important;
+}
+
+.mln, .mhn, .man {
+  margin-left: 0px !important;
+}
+
+.mls, .mhs, .mas {
+  margin-left: 5px !important;
+}
+
+.mlm, .mhm, .mam {
+  margin-left: 10px !important;
+}
+
+.mll, .mhl, .mal {
+  margin-left: 20px !important;
 }

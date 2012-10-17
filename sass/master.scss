@@ -28,14 +28,7 @@
 @import "partials/_mixins";
 
 
-// Resets and Helpers
-// ==========================================================================
 
-// Helper classes
-@import "partials/_helpers.scss";
-
-// Spacing classes
-@import "partials/_spacing.scss";
 
 
 // ==========================================================================
@@ -45,6 +38,8 @@
 // Block level (h1, p) and text-level (em, strong) type...etc
 //@import "partials/_typo.scss";
 
+// Headings
+@import "partials/_headings.scss";
 
 // ==========================================================================
 // GRID
@@ -126,6 +121,20 @@
 // http://thecssguru.freeiz.com/animate/\
 // 
 //@import "partials/_animate.scss";
+
+
+
+// Helpers
+// ==========================================================================
+
+// Helper classes
+@import "partials/_helpers.scss";
+
+// Spacing classes
+@import "partials/_spacing.scss";
+
+
+
 
 
 
