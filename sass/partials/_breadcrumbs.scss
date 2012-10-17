@@ -1,19 +1,16 @@
-/* #BREADCRUMBS */
+/* #Breadcrumbs */
 
 /* Standard Breadcrumb navigation for assisting users with establishing their position within the website hierarchy
 
 	<ul class="breadcrumbs">
 	    <li>
 	        <a href="#">Home</a>
-	        <span>\</span>
 	    </li>
 	    <li>
 	        <a href="#">Crumb</a>
-	        <span>\</span>
 	    </li>
 	    <li>
 	        <a href="#">Crumb</a>
-	        <span>\</span>
 	    </li>
 	    <li class="current">
 	        <a href="#">Current Crumb</a>
@@ -22,15 +19,15 @@
 */
 
 .breadcrumbs {
-	margin: rsize(20px) 0 0 0;
+	margin: 0;
 	padding: 0;
 	list-style: none;
 	overflow: hidden;
-	background: #fbfbfb; /* Old browsers */
-	border: 1px solid #ddd;
-	font-size: rsize(14px);
-	@include border-radius(3px);
-	@include box-shadow(inset 0 1px 0 #ffffff);
+	//background: #fbfbfb; /* Old browsers */
+	//border: 1px solid #ddd;
+	//font-size: rsize(14px);
+	//@include border-radius(3px);
+	//@include box-shadow(inset 0 1px 0 #ffffff);
 	
 	li {
 		float: left;
@@ -43,15 +40,15 @@
 	  	padding: 0.7em 1em 0.7em 2em;
 		float: left;
 		text-decoration: none;
-		background: #fbfbfb; /* Old browsers */
-		background: -moz-linear-gradient(left, #fbfbfb 50%, #f1f1f1 100%); /* FF3.6+ */
-		background: -webkit-gradient(linear, left top, right top, color-stop(50%,#fbfbfb), color-stop(100%,#f1f1f1)); /* Chrome,Safari4+ */
-		background: -webkit-linear-gradient(left, #fbfbfb 50%,#f1f1f1 100%); /* Chrome10+,Safari5.1+ */
-		background: -o-linear-gradient(left, #fbfbfb 50%,#f1f1f1 100%); /* Opera 11.10+ */
-		background: -ms-linear-gradient(left, #fbfbfb 50%,#f1f1f1 100%); /* IE10+ */
-		background: linear-gradient(left, #fbfbfb 50%,#f1f1f1 100%); /* W3C */
+		//background: #fbfbfb; /* Old browsers */
+		//background: -moz-linear-gradient(left, #fbfbfb 50%, #f1f1f1 100%); /* FF3.6+ */
+		//background: -webkit-gradient(linear, left top, right top, color-stop(50%,#fbfbfb), color-stop(100%,#f1f1f1)); /* Chrome,Safari4+ */
+		//background: -webkit-linear-gradient(left, #fbfbfb 50%,#f1f1f1 100%); /* Chrome10+,Safari5.1+ */
+		//background: -o-linear-gradient(left, #fbfbfb 50%,#f1f1f1 100%); /* Opera 11.10+ */
+		//background: -ms-linear-gradient(left, #fbfbfb 50%,#f1f1f1 100%); /* IE10+ */
+		//background: linear-gradient(left, #fbfbfb 50%,#f1f1f1 100%); /* W3C */
 
-		&:before,
+		/* &:before,
 		&:after {
 			content: "";
 			position: absolute;
@@ -72,13 +69,13 @@
 		&:after {
 			z-index: 2;
 			border-left-color: #F1F1F1;
-		}
+		} */
 	}
 
 	// Current item
 	.current a {
 		color: #999;
-		background: transparent;
+		//background: transparent;
 
 		&:before,
 		&:after {
