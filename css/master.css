@@ -203,7 +203,7 @@
   visibility: hidden;
 }
 
-/* #SPACING */
+/* #Spacing */
 /* Should be used to modify the default spacing between objects (not between nodes of the same object). Please use judiciously. You want to be using defaults most of the time, these are exceptions! */
 /* ##Usage */
 /* p,m = padding,margin */
@@ -1281,21 +1281,18 @@
   float: right;
 }
 
-/* #BREADCRUMBS */
+/* #Breadcrumbs */
 /* Standard Breadcrumb navigation for assisting users with establishing their position within the website hierarchy
 
 	<ul class="breadcrumbs">
 	    <li>
 	        <a href="#">Home</a>
-	        <span>\</span>
 	    </li>
 	    <li>
 	        <a href="#">Crumb</a>
-	        <span>\</span>
 	    </li>
 	    <li>
 	        <a href="#">Crumb</a>
-	        <span>\</span>
 	    </li>
 	    <li class="current">
 	        <a href="#">Current Crumb</a>
@@ -1303,22 +1300,10 @@
 	</ul>
 */
 .breadcrumbs {
-  margin: 1.25em 0 0 0;
+  margin: 0;
   padding: 0;
   list-style: none;
   overflow: hidden;
-  background: #fbfbfb;
-  /* Old browsers */
-  border: 1px solid #ddd;
-  font-size: 0.875em;
-  -webkit-border-radius: 3px;
-  -moz-border-radius: 3px;
-  -ms-border-radius: 3px;
-  -o-border-radius: 3px;
-  border-radius: 3px;
-  -webkit-box-shadow: inset 0 1px 0 white;
-  -moz-box-shadow: inset 0 1px 0 white;
-  box-shadow: inset 0 1px 0 white;
 }
 .breadcrumbs li {
   float: left;
@@ -1330,43 +1315,31 @@
   padding: 0.7em 1em 0.7em 2em;
   float: left;
   text-decoration: none;
-  background: #fbfbfb;
-  /* Old browsers */
-  background: -moz-linear-gradient(left, #fbfbfb 50%, #f1f1f1 100%);
-  /* FF3.6+ */
-  background: -webkit-gradient(linear, left top, right top, color-stop(50%, #fbfbfb), color-stop(100%, #f1f1f1));
-  /* Chrome,Safari4+ */
-  background: -webkit-linear-gradient(left, #fbfbfb 50%, #f1f1f1 100%);
-  /* Chrome10+,Safari5.1+ */
-  background: -o-linear-gradient(left, #fbfbfb 50%, #f1f1f1 100%);
-  /* Opera 11.10+ */
-  background: -ms-linear-gradient(left, #fbfbfb 50%, #f1f1f1 100%);
-  /* IE10+ */
-  background: linear-gradient(left, #fbfbfb 50%, #f1f1f1 100%);
-  /* W3C */
-}
-.breadcrumbs a:before, .breadcrumbs a:after {
-  content: "";
-  position: absolute;
-  top: 50%;
-  margin-top: -1.5em;
-  border-top: 1.5em solid transparent;
-  border-bottom: 1.5em solid transparent;
-  border-left: 1em solid;
-  right: -1em;
-}
-.breadcrumbs a:before {
-  border-left-color: #ddd;
-  right: -1.1em;
-  z-index: 1;
-}
-.breadcrumbs a:after {
-  z-index: 2;
-  border-left-color: #F1F1F1;
+  		/* &:before,
+  		&:after {
+  			content: "";
+  			position: absolute;
+  			top: 50%;
+  			margin-top: -1.5em;
+  			border-top: 1.5em solid transparent;
+  			border-bottom: 1.5em solid transparent;
+  			border-left: 1em solid;
+  			right: -1em;
+  		}
+  
+  		&:before {
+  			border-left-color: #ddd;
+  			right: -1.1em;
+  			z-index: 1;
+  		}
+  
+  		&:after {
+  			z-index: 2;
+  			border-left-color: #F1F1F1;
+  		} */
 }
 .breadcrumbs .current a {
   color: #999;
-  background: transparent;
 }
 .breadcrumbs .current a:before, .breadcrumbs .current a:after {
   display: none;
@@ -1394,6 +1367,47 @@
 .complex-link:hover .link-target,
 .complex-link:focus .link-target {
   text-decoration: underline;
+}
+
+/* #Images */
+/* Common styling patterns for images to be applied to `<img` elements. */
+/* Please note that `.img-rounded` and `.img-circle` do not work in IE7-8. */
+/* ##Rounded */
+/*
+    <img src="http://www.placehold.it/200x200" class="img-rounded" />
+*/
+.img-rounded {
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  -ms-border-radius: 6px;
+  -o-border-radius: 6px;
+  border-radius: 6px;
+}
+
+/* ##Poloroid */
+/*
+    <img src="http://www.placehold.it/200x200" class="img-polaroid" />
+*/
+.img-polaroid {
+  padding: 4px;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  -moz-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+/* ##Circle */
+/*
+    <img src="http://www.placehold.it/200x200" class="img-circle" />
+*/
+.img-circle {
+  -webkit-border-radius: 500px;
+  -moz-border-radius: 500px;
+  -ms-border-radius: 500px;
+  -o-border-radius: 500px;
+  border-radius: 500px;
 }
 
 /* #Misc */
