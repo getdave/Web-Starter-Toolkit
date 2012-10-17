@@ -45,18 +45,23 @@
 	</div>
 */
 
-.clearfix:before, 
-.clearfix:after { 
-	content: ""; 
-	display: table; 	
+
+.clearfix,
+.cf {
+	zoom: 1; 
+
+	&:before,
+	&:after {
+		content: ""; 
+		display: table; 
+	}
+
+	&:after {
+		clear: both; 
+	}
 }
 
-.clearfix:after { 
-	clear: both; 	
-}
-.clearfix { 
-	zoom: 1; 	
-}
+
 
 
 

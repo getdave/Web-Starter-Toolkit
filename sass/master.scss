@@ -59,6 +59,12 @@
 // Containers - used to define "sections" on a layout/page
 @import "partials/_containers.scss";
 
+// Island/Islet - simple boxed off content
+@import "partials/_island.scss";
+
+// Matrix
+@import "partials/_block-grids.scss";
+
 // Standard nav patterns
 @import "partials/_nav.scss";
 
