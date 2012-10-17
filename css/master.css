@@ -1283,3 +1283,38 @@
 .complex-link:focus .link-target {
   text-decoration: underline;
 }
+
+/* #MISC */
+/* Below are a number of miscellaneous items that don't quite fit anywhere else...yet */
+/* ##Site Logo 
+	<a href="/" class="site-logo" title="Return to website homepage">
+		<img src="http://www.placehold.it/200x100" alt="My Logo">
+	</a>    
+*/
+.site-logo {
+  display: block;
+  border: 0;
+  padding: 20px 0;
+  margin: 0;
+  vertical-align: bottom;
+}
+.site-logo a {
+  text-indent: -999em;
+  text-align: left;
+  direction: ltr;
+  display: block;
+  position: relative;
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  background-image: url('/images/logo.gif?1339662808');
+  width: 200px;
+  height: 60px;
+}
+.site-logo a:hover, .site-logo a:focus {
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=80);
+  opacity: 0.8;
+  -webkit-transition: opacity 0.5s ease-out;
+  -moz-transition: opacity 0.5s ease-out;
+  -o-transition: opacity 0.5s ease-out;
+  transition: opacity 0.5s ease-out;
+}
