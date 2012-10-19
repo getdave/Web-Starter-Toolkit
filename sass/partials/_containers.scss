@@ -16,6 +16,10 @@
 	@include pie-clearfix;
 }
 
+.page-fixed .container {
+	width: 960px;
+}
+
 
 /* ## Extended Container */
 /* Use to extend the content to be the full width of the window. Additional wrapping element around `.container`. */
