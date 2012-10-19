@@ -12,6 +12,13 @@ body {
 	color: $grayDark;
 }
 
+@if($bIE) {
+	body {
+		font-size: 100px;
+	}
+
+}
+
 
 
 

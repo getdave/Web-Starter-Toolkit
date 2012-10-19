@@ -19,9 +19,19 @@
     <meta name="viewport" content="width=device-width">
 
 
-    <!-- CSS -->
+    <!-- Normalize - included separately -->
     <link rel="stylesheet" href="css/normalize.css">
+
+
+    <!-- CSS FRAMEWORK -->
+
+    <!--[if (gt IE 8) | (IEMobile)]><!-->
     <link rel="stylesheet" href="css/master.css">
+    <!--<![endif]-->
+
+    <!--[if (lt IE 9) & (!IEMobile)]>
+    <link rel="stylesheet" href="/css/master-ie.css">
+    <![endif]-->
 
     <!-- More ideas for your <head> here: h5bp.com/d/head-Tips -->
 
@@ -44,7 +54,11 @@
 
             <a class="site-logo" href="/"><img src="http://placehold.it/260x70&text=site%20logo"></a>
 
-            <span class="fr">Call Us 01225 123 456</span>
+            <div class="site-contact">
+                
+                <span class="fr">Call Us 01225 123 456</span>
+            </div>
+            
 
             <nav class="primary-nav" role="navigation">          
                 <ul class="nav-primary">
