@@ -214,7 +214,7 @@ h6, .h6 {
 }
 
 .mobile-size1of12, .mobile-onecolumns {
-  width: 6.43333%;
+  width: 4.85%;
   margin-left: 3.8%;
   /* equal to 20px at 1024px */
   float: left;
@@ -223,7 +223,7 @@ h6, .h6 {
 }
 
 .mobile-size1of6, .mobile-twocolumns {
-  width: 14.76667%;
+  width: 13.5%;
   margin-left: 3.8%;
   /* equal to 20px at 1024px */
   float: left;
@@ -232,7 +232,7 @@ h6, .h6 {
 }
 
 .mobile-size1of4, .mobile-threecolumns {
-  width: 23.1%;
+  width: 22.15%;
   margin-left: 3.8%;
   /* equal to 20px at 1024px */
   float: left;
@@ -241,7 +241,7 @@ h6, .h6 {
 }
 
 .mobile-size1of3, .mobile-fourcolumns {
-  width: 31.43333%;
+  width: 30.8%;
   margin-left: 3.8%;
   /* equal to 20px at 1024px */
   float: left;
@@ -250,7 +250,7 @@ h6, .h6 {
 }
 
 .mobile-fivecolumns {
-  width: 39.76667%;
+  width: 39.45%;
   margin-left: 3.8%;
   /* equal to 20px at 1024px */
   float: left;
@@ -268,7 +268,7 @@ h6, .h6 {
 }
 
 .mobile-sevencolumns {
-  width: 56.43333%;
+  width: 56.75%;
   margin-left: 3.8%;
   /* equal to 20px at 1024px */
   float: left;
@@ -277,7 +277,7 @@ h6, .h6 {
 }
 
 .mobile-size2of3, .mobile-eightcolumns {
-  width: 64.76667%;
+  width: 65.4%;
   margin-left: 3.8%;
   /* equal to 20px at 1024px */
   float: left;
@@ -286,7 +286,7 @@ h6, .h6 {
 }
 
 .mobile-size3of4, .mobile-ninecolumns {
-  width: 73.1%;
+  width: 74.05%;
   margin-left: 3.8%;
   /* equal to 20px at 1024px */
   float: left;
@@ -295,7 +295,7 @@ h6, .h6 {
 }
 
 .mobile-tencolumns {
-  width: 81.43333%;
+  width: 82.7%;
   margin-left: 3.8%;
   /* equal to 20px at 1024px */
   float: left;
@@ -304,7 +304,7 @@ h6, .h6 {
 }
 
 .mobile-elevencolumns {
-  width: 89.76667%;
+  width: 91.35%;
   margin-left: 3.8%;
   /* equal to 20px at 1024px */
   float: left;
@@ -331,23 +331,23 @@ h6, .h6 {
   }
 
   .size1of12, .onecolumns {
-    width: 6.43333%;
+    width: 4.85%;
   }
 
   .size1of6, .twocolumns {
-    width: 14.76667%;
+    width: 13.5%;
   }
 
   .size1of4, .threecolumns {
-    width: 23.1%;
+    width: 22.15%;
   }
 
   .size1of3, .fourcolumns {
-    width: 31.43333%;
+    width: 30.8%;
   }
 
   .fivecolumns {
-    width: 39.76667%;
+    width: 39.45%;
   }
 
   .size1of2, .sixcolumns {
@@ -355,23 +355,23 @@ h6, .h6 {
   }
 
   .sevencolumns {
-    width: 56.43333%;
+    width: 56.75%;
   }
 
   .size2of3, .eightcolumns {
-    width: 64.76667%;
+    width: 65.4%;
   }
 
   .size3of4, .ninecolumns {
-    width: 73.1%;
+    width: 74.05%;
   }
 
   .tencolumns {
-    width: 81.43333%;
+    width: 82.7%;
   }
 
   .elevencolumns {
-    width: 89.76667%;
+    width: 91.35%;
   }
 
   .size1of1, .twelvecolumns {
@@ -385,23 +385,23 @@ h6, .h6 {
   	</div>
   */
   .push-size1of12, .push-onecolumns {
-    left: 10.23333%;
+    left: 8.65%;
   }
 
   .push-size1of6, .push-twocolumns {
-    left: 18.56667%;
+    left: 17.3%;
   }
 
   .push-size1of4, .push-threecolumns {
-    left: 26.9%;
+    left: 25.95%;
   }
 
   .push-size1of3, .push-fourcolumns {
-    left: 35.23333%;
+    left: 34.6%;
   }
 
   .push-fivecolumns {
-    left: 43.56667%;
+    left: 43.25%;
   }
 
   .push-size1of2, .push-sixcolumns {
@@ -409,43 +409,43 @@ h6, .h6 {
   }
 
   .push-sevencolumns {
-    left: 60.23333%;
+    left: 60.55%;
   }
 
   .push-size2of3, .push-eightcolumns {
-    left: 68.56667%;
+    left: 69.2%;
   }
 
   .push-size3of4, .push-ninecolumns {
-    left: 76.9%;
+    left: 77.85%;
   }
 
   .push-tencolumns {
-    left: 85.23333%;
+    left: 86.5%;
   }
 
   .push-elevencolumns {
-    left: 93.56667%;
+    left: 95.15%;
   }
 
   .pull-size1of12, .pull-onecolumns {
-    right: 10.23333%;
+    right: 8.65%;
   }
 
   .pull-size1of6, .pull-twocolumns {
-    right: 18.56667%;
+    right: 17.3%;
   }
 
   .pull-size1of4, .pull-threecolumns {
-    right: 26.9%;
+    right: 25.95%;
   }
 
   .pull-size1of3, .pull-fourcolumns {
-    right: 35.23333%;
+    right: 34.6%;
   }
 
   .pull-fivecolumns {
-    right: 43.56667%;
+    right: 43.25%;
   }
 
   .pull-size1of2, .pull-sixcolumns {
@@ -453,23 +453,23 @@ h6, .h6 {
   }
 
   .pull-sevencolumns {
-    right: 60.23333%;
+    right: 60.55%;
   }
 
   .pull-size2of3, .pull-eightcolumns {
-    right: 68.56667%;
+    right: 69.2%;
   }
 
   .pull-size3of4, .pull-ninecolumns {
-    right: 76.9%;
+    right: 77.85%;
   }
 
   .pull-tencolumns {
-    right: 85.23333%;
+    right: 86.5%;
   }
 
   .pull-elevencolumns {
-    right: 93.56667%;
+    right: 95.15%;
   }
 }
 .firstcol {
@@ -655,7 +655,7 @@ h6, .h6 {
   padding: 15px 30px;
   margin: 0;
   background-color: #f9f9f9;
-  border-top: 1px solid #ccc;
+  border-top: 0;
   border-bottom: 1px solid #ccc;
 }
 .headed-island .island-content {
