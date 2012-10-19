@@ -1,30 +1,21 @@
-/* ============================================================ */
 
 // MIXINS
 
 // Standard mixins and functions to help make life easier
 
-/* ============================================================ */
 
 
 // ==========================================================================
 // GRID MIXINS
 // ==========================================================================
 
-
-
-// GRID WIDTH - returns a grid unit's width
-@function grid-width($n,$nCols:$cols) {
-	//@return $n * $col_width + ($n - 1) * $gutter_width;
-   
-    //$nCols : 5;
-    @if ($n == $nCols) {
-        @return ($n/$nCols*100) * 1%;
-    } @else {
-        @return ($n/$nCols*100) - ( $gutter_width*0.5 );
-    }
-    
+$one_col: (100% - ($gutter_width*($cols - 1))) / $cols;
+ 
+@function grid-width($num) {
+    @return ($one_col * $num) + ($gutter_width * ($num - 1));
 }
+
+
 
 // Grid Col - produces CSS selector for a single grid col/unit based on input provided
 @function grid-col($column,$nColumn,$sPrepend) {
@@ -53,6 +44,15 @@
         $count: $count + 1;
     }
     @return $selectorString;
+}
+
+
+@mixin grid-span($cols) {
+    width: grid-width($cols);
+    margin-left: $gutter_width; /* equal to 20px at 1024px */
+    float: left;
+    min-height: 1px;
+    clear: none;
 }
 
 

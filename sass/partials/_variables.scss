@@ -1,11 +1,9 @@
-/* ============================================================ */
 
 // VARIABLES
 
 // This file allows you to set variables which will be reused
 // throughout your project to save you time and energy. 
 
-/* ============================================================ */
 
 
 // ==========================================================================
@@ -144,6 +142,12 @@ $containerWidth:				90%;
 // Padding for main page columns. This is not for the grid-system
 $colPaddingTB:					30px;
 $colPaddingLR:					30px;
+
+// SPACING UNITS
+// ==========================================================================
+
+$spacing-unit:					30;
+$half-spacing-unit:				15;
 
 // WEBSITE LOGO
 // ==========================================================================

@@ -1,0 +1,95 @@
+/* ============================================================ */
+
+// Menu
+
+// Description:			Default navigation styles for Global nav
+//						elements
+// Acknowledgements		Twitter Bootstrap 2
+
+/* ============================================================ */
+
+
+
+// ==========================================================================
+// NAV PRIMARY
+// ==========================================================================
+
+.nav-primary,
+.nav-primary ul {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	overflow: visible;
+	@include clearfix;
+}
+
+.nav-primary {
+	background-color: $navbarBackground;
+
+	> li {
+		float: left;
+		position: relative;
+	}
+
+	a {
+		display: block;
+		text-align: center;
+		color: $navbarLinkColor;
+		padding: rsize(10px) rsize(20px);
+
+		&:hover,
+		&:focus {
+			color: $navbarLinkColorHover;
+		}
+	}	
+}
+
+// Show submenu on :hover/:focus
+.nav-primary li {
+	&:hover .sub-menu,
+	&:focus .sub-menu {
+		left: 0;
+	}
+}
+
+
+// STATE: FIXED POSITION
+// ==========================================================================
+
+.navbar-fixed {
+	@extend .navbar;
+	position: fixed;
+	top: 0;
+	right: 0;
+	left: 0;
+	z-index: $zindexFixedNavbar;
+}
+
+
+// SUBMENUS
+// ==========================================================================
+
+.sub-menu {
+	position: absolute;
+	top: auto;
+	left: -999em;
+	z-index: $zindexDropdown;
+	text-align: left;
+	direction:ltr;
+	background-color: $navbarBackground;
+
+	li {
+		vertical-align: bottom; /* This fixes the IE5 Win gap (no harm done to modern browsers) */
+		white-space: nowrap;
+		width: 100%;	/* inherit the width of the parent <ul> */
+		clear: both;
+		display: list-item;
+
+
+		a {
+			white-space: nowrap; /* forces drop down to stretch to accommodate length of text (and not wrap) */
+			padding: 0.4615384615384615em 20px;
+			text-align: left;
+		}
+	}
+}
