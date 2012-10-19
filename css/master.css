@@ -1,3 +1,109 @@
+@-ms-viewport {
+  width: device-width;
+}
+
+/* #Typography */
+body {
+  font-family: "Helvetica Neue", Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  line-height: 1.667em;
+  color: #333333;
+}
+
+p {
+  margin: 0 0 1.667em;
+  line-height: 1.667em;
+}
+
+a {
+  color: #0088cc;
+}
+
+a:hover,
+a:focus {
+  color: #005580;
+}
+
+a:focus {
+  outline: thin dotted;
+}
+
+a:hover, a:active {
+  outline: none;
+}
+
+ul, ol {
+  padding: 0;
+  margin: 0 0 0.8335em 25px;
+}
+
+ul ul,
+ul ol,
+ol ol,
+ol ul {
+  margin-bottom: 0;
+}
+
+ul {
+  list-style: disc;
+}
+
+ol {
+  list-style: decimal;
+}
+
+li {
+  line-height: 1.667em;
+}
+
+blockquote, blockquote p {
+  line-height: 1.5;
+  color: #777;
+}
+
+blockquote {
+  margin: 0 0 ms(1);
+  padding: 9px 20px 0 19px;
+  border-left: 1px solid #ddd;
+}
+
+blockquote cite {
+  display: block;
+  font-size: ms(0)-1;
+  color: #555;
+}
+
+blockquote cite:before {
+  content: "\2014 \0020";
+}
+
+blockquote cite a, blockquote cite a:visited {
+  color: #555;
+}
+
+img {
+  max-width: 100%;
+  vertical-align: middle;
+  border: 0;
+  -ms-interpolation-mode: bicubic;
+}
+
+#googlemap img, object, embed {
+  max-width: none;
+}
+
+#map_canvas embed {
+  max-width: none;
+}
+
+#map_canvas img {
+  max-width: none;
+}
+
+#map_canvas object {
+  max-width: none;
+}
+
 /* #Headings */
 /* Based on the ancient Typographic scale */
 /* http://www.markboulton.co.uk/journal/comments/five-simple-steps-to-better-typography-part-4.
@@ -457,6 +563,10 @@ h6, .h6 {
   clear: both;
 }
 
+.page-fixed .container {
+  width: 960px;
+}
+
 /* ## Extended Container */
 /* Use to extend the content to be the full width of the window. Additional wrapping element around `.container`. */
 /*
@@ -496,16 +606,18 @@ h6, .h6 {
         I am boxed off.
     </div>
 */
-.island,
+.island, .headed-island,
 .islet {
   display: block;
+  border: 1px solid #ccc;
+  /* Override this color in your theme stylesheet */
 }
 
-.island {
-  padding: 20px;
+.island, .headed-island {
+  padding: 15px 30px;
 }
 
-.island > :last-child,
+.island > :last-child, .headed-island > :last-child,
 .islet > :last-child {
   margin-bottom: 0;
 }
@@ -518,7 +630,39 @@ h6, .h6 {
     </div>
 */
 .islet {
-  padding: 10px;
+  padding: 15px;
+}
+
+/* ##Headed Island */
+/* Just like `.island`, only with a definite boxed heading */
+/*
+    <div class="headed-island">
+        <h3 class="island-heading">I am the Island Heading</h3>
+        <div class="island-content">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+            quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+            consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+            cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+            proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p> 
+        </div>
+    </div>
+*/
+.headed-island {
+  padding: 0;
+}
+.headed-island .island-heading {
+  padding: 15px 30px;
+  margin: 0;
+  background-color: #f9f9f9;
+  border-top: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+}
+.headed-island .island-content {
+  padding: 15px 30px;
+}
+.headed-island .island-content > :last-child {
+  margin-bottom: 0;
 }
 
 /* #Block Grids */
@@ -764,6 +908,41 @@ that IE7/8 do not support :nth-child.
     clear: both;
   }
 }
+/* #Block Lists */
+/* 
+Vertically stacked blocky lists of content. Ideal for sub navigation or similar.
+Borrowed from inuit.css
+*/
+/*
+    <ul class="block-list">
+        <li>Foo</li>
+        <li>Bar</li>
+        <li>Baz</li>
+        <li><a href="#" class="block-list-link">Foo Bar Baz</a></li>
+    </ul>
+*/
+.block-list,
+.block-list > li {
+  border: 0 solid #ccc;
+  /* Override this color in your theme stylesheet */
+}
+
+.block-list {
+  list-style: none;
+  margin-left: 0;
+  padding-left: 0;
+  border-top-width: 1px;
+}
+.block-list > li {
+  border-bottom-width: 1px;
+  padding: 15px;
+}
+.block-list .block-list-link {
+  display: block;
+  padding: 15px;
+  margin: -15px;
+}
+
 /* #Nav */
 /* Nav abstraction as per: csswizardry.com/2011/09/the-nav-abstraction. When used on an `ol` or `ul`, this class throws the list into horizontal mode. */
 /* ##Base */
@@ -1027,8 +1206,8 @@ that IE7/8 do not support :nth-child.
   border-right: 4px solid transparent;
   border-top: 4px solid #fff;
   background: 0;
-  margin-left: 4px;
-  margin-top: 0.75em;
+  margin-left: 7px;
+  margin-top: 0.4375em;
   content: "\2193";
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=75);
   opacity: 0.75;
@@ -1423,6 +1602,104 @@ that IE7/8 do not support :nth-child.
   border-radius: 500px;
 }
 
+/* #Flexslider */
+/* Utilise the power of WooThemes' Flexslider plugin to power slideshows */
+/* ##Base */
+/*
+	<div class="flexslider">
+	    <ul class="slides">
+	        <li class="slide">
+	        	<p>Slide 1 content</p>
+	        </li>
+	        <li class="slide" style="display: none;">
+	        	<p>Slide 2 content</p>
+	        </li>
+	    </ul>
+	</div>
+ */
+/* Browser Resets */
+.flex-container a:active,
+.flexslider a:active,
+.flex-container a:focus,
+.flexslider a:focus {
+  outline: none;
+}
+
+.slides,
+.flex-control-nav,
+.flex-direction-nav {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+/* FlexSlider Necessary Styles
+*********************************/
+.flexslider {
+  margin: 0;
+  padding: 0;
+}
+
+.flexslider .slides > li {
+  display: none;
+  -webkit-backface-visibility: hidden;
+}
+
+/* Hide the slides before the JS is loaded. Avoids image jumping */
+.flexslider .slides img {
+  width: 100%;
+  display: block;
+}
+
+.flex-pauseplay span {
+  text-transform: capitalize;
+}
+
+/* Clearfix for the .slides element */
+.slides:after {
+  content: ".";
+  display: block;
+  clear: both;
+  visibility: hidden;
+  line-height: 0;
+  height: 0;
+}
+
+html[xmlns] .slides {
+  display: block;
+}
+
+* html .slides {
+  height: 1%;
+}
+
+/* No JavaScript Fallback */
+/* If you are not using another script, such as Modernizr, make sure you
+ * include js that eliminates this class on page load */
+.js .slides > li:first-child {
+  display: block;
+}
+
+.hero-unit {
+  position: relative;
+  padding: 60px;
+  margin-bottom: 30px;
+  background-color: #eeeeee;
+}
+.hero-unit .hero-heading {
+  margin-bottom: 0;
+  font-size: 60px;
+  line-height: 1;
+  letter-spacing: -1px;
+  color: inherit;
+}
+.hero-unit .hero-content {
+  font-size: 18px;
+  font-weight: 200;
+  line-height: 30px;
+  color: inherit;
+}
+
 /* #Misc */
 /* Below are a number of miscellaneous items that don't quite fit anywhere else...yet */
 /* ##Site Logo 
@@ -1457,6 +1734,82 @@ that IE7/8 do not support :nth-child.
   -moz-transition: opacity 0.5s ease-out;
   -o-transition: opacity 0.5s ease-out;
   transition: opacity 0.5s ease-out;
+}
+
+/* ============================================================ */
+/* ============================================================ */
+.nav-primary,
+.nav-primary ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  overflow: visible;
+  zoom: 1;
+}
+.nav-primary:before,
+.nav-primary ul:before {
+  content: "";
+  display: table;
+}
+.nav-primary:after,
+.nav-primary ul:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.nav-primary {
+  background-color: #999999;
+}
+.nav-primary > li {
+  float: left;
+  position: relative;
+}
+.nav-primary a {
+  display: block;
+  text-align: center;
+  color: #333333;
+  padding: 0.625em 1.25em;
+}
+.nav-primary a:hover, .nav-primary a:focus {
+  color: white;
+}
+
+.nav-primary li:hover .sub-menu, .nav-primary li:focus .sub-menu {
+  left: 0;
+}
+
+.navbar-fixed {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 1030;
+}
+
+.sub-menu {
+  position: absolute;
+  top: auto;
+  left: -999em;
+  z-index: 1000;
+  text-align: left;
+  direction: ltr;
+  background-color: #999999;
+}
+.sub-menu li {
+  vertical-align: bottom;
+  /* This fixes the IE5 Win gap (no harm done to modern browsers) */
+  white-space: nowrap;
+  width: 100%;
+  /* inherit the width of the parent <ul> */
+  clear: both;
+  display: list-item;
+}
+.sub-menu li a {
+  white-space: nowrap;
+  /* forces drop down to stretch to accommodate length of text (and not wrap) */
+  padding: 0.4615384615384615em 20px;
+  text-align: left;
 }
 
 /* #Helpers */
@@ -1497,20 +1850,20 @@ that IE7/8 do not support :nth-child.
 		</div>
 	</div>
 */
-.clearfix, .island,
+.clearfix, .island, .headed-island,
 .islet, .nav,
 .cf {
   zoom: 1;
 }
-.clearfix:before, .island:before,
-.islet:before, .nav:before, .clearfix:after, .island:after,
+.clearfix:before, .island:before, .headed-island:before,
+.islet:before, .nav:before, .clearfix:after, .island:after, .headed-island:after,
 .islet:after, .nav:after,
 .cf:before,
 .cf:after {
   content: "";
   display: table;
 }
-.clearfix:after, .island:after,
+.clearfix:after, .island:after, .headed-island:after,
 .islet:after, .nav:after,
 .cf:after {
   clear: both;

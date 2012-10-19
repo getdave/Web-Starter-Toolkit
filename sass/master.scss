@@ -28,6 +28,11 @@
 @import "partials/_mixins";
 
 
+// Cater for IE10 Windows 8 "Snap Mode"
+// http://timkadlec.com/2012/10/ie10-snap-mode-and-responsive-design/
+@-ms-viewport{
+    width: device-width;
+}
 
 
 
@@ -36,7 +41,7 @@
 // ==========================================================================
 
 // Block level (h1, p) and text-level (em, strong) type...etc
-//@import "partials/_typo.scss";
+@import "partials/_typo.scss";
 
 // Headings
 @import "partials/_headings.scss";
@@ -62,8 +67,11 @@
 // Island/Islet - simple boxed off content
 @import "partials/_island.scss";
 
-// Matrix
+// Block Grids
 @import "partials/_block-grids.scss";
+
+// Block Lists
+@import "partials/_block-list.scss";
 
 // Standard nav patterns
 @import "partials/_nav.scss";
@@ -91,6 +99,9 @@
 
 // Images
 @import "partials/_images.scss";
+
+// Flexslider
+@import "partials/_flexslider.scss";
 
 // Misc.
 @import "partials/_misc.scss";
@@ -130,7 +141,16 @@
 
 
 
-// Helpers
+// ==========================================================================
+// STANDARD PATTERNS
+// ==========================================================================
+
+// Menu
+@import "partials/_menu.scss";
+
+
+// ==========================================================================
+// HELPERS
 // ==========================================================================
 
 // Helper classes
