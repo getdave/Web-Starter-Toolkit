@@ -10,6 +10,10 @@ body {
   color: #333333;
 }
 
+body {
+  font-size: 100px;
+}
+
 p {
   margin: 0 0 1.667em;
   line-height: 1.667em;

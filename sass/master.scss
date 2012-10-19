@@ -1,7 +1,5 @@
-/* ============================================================ */
-
-// BONES CSS FRAMEWORK
-// Version: 1.5
+// Web Starter CSS FRAMEWORK
+// Version: 2
 // URL: 
 // Apache License: v2.0. http://www.apache.org/licenses/LICENSE-2.0
 // Author: David Smith (@get_dave)
@@ -11,7 +9,6 @@
 // require in order to produce your site. Anything else should be left
 // commented out.
 
-/* ============================================================ */
 
 
 // ==========================================================================
@@ -29,17 +26,12 @@
 @import "partials/_mixins";
 
 
-// Resets and Helpers
-// ==========================================================================
+// Cater for IE10 Windows 8 "Snap Mode"
+// http://timkadlec.com/2012/10/ie10-snap-mode-and-responsive-design/
+@-ms-viewport{
+    width: device-width;
+}
 
-// Normalize (we prefer this over CSS resets)
-@import "normalize.scss";
-
-// Helper classes
-@import "partials/_helpers.scss";
-
-// Spacing classes
-//@import "partials/_spacing.scss";
 
 
 // ==========================================================================
@@ -49,6 +41,8 @@
 // Block level (h1, p) and text-level (em, strong) type...etc
 @import "partials/_typo.scss";
 
+// Headings
+@import "partials/_headings.scss";
 
 // ==========================================================================
 // GRID
@@ -62,25 +56,59 @@
 // ELEMENTS
 // ==========================================================================
 
-// Layout structures (columns, page layouts...etc)
-@import "partials/_structure.scss";
+// Media Block
+@import "partials/_media.scss";
+
+// Containers - used to define "sections" on a layout/page
+@import "partials/_containers.scss";
+
+// Island/Islet - simple boxed off content
+@import "partials/_island.scss";
+
+// Split (Listings)
+@import "partials/_split.scss";
+
+// Hero Unit
+@import "partials/_hero-unit.scss";
+
+// Block Grids
+@import "partials/_block-grids.scss";
+
+// Block Lists
+@import "partials/_block-list.scss";
 
 // Standard nav patterns
 @import "partials/_nav.scss";
 
-// Button styles (optional)
+// Buttons (optional)
 @import "partials/_buttons.scss";
 
-// Standard Alert messages
-//@import "partials/_alerts.scss";
+// Dropdowns (optional)
+@import "partials/_dropdowns.scss";
 
-// Standard Pagination and Paging controls
-//@import "partials/_pagination.scss";
+// Alerts 
+@import "partials/_alerts.scss";
 
-// Standard Breadcrumb navigation
-//@import "partials/_breadcrumbs.scss";
+// Pagination 
+@import "partials/_pagination.scss";
 
+// Paging (controls for Next/Previous)
+@import "partials/_pager.scss";
 
+// Breadcrumb navigation
+@import "partials/_breadcrumbs.scss";
+
+// Complex (split) Link
+@import "partials/_complex-link.scss";
+
+// Images
+@import "partials/_images.scss";
+
+// Flexslider
+@import "partials/_flexslider.scss";
+
+// Misc.
+@import "partials/_misc.scss";
 
 
 // ==========================================================================
@@ -88,7 +116,7 @@
 // ==========================================================================
 
 // Standard form controls
-@import "partials/_forms.scss";
+//@import "partials/_forms.scss";
 
 
 
@@ -100,7 +128,7 @@
 // ==========================================================================
 
 // Font Awesome icon fonts (optional)
-@import "partials/_font-awesome";
+//@import "partials/_font-awesome";
 
 
 
@@ -118,11 +146,34 @@
 
 
 // ==========================================================================
+// STANDARD PATTERNS
+// ==========================================================================
+
+// Menu
+@import "partials/_menu.scss";
+
+
+// ==========================================================================
+// HELPERS
+// ==========================================================================
+
+// Helper classes
+@import "partials/_helpers.scss";
+
+// Spacing classes
+@import "partials/_spacing.scss";
+
+
+
+
+
+
+// ==========================================================================
 // LAYOUT
 // ==========================================================================
 
 // Page level layout styles (banner, navigation, content, contentinfo)
-@import "site/_page.scss";
+//@import "site/_page.scss";
 
 // PAGES
 // Individual stylesheets for unique pages on the site/application
