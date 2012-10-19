@@ -14,15 +14,28 @@
 // NAV PRIMARY
 // ==========================================================================
 
-.nav-primary {
-	@extend .nav;
+.nav-primary,
+.nav-primary ul {
+	margin: 0;
+	padding: 0;
+	list-style: none;
 	overflow: visible;
+	@include clearfix;
+}
+
+.nav-primary {
 	background-color: $navbarBackground;
-	@include pie-clearfix;
+
+	> li {
+		float: left;
+		position: relative;
+	}
 
 	a {
+		display: block;
 		text-align: center;
 		color: $navbarLinkColor;
+		padding: rsize(10px) rsize(20px);
 
 		&:hover,
 		&:focus {
