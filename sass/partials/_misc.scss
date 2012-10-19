@@ -10,7 +10,7 @@
 */
 
 .site-logo {
-	display: block;
+	@include inline-block;
 	border: 0;
 	padding: 0;
 	margin: $spacing-unit +px 0;

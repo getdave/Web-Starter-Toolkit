@@ -665,6 +665,45 @@ h6, .h6 {
   margin-bottom: 0;
 }
 
+/* #Split */
+/* 
+Simple split item for creating two elements floated away from one another.
+
+Borrowed from inuit.css
+
+https://raw.github.com/csswizardry/inuit.css/master/inuit.css/partials/objects/_split.scss
+*/
+/* ##Simple Split 
+
+    <dl class="split">       
+        <dt class="split-title">Burger and fries</dt>
+        <dd>&pound;5.99</dd>       
+        <dt class="split-title">Fillet steak</dt>
+        <dd>&pound;19.99</dd>       
+        <dt class="split-title">Ice cream</dt>
+        <dd>&pound;2.99</dd>       
+    </dl>   
+*/
+/* ##Split Results List
+
+    <ol class="split results">
+        <li class="first"><b class="split-title">1st place</b> Bob</li>       
+        <li class="second"><b class="split-title">2nd place</b> Lilly</li>       
+        <li class="third"><b class="split-title">3rd place</b> Ted</li>       
+    </ol>​ 
+*/
+.split {
+  text-align: right;
+  list-style: none;
+  margin-left: 0;
+  padding-left: 0;
+}
+.split .split-title {
+  text-align: left;
+  float: left;
+  clear: left;
+}
+
 /* #Hero Unit */
 /* 
 Creates an image-based feature "hero" areas with absolutely positioned content blocks
@@ -1780,7 +1819,12 @@ html[xmlns] .slides {
 	</a>    
 */
 .site-logo {
-  display: block;
+  display: -moz-inline-stack;
+  display: inline-block;
+  vertical-align: middle;
+  *vertical-align: auto;
+  zoom: 1;
+  *display: inline;
   border: 0;
   padding: 0;
   margin: 30px 0;
