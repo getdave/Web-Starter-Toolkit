@@ -42,24 +42,3 @@ html[xmlns] .slides {display: block;}
  * include js that eliminates this class on page load */
 .js .slides > li:first-child {display: block;}
 
-
-.hero-unit {
-	position: relative;
-	padding: 60px;
-	margin-bottom: 30px;
-	background-color: #eeeeee;
-
-	.hero-heading {
-		margin-bottom: 0;
-		font-size: 60px;
-		line-height: 1;
-		letter-spacing: -1px;
-		color: inherit;
-	}
-	.hero-content {
-		font-size: 18px;
-		font-weight: 200;
-		line-height: 30px;
-		color: inherit;
-	}
-}

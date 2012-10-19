@@ -665,6 +665,97 @@ h6, .h6 {
   margin-bottom: 0;
 }
 
+/* #Hero Unit */
+/* 
+Creates an image-based feature "hero" areas with absolutely positioned content blocks
+
+Provides utility classes to allow for common positioning of content within Hero Unit
+*/
+/* ##Base */
+/* 
+By default the content is positioned top left of the Hero Unit. Images are set using `<img />` tags.
+
+Width of the content should be defined using standard grid classes (eg: `.size2of3`) 
+*/
+/*
+	<div class="hero-unit">
+        <p class="hero-content size1of2">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo.
+        </p>
+        <img src="http://flickholdr.com/960/360/food" />
+    </div>
+*/
+.hero-unit {
+  position: relative;
+  margin-bottom: 30px;
+  background-color: #eeeeee;
+}
+
+.hero-content, .hero-content-tr, .hero-content-br, .hero-content-bl,
+.hero-content-tl {
+  position: absolute;
+  top: 10%;
+  left: 0;
+  padding: 30px;
+  margin: 0;
+  background-color: #999;
+  font-size: 1.125em;
+  color: inherit;
+}
+
+/* ##Positioning Variations */
+/* ###Top Right */
+/*
+	<div class="hero-unit">
+        <p class="hero-content-tr size1of2">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo.
+        </p>
+        <img src="http://flickholdr.com/960/360/food" />
+    </div>
+ */
+.hero-content-tr {
+  left: auto;
+  right: 0;
+}
+
+/* ###Bottom Right */
+/*
+	<div class="hero-unit">
+        <p class="hero-content-br size1of2">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo.
+        </p>
+        <img src="http://flickholdr.com/960/360/food" />
+    </div>
+ */
+.hero-content-br {
+  top: auto;
+  left: auto;
+  right: 0;
+  bottom: 10%;
+}
+
+/* ###Bottom Left */
+/*
+	<div class="hero-unit">
+        <p class="hero-content-bl size1of2">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo.
+        </p>
+        <img src="http://flickholdr.com/960/360/food" />
+    </div>
+ */
+.hero-content-bl {
+  top: auto;
+  bottom: 10%;
+}
+
 /* #Block Grids */
 /* Borrowed from Zurb Foundation, these are 2-up, 3-up, 4-up and 5-up ULs, suited
 for repeating blocks of content. Add 'mobile' to
@@ -1680,26 +1771,6 @@ html[xmlns] .slides {
   display: block;
 }
 
-.hero-unit {
-  position: relative;
-  padding: 60px;
-  margin-bottom: 30px;
-  background-color: #eeeeee;
-}
-.hero-unit .hero-heading {
-  margin-bottom: 0;
-  font-size: 60px;
-  line-height: 1;
-  letter-spacing: -1px;
-  color: inherit;
-}
-.hero-unit .hero-content {
-  font-size: 18px;
-  font-weight: 200;
-  line-height: 30px;
-  color: inherit;
-}
-
 /* #Misc */
 /* Below are a number of miscellaneous items that don't quite fit anywhere else...yet */
 /* ##Site Logo 
@@ -1712,7 +1783,7 @@ html[xmlns] .slides {
   display: block;
   border: 0;
   padding: 0;
-  margin: 0;
+  margin: 30px 0;
   vertical-align: bottom;
 }
 .site-logo a {
