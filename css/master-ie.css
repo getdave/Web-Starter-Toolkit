@@ -4,7 +4,7 @@
 
 /* #Typography */
 body {
-  font-family: "Helvetica Neue", Arial, Helvetica, sans-serif;
+  font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
   font-size: 16px;
   line-height: 1.667em;
   color: #333333;
@@ -325,157 +325,156 @@ h6, .h6 {
   clear: none;
 }
 
-@media only screen and (min-width: 62em) {
-  .size1of12, .onecolumns, .size1of6, .twocolumns, .size1of4, .threecolumns, .size1of3, .fourcolumns, .fivecolumns, .size1of2, .sixcolumns, .sevencolumns, .size2of3, .eightcolumns, .size3of4, .ninecolumns, .tencolumns, .elevencolumns, .size1of1, .twelvecolumns {
-    margin-left: 3.8%;
-    float: left;
-    min-height: 1px;
-    position: relative;
-    clear: none;
-  }
-
-  .size1of12, .onecolumns {
-    width: 4.85%;
-  }
-
-  .size1of6, .twocolumns {
-    width: 13.5%;
-  }
-
-  .size1of4, .threecolumns {
-    width: 22.15%;
-  }
-
-  .size1of3, .fourcolumns {
-    width: 30.8%;
-  }
-
-  .fivecolumns {
-    width: 39.45%;
-  }
-
-  .size1of2, .sixcolumns {
-    width: 48.1%;
-  }
-
-  .sevencolumns {
-    width: 56.75%;
-  }
-
-  .size2of3, .eightcolumns {
-    width: 65.4%;
-  }
-
-  .size3of4, .ninecolumns {
-    width: 74.05%;
-  }
-
-  .tencolumns {
-    width: 82.7%;
-  }
-
-  .elevencolumns {
-    width: 91.35%;
-  }
-
-  .size1of1, .twelvecolumns {
-    width: 100%;
-  }
-
-  /* ##Push Classes */
-  /* 
-  	<div class="size3of4 firstcol push-size1of4">
-  		I'm a 3/4 width column that is pushed to the left by 1/4 column
-  	</div>
-  */
-  .push-size1of12, .push-onecolumns {
-    left: 8.65%;
-  }
-
-  .push-size1of6, .push-twocolumns {
-    left: 17.3%;
-  }
-
-  .push-size1of4, .push-threecolumns {
-    left: 25.95%;
-  }
-
-  .push-size1of3, .push-fourcolumns {
-    left: 34.6%;
-  }
-
-  .push-fivecolumns {
-    left: 43.25%;
-  }
-
-  .push-size1of2, .push-sixcolumns {
-    left: 51.9%;
-  }
-
-  .push-sevencolumns {
-    left: 60.55%;
-  }
-
-  .push-size2of3, .push-eightcolumns {
-    left: 69.2%;
-  }
-
-  .push-size3of4, .push-ninecolumns {
-    left: 77.85%;
-  }
-
-  .push-tencolumns {
-    left: 86.5%;
-  }
-
-  .push-elevencolumns {
-    left: 95.15%;
-  }
-
-  .pull-size1of12, .pull-onecolumns {
-    right: 8.65%;
-  }
-
-  .pull-size1of6, .pull-twocolumns {
-    right: 17.3%;
-  }
-
-  .pull-size1of4, .pull-threecolumns {
-    right: 25.95%;
-  }
-
-  .pull-size1of3, .pull-fourcolumns {
-    right: 34.6%;
-  }
-
-  .pull-fivecolumns {
-    right: 43.25%;
-  }
-
-  .pull-size1of2, .pull-sixcolumns {
-    right: 51.9%;
-  }
-
-  .pull-sevencolumns {
-    right: 60.55%;
-  }
-
-  .pull-size2of3, .pull-eightcolumns {
-    right: 69.2%;
-  }
-
-  .pull-size3of4, .pull-ninecolumns {
-    right: 77.85%;
-  }
-
-  .pull-tencolumns {
-    right: 86.5%;
-  }
-
-  .pull-elevencolumns {
-    right: 95.15%;
-  }
+.size1of12, .onecolumns, .size1of6, .twocolumns, .size1of4, .threecolumns, .size1of3, .fourcolumns, .fivecolumns, .size1of2, .sixcolumns, .sevencolumns, .size2of3, .eightcolumns, .size3of4, .ninecolumns, .tencolumns, .elevencolumns, .size1of1, .twelvecolumns {
+  margin-left: 3.8%;
+  float: left;
+  min-height: 1px;
+  position: relative;
+  clear: none;
 }
+
+.size1of12, .onecolumns {
+  width: 4.85%;
+}
+
+.size1of6, .twocolumns {
+  width: 13.5%;
+}
+
+.size1of4, .threecolumns {
+  width: 22.15%;
+}
+
+.size1of3, .fourcolumns {
+  width: 30.8%;
+}
+
+.fivecolumns {
+  width: 39.45%;
+}
+
+.size1of2, .sixcolumns {
+  width: 48.1%;
+}
+
+.sevencolumns {
+  width: 56.75%;
+}
+
+.size2of3, .eightcolumns {
+  width: 65.4%;
+}
+
+.size3of4, .ninecolumns {
+  width: 74.05%;
+}
+
+.tencolumns {
+  width: 82.7%;
+}
+
+.elevencolumns {
+  width: 91.35%;
+}
+
+.size1of1, .twelvecolumns {
+  width: 100%;
+}
+
+/* ##Push Classes */
+/* 
+	<div class="size3of4 firstcol push-size1of4">
+		I'm a 3/4 width column that is pushed to the left by 1/4 column
+	</div>
+*/
+.push-size1of12, .push-onecolumns {
+  left: 8.65%;
+}
+
+.push-size1of6, .push-twocolumns {
+  left: 17.3%;
+}
+
+.push-size1of4, .push-threecolumns {
+  left: 25.95%;
+}
+
+.push-size1of3, .push-fourcolumns {
+  left: 34.6%;
+}
+
+.push-fivecolumns {
+  left: 43.25%;
+}
+
+.push-size1of2, .push-sixcolumns {
+  left: 51.9%;
+}
+
+.push-sevencolumns {
+  left: 60.55%;
+}
+
+.push-size2of3, .push-eightcolumns {
+  left: 69.2%;
+}
+
+.push-size3of4, .push-ninecolumns {
+  left: 77.85%;
+}
+
+.push-tencolumns {
+  left: 86.5%;
+}
+
+.push-elevencolumns {
+  left: 95.15%;
+}
+
+.pull-size1of12, .pull-onecolumns {
+  right: 8.65%;
+}
+
+.pull-size1of6, .pull-twocolumns {
+  right: 17.3%;
+}
+
+.pull-size1of4, .pull-threecolumns {
+  right: 25.95%;
+}
+
+.pull-size1of3, .pull-fourcolumns {
+  right: 34.6%;
+}
+
+.pull-fivecolumns {
+  right: 43.25%;
+}
+
+.pull-size1of2, .pull-sixcolumns {
+  right: 51.9%;
+}
+
+.pull-sevencolumns {
+  right: 60.55%;
+}
+
+.pull-size2of3, .pull-eightcolumns {
+  right: 69.2%;
+}
+
+.pull-size3of4, .pull-ninecolumns {
+  right: 77.85%;
+}
+
+.pull-tencolumns {
+  right: 86.5%;
+}
+
+.pull-elevencolumns {
+  right: 95.15%;
+}
+
 .firstcol {
   margin-left: 0;
 }
@@ -567,10 +566,6 @@ h6, .h6 {
   clear: both;
 }
 
-.page-fixed .container {
-  width: 960px;
-}
-
 /* ## Extended Container */
 /* Use to extend the content to be the full width of the window. Additional wrapping element around `.container`. */
 /*
@@ -591,7 +586,7 @@ h6, .h6 {
 }
 
 .col {
-  padding: 30px 30px;
+  padding: 30;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
@@ -599,7 +594,7 @@ h6, .h6 {
 
 @media only screen and (max-width: 30em) {
   .col {
-    padding: 15px 15px;
+    padding: 15;
   }
 }
 /* #Island and Islet */
@@ -615,6 +610,7 @@ h6, .h6 {
   display: block;
   border: 1px solid #ccc;
   /* Override this color in your theme stylesheet */
+  margin-bottom: 1.667em;
 }
 
 .island, .headed-island {
@@ -1814,47 +1810,6 @@ html[xmlns] .slides {
   display: block;
 }
 
-/* #Misc */
-/* Below are a number of miscellaneous items that don't quite fit anywhere else...yet */
-/* ##Site Logo 
-
-	<a href="/" class="site-logo" title="Return to website homepage">
-		<img src="http://www.placehold.it/200x100" alt="My Logo">
-	</a>    
-*/
-.site-logo {
-  display: -moz-inline-stack;
-  display: inline-block;
-  vertical-align: middle;
-  *vertical-align: auto;
-  zoom: 1;
-  *display: inline;
-  border: 0;
-  padding: 0;
-  margin: 30px 0;
-  vertical-align: bottom;
-}
-.site-logo a {
-  text-indent: -999em;
-  text-align: left;
-  direction: ltr;
-  display: block;
-  position: relative;
-  background-repeat: no-repeat;
-  background-position: 0 0;
-  background-image: url('/images/logo.gif?1339662808');
-  width: 200px;
-  height: 60px;
-}
-.site-logo a:hover, .site-logo a:focus {
-  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=80);
-  opacity: 0.8;
-  -webkit-transition: opacity 0.5s ease-out;
-  -moz-transition: opacity 0.5s ease-out;
-  -o-transition: opacity 0.5s ease-out;
-  transition: opacity 0.5s ease-out;
-}
-
 /* ============================================================ */
 /* ============================================================ */
 .nav-primary,
@@ -1929,6 +1884,47 @@ html[xmlns] .slides {
   /* forces drop down to stretch to accommodate length of text (and not wrap) */
   padding: 0.4615384615384615em 20px;
   text-align: left;
+}
+
+/* #Misc */
+/* Below are a number of miscellaneous items that don't quite fit anywhere else...yet */
+/* ##Site Logo 
+
+	<a href="/" class="site-logo" title="Return to website homepage">
+		<img src="http://www.placehold.it/200x100" alt="My Logo">
+	</a>    
+*/
+.site-logo {
+  display: -moz-inline-stack;
+  display: inline-block;
+  vertical-align: middle;
+  *vertical-align: auto;
+  zoom: 1;
+  *display: inline;
+  border: 0;
+  padding: 0;
+  margin: 30px 0;
+  vertical-align: bottom;
+}
+.site-logo a {
+  text-indent: -999em;
+  text-align: left;
+  direction: ltr;
+  display: block;
+  position: relative;
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  background-image: url('/images/logo.gif?1339662808');
+  width: 200px;
+  height: 60px;
+}
+.site-logo a:hover, .site-logo a:focus {
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=80);
+  opacity: 0.8;
+  -webkit-transition: opacity 0.5s ease-out;
+  -moz-transition: opacity 0.5s ease-out;
+  -o-transition: opacity 0.5s ease-out;
+  transition: opacity 0.5s ease-out;
 }
 
 /* #Helpers */

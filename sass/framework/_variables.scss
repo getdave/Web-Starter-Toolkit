@@ -1,29 +1,21 @@
+// FRAMEWORK VARIABLES
 
-// VARIABLES
+// The following variables are utilities to provide defaults for the framework.
+// Do not alter these values. Instead override as required in your Projects'
+// _config file.
 
-// This file allows you to set variables which will be reused
-// throughout your project to save you time and energy. 
+// ==========================================================================
+// IE HACK
+// ==========================================================================
 
+// This is a flag which is set to "true" by master-ie.scss
+// This allows us to target specifically IE within Sass files!
+$bIE: false !default;
 
 
 // ==========================================================================
 // COLORS
 // ==========================================================================
-
-// Brand colors
-// ==========================================================================
-
-//$primaryColor:				YOURHEXCODE;
-//$secondaryColor:				YOURHEXCODE;
-//$tertiaryColor:				YOURHEXCODE;
-
-
-// Misc colors
-// ==========================================================================
-
-// Links
-$linkColor:             		#08c;
-$linkColorHover:        		darken($linkColor, 15%);
 
 // Grays
 $black:                 		#000;
@@ -99,32 +91,14 @@ $consolas			: Consolas, "Andale Mono WT", "Andale Mono", "Lucida Console", "Luci
 $cursive			: "Bradley Hand ITC", "Apple Chancery", "URW Chancery L", cursive !default;
 
 
-// WEBSITE FONT
-// ==========================================================================
 
-$baseFontSize:          		16px;
-$baseFontFamily:        		$helvetica;
-$baseLineHeight:        		1.667em;
 
 // ==========================================================================
 // GRID
 // ==========================================================================
 
-// Column Configuration
-$cols: 							12;
-$gutter_width: 					3.8%;
-$col_width: 					4.85%;
-
 // We loop thorugh this string to produce our written grid classes
-$cols_as_string: 				one two three four five six seven eight nine ten eleven twelve;
-
-// Do we want to include "push-" and "pull-" classes for source reordering?
-$bGridPushClasses:				true;
-$bGridPullClasses:				true;
-
-// Do we want to use mobile grid classes for specific mobile grids?
-$bMobileCols:					true;
-
+$cols_as_string: 				one two three four five six seven eight nine ten eleven twelve thirteen fourteen fifteen sixteen seventeen eighteen nineteen twenty;
 
 
 
@@ -132,28 +106,6 @@ $bMobileCols:					true;
 // ELEMENTS & COMPONENTS
 // ==========================================================================
 // 
-
-// STRUCTURE & COLUMNS
-// ==========================================================================
-
-// Width of primary width container elements
-$containerWidth:				90%;
-
-// Padding for main page columns. This is not for the grid-system
-$colPaddingTB:					30px;
-$colPaddingLR:					30px;
-
-// SPACING UNITS
-// ==========================================================================
-
-$spacing-unit:					30;
-$half-spacing-unit:				15;
-
-// WEBSITE LOGO
-// ==========================================================================
-
-$logo: 							"logo.gif";
-
 
 // MASTER Z-INDEX
 // ==========================================================================
@@ -182,30 +134,27 @@ $inputBorder:					$grayLight;
 $formActionsBackground:			#f5f5f5;
 
 // Form states and alerts
-$warningText:             #c09853;
-$warningBackground:       #fcf8e3;
-$warningBorder:           darken(adjust-hue($warningBackground, -10), 3%);
+$warningText:            		 #c09853;
+$warningBackground:       		#fcf8e3;
+$warningBorder:           		darken(adjust-hue($warningBackground, -10), 3%);
 
-$errorText:               #b94a48;
-$errorBackground:         #f2dede;
-$errorBorder:             darken(adjust-hue($errorBackground, -10), 3%);
+$errorText:               		#b94a48;
+$errorBackground:         		#f2dede;
+$errorBorder:             		darken(adjust-hue($errorBackground, -10), 3%);
 
-$successText:             #468847;
-$successBackground:       #dff0d8;
-$successBorder:           darken(adjust-hue($successBackground, -10), 5%);
+$successText:             		#468847;
+$successBackground:       		#dff0d8;
+$successBorder:           		darken(adjust-hue($successBackground, -10), 5%);
 
-$infoText:                #3a87ad;
-$infoBackground:          #d9edf7;
-$infoBorder:              darken(adjust-hue($infoBackground, -10), 7%);
+$infoText:                		#3a87ad;
+$infoBackground:          		#d9edf7;
+$infoBorder:              		darken(adjust-hue($infoBackground, -10), 7%);
 
 
 // NAVBAR
 // ==========================================================================
 
 $navbarBackground: 				$grayLight;
-$navbarBackgroundHighlight: 	$grayDark;
-
-$navbarText: 					$white;
 $navbarLinkColor: 				$grayDark;
 $navbarLinkColorHover: 			$white;
 
@@ -221,18 +170,5 @@ $button_background_shader-f		: url(../images/site/button-shader.png) left center
 
 
 
-// ==========================================================================
-// MEDIA QUERY BREAKPOINTS
-// ==========================================================================
-
-// Note: these are placeholders! 
-// Alter these to suit the breakpoints as dictated by your design.
-// Do not rely on device widths to define your breakpoints! It's a bad idea.
-// 
-$break-tiny:            480px;
-$break-small:           600px;
-$break-medium:          768px;
-$break-large:           992px;
-$break-xlarge:          1382px;
 
 
