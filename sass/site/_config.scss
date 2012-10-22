@@ -1,0 +1,97 @@
+// ==========================================================================
+// BRANDING
+// ==========================================================================
+
+// COLORS
+// ==========================================================================
+
+// Primary
+//$pColor:						YOURHEXCODE;
+
+// Secondary
+//$sColor:						YOURHEXCODE;
+
+// Tertiary
+//$tColor:						YOURHEXCODE;
+
+// Links
+$linkColor:             		#08c;
+$linkColorHover:        		darken($linkColor, 15%);
+
+
+// SITE LOGO
+// ==========================================================================
+
+$logo: 							"logo.gif";		// assumes location of "/images/"
+
+
+
+
+// ==========================================================================
+// TYPOGRAPHY
+// ==========================================================================
+
+// Fontstack
+// ==========================================================================
+
+$baseFontSize:          		16px;
+$baseFontFamily:        		Arial, "Helvetica Neue", Helvetica, sans-serif !default; // or write your own custom font-stack
+$baseLineHeight:        		1.667em;
+
+
+
+
+// ==========================================================================
+// GRID
+// ==========================================================================
+
+// Column Configuration
+$cols: 							13;		// number of columns required
+$gutter_width: 					3.8%;	// gutter between each column
+
+// Include "push-" and "pull-" classes for source reordering?
+$bGridPushClasses:				true;
+$bGridPullClasses:				true;
+
+// Do we want to use mobile grid classes for specific mobile grids?
+$bMobileCols:					true;
+
+
+
+
+// ==========================================================================
+// LAYOUT
+// ==========================================================================
+
+// Width of primary width ".container" elements
+$containerWidth:				90%;
+
+// Spacing 
+$spacingUnit:					30;
+$halfSpacingUnit:				15;
+
+
+
+
+// ==========================================================================
+// MEDIA QUERY BREAKPOINTS
+// ==========================================================================
+
+// Note: these are placeholders! 
+// Alter these to suit the breakpoints as dictated by your design.
+// DO NOT rely on device widths to define your breakpoints! It's a bad idea.
+// 
+// Usage:
+// 
+// @mixin respond-to(tiny/small/medium/large/xlarge) {
+// 
+// }
+
+$break-tiny:            480px;
+$break-small:           600px;
+$break-medium:          768px;
+$break-large:           992px;
+$break-xlarge:          1382px;
+
+
+

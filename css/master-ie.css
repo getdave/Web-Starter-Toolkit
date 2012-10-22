@@ -4,7 +4,7 @@
 
 /* #Typography */
 body {
-  font-family: "Helvetica Neue", Arial, Helvetica, sans-serif;
+  font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
   font-size: 16px;
   line-height: 1.667em;
   color: #333333;
@@ -207,7 +207,7 @@ h6, .h6 {
 		I'm the second of the two grid items. No need for a second class for me!
 	</div>
 */
-.size1of12, .onecolumns, .size1of6, .twocolumns, .size1of4, .threecolumns, .size1of3, .fourcolumns, .fivecolumns, .size1of2, .sixcolumns, .sevencolumns, .size2of3, .eightcolumns, .size3of4, .ninecolumns, .tencolumns, .elevencolumns, .size1of1, .twelvecolumns {
+.size1of13, .onecolumns, .twocolumns, .threecolumns, .fourcolumns, .fivecolumns, .sixcolumns, .sevencolumns, .size2of3, .eightcolumns, .size3of4, .ninecolumns, .tencolumns, .elevencolumns, .twelvecolumns, .size1of1, .thirteencolumns {
   float: none;
   clear: both;
   display: block;
@@ -217,8 +217,8 @@ h6, .h6 {
   right: auto;
 }
 
-.mobile-size1of12, .mobile-onecolumns {
-  width: 4.85%;
+.mobile-size1of13, .mobile-onecolumns {
+  width: 4.18462%;
   margin-left: 3.8%;
   /* equal to 20px at 1024px */
   float: left;
@@ -226,8 +226,8 @@ h6, .h6 {
   clear: none;
 }
 
-.mobile-size1of6, .mobile-twocolumns {
-  width: 13.5%;
+.mobile-twocolumns {
+  width: 12.16923%;
   margin-left: 3.8%;
   /* equal to 20px at 1024px */
   float: left;
@@ -235,8 +235,8 @@ h6, .h6 {
   clear: none;
 }
 
-.mobile-size1of4, .mobile-threecolumns {
-  width: 22.15%;
+.mobile-threecolumns {
+  width: 20.15385%;
   margin-left: 3.8%;
   /* equal to 20px at 1024px */
   float: left;
@@ -244,8 +244,8 @@ h6, .h6 {
   clear: none;
 }
 
-.mobile-size1of3, .mobile-fourcolumns {
-  width: 30.8%;
+.mobile-fourcolumns {
+  width: 28.13846%;
   margin-left: 3.8%;
   /* equal to 20px at 1024px */
   float: left;
@@ -254,7 +254,7 @@ h6, .h6 {
 }
 
 .mobile-fivecolumns {
-  width: 39.45%;
+  width: 36.12308%;
   margin-left: 3.8%;
   /* equal to 20px at 1024px */
   float: left;
@@ -262,8 +262,8 @@ h6, .h6 {
   clear: none;
 }
 
-.mobile-size1of2, .mobile-sixcolumns {
-  width: 48.1%;
+.mobile-sixcolumns {
+  width: 44.10769%;
   margin-left: 3.8%;
   /* equal to 20px at 1024px */
   float: left;
@@ -272,7 +272,7 @@ h6, .h6 {
 }
 
 .mobile-sevencolumns {
-  width: 56.75%;
+  width: 52.09231%;
   margin-left: 3.8%;
   /* equal to 20px at 1024px */
   float: left;
@@ -281,7 +281,7 @@ h6, .h6 {
 }
 
 .mobile-size2of3, .mobile-eightcolumns {
-  width: 65.4%;
+  width: 60.07692%;
   margin-left: 3.8%;
   /* equal to 20px at 1024px */
   float: left;
@@ -290,7 +290,7 @@ h6, .h6 {
 }
 
 .mobile-size3of4, .mobile-ninecolumns {
-  width: 74.05%;
+  width: 68.06154%;
   margin-left: 3.8%;
   /* equal to 20px at 1024px */
   float: left;
@@ -299,7 +299,7 @@ h6, .h6 {
 }
 
 .mobile-tencolumns {
-  width: 82.7%;
+  width: 76.04615%;
   margin-left: 3.8%;
   /* equal to 20px at 1024px */
   float: left;
@@ -308,7 +308,7 @@ h6, .h6 {
 }
 
 .mobile-elevencolumns {
-  width: 91.35%;
+  width: 84.03077%;
   margin-left: 3.8%;
   /* equal to 20px at 1024px */
   float: left;
@@ -316,7 +316,16 @@ h6, .h6 {
   clear: none;
 }
 
-.mobile-size1of1, .mobile-twelvecolumns {
+.mobile-twelvecolumns {
+  width: 92.01538%;
+  margin-left: 3.8%;
+  /* equal to 20px at 1024px */
+  float: left;
+  min-height: 1px;
+  clear: none;
+}
+
+.mobile-size1of1, .mobile-thirteencolumns {
   width: 100%;
   margin-left: 3.8%;
   /* equal to 20px at 1024px */
@@ -326,7 +335,7 @@ h6, .h6 {
 }
 
 @media only screen and (min-width: 62em) {
-  .size1of12, .onecolumns, .size1of6, .twocolumns, .size1of4, .threecolumns, .size1of3, .fourcolumns, .fivecolumns, .size1of2, .sixcolumns, .sevencolumns, .size2of3, .eightcolumns, .size3of4, .ninecolumns, .tencolumns, .elevencolumns, .size1of1, .twelvecolumns {
+  .size1of13, .onecolumns, .twocolumns, .threecolumns, .fourcolumns, .fivecolumns, .sixcolumns, .sevencolumns, .size2of3, .eightcolumns, .size3of4, .ninecolumns, .tencolumns, .elevencolumns, .twelvecolumns, .size1of1, .thirteencolumns {
     margin-left: 3.8%;
     float: left;
     min-height: 1px;
@@ -334,51 +343,55 @@ h6, .h6 {
     clear: none;
   }
 
-  .size1of12, .onecolumns {
-    width: 4.85%;
+  .size1of13, .onecolumns {
+    width: 4.18462%;
   }
 
-  .size1of6, .twocolumns {
-    width: 13.5%;
+  .twocolumns {
+    width: 12.16923%;
   }
 
-  .size1of4, .threecolumns {
-    width: 22.15%;
+  .threecolumns {
+    width: 20.15385%;
   }
 
-  .size1of3, .fourcolumns {
-    width: 30.8%;
+  .fourcolumns {
+    width: 28.13846%;
   }
 
   .fivecolumns {
-    width: 39.45%;
+    width: 36.12308%;
   }
 
-  .size1of2, .sixcolumns {
-    width: 48.1%;
+  .sixcolumns {
+    width: 44.10769%;
   }
 
   .sevencolumns {
-    width: 56.75%;
+    width: 52.09231%;
   }
 
   .size2of3, .eightcolumns {
-    width: 65.4%;
+    width: 60.07692%;
   }
 
   .size3of4, .ninecolumns {
-    width: 74.05%;
+    width: 68.06154%;
   }
 
   .tencolumns {
-    width: 82.7%;
+    width: 76.04615%;
   }
 
   .elevencolumns {
-    width: 91.35%;
+    width: 84.03077%;
   }
 
-  .size1of1, .twelvecolumns {
+  .twelvecolumns {
+    width: 92.01538%;
+  }
+
+  .size1of1, .thirteencolumns {
     width: 100%;
   }
 
@@ -388,92 +401,92 @@ h6, .h6 {
   		I'm a 3/4 width column that is pushed to the left by 1/4 column
   	</div>
   */
-  .push-size1of12, .push-onecolumns {
-    left: 8.65%;
+  .push-size1of13, .push-onecolumns {
+    left: 7.98462%;
   }
 
-  .push-size1of6, .push-twocolumns {
-    left: 17.3%;
+  .push-twocolumns {
+    left: 15.96923%;
   }
 
-  .push-size1of4, .push-threecolumns {
-    left: 25.95%;
+  .push-threecolumns {
+    left: 23.95385%;
   }
 
-  .push-size1of3, .push-fourcolumns {
-    left: 34.6%;
+  .push-fourcolumns {
+    left: 31.93846%;
   }
 
   .push-fivecolumns {
-    left: 43.25%;
+    left: 39.92308%;
   }
 
-  .push-size1of2, .push-sixcolumns {
-    left: 51.9%;
+  .push-sixcolumns {
+    left: 47.90769%;
   }
 
   .push-sevencolumns {
-    left: 60.55%;
+    left: 55.89231%;
   }
 
   .push-size2of3, .push-eightcolumns {
-    left: 69.2%;
+    left: 63.87692%;
   }
 
   .push-size3of4, .push-ninecolumns {
-    left: 77.85%;
+    left: 71.86154%;
   }
 
   .push-tencolumns {
-    left: 86.5%;
+    left: 79.84615%;
   }
 
   .push-elevencolumns {
-    left: 95.15%;
+    left: 87.83077%;
   }
 
-  .pull-size1of12, .pull-onecolumns {
-    right: 8.65%;
+  .pull-size1of13, .pull-onecolumns {
+    right: 7.98462%;
   }
 
-  .pull-size1of6, .pull-twocolumns {
-    right: 17.3%;
+  .pull-twocolumns {
+    right: 15.96923%;
   }
 
-  .pull-size1of4, .pull-threecolumns {
-    right: 25.95%;
+  .pull-threecolumns {
+    right: 23.95385%;
   }
 
-  .pull-size1of3, .pull-fourcolumns {
-    right: 34.6%;
+  .pull-fourcolumns {
+    right: 31.93846%;
   }
 
   .pull-fivecolumns {
-    right: 43.25%;
+    right: 39.92308%;
   }
 
-  .pull-size1of2, .pull-sixcolumns {
-    right: 51.9%;
+  .pull-sixcolumns {
+    right: 47.90769%;
   }
 
   .pull-sevencolumns {
-    right: 60.55%;
+    right: 55.89231%;
   }
 
   .pull-size2of3, .pull-eightcolumns {
-    right: 69.2%;
+    right: 63.87692%;
   }
 
   .pull-size3of4, .pull-ninecolumns {
-    right: 77.85%;
+    right: 71.86154%;
   }
 
   .pull-tencolumns {
-    right: 86.5%;
+    right: 79.84615%;
   }
 
   .pull-elevencolumns {
-    right: 95.15%;
+    right: 87.83077%;
   }
 }
 .firstcol {
@@ -591,7 +604,7 @@ h6, .h6 {
 }
 
 .col {
-  padding: 30px 30px;
+  padding: 30;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
@@ -599,7 +612,7 @@ h6, .h6 {
 
 @media only screen and (max-width: 30em) {
   .col {
-    padding: 15px 15px;
+    padding: 15;
   }
 }
 /* #Island and Islet */
@@ -1814,47 +1827,6 @@ html[xmlns] .slides {
   display: block;
 }
 
-/* #Misc */
-/* Below are a number of miscellaneous items that don't quite fit anywhere else...yet */
-/* ##Site Logo 
-
-	<a href="/" class="site-logo" title="Return to website homepage">
-		<img src="http://www.placehold.it/200x100" alt="My Logo">
-	</a>    
-*/
-.site-logo {
-  display: -moz-inline-stack;
-  display: inline-block;
-  vertical-align: middle;
-  *vertical-align: auto;
-  zoom: 1;
-  *display: inline;
-  border: 0;
-  padding: 0;
-  margin: 30px 0;
-  vertical-align: bottom;
-}
-.site-logo a {
-  text-indent: -999em;
-  text-align: left;
-  direction: ltr;
-  display: block;
-  position: relative;
-  background-repeat: no-repeat;
-  background-position: 0 0;
-  background-image: url('/images/logo.gif?1339662808');
-  width: 200px;
-  height: 60px;
-}
-.site-logo a:hover, .site-logo a:focus {
-  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=80);
-  opacity: 0.8;
-  -webkit-transition: opacity 0.5s ease-out;
-  -moz-transition: opacity 0.5s ease-out;
-  -o-transition: opacity 0.5s ease-out;
-  transition: opacity 0.5s ease-out;
-}
-
 /* ============================================================ */
 /* ============================================================ */
 .nav-primary,
@@ -1929,6 +1901,47 @@ html[xmlns] .slides {
   /* forces drop down to stretch to accommodate length of text (and not wrap) */
   padding: 0.4615384615384615em 20px;
   text-align: left;
+}
+
+/* #Misc */
+/* Below are a number of miscellaneous items that don't quite fit anywhere else...yet */
+/* ##Site Logo 
+
+	<a href="/" class="site-logo" title="Return to website homepage">
+		<img src="http://www.placehold.it/200x100" alt="My Logo">
+	</a>    
+*/
+.site-logo {
+  display: -moz-inline-stack;
+  display: inline-block;
+  vertical-align: middle;
+  *vertical-align: auto;
+  zoom: 1;
+  *display: inline;
+  border: 0;
+  padding: 0;
+  margin: 30px 0;
+  vertical-align: bottom;
+}
+.site-logo a {
+  text-indent: -999em;
+  text-align: left;
+  direction: ltr;
+  display: block;
+  position: relative;
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  background-image: url('/images/logo.gif?1339662808');
+  width: 200px;
+  height: 60px;
+}
+.site-logo a:hover, .site-logo a:focus {
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=80);
+  opacity: 0.8;
+  -webkit-transition: opacity 0.5s ease-out;
+  -moz-transition: opacity 0.5s ease-out;
+  -o-transition: opacity 0.5s ease-out;
+  transition: opacity 0.5s ease-out;
 }
 
 /* #Helpers */

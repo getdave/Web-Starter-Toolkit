@@ -18,7 +18,7 @@
 }
 
 .island {
-    padding: $half-spacing-unit +px $spacing-unit +px;
+    padding: $halfSpacingUnit +px $spacingUnit +px;
 }
 
 .island > :last-child,
@@ -36,7 +36,7 @@
 */
 
 .islet{
-    padding: $half-spacing-unit +px;
+    padding: $halfSpacingUnit +px;
 }
 
 
@@ -61,7 +61,7 @@
     padding: 0;
 
     .island-heading {
-        padding: $half-spacing-unit +px $spacing-unit +px;
+        padding: $halfSpacingUnit +px $spacingUnit +px;
         margin: 0;
         background-color: #f9f9f9;
         border-top: 0;
@@ -69,7 +69,7 @@
     }
 
     .island-content {
-        padding: $half-spacing-unit +px $spacing-unit +px;
+        padding: $halfSpacingUnit +px $spacingUnit +px;
 
         > :last-child {
             margin-bottom: 0;

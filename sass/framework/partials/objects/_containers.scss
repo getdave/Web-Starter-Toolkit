@@ -41,13 +41,13 @@
 // ==========================================================================
 
 .col {
-	padding: $colPaddingTB $colPaddingLR;
+	padding: $spacingUnit;
 	@include box-sizing(border-box);
 }
 
 @media only screen and (max-width: 30em) {
 	.col {
-		padding: ($colPaddingTB*0.5) ($colPaddingLR*0.5);
+		padding: $halfSpacingUnit;
 	}
 }
 
