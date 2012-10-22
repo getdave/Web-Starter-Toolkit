@@ -32,7 +32,6 @@ $one_col: (100% - ($gutter_width*($cols - 1))) / $cols;
 
 // Returns a CSS selector string for all grid classes to be used in _grid.scss
 @function grid-set() {
-    
     $count: 1;
     $selectorString: "";
     @each $col in $cols_as_string {
@@ -130,7 +129,7 @@ $one_col: (100% - ($gutter_width*($cols - 1))) / $cols;
 
 @mixin respond-to($media) {
 
-    @if ($bIE == true) {
+    @if ($bIE == true or $isFixed == true) {
         // Check if we're IE. If so then just return the content sans-media query
         @content;
     } @else {
