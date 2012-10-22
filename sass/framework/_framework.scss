@@ -74,55 +74,55 @@
 // ==========================================================================
 
 // Media Block
-@import "partials/_media.scss";
+@import "partials/objects/_media.scss";
 
 // Containers - used to define "sections" on a layout/page
-@import "partials/_containers.scss";
+@import "partials/objects/_containers.scss";
 
 // Island/Islet - simple boxed off content
-@import "partials/_island.scss";
+@import "partials/objects/_island.scss";
 
 // Split (Listings)
-@import "partials/_split.scss";
+@import "partials/objects/_split.scss";
 
 // Hero Unit
-@import "partials/_hero-unit.scss";
+@import "partials/objects/_hero-unit.scss";
 
 // Block Grids
-@import "partials/_block-grids.scss";
+@import "partials/objects/_block-grids.scss";
 
 // Block Lists
-@import "partials/_block-list.scss";
+@import "partials/objects/_block-list.scss";
 
 // "Nav" object - floated lists of content
-@import "partials/_nav.scss";
+@import "partials/objects/_nav.scss";
 
 // Buttons 
-@import "partials/_buttons.scss";
+@import "partials/objects/_buttons.scss";
 
 // Dropdowns 
-@import "partials/_dropdowns.scss";
+@import "partials/objects/_dropdowns.scss";
 
 // Alerts 
-@import "partials/_alerts.scss";
+@import "partials/objects/_alerts.scss";
 
 // Pagination 
-@import "partials/_pagination.scss";
+@import "partials/objects/_pagination.scss";
 
 // Paging (controls for Next/Previous)
-@import "partials/_pager.scss";
+@import "partials/objects/_pager.scss";
 
 // Breadcrumb navigation
-@import "partials/_breadcrumbs.scss";
+@import "partials/objects/_breadcrumbs.scss";
 
 // Complex (split) Link
-@import "partials/_complex-link.scss";
+@import "partials/objects/_complex-link.scss";
 
 // Images
-@import "partials/_images.scss";
+@import "partials/objects/_images.scss";
 
 // Flexslider (slideshow styles)
-@import "partials/_flexslider.scss";
+@import "partials/objects/_flexslider.scss";
 
 
 
@@ -145,8 +145,8 @@
 // ==========================================================================
 
 // Helper classes
-@import "partials/_helpers.scss";
+@import "partials/base/_helpers.scss";
 
 // Spacing classes
-@import "partials/_spacing.scss";
+@import "partials/base/_spacing.scss";
 

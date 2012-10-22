@@ -1,14 +1,36 @@
+// %%YOUR_PROJECT_NAME%%
 
+
+// ==========================================================================
+// FRAMEWORK & CONFIG
+// ==========================================================================
+
+// Configure your project and the "Web Starter" framework
+@import "site/_config.scss";
+
+// Import the "Web Starter" framework
+@import "framework/_framework.scss";
 
 
 
 
 // ==========================================================================
-// LAYOUT
+// WIREFRAME/PROTOTYPING
+// Temp styles used for quick prototypes or wireframes. 
+// ==========================================================================
+
+// Wireframe
+//@import "site/_wireframe.scss";
+
+
+
+// ==========================================================================
+// SITE
 // ==========================================================================
 
 // Page level layout styles (banner, navigation, content, contentinfo)
 //@import "site/_page.scss";
+
 
 // PAGES
 // Individual stylesheets for unique pages on the site/application
