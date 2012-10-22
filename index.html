@@ -19,9 +19,19 @@
     <meta name="viewport" content="width=device-width">
 
 
-    <!-- CSS -->
+    <!-- Normalize - included separately -->
     <link rel="stylesheet" href="css/normalize.css">
+
+
+    <!-- CSS FRAMEWORK -->
+
+    <!--[if (gt IE 8) | (IEMobile)]><!-->
     <link rel="stylesheet" href="css/master.css">
+    <!--<![endif]-->
+
+    <!--[if (lt IE 9) & (!IEMobile)]>
+    <link rel="stylesheet" href="/css/master-ie.css">
+    <![endif]-->
 
     <!-- More ideas for your <head> here: h5bp.com/d/head-Tips -->
 
@@ -38,246 +48,141 @@
     <!-- Add your site or application content here -->
 
 
-
-    <div class="page">
+    <div class="page page-fixed">
 
         <header class="container banner" role="banner">
-            <div class="container-inner">
-                
-                <a class="site-logo" href="/"><img src="http://placehold.it/260x70&text=site%20logo"></a>
-                <!-- you can also mark it up like this 
-                
-                <h1 class="site-logo"><a href="/">Site logo</a></h1>
-                -->
 
+            <a class="site-logo" href="/"><img src="http://placehold.it/260x70&text=site%20logo"></a>
 
-                <nav class="nav-primary" role="navigation">          
-                    <ul>
-                        <li class="sel"><a href="javascript:void(0);">Nav Link 1</a></li>
-                        <li>
-                            <a class="dropdown" href="javascript:void(0);">Nav Link 2
-                                <b class="caret"></b>                   
-                            </a>
-                            <ul class="sub-menu">
-                                <li><a href="javascript:void(0);">Nav Link 1</a></li>
-                                <li><a href="javascript:void(0);">Nav Link 2</a></li>
-                                <li><a href="javascript:void(0);">Nav Link 3</a></li>
-                            </ul>
-                        </li>
-                        <li><a href="javascript:void(0);">Nav Link 3</a></li>
-                    </ul>           
-                </nav>
+            <div class="site-contact">
+                
+                <span class="fr">Call Us 01225 123 456</span>
             </div>
+            
+
+            <nav class="primary-nav" role="navigation">          
+                <ul class="nav-primary">
+                    <li class="sel"><a href="javascript:void(0);">Nav Link 1</a></li>
+                    <li>
+                        <a class="dropdown" href="javascript:void(0);">Nav Link 2
+                            <b class="caret"></b>                   
+                        </a>
+                        <ul class="sub-menu">
+                            <li><a href="javascript:void(0);">Nav Link 1</a></li>
+                            <li><a href="javascript:void(0);">Nav Link 2</a></li>
+                            <li><a href="javascript:void(0);">Nav Link 3</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="javascript:void(0);">Nav Link 3</a></li>
+                </ul>           
+            </nav>
         </header>
 
-        <section class="container">
-            <div class="container-inner">
-                <img src="http://placehold.it/960x350" />
-            </div>            
-        </section>
+      
 
-        
-        <div class="content two-col-left container" role="main">
-            <div class="container-inner">
-               
-                    <article class="col size3of4 push-size1of4">
-                        
-                        <!-- HTML5 allows you to reset the header count with each new 
-                             piece of sectioning content, if you so choose. -->
-                        <h1>HTML Ipsum Presents</h1>
-                        
-                           
-                        <p><strong>Pellentesque habitant morbi tristique</strong> senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. <em>Aenean ultricies mi vitae est.</em> Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra. Vestibulum erat wisi, condimentum sed, <code>commodo vitae</code>, ornare sit amet, wisi. Aenean fermentum, elit eget tincidunt condimentum, eros ipsum rutrum orci, sagittis tempus lacus enim ac dui. <a href="#">Donec non enim</a> in turpis pulvinar facilisis. Ut felis.</p>
+        <div class="maincontent container">
+            
+            <div class="main size2of3 firstcol" role="main">
 
-                        <h2>Buttons</h2>
-                                   
-                        <p class="">
-                        <a href="javascript:void(0);" class="btn">Button Normal</a>
+                <div class="hero-unit">
+                    <p class="hero-content-tr size2of3">
+                        To order you can call us on 01225 312 959 Mon - Fri 9am - 7pm Sat 10am - 4pm 
+                    </p>
+                    <img src="http://flickholdr.com/630/360/cuisine" alt="">
+                </div>
 
-                        <a href="javascript:void(0);" disabled="disabled" class="btn">Button Disabled</a>
+                <h2 class="page-title">Ma Cuisine takes take-away food into the realms of gourmet dining</h2>
 
-                        <a href="javascript:void(0);" class="btn btn-small">Button Small</a>
+                <p>Prepared and devised by Michelin-trained chef ChristopheLacroix it brings to Bath a unique concept: food of exquisite quality delivered to your door at prices barely more than fish and chips.</p>
 
-                        <a href="javascript:void(0);" class="btn btn-large">Button Large</a>
+                <p>Savour the flavour of “salmon au vin” with roasted fennel; of scallops and shittake mushrooms in spaghetti with a lobster sauce (as a shared starter or main); of classic “coq au vin”; of mushroom and blue cheese risotto…</p>
 
-                        <a href="javascript:void(0);" class="btn btn-huge">Button Huge</a>
-                        </p>
+                <p>These are flavours of distinction. Each dish prepared with the same care and attention to the delicacies of taste as Christophe was trained to deliver to customers in some of the finest restaurants of Europe – and in Paris, Lausanne, Monaco and St Lucia.</p>
 
-                        
-                        <p class="btn-group">
-                            <a class="btn" href="javascript:void(0);">Left</a>
-                            <a class="btn" href="javascript:void(0);">Middle</a>
-                            <a class="btn" href="javascript:void(0);">Right</a>
-                        </p>
+                <p>Using fresh locally sourced produce, the dishes vary with the seasons – seafood prepared according to the best catches of the day, vegetarian options with the pickings of the morning dew – all providing a freshness of flavours that delights.</p>
 
-                        <a class="btn dropdown" href="javascript:void(0);">
-                            Dropdown
-                            <b class="caret"></b>
-                        </a>
+                <p>Choose from our menu board or call and discuss your special needs. Whether that is for a one-off special occasion or to devise special dishes to account for preferences, or allergies.</p>
 
-                        <p class="btn-group">
-                            <a class="btn" href="javascript:void(0);">Dropdown with Toggle</a>
-                            <a class="btn dropdown-toggle" href="javascript:void(0);">
-                                <span class="caret"></span>
-                            </a>
-                        </p>
-                        
+                <p>We welcome your calls because Ma Cuisine is passionate about delivering to you the food you love.</p>
 
-                        
+                <p>Thank you and Bon Appétit!</p>
+            </div>
 
-                        <h3>Header Level 3</h3>
+            <aside class="sub size1of3">
+                <div class="island widget widget-sidebar">
+                    <a href="#">
+                        <h4>Ready Meals</h4>
+                        <p>Delicious meals ready to eat</p>
+                    </a>
+                </div>
 
-                        <ul>
-                           <li>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</li>
-                           <li>Aliquam tincidunt mauris eu risus.</li>
+                <div class="island widget widget-sidebar">
+                    <a href="#">
+                        <h4>Ready Meals</h4>
+                        <p>Delicious meals ready to eat</p>
+                    </a>
+                </div>
+
+                <section class="headed-island">
+                    <header>
+                        <h4 class="island-heading h6">Freshly Cooked Today</h4>
+                    </header>
+                    <div class="flexslider">
+                        <ul class="slides">
+                            <li class="slide">
+                                <div class="island-content text-center">
+                                    <p>Roast cod tongues, green lentils and aubergine caviar drizzled with a cream sauce. 
+                                    <span class="h4">Only &pound;16.35</span>.</p>
+                                </div>                                
+                            </li>
                         </ul>
+                    </div>
+                </section>
 
-                        <h4>Heading Level 4</h4>
+                <div class="headed-island">
+                    <h4 class="island-heading h6">Desert of the Day</h4>
+                    <div class="island-content text-center">
+                        <p>Salted dark chocolate and honey tart with butter milk ice cream
+                            <span class="h4">Only &pound;3.95</span>
+                        </p> 
+                    </div>
+                </div>
 
-                        
-                        <h5>Heading Level 5</h5>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus magna. Cras in mi at felis aliquet congue. Ut a est eget ligula molestie gravida. Curabitur massa. Donec eleifend, libero at sagittis mollis, tellus est malesuada tellus, at luctus turpis elit sit amet quam. Vivamus pretium ornare est.</p>
+                <div class="headed-island">
+                    <h4 class="island-heading h6">Home Deliveries</h4>
+                    <div class="island-content text-center">
 
+                        <p>Deliveries Mon-Fri (Noon-8pm) within 3 mile radius. Free for orders over &pound;15.</p>
 
-                        <h3>Forms</h3>
-                        <form class="form-horizontal">
-        <fieldset>
-          <div class="control-group">
-            <label class="control-label" for="focusedInput">Focused input</label>
-            <div class="controls">
-              <input class="input-xlarge focused" id="focusedInput" type="text" value="This is focused…">
-            </div>
-          </div>
-          <div class="control-group">
-            <label class="control-label">Uneditable input</label>
-            <div class="controls">
-              <span class="input-xlarge uneditable-input">Some value here</span>
-            </div>
-          </div>
-          <div class="control-group">
-            <label class="control-label" for="disabledInput">Disabled input</label>
-            <div class="controls">
-              <input class="input-xlarge disabled" id="disabledInput" type="text" placeholder="Disabled input here…" disabled="">
-            </div>
-          </div>
-          <div class="control-group">
-            <label class="control-label" for="optionsCheckbox2">Disabled checkbox</label>
-            <div class="controls">
-              <label class="checkbox">
-                <input type="checkbox" id="optionsCheckbox2" value="option1" disabled="">
-                This is a disabled checkbox
-              </label>
-            </div>
-          </div>
-          <div class="control-group warning">
-            <label class="control-label" for="inputWarning">Input with warning</label>
-            <div class="controls">
-              <input type="text" id="inputWarning">
-              <span class="help-inline">Something may have gone wrong</span>
-            </div>
-          </div>
-          <div class="control-group error">
-            <label class="control-label" for="inputError">Input with error</label>
-            <div class="controls">
-              <input type="text" id="inputError">
-              <span class="help-inline">Please correct the error</span>
-            </div>
-          </div>
-          <div class="control-group success">
-            <label class="control-label" for="inputSuccess">Input with success</label>
-            <div class="controls">
-              <input type="text" id="inputSuccess">
-              <span class="help-inline">Woohoo!</span>
-            </div>
-          </div>
-          <div class="control-group success">
-            <label class="control-label" for="selectError">Select with success</label>
-            <div class="controls">
-              <select id="selectError">
-                <option>1</option>
-                <option>2</option>
-                <option>3</option>
-                <option>4</option>
-                <option>5</option>
-              </select>
-              <span class="help-inline">Woohoo!</span>
-            </div>
-          </div>
-          <div class="control-group">
-            <label class="control-label" for="prependedInput">Prepended text</label>
-            <div class="controls">
-              <div class="input-prepend">
-                <span class="add-on">@</span><input class="span2" id="prependedInput" size="16" type="text">
-              </div>
-              <p class="help-block">Here's some help text</p>
-            </div>
-          </div>
-          <div class="form-actions">
-            <button type="submit" class="btn btn-primary">Save changes</button>
-            <button class="btn">Cancel</button>
-          </div>
-        </fieldset>
-      </form>
-                    </article>
-                
-                
-                
-                    <aside class="col size1of4 pull-size3of4">
-                    
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-                        cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-                        proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                        <p class="h4">Call 01225 312 959</p>
 
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-                        cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-                        proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-                        cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-                        proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-                        cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-                        proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-                        cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-                        proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-                        cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-                        proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-                        cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-                        proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-
-                    
-                    </aside>
-            </div>
+                        <p>Alternatively, collect your order from 4 St Saviour's Road, Larkhall, BA1 6RT</p> 
+                    </div>
+                </div>
+            </aside>            
         </div>
 
+        <div class="supplementary container">
+            <section class="size1of3 firstcol">
+                <div class="island">
+                    Hello
+                </div>
+            </section>
+
+            <section class="size1of3">
+                <div class="island">
+                    Hello
+                </div>
+            </section>
+
+            <section class="size1of3">
+                <div class="island">
+                    Hello
+                </div>
+            </section>
+        </div>
+
+        
 
         <footer class="container" role="contentinfo">
             <div class="container-inner">

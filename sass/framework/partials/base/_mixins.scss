@@ -1,19 +1,59 @@
-/* ============================================================ */
 
 // MIXINS
 
 // Standard mixins and functions to help make life easier
 
-/* ============================================================ */
 
 
 // ==========================================================================
 // GRID MIXINS
 // ==========================================================================
 
-// GRID WIDTH - returns a grid unit's width
-@function grid-width($n) {
-	@return $n * $col_width + ($n - 1) * $gutter_width;
+$one_col: (100% - ($gutter_width*($cols - 1))) / $cols;
+ 
+@function grid-width($num) {
+    @return ($one_col * $num) + ($gutter_width * ($num - 1));
+}
+
+
+
+// Grid Col - produces CSS selector for a single grid col/unit based on input provided
+@function grid-col($column,$nColumn,$sPrepend) {
+    @if ($cols % $nColumn == 0) {
+        @return "."#{$sPrepend}"size1of"#{$cols/$nColumn}",.#{$sPrepend}"#{$column}"columns";
+    } @else if ($nColumn == 8) {
+        @return ".#{$sPrepend}size2of3,.#{$sPrepend}"#{$column}"columns";
+    } @else if ($nColumn == 9) {
+        @return ".#{$sPrepend}size3of4,.#{$sPrepend}"#{$column}"columns";
+    } @else {
+        @return ".#{$sPrepend}"#{$column}"columns";   
+    } 
+}
+
+// Returns a CSS selector string for all grid classes to be used in _grid.scss
+@function grid-set() {
+    $count: 1;
+    $selectorString: "";
+    @each $col in $cols_as_string {
+        @if ($count <= $cols) {
+            @if ($count == 1) {
+                $selectorString: $selectorString + "#{grid-col($col,$count,'')}"; 
+            } @else {
+                $selectorString: $selectorString + ",#{grid-col($col,$count,'')}";
+            }
+            $count: $count + 1;
+        }
+    }
+    @return $selectorString;
+}
+
+
+@mixin grid-span($cols) {
+    width: grid-width($cols);
+    margin-left: $gutter_width; /* equal to 20px at 1024px */
+    float: left;
+    min-height: 1px;
+    clear: none;
 }
 
 
@@ -81,11 +121,35 @@
     outline-offset: -2px;
 }
 
-// Center-align a block level element
-@mixin center-block {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
+
+
+// ==========================================================================
+// MEDIA QUERY INLINE
+// ==========================================================================
+
+@mixin respond-to($media) {
+
+    @if ($bIE == true or $isFixed == true) {
+        // Check if we're IE. If so then just return the content sans-media query
+        @content;
+    } @else {
+        // Return the appropriate MQ declaration for modern browsers
+        @if $media == tiny {
+            @media only screen and (min-width: $break-tiny) { @content; }
+        }
+        @else if $media == small {
+            @media only screen and (min-width: $break-small) { @content; }
+        }
+        @else if $media == medium {
+            @media only screen and (min-width: $break-medium) { @content; }
+        }
+        @else if $media == large {
+            @media only screen and (min-width: $break-large) { @content; }
+        }
+        @else if $media == xlarge {
+            @media only screen and (min-width: $break-xlarge) { @content; }
+        }
+    }
 }
 
 

@@ -1,0 +1,80 @@
+/* #Headings */
+/* Based on the ancient Typographic scale */
+/* http://www.markboulton.co.uk/journal/comments/five-simple-steps-to-better-typography-part-4.
+
+/* ###Standard Headings */
+/* Note that all heading sizes are aliased via the `.hN` classes. So if you would like your `<h6>` to look like an `<h1>` then simply add the class `<h3 class="h1" />` */
+
+/* 
+	<h1>Heading 1</h1> 
+*/
+h1,.h1 {
+	font-size: rsize(36px,12px);
+	color: $grayDarker;
+	line-height:1;
+	margin-bottom:.5em;
+  	text-rendering: optimizelegibility; 
+}
+
+/* 
+	<h2>Heading 2</h1> 
+*/
+h2,.h2 {
+	font-size: rsize(24px,12px);
+	color: $grayDarker;
+	line-height:1;
+	margin-bottom:.75em;
+}
+
+/* 
+	<h3>Heading 3</h3> 
+*/
+h3,.h3 {
+	font-size: rsize(21px,12px);
+	color:$grayDark;
+	line-height:1;
+	margin-bottom:.5em;
+}
+
+/* 
+	<h4>Heading 4</h4> 
+*/
+h4,.h4 {
+	font-size: rsize(16px,12px);
+	color:$grayDark;
+	line-height:1;
+	margin-bottom:.5em;
+}
+
+/* 
+	<h5>Heading 5</h3> 
+*/
+h5,.h5 {
+	font-size:1em;
+	line-height:1;
+	margin-bottom:.8em;
+}
+
+/* 
+	<h6>Heading 6</h6> 
+*/
+h6,.h6 {
+	font-size:1em;
+	line-height:1;
+}
+
+
+/* ###Misc Headings */
+
+/* A series of classes for setting massive type; for use in heroes, mastheads, promos, etc. */
+/* CSS classes to use are `.giga` (massive!), `.mega` (giant) and `.kilo` (large) */
+
+.giga{
+	font-size: rsize(96px,12px);
+}
+.mega{
+	font-size: rsize(72px,12px);
+}
+.kilo{
+	font-size: rsize(48px,12px);
+}

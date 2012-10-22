@@ -1,0 +1,180 @@
+/* #Grid */
+
+/* Custom grid system for rapid prototyping and quick layout solutions.
+
+##Example 1 - fractions
+	<div class="size1of2 firstcol">
+		I'm the first of two grid items. I need an extra class to remove my gutter!
+	</div>
+	<div class="size1of2">
+		I'm the second of the two grid items. No need for a second class for me!
+	</div>
+
+
+##Example 2 - columns
+	<div class="sixcolumns firstcol">
+		I'm the first of two grid items. I need an extra class to remove my gutter!
+	</div>
+	<div class="sixcolumns">
+		I'm the second of the two grid items. No need for a second class for me!
+	</div>
+*/
+
+
+// Generate a CSS selector string for all the possibile grid classes
+$allGridClasses: #{grid-set()};
+
+
+// ==========================================================================
+// MOBILE GRID
+// ==========================================================================
+
+// Add styles to all the grid classes
+#{$allGridClasses} {
+	float: none;
+	clear: both;
+	display: block;
+	width: auto;    
+	margin: 0;
+	left: auto;
+	right: auto;
+}
+
+// MOBILE COLUMNS
+// ==========================================================================
+
+@if($bMobileCols) {
+	$count: 1;
+	@each $col in $cols_as_string {
+		@if ($count <= $cols) {
+			#{grid-col($col,$count,'mobile-')} {
+				width: #{grid-width($count)};
+				margin-left: $gutter_width; /* equal to 20px at 1024px */
+				float: left;
+				min-height: 1px;
+				clear: none;
+			}
+			$count: $count + 1;
+		}
+	}
+}
+
+
+
+
+
+// ==========================================================================
+// STANDARD GRID
+// ==========================================================================
+
+
+@include respond-to(medium) {
+
+	// Add styles to all the grid classes
+	#{$allGridClasses} {
+		margin-left: $gutter_width; // equal to 20px at 1024px 
+		float: left;
+		min-height: 1px;
+		position: relative;
+		clear: none;
+	}
+
+	// Common definition classes
+	// ==========================================================================
+	$count: 1;
+	@each $col in $cols_as_string {
+		@if ($count <= $cols) {
+			#{grid-col($col,$count,'')} {
+				width: #{grid-width($count)};
+			}
+			$count: $count + 1;
+		}
+	}
+
+
+	// Push classes
+	// ==========================================================================
+	
+	/* ##Push Classes */
+	/* 
+		<div class="size3of4 firstcol push-size1of4">
+			I'm a 3/4 width column that is pushed to the left by 1/4 column
+		</div>
+	*/
+	@if($bGridPushClasses) {
+		$count: 1;
+		@each $col in $cols_as_string {
+			@if ($count <= $cols) {
+				// Omit full width columns from "push" classes
+				@if ($count != $cols) { 	
+					#{grid-col($col,$count,'push-')} {
+						left: #{grid-width($count) + $gutter_width};
+					}
+					$count: $count + 1;
+				}
+			}
+		}
+	}
+
+	// Pull classes
+	// ==========================================================================
+	@if($bGridPushClasses) {
+		$count: 1;
+		@each $col in $cols_as_string {
+			@if ($count <= $cols) {
+				// Omit full width columns from "push" classes
+				@if ($count != $cols) { 	
+					#{grid-col($col,$count,'pull-')} {
+						right: #{grid-width($count) + $gutter_width};
+					}
+					$count: $count + 1;
+				}
+			}
+		}
+	}
+}
+
+
+
+
+
+// ==========================================================================
+// OVERIDES & EXTENSIONS
+// ==========================================================================
+
+.firstcol {
+	margin-left: 0;
+}
+
+/* ##Column Extensions */
+
+/* ###Full Width */
+/* 
+	<div class="full-col">
+		I'm a full width column. You probably won't need to use me that often...
+	</div>
+*/
+
+.full-col {
+	width: auto;
+	float: none;
+}
+
+
+/* ###Centered */
+/* 
+	<div class="size1of3 centered-col">
+		I'm a centered column. Useful on the odd occassion you need to center a grid unit
+	</div>
+*/
+
+.centered-col {
+    margin: 0 auto;
+    float: none;
+}
+
+
+
+
+
+
