@@ -14,6 +14,7 @@
 .islet{
     display:block;
     border: 1px solid #ccc; /* Override this color in your theme stylesheet */
+    margin-bottom: $baseLineHeight;
     @extend .clearfix;
 }
 
@@ -76,3 +77,4 @@
         }
     }
 }
+
