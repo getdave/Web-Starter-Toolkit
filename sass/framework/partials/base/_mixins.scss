@@ -127,21 +127,28 @@ $one_col: (100% - ($gutter_width*($cols - 1))) / $cols;
 // ==========================================================================
 
 @mixin respond-to($media) {
-  @if $media == tiny {
-    @media only screen and (min-width: $break-tiny) { @content; }
-  }
-  @else if $media == small {
-    @media only screen and (min-width: $break-small) { @content; }
-  }
-  @else if $media == medium {
-    @media only screen and (min-width: $break-medium) { @content; }
-  }
-  @else if $media == large {
-    @media only screen and (min-width: $break-large) { @content; }
-  }
-  @else if $media == xlarge {
-    @media only screen and (min-width: $break-xlarge) { @content; }
-  }
+
+    @if ($bIE == true) {
+        // Check if we're IE. If so then just return the content sans-media query
+        @content;
+    } @else {
+        // Return the appropriate MQ declaration for modern browsers
+        @if $media == tiny {
+            @media only screen and (min-width: $break-tiny) { @content; }
+        }
+        @else if $media == small {
+            @media only screen and (min-width: $break-small) { @content; }
+        }
+        @else if $media == medium {
+            @media only screen and (min-width: $break-medium) { @content; }
+        }
+        @else if $media == large {
+            @media only screen and (min-width: $break-large) { @content; }
+        }
+        @else if $media == xlarge {
+            @media only screen and (min-width: $break-xlarge) { @content; }
+        }
+    }
 }
 
 

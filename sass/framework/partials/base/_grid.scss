@@ -25,8 +25,6 @@
 $allGridClasses: #{grid-set()};
 
 
-
-
 // ==========================================================================
 // MOBILE GRID
 // ==========================================================================
@@ -68,7 +66,7 @@ $allGridClasses: #{grid-set()};
 // ==========================================================================
 
 
-@media only screen and (min-width: 62em) {
+@include respond-to(medium) {
 
 	// Add styles to all the grid classes
 	#{$allGridClasses} {
