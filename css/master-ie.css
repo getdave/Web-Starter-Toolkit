@@ -207,7 +207,7 @@ h6, .h6 {
 		I'm the second of the two grid items. No need for a second class for me!
 	</div>
 */
-.size1of13, .onecolumns, .twocolumns, .threecolumns, .fourcolumns, .fivecolumns, .sixcolumns, .sevencolumns, .size2of3, .eightcolumns, .size3of4, .ninecolumns, .tencolumns, .elevencolumns, .twelvecolumns, .size1of1, .thirteencolumns {
+.size1of12, .onecolumns, .size1of6, .twocolumns, .size1of4, .threecolumns, .size1of3, .fourcolumns, .fivecolumns, .size1of2, .sixcolumns, .sevencolumns, .size2of3, .eightcolumns, .size3of4, .ninecolumns, .tencolumns, .elevencolumns, .size1of1, .twelvecolumns, .thirteencolumns {
   float: none;
   clear: both;
   display: block;
@@ -217,8 +217,8 @@ h6, .h6 {
   right: auto;
 }
 
-.mobile-size1of13, .mobile-onecolumns {
-  width: 4.18462%;
+.mobile-size1of12, .mobile-onecolumns {
+  width: 4.85%;
   margin-left: 3.8%;
   /* equal to 20px at 1024px */
   float: left;
@@ -226,8 +226,8 @@ h6, .h6 {
   clear: none;
 }
 
-.mobile-twocolumns {
-  width: 12.16923%;
+.mobile-size1of6, .mobile-twocolumns {
+  width: 13.5%;
   margin-left: 3.8%;
   /* equal to 20px at 1024px */
   float: left;
@@ -235,8 +235,8 @@ h6, .h6 {
   clear: none;
 }
 
-.mobile-threecolumns {
-  width: 20.15385%;
+.mobile-size1of4, .mobile-threecolumns {
+  width: 22.15%;
   margin-left: 3.8%;
   /* equal to 20px at 1024px */
   float: left;
@@ -244,8 +244,8 @@ h6, .h6 {
   clear: none;
 }
 
-.mobile-fourcolumns {
-  width: 28.13846%;
+.mobile-size1of3, .mobile-fourcolumns {
+  width: 30.8%;
   margin-left: 3.8%;
   /* equal to 20px at 1024px */
   float: left;
@@ -254,7 +254,7 @@ h6, .h6 {
 }
 
 .mobile-fivecolumns {
-  width: 36.12308%;
+  width: 39.45%;
   margin-left: 3.8%;
   /* equal to 20px at 1024px */
   float: left;
@@ -262,8 +262,8 @@ h6, .h6 {
   clear: none;
 }
 
-.mobile-sixcolumns {
-  width: 44.10769%;
+.mobile-size1of2, .mobile-sixcolumns {
+  width: 48.1%;
   margin-left: 3.8%;
   /* equal to 20px at 1024px */
   float: left;
@@ -272,7 +272,7 @@ h6, .h6 {
 }
 
 .mobile-sevencolumns {
-  width: 52.09231%;
+  width: 56.75%;
   margin-left: 3.8%;
   /* equal to 20px at 1024px */
   float: left;
@@ -281,7 +281,7 @@ h6, .h6 {
 }
 
 .mobile-size2of3, .mobile-eightcolumns {
-  width: 60.07692%;
+  width: 65.4%;
   margin-left: 3.8%;
   /* equal to 20px at 1024px */
   float: left;
@@ -290,7 +290,7 @@ h6, .h6 {
 }
 
 .mobile-size3of4, .mobile-ninecolumns {
-  width: 68.06154%;
+  width: 74.05%;
   margin-left: 3.8%;
   /* equal to 20px at 1024px */
   float: left;
@@ -299,7 +299,7 @@ h6, .h6 {
 }
 
 .mobile-tencolumns {
-  width: 76.04615%;
+  width: 82.7%;
   margin-left: 3.8%;
   /* equal to 20px at 1024px */
   float: left;
@@ -308,7 +308,7 @@ h6, .h6 {
 }
 
 .mobile-elevencolumns {
-  width: 84.03077%;
+  width: 91.35%;
   margin-left: 3.8%;
   /* equal to 20px at 1024px */
   float: left;
@@ -316,16 +316,7 @@ h6, .h6 {
   clear: none;
 }
 
-.mobile-twelvecolumns {
-  width: 92.01538%;
-  margin-left: 3.8%;
-  /* equal to 20px at 1024px */
-  float: left;
-  min-height: 1px;
-  clear: none;
-}
-
-.mobile-size1of1, .mobile-thirteencolumns {
+.mobile-size1of1, .mobile-twelvecolumns {
   width: 100%;
   margin-left: 3.8%;
   /* equal to 20px at 1024px */
@@ -334,161 +325,169 @@ h6, .h6 {
   clear: none;
 }
 
-@media only screen and (min-width: 62em) {
-  .size1of13, .onecolumns, .twocolumns, .threecolumns, .fourcolumns, .fivecolumns, .sixcolumns, .sevencolumns, .size2of3, .eightcolumns, .size3of4, .ninecolumns, .tencolumns, .elevencolumns, .twelvecolumns, .size1of1, .thirteencolumns {
-    margin-left: 3.8%;
-    float: left;
-    min-height: 1px;
-    position: relative;
-    clear: none;
-  }
-
-  .size1of13, .onecolumns {
-    width: 4.18462%;
-  }
-
-  .twocolumns {
-    width: 12.16923%;
-  }
-
-  .threecolumns {
-    width: 20.15385%;
-  }
-
-  .fourcolumns {
-    width: 28.13846%;
-  }
-
-  .fivecolumns {
-    width: 36.12308%;
-  }
-
-  .sixcolumns {
-    width: 44.10769%;
-  }
-
-  .sevencolumns {
-    width: 52.09231%;
-  }
-
-  .size2of3, .eightcolumns {
-    width: 60.07692%;
-  }
-
-  .size3of4, .ninecolumns {
-    width: 68.06154%;
-  }
-
-  .tencolumns {
-    width: 76.04615%;
-  }
-
-  .elevencolumns {
-    width: 84.03077%;
-  }
-
-  .twelvecolumns {
-    width: 92.01538%;
-  }
-
-  .size1of1, .thirteencolumns {
-    width: 100%;
-  }
-
-  /* ##Push Classes */
-  /* 
-  	<div class="size3of4 firstcol push-size1of4">
-  		I'm a 3/4 width column that is pushed to the left by 1/4 column
-  	</div>
-  */
-  .push-size1of13, .push-onecolumns {
-    left: 7.98462%;
-  }
-
-  .push-twocolumns {
-    left: 15.96923%;
-  }
-
-  .push-threecolumns {
-    left: 23.95385%;
-  }
-
-  .push-fourcolumns {
-    left: 31.93846%;
-  }
-
-  .push-fivecolumns {
-    left: 39.92308%;
-  }
-
-  .push-sixcolumns {
-    left: 47.90769%;
-  }
-
-  .push-sevencolumns {
-    left: 55.89231%;
-  }
-
-  .push-size2of3, .push-eightcolumns {
-    left: 63.87692%;
-  }
-
-  .push-size3of4, .push-ninecolumns {
-    left: 71.86154%;
-  }
-
-  .push-tencolumns {
-    left: 79.84615%;
-  }
-
-  .push-elevencolumns {
-    left: 87.83077%;
-  }
-
-  .pull-size1of13, .pull-onecolumns {
-    right: 7.98462%;
-  }
-
-  .pull-twocolumns {
-    right: 15.96923%;
-  }
-
-  .pull-threecolumns {
-    right: 23.95385%;
-  }
-
-  .pull-fourcolumns {
-    right: 31.93846%;
-  }
-
-  .pull-fivecolumns {
-    right: 39.92308%;
-  }
-
-  .pull-sixcolumns {
-    right: 47.90769%;
-  }
-
-  .pull-sevencolumns {
-    right: 55.89231%;
-  }
-
-  .pull-size2of3, .pull-eightcolumns {
-    right: 63.87692%;
-  }
-
-  .pull-size3of4, .pull-ninecolumns {
-    right: 71.86154%;
-  }
-
-  .pull-tencolumns {
-    right: 79.84615%;
-  }
-
-  .pull-elevencolumns {
-    right: 87.83077%;
-  }
+.mobile-thirteencolumns {
+  width: 108.65%;
+  margin-left: 3.8%;
+  /* equal to 20px at 1024px */
+  float: left;
+  min-height: 1px;
+  clear: none;
 }
+
+.size1of12, .onecolumns, .size1of6, .twocolumns, .size1of4, .threecolumns, .size1of3, .fourcolumns, .fivecolumns, .size1of2, .sixcolumns, .sevencolumns, .size2of3, .eightcolumns, .size3of4, .ninecolumns, .tencolumns, .elevencolumns, .size1of1, .twelvecolumns, .thirteencolumns {
+  margin-left: 3.8%;
+  float: left;
+  min-height: 1px;
+  position: relative;
+  clear: none;
+}
+
+.size1of12, .onecolumns {
+  width: 4.85%;
+}
+
+.size1of6, .twocolumns {
+  width: 13.5%;
+}
+
+.size1of4, .threecolumns {
+  width: 22.15%;
+}
+
+.size1of3, .fourcolumns {
+  width: 30.8%;
+}
+
+.fivecolumns {
+  width: 39.45%;
+}
+
+.size1of2, .sixcolumns {
+  width: 48.1%;
+}
+
+.sevencolumns {
+  width: 56.75%;
+}
+
+.size2of3, .eightcolumns {
+  width: 65.4%;
+}
+
+.size3of4, .ninecolumns {
+  width: 74.05%;
+}
+
+.tencolumns {
+  width: 82.7%;
+}
+
+.elevencolumns {
+  width: 91.35%;
+}
+
+.size1of1, .twelvecolumns {
+  width: 100%;
+}
+
+.thirteencolumns {
+  width: 108.65%;
+}
+
+/* ##Push Classes */
+/* 
+	<div class="size3of4 firstcol push-size1of4">
+		I'm a 3/4 width column that is pushed to the left by 1/4 column
+	</div>
+*/
+.push-size1of12, .push-onecolumns {
+  left: 8.65%;
+}
+
+.push-size1of6, .push-twocolumns {
+  left: 17.3%;
+}
+
+.push-size1of4, .push-threecolumns {
+  left: 25.95%;
+}
+
+.push-size1of3, .push-fourcolumns {
+  left: 34.6%;
+}
+
+.push-fivecolumns {
+  left: 43.25%;
+}
+
+.push-size1of2, .push-sixcolumns {
+  left: 51.9%;
+}
+
+.push-sevencolumns {
+  left: 60.55%;
+}
+
+.push-size2of3, .push-eightcolumns {
+  left: 69.2%;
+}
+
+.push-size3of4, .push-ninecolumns {
+  left: 77.85%;
+}
+
+.push-tencolumns {
+  left: 86.5%;
+}
+
+.push-elevencolumns {
+  left: 95.15%;
+}
+
+.pull-size1of12, .pull-onecolumns {
+  right: 8.65%;
+}
+
+.pull-size1of6, .pull-twocolumns {
+  right: 17.3%;
+}
+
+.pull-size1of4, .pull-threecolumns {
+  right: 25.95%;
+}
+
+.pull-size1of3, .pull-fourcolumns {
+  right: 34.6%;
+}
+
+.pull-fivecolumns {
+  right: 43.25%;
+}
+
+.pull-size1of2, .pull-sixcolumns {
+  right: 51.9%;
+}
+
+.pull-sevencolumns {
+  right: 60.55%;
+}
+
+.pull-size2of3, .pull-eightcolumns {
+  right: 69.2%;
+}
+
+.pull-size3of4, .pull-ninecolumns {
+  right: 77.85%;
+}
+
+.pull-tencolumns {
+  right: 86.5%;
+}
+
+.pull-elevencolumns {
+  right: 95.15%;
+}
+
 .firstcol {
   margin-left: 0;
 }
@@ -578,10 +577,6 @@ h6, .h6 {
   content: "";
   display: table;
   clear: both;
-}
-
-.page-fixed .container {
-  width: 960px;
 }
 
 /* ## Extended Container */

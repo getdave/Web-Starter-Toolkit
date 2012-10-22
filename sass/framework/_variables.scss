@@ -4,6 +4,13 @@
 // Do not alter these values. Instead override as required in your Projects'
 // _config file.
 
+// ==========================================================================
+// IE HACK
+// ==========================================================================
+
+// This is a flag which is set to "true" by master-ie.scss
+// This allows us to target specifically IE within Sass files!
+$bIE: false !default;
 
 
 // ==========================================================================

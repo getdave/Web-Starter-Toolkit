@@ -55,7 +55,7 @@ $baseLineHeight:        		1.667em;
 // ==========================================================================
 
 // Column Configuration
-$cols: 							13;		// number of columns required
+$cols: 							12;		// number of columns required
 $gutter_width: 					3.8%;	// gutter between each column
 
 // Include "push-" and "pull-" classes for source reordering?
@@ -71,6 +71,9 @@ $bMobileCols:					true;
 // ==========================================================================
 // LAYOUT
 // ==========================================================================
+
+// Please specify a fixed or a fluid layout
+$isLayoutFixed:					false;
 
 // Width of primary width ".container" elements
 $containerWidth:				90%;
