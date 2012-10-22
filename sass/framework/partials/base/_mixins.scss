@@ -36,12 +36,14 @@ $one_col: (100% - ($gutter_width*($cols - 1))) / $cols;
     $count: 1;
     $selectorString: "";
     @each $col in $cols_as_string {
-        @if ($count == 1) {
-           $selectorString: $selectorString + "#{grid-col($col,$count,'')}"; 
-       } @else {
-            $selectorString: $selectorString + ",#{grid-col($col,$count,'')}";
-       }
-        $count: $count + 1;
+        @if ($count <= $cols) {
+            @if ($count == 1) {
+                $selectorString: $selectorString + "#{grid-col($col,$count,'')}"; 
+            } @else {
+                $selectorString: $selectorString + ",#{grid-col($col,$count,'')}";
+            }
+            $count: $count + 1;
+        }
     }
     @return $selectorString;
 }

@@ -46,14 +46,16 @@ $allGridClasses: #{grid-set()};
 @if($bMobileCols) {
 	$count: 1;
 	@each $col in $cols_as_string {
-		#{grid-col($col,$count,'mobile-')} {
-			width: #{grid-width($count)};
-			margin-left: $gutter_width; /* equal to 20px at 1024px */
-			float: left;
-			min-height: 1px;
-			clear: none;
+		@if ($count <= $cols) {
+			#{grid-col($col,$count,'mobile-')} {
+				width: #{grid-width($count)};
+				margin-left: $gutter_width; /* equal to 20px at 1024px */
+				float: left;
+				min-height: 1px;
+				clear: none;
+			}
+			$count: $count + 1;
 		}
-		$count: $count + 1;
 	}
 }
 
@@ -81,10 +83,12 @@ $allGridClasses: #{grid-set()};
 	// ==========================================================================
 	$count: 1;
 	@each $col in $cols_as_string {
-		#{grid-col($col,$count,'')} {
-			width: #{grid-width($count)};
+		@if ($count <= $cols) {
+			#{grid-col($col,$count,'')} {
+				width: #{grid-width($count)};
+			}
+			$count: $count + 1;
 		}
-		$count: $count + 1;
 	}
 
 
@@ -100,12 +104,14 @@ $allGridClasses: #{grid-set()};
 	@if($bGridPushClasses) {
 		$count: 1;
 		@each $col in $cols_as_string {
-			// Omit full width columns from "push" classes
-			@if ($count != 12) { 	
-				#{grid-col($col,$count,'push-')} {
-					left: #{grid-width($count) + $gutter_width};
+			@if ($count <= $cols) {
+				// Omit full width columns from "push" classes
+				@if ($count != $cols) { 	
+					#{grid-col($col,$count,'push-')} {
+						left: #{grid-width($count) + $gutter_width};
+					}
+					$count: $count + 1;
 				}
-				$count: $count + 1;
 			}
 		}
 	}
@@ -115,12 +121,14 @@ $allGridClasses: #{grid-set()};
 	@if($bGridPushClasses) {
 		$count: 1;
 		@each $col in $cols_as_string {
-			// Omit full width columns from "push" classes
-			@if ($count != 12) { 	
-				#{grid-col($col,$count,'pull-')} {
-					right: #{grid-width($count) + $gutter_width};
+			@if ($count <= $cols) {
+				// Omit full width columns from "push" classes
+				@if ($count != $cols) { 	
+					#{grid-col($col,$count,'pull-')} {
+						right: #{grid-width($count) + $gutter_width};
+					}
+					$count: $count + 1;
 				}
-				$count: $count + 1;
 			}
 		}
 	}
