@@ -93,6 +93,22 @@ $cursive			: "Bradley Hand ITC", "Apple Chancery", "URW Chancery L", cursive !de
 
 
 
+// Heading Levels
+// These are set as defaults and overidden in the site config
+// ==========================================================================
+
+$headingLevel1:		36px !default;
+$headingLevel2:		24px !default;
+$headingLevel3:		21px !default;
+$headingLevel4:		16px !default;
+$headingLevel5:		14px !default;
+$headingLevel6:		13px !default;
+
+$giga:				96px !default;
+$mega:				72px !default;
+$kilo:				48px !default;
+
+
 // ==========================================================================
 // GRID
 // ==========================================================================

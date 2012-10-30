@@ -78,15 +78,20 @@ $one_col: (100% - ($gutter_width*($cols - 1))) / $cols;
 }
 
 
-// Font Size
-@mixin fsize($pxval, $baseline : $baseFontSize) {
-    font-size: ($pxval / $baseline) * 100%
-}
+
+
 
 // Relative Size
 @function rsize($pxval, $baseline : $baseFontSize) {
     @return ($pxval/$baseline) + em;
 }
+
+// Font Size
+@mixin fsize($font-size) {
+    font-size: #{$font-size/$baseFontSize}em;
+}
+
+
 
 
 

@@ -6,17 +6,13 @@
 body {
   font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
   font-size: 16px;
-  line-height: 1.667em;
+  line-height: 1.666em;
   color: #333333;
 }
 
-body {
-  font-size: 100px;
-}
-
 p {
-  margin: 0 0 1.667em;
-  line-height: 1.667em;
+  margin: 0 0 1.666em;
+  line-height: 1.666em;
 }
 
 a {
@@ -38,7 +34,7 @@ a:hover, a:active {
 
 ul, ol {
   padding: 0;
-  margin: 0 0 0.8335em 25px;
+  margin: 0 0 0.833em 25px;
 }
 
 ul ul,
@@ -57,7 +53,7 @@ ol {
 }
 
 li {
-  line-height: 1.667em;
+  line-height: 1.666em;
 }
 
 blockquote, blockquote p {
@@ -118,73 +114,74 @@ img {
 	<h1>Heading 1</h1> 
 */
 h1, .h1 {
-  font-size: 3em;
+  font-size: 2.25em;
   color: #222222;
   line-height: 1;
-  margin-bottom: .5em;
+  margin: 0 0 .5em 0;
   text-rendering: optimizelegibility;
 }
 
 /* 
-	<h2>Heading 2</h1> 
+	<h2>Heading 2</h2> 
 */
 h2, .h2 {
-  font-size: 2em;
+  font-size: 1.5em;
   color: #222222;
   line-height: 1;
-  margin-bottom: .75em;
+  margin: 0 0 .75em 0;
 }
 
 /* 
 	<h3>Heading 3</h3> 
 */
 h3, .h3 {
-  font-size: 1.75em;
+  font-size: 1.3125em;
   color: #333333;
   line-height: 1;
-  margin-bottom: .5em;
+  margin: 0 0 .5em 0;
 }
 
 /* 
 	<h4>Heading 4</h4> 
 */
 h4, .h4 {
-  font-size: 1.33333em;
+  font-size: 1em;
   color: #333333;
   line-height: 1;
-  margin-bottom: .5em;
+  margin: 0 0 .5em 0;
 }
 
 /* 
-	<h5>Heading 5</h3> 
+	<h5>Heading 5</h5> 
 */
 h5, .h5 {
-  font-size: 1em;
+  font-size: 0.875em;
   line-height: 1;
-  margin-bottom: .8em;
+  margin: 0 0 .8em 0;
 }
 
 /* 
 	<h6>Heading 6</h6> 
 */
 h6, .h6 {
-  font-size: 1em;
+  font-size: 0.8125em;
   line-height: 1;
+  margin: 0 0 .5em 0;
 }
 
 /* ###Misc Headings */
 /* A series of classes for setting massive type; for use in heroes, mastheads, promos, etc. */
 /* CSS classes to use are `.giga` (massive!), `.mega` (giant) and `.kilo` (large) */
 .giga {
-  font-size: 8em;
+  font-size: 96px;
 }
 
 .mega {
-  font-size: 6em;
+  font-size: 72px;
 }
 
 .kilo {
-  font-size: 4em;
+  font-size: 48px;
 }
 
 /* #Grid */
@@ -610,7 +607,7 @@ h6, .h6 {
   display: block;
   border: 1px solid #ccc;
   /* Override this color in your theme stylesheet */
-  margin-bottom: 1.667em;
+  margin-bottom: 1.666em;
 }
 
 .island, .headed-island {
@@ -1360,7 +1357,7 @@ Borrowed from inuit.css
 */
 .alert {
   padding: 0.5em 35px 0.5em 14px;
-  margin-bottom: 1.667em;
+  margin-bottom: 1.666em;
   text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
   background-color: #fcf8e3;
   border: 1px solid #fbeed5;
@@ -1384,7 +1381,7 @@ Borrowed from inuit.css
   position: relative;
   top: -2px;
   right: -21px;
-  line-height: 1.667em;
+  line-height: 1.666em;
 }
 
 /* ##Alert Success */
@@ -1886,9 +1883,7 @@ html[xmlns] .slides {
   text-align: left;
 }
 
-/* #Misc */
-/* Below are a number of miscellaneous items that don't quite fit anywhere else...yet */
-/* ##Site Logo 
+/* #Site Logo 
 
 	<a href="/" class="site-logo" title="Return to website homepage">
 		<img src="http://www.placehold.it/200x100" alt="My Logo">
