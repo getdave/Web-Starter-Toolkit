@@ -1,0 +1,11 @@
+/* #Site Credit
+
+	<p>Developed by <a href="#" class="ir site-credit">Burfield Creative</a></p> 
+*/
+
+.site-credit {
+	@include inline-block;
+	background-image: image-url($site-credit);
+	width: image-width($site-credit);
+	height: image-height($site-credit);
+}
