@@ -12,7 +12,7 @@ h1,.h1 {
 	font-size: rsize(36px,12px);
 	color: $grayDarker;
 	line-height:1;
-	margin-bottom:.5em;
+	margin: 0 0 .5em 0;
   	text-rendering: optimizelegibility; 
 }
 
@@ -23,7 +23,7 @@ h2,.h2 {
 	font-size: rsize(24px,12px);
 	color: $grayDarker;
 	line-height:1;
-	margin-bottom:.75em;
+	margin: 0 0 .75em 0;
 }
 
 /* 
@@ -33,7 +33,7 @@ h3,.h3 {
 	font-size: rsize(21px,12px);
 	color:$grayDark;
 	line-height:1;
-	margin-bottom:.5em;
+	margin: 0 0 .5em 0;
 }
 
 /* 
@@ -43,7 +43,7 @@ h4,.h4 {
 	font-size: rsize(16px,12px);
 	color:$grayDark;
 	line-height:1;
-	margin-bottom:.5em;
+	margin: 0 0 .5em 0;
 }
 
 /* 
@@ -52,7 +52,7 @@ h4,.h4 {
 h5,.h5 {
 	font-size:1em;
 	line-height:1;
-	margin-bottom:.8em;
+	margin: 0 0 .8em 0;
 }
 
 /* 
@@ -61,6 +61,7 @@ h5,.h5 {
 h6,.h6 {
 	font-size:1em;
 	line-height:1;
+	margin: 0 0 .5em 0;
 }
 
 

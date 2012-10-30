@@ -117,7 +117,7 @@ h1, .h1 {
   font-size: 3em;
   color: #222222;
   line-height: 1;
-  margin-bottom: .5em;
+  margin: 0 0 .5em 0;
   text-rendering: optimizelegibility;
 }
 
@@ -128,7 +128,7 @@ h2, .h2 {
   font-size: 2em;
   color: #222222;
   line-height: 1;
-  margin-bottom: .75em;
+  margin: 0 0 .75em 0;
 }
 
 /* 
@@ -138,7 +138,7 @@ h3, .h3 {
   font-size: 1.75em;
   color: #333333;
   line-height: 1;
-  margin-bottom: .5em;
+  margin: 0 0 .5em 0;
 }
 
 /* 
@@ -148,7 +148,7 @@ h4, .h4 {
   font-size: 1.33333em;
   color: #333333;
   line-height: 1;
-  margin-bottom: .5em;
+  margin: 0 0 .5em 0;
 }
 
 /* 
@@ -157,7 +157,7 @@ h4, .h4 {
 h5, .h5 {
   font-size: 1em;
   line-height: 1;
-  margin-bottom: .8em;
+  margin: 0 0 .8em 0;
 }
 
 /* 
@@ -166,6 +166,7 @@ h5, .h5 {
 h6, .h6 {
   font-size: 1em;
   line-height: 1;
+  margin: 0 0 .5em 0;
 }
 
 /* ###Misc Headings */
@@ -1883,9 +1884,7 @@ html[xmlns] .slides {
   text-align: left;
 }
 
-/* #Misc */
-/* Below are a number of miscellaneous items that don't quite fit anywhere else...yet */
-/* ##Site Logo 
+/* #Site Logo 
 
 	<a href="/" class="site-logo" title="Return to website homepage">
 		<img src="http://www.placehold.it/200x100" alt="My Logo">
