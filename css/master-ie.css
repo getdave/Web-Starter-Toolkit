@@ -1922,6 +1922,25 @@ html[xmlns] .slides {
   transition: opacity 0.5s ease-out;
 }
 
+/* #Site Credit */
+/* Useful pattern typically used to provide credit to the website developer in the footer of the website. */
+/*
+	<p>Developed by <a href="#" class="ir site-credit">Burfield Creative</a></p> 
+*/
+.site-credit {
+  display: -moz-inline-stack;
+  display: inline-block;
+  vertical-align: middle;
+  *vertical-align: auto;
+  zoom: 1;
+  *display: inline;
+  vertical-align: middle;
+  background-position: 50% 50%;
+  background-image: url('/images/site-credit.png?1351182971');
+  width: 117px;
+  height: 18px;
+}
+
 /* #Helpers */
 /* Set of simple classes to implement common CSS patterns */
 /* ##Clearfix & Clearing */
