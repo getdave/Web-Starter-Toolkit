@@ -1247,6 +1247,14 @@ Borrowed from inuit.css
   box-shadow: none;
 }
 
+/* ## Button Full */
+/* 
+	<a href="#" class="btn btn-full">Full Width Button</a>
+*/
+.btn-full {
+  display: block;
+}
+
 /* ## Button Groups */
 /* 
 	<div class="btn-group">
@@ -1936,7 +1944,7 @@ html[xmlns] .slides {
   *display: inline;
   vertical-align: middle;
   background-position: 50% 50%;
-  background-image: url('/images/site-credit.png?1351612272');
+  background-image: url('/images/site-credit.png?1353422063');
   width: 117px;
   height: 18px;
 }
@@ -2048,18 +2056,8 @@ html[xmlns] .slides {
 .img-left,
 .img-l,
 .alignleft {
-  display: block;
-  float: none;
-  margin: 0 auto 1.5em auto;
-}
-@media screen and (min-width: 768px) {
-  .img-left,
-  .img-l,
-  .alignleft {
-    float: left;
-    display: inline-block;
-    margin: 0 20px 1.5em 0;
-  }
+  float: left;
+  margin: 0 20px 1.5em 0;
 }
 
 /* 	
@@ -2072,18 +2070,8 @@ html[xmlns] .slides {
 .img-right,
 .img-r,
 .alignright {
-  display: block;
-  float: none;
-  margin: 0 auto 1.5em auto;
-}
-@media screen and (min-width: 768px) {
-  .img-right,
-  .img-r,
-  .alignright {
-    float: right;
-    display: inline-block;
-    margin: 0 0 1.5em 20px;
-  }
+  float: right;
+  margin: 0 0 1.5em 20px;
 }
 
 /* ###Image Replacement */
