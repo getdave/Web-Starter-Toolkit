@@ -1636,34 +1636,17 @@ Borrowed from inuit.css
   float: left;
   margin-bottom: 0;
 }
-.breadcrumbs a {
+.breadcrumbs a,
+.breadcrumbs .trail-end {
   position: relative;
-  display: block;
-  padding: 0.7em 1em 0.7em 2em;
-  float: left;
+  padding: 0.7em 1em;
   text-decoration: none;
-  		/* &:before,
-  		&:after {
-  			content: "";
-  			position: absolute;
-  			top: 50%;
-  			margin-top: -1.5em;
-  			border-top: 1.5em solid transparent;
-  			border-bottom: 1.5em solid transparent;
-  			border-left: 1em solid;
-  			right: -1em;
-  		}
-  
-  		&:before {
-  			border-left-color: #ddd;
-  			right: -1.1em;
-  			z-index: 1;
-  		}
-  
-  		&:after {
-  			z-index: 2;
-  			border-left-color: #F1F1F1;
-  		} */
+  display: -moz-inline-stack;
+  display: inline-block;
+  vertical-align: middle;
+  *vertical-align: auto;
+  zoom: 1;
+  *display: inline;
 }
 .breadcrumbs .current a {
   color: #999;
@@ -1944,7 +1927,7 @@ html[xmlns] .slides {
   *display: inline;
   vertical-align: middle;
   background-position: 50% 50%;
-  background-image: url('/images/site-credit.png?1353422063');
+  background-image: url('/images/site-credit.png?1354628214');
   width: 117px;
   height: 18px;
 }
