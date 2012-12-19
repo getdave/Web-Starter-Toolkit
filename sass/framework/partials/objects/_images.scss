@@ -3,12 +3,18 @@
 /* Common styling patterns for images to be applied to `<img` elements. */
 /* Please note that `.img-rounded` and `.img-circle` do not work in IE7-8. */
 
+// BASE
+%img-base {
+    @include inline-block; 
+}
+
 /* ##Rounded */
 /*
     <img src="http://www.placehold.it/200x200" class="img-rounded" />
 */
 
 .img-rounded {
+    @extend %img-base;
     @include border-radius(6px);
 }
 
@@ -18,6 +24,7 @@
 */
 
 .img-polaroid {
+    @extend %img-base;
     padding: 4px;
     background-color: #fff;
     border: 1px solid #ccc;
@@ -31,5 +38,6 @@
     <img src="http://www.placehold.it/200x200" class="img-circle" />
 */
 .img-circle {
+    @extend %img-base;
     @include border-radius(500px);
 }
