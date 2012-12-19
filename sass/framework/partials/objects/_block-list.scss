@@ -14,23 +14,17 @@ Borrowed from inuit.css
 */
 
 
-.block-list,
-.block-list > li{
-    border:0 solid #ccc; /* Override this color in your theme stylesheet */
-}
-
 .block-list{
     list-style:none;
     margin-left:0;
     padding-left: 0;
-    border-top-width:1px;
 
     > li {
-        border-bottom-width:1px;
-        padding:$halfSpacingUnit +px;
+        padding: $halfSpacingUnit +px;
     }
 
-    .block-list-link{
+    > li > a,
+    .block-list-link {
         display:block;
         padding:$halfSpacingUnit +px;
         margin:-$halfSpacingUnit +px;
