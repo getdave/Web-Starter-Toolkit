@@ -71,11 +71,11 @@ h6,.h6 {
 /* CSS classes to use are `.giga` (massive!), `.mega` (giant) and `.kilo` (large) */
 
 .giga {
-	font-size: $giga;
+	font-size: rsize($giga);
 }
 .mega {
-	font-size: $mega;
+	font-size: rsize($mega);
 }
 .kilo {
-	font-size: $kilo;
+	font-size: rsize($kilo);
 }
