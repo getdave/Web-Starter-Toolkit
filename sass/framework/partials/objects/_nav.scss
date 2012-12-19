@@ -14,11 +14,12 @@
 .nav {
     list-style:none;
     margin-left:0;
+    padding-left: 0;
     @extend .clearfix;
 }
 
 .nav > li,
-.nav > li > a{
+.nav > li > a {
     @include inline-block;
 }
 
@@ -32,18 +33,19 @@
         <li><a href="#">Contact</a></li>
     </ul>
 */
-    .nav-stacked > li {
-        display:list-item;
-    }
-    .nav-stacked > li > a{
-        display:block;
-    }
+
+.nav-stacked > li {
+    display:list-item;
+}
+.nav-stacked > li > a{
+    display:block;
+}
 
 
 /* ##Banner */
-/* `.banner-nav` extends `.nav` and centres the list. */
+/* `.nav-banner` extends `.nav` and centres the list. */
 /*
-    <ul class="nav banner-nav">
+    <ul class="nav nav-banner">
         <li><a href="#">Home</a></li>
         <li><a href="#">About</a></li>
         <li><a href="#">Portfolio</a></li>
@@ -51,6 +53,6 @@
     </ul>
   */
 
-.banner-nav{
+.nav-banner {
     text-align:center;
 }
