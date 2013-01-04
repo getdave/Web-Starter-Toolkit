@@ -14,19 +14,22 @@ Borrowed from inuit.css
 */
 
 
-.block-list{
+
+.block-list {
     list-style:none;
     margin-left:0;
     padding-left: 0;
 
-    > li {
-        padding: $halfSpacingUnit +px;
+    li {
+        clear: both;
     }
+    
+    a {
+        @extend .block-list-link;
+    }    
+}
 
-    > li > a,
-    .block-list-link {
-        display:block;
-        padding:$halfSpacingUnit +px;
-        margin:-$halfSpacingUnit +px;
-    }
+.block-list-link {
+    display:block;
+    padding: $halfSpacingUnit +px;
 }
