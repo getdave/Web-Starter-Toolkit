@@ -1056,14 +1056,13 @@ Borrowed from inuit.css
   margin-left: 0;
   padding-left: 0;
 }
-.block-list > li {
-  padding: 15px;
+.block-list li {
+  clear: both;
 }
-.block-list > li > a,
-.block-list .block-list-link {
+
+.block-list-link, .block-list a {
   display: block;
   padding: 15px;
-  margin: -15px;
 }
 
 /* #Nav */
@@ -1592,6 +1591,7 @@ Borrowed from inuit.css
   *vertical-align: auto;
   zoom: 1;
   *display: inline;
+  vertical-align: middle;
 }
 .breadcrumbs .current a {
   color: #999;
@@ -1881,7 +1881,7 @@ html[xmlns] .slides {
   *display: inline;
   vertical-align: middle;
   background-position: 50% 50%;
-  background-image: url('/images/site-credit.png?1355907678');
+  background-image: url('/images/site-credit.png?1357312861');
   width: 117px;
   height: 18px;
 }

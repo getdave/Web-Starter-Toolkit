@@ -178,11 +178,11 @@ $navbarLinkColorHover: 			$white;
 // BUTTONS
 // ==========================================================================
 
-$button_background				: $linkColor;
-$button_background_shader		: linear-gradient(top, rgba(0,0,0,0), rgba(0,0,0,0.25)); // standard bg shader 
-$button_background_shader_h		: linear-gradient(top, rgba(0,0,0,0.05), rgba(0,0,0,0.30)); // :hover bg shader 
-$button_background_shader_i		: linear-gradient(top, rgba(0,0,0,0.25), rgba(0,0,0,0)); // inverted bg shader 
-$button_background_shader-f		: url(../images/site/button-shader.png) left center repeat-x; // fallback bg shader 
+$button_background              : $linkColor !default;
+$button_background_shader       : linear-gradient(top, rgba(0,0,0,0), rgba(0,0,0,0.25)) !default; // standard bg shader 
+$button_background_shader_h     : linear-gradient(top, rgba(0,0,0,0.05), rgba(0,0,0,0.30)) !default; // :hover bg shader 
+$button_background_shader_i     : linear-gradient(top, rgba(0,0,0,0.25), rgba(0,0,0,0)) !default; // inverted bg shader 
+$button_background_shader-f     : url(../images/site/button-shader.png) left center repeat-x !default; // fallback bg shader 
 
 
 
