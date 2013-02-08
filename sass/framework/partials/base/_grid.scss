@@ -21,6 +21,7 @@
 */
 
 $gutter_width: $gutter+em;
+$large_gutter_width: ($gutter*2)+em;
 $half_gutter_width: ($gutter/2)+em;
 
 
@@ -29,7 +30,13 @@ $half_gutter_width: ($gutter/2)+em;
     margin:0;                       
     padding:0;                      
     margin-left: -$gutter_width;
+    clear: both;
     @include clearfix;
+}
+
+.large-gutter {
+	@extend .grid-wrap;
+	margin-left: -$large_gutter_width;
 }
 
 .half-gutter {
@@ -56,11 +63,16 @@ $allGridClasses: #{grid-selectors()};
 // ==========================================================================
 
 // Add styles to all the grid classes
-#{$allGridClasses} {
+#{$allGridClasses},
+.gc {
 	width: 100%;
 	padding-left: $gutter_width;
 	float: left;
 	@include box-sizing(border-box);
+
+	.large-gutter & {
+		padding-left: $large_gutter_width;
+	}
 
 	.half-gutter & {
 		padding-left: $half_gutter_width;

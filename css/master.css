@@ -593,21 +593,26 @@ optgroup::-moz-focus-inner {
 		I'm the second of the two grid items. No need for a second class for me!
 	</div>
 */
-.grid-wrap, .half-gutter, .no-gutter {
+.grid-wrap, .large-gutter, .half-gutter, .no-gutter {
   list-style: none;
   margin: 0;
   padding: 0;
   margin-left: -3em;
+  clear: both;
   zoom: 1;
 }
-.grid-wrap:before, .half-gutter:before, .no-gutter:before {
+.grid-wrap:before, .large-gutter:before, .half-gutter:before, .no-gutter:before {
   content: "";
   display: table;
 }
-.grid-wrap:after, .half-gutter:after, .no-gutter:after {
+.grid-wrap:after, .large-gutter:after, .half-gutter:after, .no-gutter:after {
   content: "";
   display: table;
   clear: both;
+}
+
+.large-gutter {
+  margin-left: -6em;
 }
 
 .half-gutter {
@@ -622,7 +627,8 @@ optgroup::-moz-focus-inner {
   margin-bottom: 1.666em;
 }
 
-.g1-12, .gonecolumns, .g1-6, .gtwocolumns, .g1-4, .gthreecolumns, .g1-3, .gfourcolumns, .gfivecolumns, .g1-2, .gsixcolumns, .gsevencolumns, .g2-3, .geightcolumns, .g3-4, .gninecolumns, .gtencolumns, .gelevencolumns, .g1-1, .gtwelvecolumns {
+.g1-12, .gonecolumns, .g1-6, .gtwocolumns, .g1-4, .gthreecolumns, .g1-3, .gfourcolumns, .gfivecolumns, .g1-2, .gsixcolumns, .gsevencolumns, .g2-3, .geightcolumns, .g3-4, .gninecolumns, .gtencolumns, .gelevencolumns, .g1-1, .gtwelvecolumns,
+.gc {
   width: 100%;
   padding-left: 3em;
   float: left;
@@ -630,10 +636,16 @@ optgroup::-moz-focus-inner {
   -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
-.half-gutter .g1-12, .half-gutter .gonecolumns, .half-gutter .g1-6, .half-gutter .gtwocolumns, .half-gutter .g1-4, .half-gutter .gthreecolumns, .half-gutter .g1-3, .half-gutter .gfourcolumns, .half-gutter .gfivecolumns, .half-gutter .g1-2, .half-gutter .gsixcolumns, .half-gutter .gsevencolumns, .half-gutter .g2-3, .half-gutter .geightcolumns, .half-gutter .g3-4, .half-gutter .gninecolumns, .half-gutter .gtencolumns, .half-gutter .gelevencolumns, .half-gutter .g1-1, .half-gutter .gtwelvecolumns {
+.large-gutter .g1-12, .large-gutter .gonecolumns, .large-gutter .g1-6, .large-gutter .gtwocolumns, .large-gutter .g1-4, .large-gutter .gthreecolumns, .large-gutter .g1-3, .large-gutter .gfourcolumns, .large-gutter .gfivecolumns, .large-gutter .g1-2, .large-gutter .gsixcolumns, .large-gutter .gsevencolumns, .large-gutter .g2-3, .large-gutter .geightcolumns, .large-gutter .g3-4, .large-gutter .gninecolumns, .large-gutter .gtencolumns, .large-gutter .gelevencolumns, .large-gutter .g1-1, .large-gutter .gtwelvecolumns, .large-gutter
+.gc {
+  padding-left: 6em;
+}
+.half-gutter .g1-12, .half-gutter .gonecolumns, .half-gutter .g1-6, .half-gutter .gtwocolumns, .half-gutter .g1-4, .half-gutter .gthreecolumns, .half-gutter .g1-3, .half-gutter .gfourcolumns, .half-gutter .gfivecolumns, .half-gutter .g1-2, .half-gutter .gsixcolumns, .half-gutter .gsevencolumns, .half-gutter .g2-3, .half-gutter .geightcolumns, .half-gutter .g3-4, .half-gutter .gninecolumns, .half-gutter .gtencolumns, .half-gutter .gelevencolumns, .half-gutter .g1-1, .half-gutter .gtwelvecolumns, .half-gutter
+.gc {
   padding-left: 1.5em;
 }
-.no-gutter .g1-12, .no-gutter .gonecolumns, .no-gutter .g1-6, .no-gutter .gtwocolumns, .no-gutter .g1-4, .no-gutter .gthreecolumns, .no-gutter .g1-3, .no-gutter .gfourcolumns, .no-gutter .gfivecolumns, .no-gutter .g1-2, .no-gutter .gsixcolumns, .no-gutter .gsevencolumns, .no-gutter .g2-3, .no-gutter .geightcolumns, .no-gutter .g3-4, .no-gutter .gninecolumns, .no-gutter .gtencolumns, .no-gutter .gelevencolumns, .no-gutter .g1-1, .no-gutter .gtwelvecolumns {
+.no-gutter .g1-12, .no-gutter .gonecolumns, .no-gutter .g1-6, .no-gutter .gtwocolumns, .no-gutter .g1-4, .no-gutter .gthreecolumns, .no-gutter .g1-3, .no-gutter .gfourcolumns, .no-gutter .gfivecolumns, .no-gutter .g1-2, .no-gutter .gsixcolumns, .no-gutter .gsevencolumns, .no-gutter .g2-3, .no-gutter .geightcolumns, .no-gutter .g3-4, .no-gutter .gninecolumns, .no-gutter .gtencolumns, .no-gutter .gelevencolumns, .no-gutter .g1-1, .no-gutter .gtwelvecolumns, .no-gutter
+.gc {
   padding-left: 0;
 }
 
@@ -962,8 +974,6 @@ optgroup::-moz-focus-inner {
 .island, .headed-island,
 .islet {
   display: block;
-  border: 1px solid #cccccc;
-  /* Override this color in your theme stylesheet */
   margin-bottom: 1.666em;
 }
 
@@ -1008,7 +1018,6 @@ optgroup::-moz-focus-inner {
 .headed-island .island-heading {
   padding: 15px 30px;
   margin: 0;
-  background-color: #f9f9f9;
   border-top: 0;
   border-bottom: 1px solid #cccccc;
 }
@@ -2104,6 +2113,22 @@ html[xmlns] .slides {
  * include js that eliminates this class on page load */
 .js .slides > li:first-child {
   display: block;
+}
+
+/* #Gray Box */
+/* Simple background box styles. Can be applied safetly to any element. Useful for prototyping */
+/* ##Gray Box */
+/*
+    <div class="island graybox">
+        I am a prototype box
+    </div>
+*/
+.graybox {
+  background-color: rgba(0, 0, 0, 0.15);
+  color: #000;
+}
+.graybox a {
+  color: #000;
 }
 
 .nav-primary,
