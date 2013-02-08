@@ -842,6 +842,12 @@ optgroup::-moz-focus-inner {
   width: 100%;
 }
 
+.no-js .g1-12, .no-js .gonecolumns, .no-js .g1-6, .no-js .gtwocolumns, .no-js .g1-4, .no-js .gthreecolumns, .no-js .g1-3, .no-js .gfourcolumns, .no-js .gfivecolumns, .no-js .g1-2, .no-js .gsixcolumns, .no-js .gsevencolumns, .no-js .g2-3, .no-js .geightcolumns, .no-js .g3-4, .no-js .gninecolumns, .no-js .gtencolumns, .no-js .gelevencolumns, .no-js .g1-1, .no-js .gtwelvecolumns,
+.no-js .gc {
+  float: none;
+  width: 100%;
+}
+
 /* ##Column Extensions */
 /* ###Full Width */
 /* 
