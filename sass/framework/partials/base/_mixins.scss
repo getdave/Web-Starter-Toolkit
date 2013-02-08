@@ -56,6 +56,10 @@ $one_col: (100% - ($gutter_width*($cols - 1))) / $cols;
     clear: none;
 }
 
+@mixin grid-firstcol() {
+   margin-left: 0;
+}
+
 
 // ==========================================================================
 // HELPERS
@@ -88,7 +92,9 @@ $one_col: (100% - ($gutter_width*($cols - 1))) / $cols;
 
 // Font Size
 @mixin fsize($font-size) {
-    font-size: #{$font-size/$baseFontSize}em;
+    font-size: $font-size;
+    font-size: ($font-size/$baseFontSize) * 1rem;
+    line-height:ceil($font-size / $baseLineHeight) * ($baseLineHeight / $font-size);
 }
 
 
