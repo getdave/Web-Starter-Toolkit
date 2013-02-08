@@ -20,9 +20,42 @@
 	</div>
 */
 
+$gutter_width: $gutter+em;
+$large_gutter_width: ($gutter*2)+em;
+$half_gutter_width: ($gutter/2)+em;
+
+
+.grid-wrap {
+	list-style:none;                
+    margin:0;                       
+    padding:0;                      
+    margin-left: -$gutter_width;
+    clear: both;
+    @include clearfix;
+}
+
+.large-gutter {
+	@extend .grid-wrap;
+	margin-left: -$large_gutter_width;
+}
+
+.half-gutter {
+	@extend .grid-wrap;
+	margin-left: -$half_gutter_width;
+}
+
+.no-gutter {
+	@extend .grid-wrap;
+	margin-left: 0;
+}
+
+.grid-divide {
+	margin-bottom: $baseLineHeight;
+}
+
 
 // Generate a CSS selector string for all the possibile grid classes
-$allGridClasses: #{grid-set()};
+$allGridClasses: #{grid-selectors()};
 
 
 // ==========================================================================
@@ -30,109 +63,64 @@ $allGridClasses: #{grid-set()};
 // ==========================================================================
 
 // Add styles to all the grid classes
-#{$allGridClasses} {
-	float: none;
-	clear: both;
-	display: block;
-	width: auto;    
-	margin: 0;
-	left: auto;
-	right: auto;
-}
+#{$allGridClasses},
+.gc {
+	width: 100%;
+	padding-left: $gutter_width;
+	float: left;
+	@include box-sizing(border-box);
+	*behavior: url(boxsizing.htc);
 
-// MOBILE COLUMNS
-// ==========================================================================
+	.large-gutter & {
+		padding-left: $large_gutter_width;
+	}
 
-@if($bMobileCols) {
-	$count: 1;
-	@each $col in $cols_as_string {
-		@if ($count <= $cols) {
-			#{grid-col($col,$count,'mobile-')} {
-				width: #{grid-width($count)};
-				margin-left: $gutter_width; /* equal to 20px at 1024px */
-				float: left;
-				min-height: 1px;
-				clear: none;
-			}
-			$count: $count + 1;
-		}
+	.half-gutter & {
+		padding-left: $half_gutter_width;
+	}
+
+	.no-gutter & {
+		padding-left: 0;
 	}
 }
 
+// Handheld Grids
+@include respond-to('tiny') {
+	@include grid-set('h');
+}
+
+// Lap Grids
+@include respond-to('small') {
+	@include grid-set('l');
+}
+
+// Desktop Grids
+@include respond-to('large') {
+	@include grid-set('d');
+}
+
+// Widescreen Grids
+@include respond-to('xlarge') {
+	@include grid-set('w');
+}
 
 
-
-
-// ==========================================================================
-// STANDARD GRID
-// ==========================================================================
-
-
-@include respond-to(medium) {
-
-	// Add styles to all the grid classes
-	#{$allGridClasses} {
-		margin-left: $gutter_width; // equal to 20px at 1024px 
-		float: left;
-		min-height: 1px;
-		position: relative;
-		clear: none;
-	}
-
-	// Common definition classes
-	// ==========================================================================
-	$count: 1;
-	@each $col in $cols_as_string {
-		@if ($count <= $cols) {
-			#{grid-col($col,$count,'')} {
-				width: #{grid-width($count)};
-			}
-			$count: $count + 1;
-		}
-	}
-
-
-	// Push classes
-	// ==========================================================================
-	
-	/* ##Push Classes */
-	/* 
-		<div class="size3of4 firstcol push-size1of4">
-			I'm a 3/4 width column that is pushed to the left by 1/4 column
-		</div>
-	*/
-	@if($bGridPushClasses) {
-		$count: 1;
-		@each $col in $cols_as_string {
-			@if ($count <= $cols) {
-				// Omit full width columns from "push" classes
-				@if ($count != $cols) { 	
-					#{grid-col($col,$count,'push-')} {
-						left: #{grid-width($count) + $gutter_width};
-					}
-					$count: $count + 1;
-				}
-			}
-		}
-	}
-
-	// Pull classes
-	// ==========================================================================
-	@if($bGridPushClasses) {
-		$count: 1;
-		@each $col in $cols_as_string {
-			@if ($count <= $cols) {
-				// Omit full width columns from "push" classes
-				@if ($count != $cols) { 	
-					#{grid-col($col,$count,'pull-')} {
-						right: #{grid-width($count) + $gutter_width};
-					}
-					$count: $count + 1;
-				}
-			}
+// If we're in IE and JS is disabled then
+// the .htc box-sizing hack won't run
+// therefore we need to linearise our layout to ensure it 
+// doesn't break in older IE
+@if ($bIE == true) {
+	.no-js {
+		#{$allGridClasses},
+		.gc {
+			float: none;
+			width: 100%;
 		}
 	}
 }
+
+
+
 
 
 
@@ -142,9 +130,7 @@ $allGridClasses: #{grid-set()};
 // OVERIDES & EXTENSIONS
 // ==========================================================================
 
-.firstcol {
-	@include grid-firstcol;
-}
+
 
 /* ##Column Extensions */
 

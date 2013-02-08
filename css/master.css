@@ -1,3 +1,16 @@
+/**
+ * Returns the width of given column
+ */
+/**
+ * Returns a CSS selector for a single grid col/unit based on input provided
+ */
+/**
+ * Returns a CSS selector string for all grid classes to be used in _grid.scss
+ */
+/**
+ * Outputs a full set of grid classes with the associated width
+ * optional ability to define a prefix to be appended to the selector
+ */
 @-ms-viewport {
   width: device-width;
 }
@@ -487,7 +500,7 @@ select[size="1"] {
   select,
   select[size="0"],
   select[size="1"] {
-    background-image: url('/images/select_arrow.png?1357579010');
+    background-image: url('/images/select_arrow.png?1360329629');
     background-repeat: no-repeat;
     background-position: right center;
     padding-right: 20px;
@@ -580,279 +593,259 @@ optgroup::-moz-focus-inner {
 		I'm the second of the two grid items. No need for a second class for me!
 	</div>
 */
-.size1of12, .onecolumns, .size1of6, .twocolumns, .size1of4, .threecolumns, .size1of3, .fourcolumns, .fivecolumns, .size1of2, .sixcolumns, .sevencolumns, .size2of3, .eightcolumns, .size3of4, .ninecolumns, .tencolumns, .elevencolumns, .size1of1, .twelvecolumns {
-  float: none;
-  clear: both;
-  display: block;
-  width: auto;
+.grid-wrap, .large-gutter, .half-gutter, .no-gutter {
+  list-style: none;
   margin: 0;
-  left: auto;
-  right: auto;
+  padding: 0;
+  margin-left: -3em;
+  clear: both;
+  zoom: 1;
+}
+.grid-wrap:before, .large-gutter:before, .half-gutter:before, .no-gutter:before {
+  content: "";
+  display: table;
+}
+.grid-wrap:after, .large-gutter:after, .half-gutter:after, .no-gutter:after {
+  content: "";
+  display: table;
+  clear: both;
 }
 
-.mobile-size1of12, .mobile-onecolumns {
-  width: 4.85%;
-  margin-left: 3.8%;
-  /* equal to 20px at 1024px */
-  float: left;
-  min-height: 1px;
-  clear: none;
+.large-gutter {
+  margin-left: -6em;
 }
 
-.mobile-size1of6, .mobile-twocolumns {
-  width: 13.5%;
-  margin-left: 3.8%;
-  /* equal to 20px at 1024px */
-  float: left;
-  min-height: 1px;
-  clear: none;
+.half-gutter {
+  margin-left: -1.5em;
 }
 
-.mobile-size1of4, .mobile-threecolumns {
-  width: 22.15%;
-  margin-left: 3.8%;
-  /* equal to 20px at 1024px */
-  float: left;
-  min-height: 1px;
-  clear: none;
-}
-
-.mobile-size1of3, .mobile-fourcolumns {
-  width: 30.8%;
-  margin-left: 3.8%;
-  /* equal to 20px at 1024px */
-  float: left;
-  min-height: 1px;
-  clear: none;
-}
-
-.mobile-fivecolumns {
-  width: 39.45%;
-  margin-left: 3.8%;
-  /* equal to 20px at 1024px */
-  float: left;
-  min-height: 1px;
-  clear: none;
-}
-
-.mobile-size1of2, .mobile-sixcolumns {
-  width: 48.1%;
-  margin-left: 3.8%;
-  /* equal to 20px at 1024px */
-  float: left;
-  min-height: 1px;
-  clear: none;
-}
-
-.mobile-sevencolumns {
-  width: 56.75%;
-  margin-left: 3.8%;
-  /* equal to 20px at 1024px */
-  float: left;
-  min-height: 1px;
-  clear: none;
-}
-
-.mobile-size2of3, .mobile-eightcolumns {
-  width: 65.4%;
-  margin-left: 3.8%;
-  /* equal to 20px at 1024px */
-  float: left;
-  min-height: 1px;
-  clear: none;
-}
-
-.mobile-size3of4, .mobile-ninecolumns {
-  width: 74.05%;
-  margin-left: 3.8%;
-  /* equal to 20px at 1024px */
-  float: left;
-  min-height: 1px;
-  clear: none;
-}
-
-.mobile-tencolumns {
-  width: 82.7%;
-  margin-left: 3.8%;
-  /* equal to 20px at 1024px */
-  float: left;
-  min-height: 1px;
-  clear: none;
-}
-
-.mobile-elevencolumns {
-  width: 91.35%;
-  margin-left: 3.8%;
-  /* equal to 20px at 1024px */
-  float: left;
-  min-height: 1px;
-  clear: none;
-}
-
-.mobile-size1of1, .mobile-twelvecolumns {
-  width: 100%;
-  margin-left: 3.8%;
-  /* equal to 20px at 1024px */
-  float: left;
-  min-height: 1px;
-  clear: none;
-}
-
-@media only screen and (min-width: 768px) {
-  .size1of12, .onecolumns, .size1of6, .twocolumns, .size1of4, .threecolumns, .size1of3, .fourcolumns, .fivecolumns, .size1of2, .sixcolumns, .sevencolumns, .size2of3, .eightcolumns, .size3of4, .ninecolumns, .tencolumns, .elevencolumns, .size1of1, .twelvecolumns {
-    margin-left: 3.8%;
-    float: left;
-    min-height: 1px;
-    position: relative;
-    clear: none;
-  }
-
-  .size1of12, .onecolumns {
-    width: 4.85%;
-  }
-
-  .size1of6, .twocolumns {
-    width: 13.5%;
-  }
-
-  .size1of4, .threecolumns {
-    width: 22.15%;
-  }
-
-  .size1of3, .fourcolumns {
-    width: 30.8%;
-  }
-
-  .fivecolumns {
-    width: 39.45%;
-  }
-
-  .size1of2, .sixcolumns {
-    width: 48.1%;
-  }
-
-  .sevencolumns {
-    width: 56.75%;
-  }
-
-  .size2of3, .eightcolumns {
-    width: 65.4%;
-  }
-
-  .size3of4, .ninecolumns {
-    width: 74.05%;
-  }
-
-  .tencolumns {
-    width: 82.7%;
-  }
-
-  .elevencolumns {
-    width: 91.35%;
-  }
-
-  .size1of1, .twelvecolumns {
-    width: 100%;
-  }
-
-  /* ##Push Classes */
-  /* 
-  	<div class="size3of4 firstcol push-size1of4">
-  		I'm a 3/4 width column that is pushed to the left by 1/4 column
-  	</div>
-  */
-  .push-size1of12, .push-onecolumns {
-    left: 8.65%;
-  }
-
-  .push-size1of6, .push-twocolumns {
-    left: 17.3%;
-  }
-
-  .push-size1of4, .push-threecolumns {
-    left: 25.95%;
-  }
-
-  .push-size1of3, .push-fourcolumns {
-    left: 34.6%;
-  }
-
-  .push-fivecolumns {
-    left: 43.25%;
-  }
-
-  .push-size1of2, .push-sixcolumns {
-    left: 51.9%;
-  }
-
-  .push-sevencolumns {
-    left: 60.55%;
-  }
-
-  .push-size2of3, .push-eightcolumns {
-    left: 69.2%;
-  }
-
-  .push-size3of4, .push-ninecolumns {
-    left: 77.85%;
-  }
-
-  .push-tencolumns {
-    left: 86.5%;
-  }
-
-  .push-elevencolumns {
-    left: 95.15%;
-  }
-
-  .pull-size1of12, .pull-onecolumns {
-    right: 8.65%;
-  }
-
-  .pull-size1of6, .pull-twocolumns {
-    right: 17.3%;
-  }
-
-  .pull-size1of4, .pull-threecolumns {
-    right: 25.95%;
-  }
-
-  .pull-size1of3, .pull-fourcolumns {
-    right: 34.6%;
-  }
-
-  .pull-fivecolumns {
-    right: 43.25%;
-  }
-
-  .pull-size1of2, .pull-sixcolumns {
-    right: 51.9%;
-  }
-
-  .pull-sevencolumns {
-    right: 60.55%;
-  }
-
-  .pull-size2of3, .pull-eightcolumns {
-    right: 69.2%;
-  }
-
-  .pull-size3of4, .pull-ninecolumns {
-    right: 77.85%;
-  }
-
-  .pull-tencolumns {
-    right: 86.5%;
-  }
-
-  .pull-elevencolumns {
-    right: 95.15%;
-  }
-}
-.firstcol {
+.no-gutter {
   margin-left: 0;
 }
 
+.grid-divide {
+  margin-bottom: 1.666em;
+}
+
+.g1-12, .gonecolumns, .g1-6, .gtwocolumns, .g1-4, .gthreecolumns, .g1-3, .gfourcolumns, .gfivecolumns, .g1-2, .gsixcolumns, .gsevencolumns, .g2-3, .geightcolumns, .g3-4, .gninecolumns, .gtencolumns, .gelevencolumns, .g1-1, .gtwelvecolumns,
+.gc {
+  width: 100%;
+  padding-left: 3em;
+  float: left;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  *behavior: url(boxsizing.htc);
+}
+.large-gutter .g1-12, .large-gutter .gonecolumns, .large-gutter .g1-6, .large-gutter .gtwocolumns, .large-gutter .g1-4, .large-gutter .gthreecolumns, .large-gutter .g1-3, .large-gutter .gfourcolumns, .large-gutter .gfivecolumns, .large-gutter .g1-2, .large-gutter .gsixcolumns, .large-gutter .gsevencolumns, .large-gutter .g2-3, .large-gutter .geightcolumns, .large-gutter .g3-4, .large-gutter .gninecolumns, .large-gutter .gtencolumns, .large-gutter .gelevencolumns, .large-gutter .g1-1, .large-gutter .gtwelvecolumns, .large-gutter
+.gc {
+  padding-left: 6em;
+}
+.half-gutter .g1-12, .half-gutter .gonecolumns, .half-gutter .g1-6, .half-gutter .gtwocolumns, .half-gutter .g1-4, .half-gutter .gthreecolumns, .half-gutter .g1-3, .half-gutter .gfourcolumns, .half-gutter .gfivecolumns, .half-gutter .g1-2, .half-gutter .gsixcolumns, .half-gutter .gsevencolumns, .half-gutter .g2-3, .half-gutter .geightcolumns, .half-gutter .g3-4, .half-gutter .gninecolumns, .half-gutter .gtencolumns, .half-gutter .gelevencolumns, .half-gutter .g1-1, .half-gutter .gtwelvecolumns, .half-gutter
+.gc {
+  padding-left: 1.5em;
+}
+.no-gutter .g1-12, .no-gutter .gonecolumns, .no-gutter .g1-6, .no-gutter .gtwocolumns, .no-gutter .g1-4, .no-gutter .gthreecolumns, .no-gutter .g1-3, .no-gutter .gfourcolumns, .no-gutter .gfivecolumns, .no-gutter .g1-2, .no-gutter .gsixcolumns, .no-gutter .gsevencolumns, .no-gutter .g2-3, .no-gutter .geightcolumns, .no-gutter .g3-4, .no-gutter .gninecolumns, .no-gutter .gtencolumns, .no-gutter .gelevencolumns, .no-gutter .g1-1, .no-gutter .gtwelvecolumns, .no-gutter
+.gc {
+  padding-left: 0;
+}
+
+@media only screen and (min-width: 480px) {
+  .h1-12, .honecolumns {
+    width: 8.33333%;
+  }
+
+  .h1-6, .htwocolumns {
+    width: 16.66667%;
+  }
+
+  .h1-4, .hthreecolumns {
+    width: 25%;
+  }
+
+  .h1-3, .hfourcolumns {
+    width: 33.33333%;
+  }
+
+  .hfivecolumns {
+    width: 41.66667%;
+  }
+
+  .h1-2, .hsixcolumns {
+    width: 50%;
+  }
+
+  .hsevencolumns {
+    width: 58.33333%;
+  }
+
+  .h2-3, .heightcolumns {
+    width: 66.66667%;
+  }
+
+  .h3-4, .hninecolumns {
+    width: 75%;
+  }
+
+  .htencolumns {
+    width: 83.33333%;
+  }
+
+  .helevencolumns {
+    width: 91.66667%;
+  }
+
+  .h1-1, .htwelvecolumns {
+    width: 100%;
+  }
+}
+@media only screen and (min-width: 600px) {
+  .l1-12, .lonecolumns {
+    width: 8.33333%;
+  }
+
+  .l1-6, .ltwocolumns {
+    width: 16.66667%;
+  }
+
+  .l1-4, .lthreecolumns {
+    width: 25%;
+  }
+
+  .l1-3, .lfourcolumns {
+    width: 33.33333%;
+  }
+
+  .lfivecolumns {
+    width: 41.66667%;
+  }
+
+  .l1-2, .lsixcolumns {
+    width: 50%;
+  }
+
+  .lsevencolumns {
+    width: 58.33333%;
+  }
+
+  .l2-3, .leightcolumns {
+    width: 66.66667%;
+  }
+
+  .l3-4, .lninecolumns {
+    width: 75%;
+  }
+
+  .ltencolumns {
+    width: 83.33333%;
+  }
+
+  .lelevencolumns {
+    width: 91.66667%;
+  }
+
+  .l1-1, .ltwelvecolumns {
+    width: 100%;
+  }
+}
+@media only screen and (min-width: 992px) {
+  .d1-12, .donecolumns {
+    width: 8.33333%;
+  }
+
+  .d1-6, .dtwocolumns {
+    width: 16.66667%;
+  }
+
+  .d1-4, .dthreecolumns {
+    width: 25%;
+  }
+
+  .d1-3, .dfourcolumns {
+    width: 33.33333%;
+  }
+
+  .dfivecolumns {
+    width: 41.66667%;
+  }
+
+  .d1-2, .dsixcolumns {
+    width: 50%;
+  }
+
+  .dsevencolumns {
+    width: 58.33333%;
+  }
+
+  .d2-3, .deightcolumns {
+    width: 66.66667%;
+  }
+
+  .d3-4, .dninecolumns {
+    width: 75%;
+  }
+
+  .dtencolumns {
+    width: 83.33333%;
+  }
+
+  .delevencolumns {
+    width: 91.66667%;
+  }
+
+  .d1-1, .dtwelvecolumns {
+    width: 100%;
+  }
+}
+@media only screen and (min-width: 1382px) {
+  .w1-12, .wonecolumns {
+    width: 8.33333%;
+  }
+
+  .w1-6, .wtwocolumns {
+    width: 16.66667%;
+  }
+
+  .w1-4, .wthreecolumns {
+    width: 25%;
+  }
+
+  .w1-3, .wfourcolumns {
+    width: 33.33333%;
+  }
+
+  .wfivecolumns {
+    width: 41.66667%;
+  }
+
+  .w1-2, .wsixcolumns {
+    width: 50%;
+  }
+
+  .wsevencolumns {
+    width: 58.33333%;
+  }
+
+  .w2-3, .weightcolumns {
+    width: 66.66667%;
+  }
+
+  .w3-4, .wninecolumns {
+    width: 75%;
+  }
+
+  .wtencolumns {
+    width: 83.33333%;
+  }
+
+  .welevencolumns {
+    width: 91.66667%;
+  }
+
+  .w1-1, .wtwelvecolumns {
+    width: 100%;
+  }
+}
 /* ##Column Extensions */
 /* ###Full Width */
 /* 
@@ -982,8 +975,6 @@ optgroup::-moz-focus-inner {
 .island, .headed-island,
 .islet {
   display: block;
-  border: 1px solid #cccccc;
-  /* Override this color in your theme stylesheet */
   margin-bottom: 1.666em;
 }
 
@@ -1028,7 +1019,6 @@ optgroup::-moz-focus-inner {
 .headed-island .island-heading {
   padding: 15px 30px;
   margin: 0;
-  background-color: #f9f9f9;
   border-top: 0;
   border-bottom: 1px solid #cccccc;
 }
@@ -2126,6 +2116,23 @@ html[xmlns] .slides {
   display: block;
 }
 
+/* #Gray Box */
+/* Simple background box styles. Can be applied safetly to any element. Useful for prototyping */
+/* ##Gray Box */
+/*
+    <div class="island graybox">
+        I am a prototype box
+    </div>
+*/
+.graybox {
+  background-color: rgba(0, 0, 0, 0.15);
+  background-color: #e9e9e9\9;
+  color: #000;
+}
+.graybox a {
+  color: #000;
+}
+
 .nav-primary,
 .nav-primary ul {
   margin: 0;
@@ -2285,7 +2292,7 @@ html[xmlns] .slides {
   *display: inline;
   vertical-align: middle;
   background-position: 50% 50%;
-  background-image: url('/images/site-credit.png?1357579010');
+  background-image: url('/images/site-credit.png?1360329629');
   width: 117px;
   height: 18px;
 }
