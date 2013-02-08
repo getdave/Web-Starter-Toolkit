@@ -62,11 +62,6 @@ $gutter: 						3;	// gutter between each column
 $bGridPushClasses:				true;
 $bGridPullClasses:				true;
 
-// Do we want to use mobile grid classes for specific mobile grids?
-// This allows us to set specific "collapsing" behaviour on certain columns
-$bMobileCols:					true;
-
-
 
 
 // ==========================================================================
@@ -81,6 +76,10 @@ $isFixed:						false;
 
 // Width of primary width ".container" elements
 $containerWidth:				90%;
+@if ($isFixed == true) {
+	$containerWidth:			960px;
+} 
+
 
 // Spacing 
 $spacingUnit:					30;

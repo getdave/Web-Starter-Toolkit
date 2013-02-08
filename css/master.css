@@ -500,7 +500,7 @@ select[size="1"] {
   select,
   select[size="0"],
   select[size="1"] {
-    background-image: url('/images/select_arrow.png?1360329629');
+    background-image: url('/images/select_arrow.png?1360339640');
     background-repeat: no-repeat;
     background-position: right center;
     padding-right: 20px;
@@ -2292,7 +2292,7 @@ html[xmlns] .slides {
   *display: inline;
   vertical-align: middle;
   background-position: 50% 50%;
-  background-image: url('/images/site-credit.png?1360329629');
+  background-image: url('/images/site-credit.png?1360339640');
   width: 117px;
   height: 18px;
 }
