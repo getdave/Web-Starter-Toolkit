@@ -29,11 +29,21 @@ $half_gutter_width: ($gutter/2)+em;
     margin:0;                       
     padding:0;                      
     margin-left: -$gutter_width;
+    @include clearfix;
 }
 
 .half-gutter {
 	@extend .grid-wrap;
 	margin-left: -$half_gutter_width;
+}
+
+.no-gutter {
+	@extend .grid-wrap;
+	margin-left: 0;
+}
+
+.grid-divide {
+	margin-bottom: $baseLineHeight;
 }
 
 
@@ -55,22 +65,29 @@ $allGridClasses: #{grid-selectors()};
 	.half-gutter & {
 		padding-left: $half_gutter_width;
 	}
+
+	.no-gutter & {
+		padding-left: 0;
+	}
 }
 
-
-@include respond-to(tiny) {
+// Handheld Grids
+@include respond-to('tiny') {
 	@include grid-set('h');
 }
 
-@include respond-to(small) {
+// Lap Grids
+@include respond-to('small') {
 	@include grid-set('l');
 }
 
-@include respond-to(large) {
+// Desktop Grids
+@include respond-to('large') {
 	@include grid-set('d');
 }
 
-@include respond-to(xlarge) {
+// Widescreen Grids
+@include respond-to('xlarge') {
 	@include grid-set('w');
 }
 
