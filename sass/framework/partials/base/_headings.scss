@@ -11,7 +11,6 @@
 h1,.h1 {
 	@include fsize($headingLevel1);
 	color: $grayDarker;
-	line-height:1;
 	margin: 0 0 .5em 0;
   	text-rendering: optimizelegibility; 
 }
@@ -22,8 +21,7 @@ h1,.h1 {
 h2,.h2 {
 	@include fsize($headingLevel2);
 	color: $grayDarker;
-	line-height:1;
-	margin: 0 0 .75em 0;
+	margin: 0 0 .35em 0;
 }
 
 /* 
@@ -32,7 +30,6 @@ h2,.h2 {
 h3,.h3 {
 	@include fsize($headingLevel3);
 	color:$grayDark;
-	line-height:1;
 	margin: 0 0 .5em 0;
 }
 
@@ -42,7 +39,6 @@ h3,.h3 {
 h4,.h4 {
 	@include fsize($headingLevel4);
 	color:$grayDark;
-	line-height:1;
 	margin: 0 0 .5em 0;
 }
 
@@ -51,8 +47,7 @@ h4,.h4 {
 */
 h5,.h5 {
 	@include fsize($headingLevel5);
-	line-height:1;
-	margin: 0 0 .8em 0;
+	margin: 0 0 .5em 0;
 }
 
 /* 
@@ -60,7 +55,6 @@ h5,.h5 {
 */
 h6,.h6 {
 	@include fsize($headingLevel6);
-	line-height:1;
 	margin: 0 0 .5em 0;
 }
 
