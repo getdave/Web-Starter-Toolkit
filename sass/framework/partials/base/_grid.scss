@@ -20,7 +20,8 @@
 	</div>
 */
 
-$gutter_width: $gutter_width+em;
+$gutter_width: $gutter+em;
+$half_gutter_width: ($gutter/2)+em;
 
 
 .grid-wrap {
@@ -28,6 +29,11 @@ $gutter_width: $gutter_width+em;
     margin:0;                       
     padding:0;                      
     margin-left: -$gutter_width;
+}
+
+.half-gutter {
+	@extend .grid-wrap;
+	margin-left: -$half_gutter_width;
 }
 
 
@@ -45,23 +51,27 @@ $allGridClasses: #{grid-selectors()};
 	padding-left: $gutter_width;
 	float: left;
 	@include box-sizing(border-box);
+
+	.half-gutter & {
+		padding-left: $half_gutter_width;
+	}
 }
 
 
 @include respond-to(tiny) {
-	@include grid-set('hand-');
+	@include grid-set('h');
 }
 
 @include respond-to(small) {
-	@include grid-set('lap-');
+	@include grid-set('l');
 }
 
 @include respond-to(large) {
-	@include grid-set('desk-');
+	@include grid-set('d');
 }
 
 @include respond-to(xlarge) {
-	@include grid-set('wide-');
+	@include grid-set('w');
 }
 
 

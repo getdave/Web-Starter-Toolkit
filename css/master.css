@@ -580,14 +580,18 @@ optgroup::-moz-focus-inner {
 		I'm the second of the two grid items. No need for a second class for me!
 	</div>
 */
-.grid-wrap {
+.grid-wrap, .half-gutter {
   list-style: none;
   margin: 0;
   padding: 0;
   margin-left: -3em;
 }
 
-.size1of12, .onecolumns, .size1of6, .twocolumns, .size1of4, .threecolumns, .size1of3, .fourcolumns, .fivecolumns, .size1of2, .sixcolumns, .sevencolumns, .size2of3, .eightcolumns, .size3of4, .ninecolumns, .tencolumns, .elevencolumns, .size1of1, .twelvecolumns {
+.half-gutter {
+  margin-left: -1.5em;
+}
+
+.g1-12, .gonecolumns, .g1-6, .gtwocolumns, .g1-4, .gthreecolumns, .g1-3, .gfourcolumns, .gfivecolumns, .g1-2, .gsixcolumns, .gsevencolumns, .g2-3, .geightcolumns, .g3-4, .gninecolumns, .gtencolumns, .gelevencolumns, .g1-1, .gtwelvecolumns {
   width: 100%;
   padding-left: 3em;
   float: left;
@@ -595,200 +599,203 @@ optgroup::-moz-focus-inner {
   -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
+.half-gutter .g1-12, .half-gutter .gonecolumns, .half-gutter .g1-6, .half-gutter .gtwocolumns, .half-gutter .g1-4, .half-gutter .gthreecolumns, .half-gutter .g1-3, .half-gutter .gfourcolumns, .half-gutter .gfivecolumns, .half-gutter .g1-2, .half-gutter .gsixcolumns, .half-gutter .gsevencolumns, .half-gutter .g2-3, .half-gutter .geightcolumns, .half-gutter .g3-4, .half-gutter .gninecolumns, .half-gutter .gtencolumns, .half-gutter .gelevencolumns, .half-gutter .g1-1, .half-gutter .gtwelvecolumns {
+  padding-left: 1.5em;
+}
 
 @media only screen and (min-width: 480px) {
-  .hand-size1of12, .hand-onecolumns {
+  .h1-12, .honecolumns {
     width: 8.33333%;
   }
 
-  .hand-size1of6, .hand-twocolumns {
+  .h1-6, .htwocolumns {
     width: 16.66667%;
   }
 
-  .hand-size1of4, .hand-threecolumns {
+  .h1-4, .hthreecolumns {
     width: 25%;
   }
 
-  .hand-size1of3, .hand-fourcolumns {
+  .h1-3, .hfourcolumns {
     width: 33.33333%;
   }
 
-  .hand-fivecolumns {
+  .hfivecolumns {
     width: 41.66667%;
   }
 
-  .hand-size1of2, .hand-sixcolumns {
+  .h1-2, .hsixcolumns {
     width: 50%;
   }
 
-  .hand-sevencolumns {
+  .hsevencolumns {
     width: 58.33333%;
   }
 
-  .hand-size2of3, .hand-eightcolumns {
+  .h2-3, .heightcolumns {
     width: 66.66667%;
   }
 
-  .hand-size3of4, .hand-ninecolumns {
+  .h3-4, .hninecolumns {
     width: 75%;
   }
 
-  .hand-tencolumns {
+  .htencolumns {
     width: 83.33333%;
   }
 
-  .hand-elevencolumns {
+  .helevencolumns {
     width: 91.66667%;
   }
 
-  .hand-size1of1, .hand-twelvecolumns {
+  .h1-1, .htwelvecolumns {
     width: 100%;
   }
 }
 @media only screen and (min-width: 600px) {
-  .lap-size1of12, .lap-onecolumns {
+  .l1-12, .lonecolumns {
     width: 8.33333%;
   }
 
-  .lap-size1of6, .lap-twocolumns {
+  .l1-6, .ltwocolumns {
     width: 16.66667%;
   }
 
-  .lap-size1of4, .lap-threecolumns {
+  .l1-4, .lthreecolumns {
     width: 25%;
   }
 
-  .lap-size1of3, .lap-fourcolumns {
+  .l1-3, .lfourcolumns {
     width: 33.33333%;
   }
 
-  .lap-fivecolumns {
+  .lfivecolumns {
     width: 41.66667%;
   }
 
-  .lap-size1of2, .lap-sixcolumns {
+  .l1-2, .lsixcolumns {
     width: 50%;
   }
 
-  .lap-sevencolumns {
+  .lsevencolumns {
     width: 58.33333%;
   }
 
-  .lap-size2of3, .lap-eightcolumns {
+  .l2-3, .leightcolumns {
     width: 66.66667%;
   }
 
-  .lap-size3of4, .lap-ninecolumns {
+  .l3-4, .lninecolumns {
     width: 75%;
   }
 
-  .lap-tencolumns {
+  .ltencolumns {
     width: 83.33333%;
   }
 
-  .lap-elevencolumns {
+  .lelevencolumns {
     width: 91.66667%;
   }
 
-  .lap-size1of1, .lap-twelvecolumns {
+  .l1-1, .ltwelvecolumns {
     width: 100%;
   }
 }
 @media only screen and (min-width: 992px) {
-  .desk-size1of12, .desk-onecolumns {
+  .d1-12, .donecolumns {
     width: 8.33333%;
   }
 
-  .desk-size1of6, .desk-twocolumns {
+  .d1-6, .dtwocolumns {
     width: 16.66667%;
   }
 
-  .desk-size1of4, .desk-threecolumns {
+  .d1-4, .dthreecolumns {
     width: 25%;
   }
 
-  .desk-size1of3, .desk-fourcolumns {
+  .d1-3, .dfourcolumns {
     width: 33.33333%;
   }
 
-  .desk-fivecolumns {
+  .dfivecolumns {
     width: 41.66667%;
   }
 
-  .desk-size1of2, .desk-sixcolumns {
+  .d1-2, .dsixcolumns {
     width: 50%;
   }
 
-  .desk-sevencolumns {
+  .dsevencolumns {
     width: 58.33333%;
   }
 
-  .desk-size2of3, .desk-eightcolumns {
+  .d2-3, .deightcolumns {
     width: 66.66667%;
   }
 
-  .desk-size3of4, .desk-ninecolumns {
+  .d3-4, .dninecolumns {
     width: 75%;
   }
 
-  .desk-tencolumns {
+  .dtencolumns {
     width: 83.33333%;
   }
 
-  .desk-elevencolumns {
+  .delevencolumns {
     width: 91.66667%;
   }
 
-  .desk-size1of1, .desk-twelvecolumns {
+  .d1-1, .dtwelvecolumns {
     width: 100%;
   }
 }
 @media only screen and (min-width: 1382px) {
-  .wide-size1of12, .wide-onecolumns {
+  .w1-12, .wonecolumns {
     width: 8.33333%;
   }
 
-  .wide-size1of6, .wide-twocolumns {
+  .w1-6, .wtwocolumns {
     width: 16.66667%;
   }
 
-  .wide-size1of4, .wide-threecolumns {
+  .w1-4, .wthreecolumns {
     width: 25%;
   }
 
-  .wide-size1of3, .wide-fourcolumns {
+  .w1-3, .wfourcolumns {
     width: 33.33333%;
   }
 
-  .wide-fivecolumns {
+  .wfivecolumns {
     width: 41.66667%;
   }
 
-  .wide-size1of2, .wide-sixcolumns {
+  .w1-2, .wsixcolumns {
     width: 50%;
   }
 
-  .wide-sevencolumns {
+  .wsevencolumns {
     width: 58.33333%;
   }
 
-  .wide-size2of3, .wide-eightcolumns {
+  .w2-3, .weightcolumns {
     width: 66.66667%;
   }
 
-  .wide-size3of4, .wide-ninecolumns {
+  .w3-4, .wninecolumns {
     width: 75%;
   }
 
-  .wide-tencolumns {
+  .wtencolumns {
     width: 83.33333%;
   }
 
-  .wide-elevencolumns {
+  .welevencolumns {
     width: 91.66667%;
   }
 
-  .wide-size1of1, .wide-twelvecolumns {
+  .w1-1, .wtwelvecolumns {
     width: 100%;
   }
 }

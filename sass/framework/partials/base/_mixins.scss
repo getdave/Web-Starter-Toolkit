@@ -18,13 +18,13 @@ $one_col: 100% / $cols;
 
 
 // Grid Col - produces CSS selector for a single grid col/unit based on input provided
-@function grid-col($column,$nColumn,$sPrepend) {
+@function grid-col($column,$nColumn,$sPrepend: "g") {
     @if ($cols % $nColumn == 0) {
-        @return "."#{$sPrepend}"size1of"#{$cols/$nColumn}",.#{$sPrepend}"#{$column}"columns";
+        @return "."#{$sPrepend}"1-"#{$cols/$nColumn}",.#{$sPrepend}"#{$column}"columns";
     } @else if ($nColumn == 8) {
-        @return ".#{$sPrepend}size2of3,.#{$sPrepend}"#{$column}"columns";
+        @return ".#{$sPrepend}2-3,.#{$sPrepend}"#{$column}"columns";
     } @else if ($nColumn == 9) {
-        @return ".#{$sPrepend}size3of4,.#{$sPrepend}"#{$column}"columns";
+        @return ".#{$sPrepend}3-4,.#{$sPrepend}"#{$column}"columns";
     } @else {
         @return ".#{$sPrepend}"#{$column}"columns";   
     } 
@@ -37,9 +37,9 @@ $one_col: 100% / $cols;
     @each $col in $cols_as_string {
         @if ($count <= $cols) {
             @if ($count == 1) {
-                $selectorString: $selectorString + "#{grid-col($col,$count,'')}"; 
+                $selectorString: $selectorString + "#{grid-col($col,$count)}"; 
             } @else {
-                $selectorString: $selectorString + ",#{grid-col($col,$count,'')}";
+                $selectorString: $selectorString + ",#{grid-col($col,$count)}";
             }
             $count: $count + 1;
         }

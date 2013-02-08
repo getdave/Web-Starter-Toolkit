@@ -56,7 +56,7 @@ $baseLineHeight:        		1.666em;
 
 // Column Configuration
 $cols: 							12;		// number of columns required
-$gutter_width: 					3;	// gutter between each column
+$gutter: 						3;	// gutter between each column
 
 // Include "push-" and "pull-" classes for source reordering?
 $bGridPushClasses:				true;
