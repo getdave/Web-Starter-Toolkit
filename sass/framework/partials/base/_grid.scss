@@ -143,7 +143,7 @@ $allGridClasses: #{grid-set()};
 // ==========================================================================
 
 .firstcol {
-	margin-left: 0;
+	@include grid-firstcol;
 }
 
 /* ##Column Extensions */
