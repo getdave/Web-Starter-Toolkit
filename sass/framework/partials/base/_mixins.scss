@@ -10,14 +10,18 @@
 // ==========================================================================
 
 $one_col: 100% / $cols;
- 
+
+/**
+ * Returns the width of given column
+ */
 @function grid-width($num) {
     @return ($one_col * $num);
 }
 
 
-
-// Grid Col - produces CSS selector for a single grid col/unit based on input provided
+/**
+ * Returns a CSS selector for a single grid col/unit based on input provided
+ */
 @function grid-col($column,$nColumn,$sPrepend: "g") {
     @if ($cols % $nColumn == 0) {
         @return "."#{$sPrepend}"1-"#{$cols/$nColumn}",.#{$sPrepend}"#{$column}"columns";
@@ -30,7 +34,9 @@ $one_col: 100% / $cols;
     } 
 }
 
-// Returns a CSS selector string for all grid classes to be used in _grid.scss
+/**
+ * Returns a CSS selector string for all grid classes to be used in _grid.scss
+ */
 @function grid-selectors() {
     $count: 1;
     $selectorString: "";
@@ -48,6 +54,10 @@ $one_col: 100% / $cols;
 }
 
 
+/**
+ * Outputs a full set of grid classes with the associated width
+ * optional ability to define a prefix to be appended to the selector
+ */
 @mixin grid-set($prefix:"") {
     $count: 1;
     @each $col in $cols_as_string {

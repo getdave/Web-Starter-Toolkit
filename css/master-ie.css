@@ -1,3 +1,16 @@
+/**
+ * Returns the width of given column
+ */
+/**
+ * Returns a CSS selector for a single grid col/unit based on input provided
+ */
+/**
+ * Returns a CSS selector string for all grid classes to be used in _grid.scss
+ */
+/**
+ * Outputs a full set of grid classes with the associated width
+ * optional ability to define a prefix to be appended to the selector
+ */
 @-ms-viewport {
   width: device-width;
 }
