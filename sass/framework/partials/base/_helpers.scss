@@ -181,7 +181,8 @@
 */
 .vh,
 .v-hidden,
-.screen-reader-text {
+.screen-reader-text,
+.assistive-text {
 	position: absolute !important;
 	clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
 	clip: rect(1px, 1px, 1px, 1px);

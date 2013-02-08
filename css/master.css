@@ -117,9 +117,10 @@ img {
 	<h1>Heading 1</h1> 
 */
 h1, .h1 {
-  font-size: 2.25em;
+  font-size: 36px;
+  font-size: 2.25rem;
+  line-height: 1.01811;
   color: #222222;
-  line-height: 1;
   margin: 0 0 0.5em 0;
   text-rendering: optimizelegibility;
 }
@@ -128,19 +129,21 @@ h1, .h1 {
 	<h2>Heading 2</h2> 
 */
 h2, .h2 {
-  font-size: 1.5em;
+  font-size: 30px;
+  font-size: 1.875rem;
+  line-height: 1.05513;
   color: #222222;
-  line-height: 1;
-  margin: 0 0 0.75em 0;
+  margin: 0 0 0.35em 0;
 }
 
 /* 
 	<h3>Heading 3</h3> 
 */
 h3, .h3 {
-  font-size: 1.3125em;
+  font-size: 24px;
+  font-size: 1.5rem;
+  line-height: 1.04125;
   color: #333333;
-  line-height: 1;
   margin: 0 0 0.5em 0;
 }
 
@@ -148,9 +151,10 @@ h3, .h3 {
 	<h4>Heading 4</h4> 
 */
 h4, .h4 {
-  font-size: 1em;
+  font-size: 20px;
+  font-size: 1.25rem;
+  line-height: 1.0829;
   color: #333333;
-  line-height: 1;
   margin: 0 0 0.5em 0;
 }
 
@@ -158,17 +162,19 @@ h4, .h4 {
 	<h5>Heading 5</h5> 
 */
 h5, .h5 {
-  font-size: 0.875em;
-  line-height: 1;
-  margin: 0 0 0.8em 0;
+  font-size: 16px;
+  font-size: 1rem;
+  line-height: 1.04125;
+  margin: 0 0 0.5em 0;
 }
 
 /* 
 	<h6>Heading 6</h6> 
 */
 h6, .h6 {
-  font-size: 0.8125em;
-  line-height: 1;
+  font-size: 14px;
+  font-size: 0.875rem;
+  line-height: 1.071;
   margin: 0 0 0.5em 0;
 }
 
@@ -481,7 +487,7 @@ select[size="1"] {
   select,
   select[size="0"],
   select[size="1"] {
-    background-image: url('/images/select_arrow.gif');
+    background-image: url('/images/select_arrow.png?1357579010');
     background-repeat: no-repeat;
     background-position: right center;
     padding-right: 20px;
@@ -2215,6 +2221,15 @@ html[xmlns] .slides {
 
 .menu-toggle {
   float: right;
+  display: none;
+}
+.js .menu-toggle {
+  display: block;
+}
+@media only screen and (min-width: 768px) {
+  .js .menu-toggle {
+    display: none;
+  }
 }
 
 /* #Site Logo 
@@ -2436,7 +2451,8 @@ html[xmlns] .slides {
 */
 .vh,
 .v-hidden,
-.screen-reader-text {
+.screen-reader-text,
+.assistive-text {
   position: absolute !important;
   clip: rect(1px 1px 1px 1px);
   /* IE6, IE7 */
