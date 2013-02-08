@@ -31,7 +31,7 @@ $one_col: 100% / $cols;
 }
 
 // Returns a CSS selector string for all grid classes to be used in _grid.scss
-@function grid-set() {
+@function grid-selectors() {
     $count: 1;
     $selectorString: "";
     @each $col in $cols_as_string {
@@ -48,9 +48,25 @@ $one_col: 100% / $cols;
 }
 
 
+@mixin grid-set($prefix:"") {
+    $count: 1;
+    @each $col in $cols_as_string {
+      @if ($count <= $cols) {
+          #{grid-col($col,$count,$prefix)} {
+              width: #{grid-width($count)};
+          }
+          $count: $count + 1;
+      }
+    }
+}
+
+
 @mixin grid-span($cols) {
     width: grid-width($cols);
 }
+
+
+
 
 
 
