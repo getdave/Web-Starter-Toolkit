@@ -84,24 +84,26 @@ $allGridClasses: #{grid-selectors()};
 	}
 }
 
-// Handheld Grids
-@include respond-to('tiny') {
-	@include grid-set('h');
-}
+@if ($bStdGridBreakpoints == true) {
+	// Handheld Grids
+	@include respond-to('tiny') {
+		@include grid-set('h');
+	}
 
-// Lap Grids
-@include respond-to('small') {
-	@include grid-set('l');
-}
+	// Lap Grids
+	@include respond-to('small') {
+		@include grid-set('l');
+	}
 
-// Desktop Grids
-@include respond-to('large') {
-	@include grid-set('d');
-}
+	// Desktop Grids
+	@include respond-to('large') {
+		@include grid-set('d');
+	}
 
-// Widescreen Grids
-@include respond-to('xlarge') {
-	@include grid-set('w');
+	// Widescreen Grids
+	@include respond-to('xlarge') {
+		@include grid-set('w');
+	}
 }
 
 
