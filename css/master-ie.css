@@ -1,20 +1,41 @@
 /**
- * Returns the width of given column
+ * WEB STARTER CSS FRAMEWORK
+ * Version: 2.0
+ * URL: https://github.com/getdave/Web-Starter-Toolkit
+ * Apache License: v2.0. http://www.apache.org/licenses/LICENSE-2.0
+ * Author: David Smith (@get_dave)
  */
 /**
- * Returns a CSS selector for a single grid col/unit based on input provided
+ * This project aims to be a starter kit for building websites using SASS and Compass. 
+ * 
+ * The framework comes as a stand-alone packaged collection of SASS files. The _framework.scss file
+ * should be @import'd into your projects' master SASS/SCSS file and extended as required.
+ * 
+ * You should NEVER modify the files of the framework. If you find something you cannot work around it is
+ * a bug and should be raised as an issue on Github at: 
+ * 
+ * https://github.com/getdave/Web-Starter-Toolkit/issues
+ * 
+ * This framework borrows heavily and draws inspiration from the great work of the following projects/authors:
+
+ * OOCSS 					- https://github.com/stubbornella/oocss
+ * Inuit.css 				- https://raw.github.com/csswizardry/inuit.css/
+ * SMACSS guidelines 		- http://smacss.com/
+ * Twitter Bootstrap		- http://twitter.github.com/bootstrap/
+ * ZURB Foundation		- http://foundation.zurb.com/
+ *
  */
-/**
- * Returns a CSS selector string for all grid classes to be used in _grid.scss
- */
-/**
- * Outputs a full set of grid classes with the associated width
- * optional ability to define a prefix to be appended to the selector
- */
+/* ==========================================================================
+   LIBRARIES & FRAMEWORKS
+   ========================================================================== */
 @-ms-viewport {
   width: device-width;
 }
 
+/* ==========================================================================
+   BASE
+   Base for framework. Mostly global, tag-based selector rules.
+   ========================================================================== */
 /* #Typography */
 /* 
 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque suscipit voluptas illo maiores optio cupiditate nam repellat ad voluptatum vitae ipsum quia quae fugiat laborum architecto dignissimos sit! Facere nobis!</p>
@@ -871,6 +892,10 @@ optgroup::-moz-focus-inner {
   float: none;
 }
 
+/* ==========================================================================
+   OBJECTS
+   Common patterns to be reused and extended in site-specific styles.
+   ========================================================================== */
 /* #Media Block */
 /* The media object is an image to the left, with descriptive content to the right. The content area on the right can contain any other objects. */
 /* ##Base 
@@ -1161,249 +1186,6 @@ Width of the content should be defined using standard grid classes (eg: `.size2o
   bottom: 10%;
 }
 
-/* #Block Grids */
-/* Borrowed from Zurb Foundation, these are 2-up, 3-up, 4-up and 5-up ULs, suited
-for repeating blocks of content. Add 'mobile' to
-them to switch them just like the layout grid
-(one item per line) on phones
-
-For IE7/8 compatibility block-grid items need to be
-the same height. You can optionally uncomment the
-lines below to support arbitrary height, but know
-that IE7/8 do not support :nth-child.
-*/
-/* ##Standard Example - Grid "Two Up" */
-/*
-    <ul class="block-grid two-up">
-        <li>Two-up element</li>
-        <li>Two-up element</li>
-        <li>Two-up element</li>
-        <li>Two-up element</li>
-        <li>Two-up element</li>
-    </ul>
-*/
-.block-grid {
-  display: block;
-  overflow: hidden;
-  padding: 0;
-}
-.block-grid > li {
-  display: block;
-  height: auto;
-  float: left;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-}
-.block-grid.one-up {
-  margin: 0;
-}
-.block-grid.one-up > li {
-  width: 100%;
-  padding: 0 0 15px;
-}
-.block-grid.two-up {
-  margin: 0 -15px;
-}
-.block-grid.two-up > li {
-  width: 50%;
-  padding: 0 15px 15px;
-}
-.block-grid.two-up > li:nth-child(2n+1) {
-  clear: both;
-}
-.block-grid.three-up {
-  margin: 0 -12px;
-}
-.block-grid.three-up > li {
-  width: 33.33%;
-  padding: 0 12px 12px;
-}
-.block-grid.three-up > li:nth-child(3n+1) {
-  clear: both;
-}
-.block-grid.four-up {
-  margin: 0 -10px;
-}
-.block-grid.four-up > li {
-  width: 25%;
-  padding: 0 10px 10px;
-}
-.block-grid.four-up > li:nth-child(4n+1) {
-  clear: both;
-}
-.block-grid.five-up {
-  margin: 0 -8px;
-}
-.block-grid.five-up > li {
-  width: 20%;
-  padding: 0 8px 8px;
-}
-.block-grid.five-up > li:nth-child(5n+1) {
-  clear: both;
-}
-.block-grid.six-up {
-  margin: 0 -15px;
-}
-.block-grid.six-up > li {
-  width: 16.6%;
-  padding: 0 8px 8px;
-}
-.block-grid.six-up > li:nth-child(6n+1) {
-  clear: both;
-}
-.block-grid.seven-up {
-  margin: 0 -15px;
-}
-.block-grid.seven-up > li {
-  width: 14.28%;
-  padding: 0 8px 8px;
-}
-.block-grid.seven-up > li:nth-child(7n+1) {
-  clear: both;
-}
-.block-grid.eight-up {
-  margin: 0 -15px;
-}
-.block-grid.eight-up > li {
-  width: 12.5%;
-  padding: 0 8px 8px;
-}
-.block-grid.eight-up > li:nth-child(8n+1) {
-  clear: both;
-}
-.block-grid.nine-up {
-  margin: 0 -15px;
-}
-.block-grid.nine-up > li {
-  width: 11.11%;
-  padding: 0 8px 8px;
-}
-.block-grid.nine-up > li:nth-child(9n+1) {
-  clear: both;
-}
-.block-grid.ten-up {
-  margin: 0 -15px;
-}
-.block-grid.ten-up > li {
-  width: 10%;
-  padding: 0 8px 8px;
-}
-.block-grid.ten-up > li:nth-child(10n+1) {
-  clear: both;
-}
-.block-grid.eleven-up {
-  margin: 0 -15px;
-}
-.block-grid.eleven-up > li {
-  width: 9.09%;
-  padding: 0 8px 8px;
-}
-.block-grid.eleven-up > li:nth-child(11n+1) {
-  clear: both;
-}
-.block-grid.twelve-up {
-  margin: 0 -15px;
-}
-.block-grid.twelve-up > li {
-  width: 8.33%;
-  padding: 0 8px 8px;
-}
-.block-grid.twelve-up > li:nth-child(12n+1) {
-  clear: both;
-}
-
-/* ##Mobile Block Grids Example - Grid "Two Up" */
-/*
-    <ul class="block-grid three-up mobile">
-        <li>Three-up element</li>
-        <li>Three-up element</li>
-        <li>Three-up element</li>
-        <li>Three-up element</li>
-        <li>Three-up element</li>
-        <li>Three-up element</li>
-    </ul>
-*/
-@media only screen and (max-width: 599px) {
-  .block-grid.mobile > li {
-    float: none;
-    width: 100%;
-    margin-left: 0;
-  }
-
-  .block-grid > li {
-    clear: none !important;
-  }
-  .block-grid.mobile-one-up > li {
-    width: 100%;
-  }
-  .block-grid.mobile-two-up > li {
-    width: 50%;
-  }
-  .block-grid.mobile-two-up > li:nth-child(2n+1) {
-    clear: both;
-  }
-  .block-grid.mobile-three-up > li {
-    width: 33.33%;
-  }
-  .block-grid.mobile-three-up > li:nth-child(3n+1) {
-    clear: both;
-  }
-  .block-grid.mobile-four-up > li {
-    width: 25%;
-  }
-  .block-grid.mobile-four-up > li:nth-child(4n+1) {
-    clear: both;
-  }
-  .block-grid.mobile-five-up > li {
-    width: 20%;
-  }
-  .block-grid.mobile-five-up > li:nth-child(5n+1) {
-    clear: both;
-  }
-  .block-grid.mobile-six-up > li {
-    width: 16.6%;
-  }
-  .block-grid.mobile-six-up > li:nth-child(6n+1) {
-    clear: both;
-  }
-  .block-grid.mobile-seven-up > li {
-    width: 14.28%;
-  }
-  .block-grid.mobile-seven-up > li:nth-child(7n+1) {
-    clear: both;
-  }
-  .block-grid.mobile-eight-up > li {
-    width: 12.5%;
-  }
-  .block-grid.mobile-eight-up > li:nth-child(8n+1) {
-    clear: both;
-  }
-  .block-grid.mobile-nine-up > li {
-    width: 11.11%;
-  }
-  .block-grid.mobile-nine-up > li:nth-child(9n+1) {
-    clear: both;
-  }
-  .block-grid.mobile-ten-up > li {
-    width: 10%;
-  }
-  .block-grid.mobile-ten-up > li:nth-child(10n+1) {
-    clear: both;
-  }
-  .block-grid.mobile-eleven-up > li {
-    width: 9.09%;
-  }
-  .block-grid.mobile-eleven-up > li:nth-child(11n+1) {
-    clear: both;
-  }
-  .block-grid.mobile-twelve-up > li {
-    width: 8.33%;
-  }
-  .block-grid.mobile-twelve-up > li:nth-child(12n+1) {
-    clear: both;
-  }
-}
 /* #Block Lists */
 /* 
 Vertically stacked blocky lists of content. Ideal for sub navigation or similar.
@@ -2135,6 +1917,10 @@ html[xmlns] .slides {
   color: #000;
 }
 
+/* ==========================================================================
+   COMMON
+   Common components/requirements for standard websites
+   ========================================================================== */
 .nav-primary,
 .nav-primary ul {
   margin: 0;
@@ -2267,6 +2053,10 @@ html[xmlns] .slides {
   height: 18px;
 }
 
+/* ==========================================================================
+   HELPERS
+   Global overides. Utility classes intended to overide all other styles.
+   ========================================================================== */
 /* #Helpers */
 /* Set of simple classes to implement common CSS patterns */
 /* ##Clearfix & Clearing */
