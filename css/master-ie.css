@@ -2141,6 +2141,7 @@ html[xmlns] .slides {
   padding: 0;
   list-style: none;
   overflow: visible;
+  clear: both;
   zoom: 1;
 }
 .nav-primary:before,
@@ -2206,23 +2207,6 @@ html[xmlns] .slides {
   /* forces drop down to stretch to accommodate length of text (and not wrap) */
   padding: 0.46154em 20px;
   text-align: left;
-}
-
-.js .menu-primary {
-  display: none;
-  display: block;
-}
-.menu-primary:target {
-  display: block;
-}
-
-.menu-toggle {
-  float: right;
-  display: none;
-}
-.js .menu-toggle {
-  display: block;
-  display: none;
 }
 
 /* #Site Logo 

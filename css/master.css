@@ -2139,6 +2139,7 @@ html[xmlns] .slides {
   padding: 0;
   list-style: none;
   overflow: visible;
+  clear: both;
   zoom: 1;
 }
 .nav-primary:before,
@@ -2156,11 +2157,6 @@ html[xmlns] .slides {
 .nav-primary > li {
   position: relative;
 }
-@media only screen and (min-width: 768px) {
-  .nav-primary > li {
-    float: left;
-  }
-}
 .nav-primary a {
   display: block;
   padding: 0.625em 1.25em;
@@ -2168,17 +2164,8 @@ html[xmlns] .slides {
   text-align: left;
   text-decoration: none;
 }
-@media only screen and (min-width: 768px) {
-  .nav-primary a {
-    text-align: center;
-  }
-}
 .nav-primary a:hover, .nav-primary a:focus {
   color: white;
-}
-
-.nav-primary li:hover .sub-menu, .nav-primary li:focus .sub-menu {
-  left: 0;
 }
 
 .navbar-fixed {
@@ -2212,31 +2199,6 @@ html[xmlns] .slides {
   /* forces drop down to stretch to accommodate length of text (and not wrap) */
   padding: 0.46154em 20px;
   text-align: left;
-}
-
-.js .menu-primary {
-  display: none;
-}
-@media only screen and (min-width: 768px) {
-  .js .menu-primary {
-    display: block;
-  }
-}
-.menu-primary:target {
-  display: block;
-}
-
-.menu-toggle {
-  float: right;
-  display: none;
-}
-.js .menu-toggle {
-  display: block;
-}
-@media only screen and (min-width: 768px) {
-  .js .menu-toggle {
-    display: none;
-  }
 }
 
 /* #Site Logo 

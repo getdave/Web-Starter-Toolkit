@@ -19,9 +19,8 @@
 	padding: 0;
 	list-style: none;
 	overflow: visible;
+	clear: both;
 	@include clearfix;
-
-
 }
 
 .nav-primary {
@@ -29,7 +28,7 @@
 	> li {
 		position: relative;	
 	
-		@include respond-to('medium') {
+		@include respond-to($mobileBreak) {
 			float: left;			
 		}
 	}
@@ -41,7 +40,7 @@
 		text-align: left;	
 		text-decoration: none;
 
-		@include respond-to('medium') {
+		@include respond-to($mobileBreak) {
 			text-align: center;	
 		}
 
@@ -54,9 +53,11 @@
 
 // Show submenu on :hover/:focus
 .nav-primary li {
-	&:hover .sub-menu,
-	&:focus .sub-menu {
-		left: 0;
+	@include respond-to($mobileBreak) {		
+		&:hover .sub-menu,
+		&:focus .sub-menu {
+			left: 0;
+		}
 	}
 }
 
@@ -109,29 +110,34 @@
 // ==========================================================================
 
 
-.menu-primary {
+%menu-primary {
 	.js & {
 		display: none;
 
-		@include respond-to('medium') {
+		@include respond-to($mobileBreak) {
 			display: block;	
 		}
-
 	}
 
 	&:target {
 		display: block;
 	}
+
+	.expanded & {
+		display: block;
+	}
 }
 
-.menu-toggle {
+%menu-toggle {
 	float: right;
 	display: none;
+	border: 0;
+	background-color: transparent;
 
 	.js & {
 		display: block;
 
-		@include respond-to('medium') {
+		@include respond-to($mobileBreak) {
 			display: none;	
 		}
 
