@@ -93,6 +93,22 @@ $cursive			: "Bradley Hand ITC", "Apple Chancery", "URW Chancery L", cursive !de
 
 
 
+// Heading Levels
+// These are set as defaults and overidden in the site config
+// ==========================================================================
+
+$headingLevel1:		36px !default;
+$headingLevel2:		30px !default;
+$headingLevel3:		24px !default;
+$headingLevel4:		20px !default;
+$headingLevel5:		16px !default;
+$headingLevel6:		14px !default;
+
+$giga:				96px !default;
+$mega:				72px !default;
+$kilo:				48px !default;
+
+
 // ==========================================================================
 // GRID
 // ==========================================================================
@@ -100,7 +116,14 @@ $cursive			: "Bradley Hand ITC", "Apple Chancery", "URW Chancery L", cursive !de
 // We loop thorugh this string to produce our written grid classes
 $cols_as_string: 				one two three four five six seven eight nine ten eleven twelve thirteen fourteen fifteen sixteen seventeen eighteen nineteen twenty;
 
+// Column Configuration
+$cols: 							12 !default;	// number of columns required
+$gutter: 						3 !default;		// gutter between each column
 
+// Do we want to use the packaged grid breakpoints
+// If not we need to create our own by including
+// the @include grid-set() at our required breakpoints
+$bStdGridBreakpoints: 			true !default;
 
 // ==========================================================================
 // ELEMENTS & COMPONENTS
@@ -162,11 +185,11 @@ $navbarLinkColorHover: 			$white;
 // BUTTONS
 // ==========================================================================
 
-$button_background				: $linkColor;
-$button_background_shader		: linear-gradient(top, rgba(0,0,0,0), rgba(0,0,0,0.25)); // standard bg shader 
-$button_background_shader_h		: linear-gradient(top, rgba(0,0,0,0.05), rgba(0,0,0,0.30)); // :hover bg shader 
-$button_background_shader_i		: linear-gradient(top, rgba(0,0,0,0.25), rgba(0,0,0,0)); // inverted bg shader 
-$button_background_shader-f		: url(../images/site/button-shader.png) left center repeat-x; // fallback bg shader 
+$button_background              : $linkColor !default;
+$button_background_shader       : linear-gradient(top, rgba(0,0,0,0), rgba(0,0,0,0.25)) !default; // standard bg shader 
+$button_background_shader_h     : linear-gradient(top, rgba(0,0,0,0.05), rgba(0,0,0,0.30)) !default; // :hover bg shader 
+$button_background_shader_i     : linear-gradient(top, rgba(0,0,0,0.25), rgba(0,0,0,0)) !default; // inverted bg shader 
+$button_background_shader-f     : url(../images/site/button-shader.png) left center repeat-x !default; // fallback bg shader 
 
 
 

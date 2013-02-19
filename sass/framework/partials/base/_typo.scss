@@ -1,5 +1,7 @@
 /* #Typography */
-
+/* 
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque suscipit voluptas illo maiores optio cupiditate nam repellat ad voluptatum vitae ipsum quia quae fugiat laborum architecto dignissimos sit! Facere nobis!</p>
+*/
 
 // ==========================================================================
 // GLOBAL
@@ -11,15 +13,6 @@ body {
 	line-height: $baseLineHeight;
 	color: $grayDark;
 }
-
-@if($bIE) {
-	body {
-		font-size: 100px;
-	}
-
-}
-
-
 
 
 
@@ -63,7 +56,7 @@ a:hover, a:active {
 // Typical lists
 ul, ol {
   	padding: 0;
-  	margin: 0 0 $baseLineHeight / 2 25px;
+  	margin: 0 0 $baseLineHeight 25px;
 }
 
 // Nested lists

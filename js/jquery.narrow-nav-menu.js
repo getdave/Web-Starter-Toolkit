@@ -9,6 +9,9 @@
 			showText: 'show', // Text (visually hidden) that is added to the button when the menu is closed
 			hideText: 'hide' // Text (visually hidden) that is added to the button when the menu is open
 		};
+
+		var binding = (('ontouchstart' in window) || (window.DocumentTouch && document instanceof DocumentTouch)) ? 'touchstart' : 'click';
+
 		return this.each(function () {
 
 			if (options) {
@@ -22,8 +25,8 @@
 			var wrap = $this.parent();
 
 			// Create and insert the button before the menu
-			var $button = $('<button type="button">' + settings.menuText + '<span> (' + settings.showText + ')</span></button>');
-			$button.click(function () {
+			var $button = $('<button type="button"><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button>');
+			$button.on(binding,function () {
 				if (wrap.hasClass(settings.expandedClass)) {
 					hideMenu();
 				} else {
@@ -36,7 +39,7 @@
 			function showMenu() {
 				wrap.addClass(settings.expandedClass);
 				// Update button text
-				$button.find('span').text(' (' + settings.hideText + ')');
+				//$button.find('span').text(' (' + settings.hideText + ')');
 				// Close the menu and put focus on the button when ESC is pressed
 				// The event handler is namespaced to avoid conflicts with other scripts (though unlikely in this case)
 				wrap.bind('keydown.narrowNavMenu', function (e) {
@@ -51,7 +54,7 @@
 			function hideMenu() {
 				wrap.removeClass(settings.expandedClass);
 				// Update button text
-				$button.find('span').text(' (' + settings.showText + ')');
+				//$button.find('span').text(' (' + settings.showText + ')');
 				// Remove the keyboard event handler
 				wrap.unbind('.narrowNavMenu');
 			}

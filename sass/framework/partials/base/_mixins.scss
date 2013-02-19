@@ -9,37 +9,43 @@
 // GRID MIXINS
 // ==========================================================================
 
-$one_col: (100% - ($gutter_width*($cols - 1))) / $cols;
- 
+$one_col: 100% / $cols;
+
+
+// Returns the width of given column
+// ==========================================================================
 @function grid-width($num) {
-    @return ($one_col * $num) + ($gutter_width * ($num - 1));
+    @return ($one_col * $num);
 }
 
 
 
-// Grid Col - produces CSS selector for a single grid col/unit based on input provided
-@function grid-col($column,$nColumn,$sPrepend) {
+// Returns a CSS selector for a single grid col/unit based on input provided
+// ==========================================================================
+@function grid-col($column,$nColumn,$sPrepend: "g") {
     @if ($cols % $nColumn == 0) {
-        @return "."#{$sPrepend}"size1of"#{$cols/$nColumn}",.#{$sPrepend}"#{$column}"columns";
+        @return "."#{$sPrepend}"1-"#{$cols/$nColumn}",.#{$sPrepend}"#{$column}"columns";
     } @else if ($nColumn == 8) {
-        @return ".#{$sPrepend}size2of3,.#{$sPrepend}"#{$column}"columns";
+        @return ".#{$sPrepend}2-3,.#{$sPrepend}"#{$column}"columns";
     } @else if ($nColumn == 9) {
-        @return ".#{$sPrepend}size3of4,.#{$sPrepend}"#{$column}"columns";
+        @return ".#{$sPrepend}3-4,.#{$sPrepend}"#{$column}"columns";
     } @else {
         @return ".#{$sPrepend}"#{$column}"columns";   
     } 
 }
 
+
 // Returns a CSS selector string for all grid classes to be used in _grid.scss
-@function grid-set() {
+// ==========================================================================
+@function grid-selectors() {
     $count: 1;
     $selectorString: "";
     @each $col in $cols_as_string {
         @if ($count <= $cols) {
             @if ($count == 1) {
-                $selectorString: $selectorString + "#{grid-col($col,$count,'')}"; 
+                $selectorString: $selectorString + "#{grid-col($col,$count)}"; 
             } @else {
-                $selectorString: $selectorString + ",#{grid-col($col,$count,'')}";
+                $selectorString: $selectorString + ",#{grid-col($col,$count)}";
             }
             $count: $count + 1;
         }
@@ -48,12 +54,24 @@ $one_col: (100% - ($gutter_width*($cols - 1))) / $cols;
 }
 
 
+
+// Outputs a full set of grid classes with the associated width
+// optional ability to define a prefix to be appended to the selector
+// ==========================================================================
+@mixin grid-set($prefix:"") {
+    $count: 1;
+    @each $col in $cols_as_string {
+      @if ($count <= $cols) {
+          #{grid-col($col,$count,$prefix)} {
+              width: #{grid-width($count)};
+          }
+          $count: $count + 1;
+      }
+    }
+}
+
 @mixin grid-span($cols) {
     width: grid-width($cols);
-    margin-left: $gutter_width; /* equal to 20px at 1024px */
-    float: left;
-    min-height: 1px;
-    clear: none;
 }
 
 
@@ -78,17 +96,17 @@ $one_col: (100% - ($gutter_width*($cols - 1))) / $cols;
 }
 
 
-// Font Size
-@mixin fsize($pxval, $baseline : $baseFontSize) {
-    font-size: ($pxval / $baseline) * 100%
-}
-
 // Relative Size
 @function rsize($pxval, $baseline : $baseFontSize) {
     @return ($pxval/$baseline) + em;
 }
 
-
+// Font Size
+@mixin fsize($font-size) {
+    font-size: $font-size;
+    font-size: ($font-size/$baseFontSize) * 1rem;
+    line-height:ceil($font-size / $baseLineHeight) * ($baseLineHeight / $font-size);
+}
 
 // Mixin for selection markup
 @mixin selection($background, $color, $element:false) {
@@ -120,6 +138,23 @@ $one_col: (100% - ($gutter_width*($cols - 1))) / $cols;
     outline: 5px auto -webkit-focus-ring-color;
     outline-offset: -2px;
 }
+
+
+@mixin font-face( $font-name, $font-path :"assets" ) {
+
+    @font-face{
+        font-family: $font-name;
+        src:url('#{$font-path}/#{$font-name}/#{$font-name}.eot');
+        src:url('#{$font-path}/#{$font-name}/#{$font-name}.eot?#iefix') format('embedded-opentype'),
+            url('#{$font-path}/#{$font-name}/#{$font-name}.woff') format('woff'),
+            url('#{$font-path}/#{$font-name}/#{$font-name}.ttf') format('truetype'),
+            url('#{$font-path}/#{$font-name}/#{$font-name}.svg##{$font-name}') format('svg');
+        font-weight:normal;
+        font-style:normal;
+    }
+}
+
+
 
 
 

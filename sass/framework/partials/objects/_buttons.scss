@@ -10,53 +10,11 @@
 	color: #FFF;
 	display: inline-block;
 	text-align: center;
-	padding: 0.3076923076923077em 15px;
+	padding: rsize(10px) 15px;
     text-decoration: none;    
     font-size: 100%;
-    border-width: 1px;
-    border-style: solid;
-    border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
-    // using COMPASS here
-    @include border-radius(4px);
-    @include box-shadow(inset 0 1px 0 rgba(255, 255, 255, 0.3), rgba(0,0,0,0.4) 0 1px 2px);
-    @include single-text-shadow(rgba(0,0,0,0.2), 0, -1px, 1px);
-
-    // Sort out the backgrounds
-    @include background($button_background_shader,
-						$button_background);
-
-	.no-cssgradients & {
-        @include background($button_background_shader-f,
-                            $button_background);
-    }
-
-	.no-multiplebgs & {
-		background-color: $button_background;
-	}
-
-	&:hover,
-	&:focus {
-		color: rgba(255,255,255,.8);
-		@include background($button_background_shader_h,
-							$button_background);
-		
-		@include single-transition(background,0.3s,linear);		
-	}
-
-	&:active {
-		@include background($button_background_shader_i,
-		                    $button_background);
-
-		@include box-shadow(inset 0 2px 4px rgba(0, 0, 0, 0.15), 0 1px 2px rgba(0, 0, 0, 0.05));
-
-		.no-cssgradients & {
-		        @include background($button_background_shader_f,
-		                            darken($button_background, 5%));
-		}
-		.no-multiplebgs & {
-		        background-color: darken($button_background, 5%);
-		}
-	}
+    border: 0;
+    background-color: #ccc;    
 }
 
 /* ## Button Sizes */
@@ -79,11 +37,6 @@
 	line-height: 1.75;
 	padding-right: 20px;
 	padding-left: 20px;
-	-webkit-border-radius: 6px;
-	   -moz-border-radius: 6px;
-	   	-ms-border-radius: 6px;
-	   	 -o-border-radius: 6px;
-			border-radius: 6px;
 }
 
 /* 
@@ -92,6 +45,8 @@
 .btn-small {
 	padding-right: 10px;
 	padding-left: 10px;
+	padding-top: rsize(5px);
+	padding-bottom: rsize(5px);
   	font-size: 84.61538461538462%;
 }
 
@@ -109,6 +64,16 @@
 	&:active {
 		@include box-shadow(none);
 	}
+}
+
+/* ## Button Full */
+
+/* 
+	<a href="#" class="btn btn-full">Full Width Button</a>
+*/
+
+.btn-full {
+	display: block;
 }
 
 

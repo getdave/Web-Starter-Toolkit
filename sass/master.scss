@@ -1,7 +1,3 @@
-// %%YOUR_PROJECT_NAME%%
-
-
-
 // ==========================================================================
 // FRAMEWORK & CONFIG
 // ==========================================================================
@@ -29,24 +25,36 @@
 // SITE
 // ==========================================================================
 
+// MODULES
+// ==========================================================================
+
+// Example: Sprite Module
+//@import "site/modules/_EXAMPLE_MODULE.scss";
+
+
+// SITE LAYOUT
+// ==========================================================================
+
 // Page level layout styles (banner, navigation, content, contentinfo)
-//@import "site/_page.scss";
+@import "site/_page.scss";
 
 
 // PAGES
 // Individual stylesheets for unique pages on the site/application
 // ==========================================================================
 
-// Home (example)
+// Home 
 //@import "site/pages/_home.scss";
 
+// Blog
+//@import "site/pages/_blog.scss";
+
+// Contact
+//@import "site/pages/_contact.scss";
 
 
-// MODULES
-// ==========================================================================
 
-// Example: Sprite Module
-//@import "site/modules/_EXAMPLE_MODULE.scss";
+
 
 
 

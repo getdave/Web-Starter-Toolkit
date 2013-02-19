@@ -1,4 +1,4 @@
-/* ============================================================ */
+
 
 // Menu
 
@@ -6,7 +6,6 @@
 //						elements
 // Acknowledgements		Twitter Bootstrap 2
 
-/* ============================================================ */
 
 
 
@@ -20,22 +19,30 @@
 	padding: 0;
 	list-style: none;
 	overflow: visible;
+	clear: both;
 	@include clearfix;
 }
 
 .nav-primary {
-	background-color: $navbarBackground;
 
 	> li {
-		float: left;
-		position: relative;
+		position: relative;	
+	
+		@include respond-to($mobileBreak) {
+			float: left;			
+		}
 	}
 
 	a {
-		display: block;
-		text-align: center;
-		color: $navbarLinkColor;
+		display: block;		
 		padding: rsize(10px) rsize(20px);
+		color: $navbarLinkColor;	
+		text-align: left;	
+		text-decoration: none;
+
+		@include respond-to($mobileBreak) {
+			text-align: center;	
+		}
 
 		&:hover,
 		&:focus {
@@ -46,9 +53,11 @@
 
 // Show submenu on :hover/:focus
 .nav-primary li {
-	&:hover .sub-menu,
-	&:focus .sub-menu {
-		left: 0;
+	@include respond-to($mobileBreak) {		
+		&:hover .sub-menu,
+		&:focus .sub-menu {
+			left: 0;
+		}
 	}
 }
 
@@ -91,5 +100,46 @@
 			padding: 0.4615384615384615em 20px;
 			text-align: left;
 		}
+	}
+}
+
+
+
+// ==========================================================================
+// MENU TOGGLE
+// ==========================================================================
+
+
+%menu-primary {
+	.js & {
+		display: none;
+
+		@include respond-to($mobileBreak) {
+			display: block;	
+		}
+	}
+
+	&:target {
+		display: block;
+	}
+
+	.expanded & {
+		display: block;
+	}
+}
+
+%menu-toggle {
+	float: right;
+	display: none;
+	border: 0;
+	background-color: transparent;
+
+	.js & {
+		display: block;
+
+		@include respond-to($mobileBreak) {
+			display: none;	
+		}
+
 	}
 }

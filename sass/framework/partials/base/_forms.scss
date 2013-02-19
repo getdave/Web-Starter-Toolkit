@@ -1,13 +1,10 @@
-// Base form styles
-// based on formalize.me
-// =================================================================================
+/* #Forms */
 
-// BASE
-// ==========================================================================
+
 
 label {
 	font-weight: bold; 
-	font-size: $baseFontSize;
+	font-size: 100%;
 }
 
 fieldset {
@@ -84,8 +81,7 @@ legend {
 	padding-right: 8px; 
 }
 
-/* 	UI Consistency
-	----------------- */
+
 
 input[type="search"]::-webkit-search-decoration {
 	display: none; 
@@ -283,7 +279,7 @@ select[size="1"] {
 	select,
 	select[size="0"],
 	select[size="1"] {
-		background-image: image-url("select_arrow.gif");
+		background-image: image-url("select_arrow.png");
 		background-repeat: no-repeat;
 		background-position: right center;
 		padding-right: 20px; 
@@ -332,4 +328,45 @@ optgroup {
 		border: 0;
 		padding: 0; 
 	} 
+}
+
+
+
+
+/* ##Form Instances */
+
+/* ##Prepend/Append */
+
+/* 
+	<div class="input-append">
+		<input type="text">
+		<button class="btn" type="button">Go!</button>
+	</div>
+*/
+
+.input-append,
+.input-prepend {
+	white-space: nowrap;
+}
+
+
+/* ##Search Form */
+
+/* 
+	<form class="form-search input-append">
+		<input type="text" class="input-medium search-query">
+		<button type="submit" class="btn">Search</button>
+	</form>
+*/
+
+.form-search {
+	.search-query {
+		display: inline-block;
+		margin-bottom: 0;
+		vertical-align: middle;
+	}
+
+	.search-submit {
+
+	}
 }

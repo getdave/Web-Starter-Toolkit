@@ -121,14 +121,8 @@
 .img-left,
 .img-l,
 .alignleft {
-	display: block;
-	float: none;
-	margin: 0 auto 1.5em auto;
-	@media screen and (min-width: 768px) {
-		float: left;
-		display: inline-block;
-		margin: 0 20px 1.5em 0;
-	}
+	float: left;
+	margin: 0 20px 1.5em 0;
 }
 
 /* 	
@@ -141,14 +135,8 @@
 .img-right,
 .img-r,
 .alignright {
-	display: block;
-	float: none;
-	margin: 0 auto 1.5em auto;
-	@media screen and (min-width: 768px) {
-		float: right;
-		display: inline-block;
-		margin: 0 0 1.5em 20px;
-	}
+	float: right;
+	margin: 0 0 1.5em 20px;
 }
 
 /* ###Image Replacement */
@@ -193,7 +181,8 @@
 */
 .vh,
 .v-hidden,
-.screen-reader-text {
+.screen-reader-text,
+.assistive-text {
 	position: absolute !important;
 	clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
 	clip: rect(1px, 1px, 1px, 1px);
@@ -218,6 +207,16 @@
 */
 .invisible {
 	visibility:hidden;
+}
+
+
+
+/* ##Resetting */
+
+/* ###Lists */
+
+.list-reset {
+	@include list-reset;
 }
 
 
