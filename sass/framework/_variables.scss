@@ -116,7 +116,14 @@ $kilo:				48px !default;
 // We loop thorugh this string to produce our written grid classes
 $cols_as_string: 				one two three four five six seven eight nine ten eleven twelve thirteen fourteen fifteen sixteen seventeen eighteen nineteen twenty;
 
+// Column Configuration
+$cols: 							12 !default;	// number of columns required
+$gutter: 						3 !default;		// gutter between each column
 
+// Do we want to use the packaged grid breakpoints
+// If not we need to create our own by including
+// the @include grid-set() at our required breakpoints
+$bStdGridBreakpoints: 			true !default;
 
 // ==========================================================================
 // ELEMENTS & COMPONENTS
