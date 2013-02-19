@@ -102,9 +102,6 @@ $one_col: 100% / $cols;
 }
 
 
-
-
-
 // Relative Size
 @function rsize($pxval, $baseline : $baseFontSize) {
     @return ($pxval/$baseline) + em;
@@ -116,10 +113,6 @@ $one_col: 100% / $cols;
     font-size: ($font-size/$baseFontSize) * 1rem;
     line-height:ceil($font-size / $baseLineHeight) * ($baseLineHeight / $font-size);
 }
-
-
-
-
 
 // Mixin for selection markup
 @mixin selection($background, $color, $element:false) {
@@ -151,6 +144,23 @@ $one_col: 100% / $cols;
     outline: 5px auto -webkit-focus-ring-color;
     outline-offset: -2px;
 }
+
+
+@mixin font-face( $font-name, $font-path :"assets" ) {
+
+    @font-face{
+        font-family: $font-name;
+        src:url('#{$font-path}/#{$font-name}/#{$font-name}.eot');
+        src:url('#{$font-path}/#{$font-name}/#{$font-name}.eot?#iefix') format('embedded-opentype'),
+            url('#{$font-path}/#{$font-name}/#{$font-name}.woff') format('woff'),
+            url('#{$font-path}/#{$font-name}/#{$font-name}.ttf') format('truetype'),
+            url('#{$font-path}/#{$font-name}/#{$font-name}.svg##{$font-name}') format('svg');
+        font-weight:normal;
+        font-style:normal;
+    }
+}
+
+
 
 
 
