@@ -139,6 +139,20 @@
 	margin: 0 0 1.5em 20px;
 }
 
+/* 	
+	<img src="http://www.placehold.it/200x200" class="img-center" />
+	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+	tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+	quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+	consequat.</p> 
+*/
+.img-center,
+.aligncenter {
+	float: none;
+	margin: 0 auto;
+	display: block;
+}
+
 /* ###Image Replacement */
 /* This is a safe way to replace HTML content with an image. Advice is not to set width and height via the `style` attribute. Rather achieve this via an additional CSS rule where possible. */
 /* 	
