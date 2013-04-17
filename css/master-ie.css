@@ -2047,6 +2047,9 @@ html[xmlns] .slides {
   -o-transition: opacity 0.5s ease-out;
   transition: opacity 0.5s ease-out;
 }
+.lt-ie9 .site-logo img {
+  max-width: none;
+}
 
 /* #Site Credit */
 /* Useful pattern typically used to provide credit to the website developer in the footer of the website. */
