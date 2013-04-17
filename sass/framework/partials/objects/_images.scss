@@ -5,7 +5,7 @@
 
 // BASE
 %img-base {
-    @include inline-block; 
+    // Do not apply display: inline-block; here else it breaks Responsive Images max-width: 100%;
 }
 
 /* ##Rounded */

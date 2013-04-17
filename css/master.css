@@ -1775,15 +1775,6 @@ Borrowed from inuit.css
 /* #Images */
 /* Common styling patterns for images to be applied to `<img` elements. */
 /* Please note that `.img-rounded` and `.img-circle` do not work in IE7-8. */
-.img-rounded, .img-polaroid, .img-circle {
-  display: -moz-inline-stack;
-  display: inline-block;
-  vertical-align: middle;
-  *vertical-align: auto;
-  zoom: 1;
-  *display: inline;
-}
-
 /* ##Rounded */
 /*
     <img src="http://www.placehold.it/200x200" class="img-rounded" />
