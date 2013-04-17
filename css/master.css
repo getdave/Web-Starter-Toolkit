@@ -938,7 +938,12 @@ optgroup::-moz-focus-inner {
 .container {
   width: 90%;
   margin: 0 auto;
-  *zoom: 1;
+  display: block;
+  zoom: 1;
+}
+.container:before {
+  content: "";
+  display: table;
 }
 .container:after {
   content: "";
@@ -957,7 +962,11 @@ optgroup::-moz-focus-inner {
 */
 .container-extend {
   width: auto;
-  *zoom: 1;
+  zoom: 1;
+}
+.container-extend:before {
+  content: "";
+  display: table;
 }
 .container-extend:after {
   content: "";

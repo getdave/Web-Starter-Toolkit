@@ -13,7 +13,8 @@
 .container {
 	width: $containerWidth;
 	margin: 0 auto;	
-	@include pie-clearfix;
+	display: block;
+	@include clearfix;
 }
 
 
@@ -31,7 +32,7 @@
 
 .container-extend {
 	width: auto;
-	@include pie-clearfix;
+	@include clearfix;
 }
 
 
