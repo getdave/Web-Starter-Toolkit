@@ -1,6 +1,6 @@
 /**
  * WEB STARTER CSS FRAMEWORK
- * Version: 2.0
+ * Version: 2.5
  * URL: https://github.com/getdave/Web-Starter-Toolkit
  * Apache License: v2.0. http://www.apache.org/licenses/LICENSE-2.0
  * Author: David Smith (@get_dave)
@@ -521,7 +521,7 @@ select[size="1"] {
   select,
   select[size="0"],
   select[size="1"] {
-    background-image: url('/images/select_arrow.png?1360339640');
+    background-image: url('/images/select_arrow.png?1361267456');
     background-repeat: no-repeat;
     background-position: right center;
     padding-right: 20px;
@@ -1680,9 +1680,13 @@ Borrowed from inuit.css
   padding: 0;
   list-style: none;
 }
-.pager li {
+
+.pager li,
+.pager-item {
   display: inline;
 }
+
+.pager-item a,
 .pager a {
   display: -moz-inline-stack;
   display: inline-block;
@@ -1696,7 +1700,8 @@ Borrowed from inuit.css
   line-height: 1;
   float: left;
 }
-.pager .next a {
+
+.next a {
   float: right;
 }
 
@@ -2048,7 +2053,7 @@ html[xmlns] .slides {
   *display: inline;
   vertical-align: middle;
   background-position: 50% 50%;
-  background-image: url('/images/site-credit.png?1360339640');
+  background-image: url('/images/site-credit.png?1361267456');
   width: 117px;
   height: 18px;
 }
@@ -2190,7 +2195,8 @@ html[xmlns] .slides {
 	</span>
 */
 .img-replace,
-.ir {
+.ir,
+.site-credit {
   display: inline-block;
   text-indent: -999em;
   overflow: hidden;
