@@ -1,6 +1,6 @@
 /**
  * WEB STARTER CSS FRAMEWORK
- * Version: 2.0
+ * Version: 2.5
  * URL: https://github.com/getdave/Web-Starter-Toolkit
  * Apache License: v2.0. http://www.apache.org/licenses/LICENSE-2.0
  * Author: David Smith (@get_dave)
@@ -150,7 +150,7 @@ img {
 /* 
 	<h1>Heading 1</h1> 
 */
-h1, .h1 {
+h1, .h1, .giga, .mega, .kilo {
   font-size: 36px;
   font-size: 2.25rem;
   line-height: 1.01811;
@@ -215,18 +215,6 @@ h6, .h6 {
 /* ###Misc Headings */
 /* A series of classes for setting massive type; for use in heroes, mastheads, promos, etc. */
 /* CSS classes to use are `.giga` (massive!), `.mega` (giant) and `.kilo` (large) */
-.giga {
-  font-size: 6em;
-}
-
-.mega {
-  font-size: 4.5em;
-}
-
-.kilo {
-  font-size: 3em;
-}
-
 /* #Forms */
 label {
   font-weight: bold;
@@ -521,7 +509,7 @@ select[size="1"] {
   select,
   select[size="0"],
   select[size="1"] {
-    background-image: url('/images/select_arrow.png?1360339640');
+    background-image: url('/images/select_arrow.png?1361267456');
     background-repeat: no-repeat;
     background-position: right center;
     padding-right: 20px;
@@ -950,7 +938,12 @@ optgroup::-moz-focus-inner {
 .container {
   width: 90%;
   margin: 0 auto;
-  *zoom: 1;
+  display: block;
+  zoom: 1;
+}
+.container:before {
+  content: "";
+  display: table;
 }
 .container:after {
   content: "";
@@ -969,7 +962,11 @@ optgroup::-moz-focus-inner {
 */
 .container-extend {
   width: auto;
-  *zoom: 1;
+  zoom: 1;
+}
+.container-extend:before {
+  content: "";
+  display: table;
 }
 .container-extend:after {
   content: "";
@@ -1678,9 +1675,13 @@ Borrowed from inuit.css
   padding: 0;
   list-style: none;
 }
-.pager li {
+
+.pager li,
+.pager-item {
   display: inline;
 }
+
+.pager-item a,
 .pager a {
   display: -moz-inline-stack;
   display: inline-block;
@@ -1694,7 +1695,8 @@ Borrowed from inuit.css
   line-height: 1;
   float: left;
 }
-.pager .next a {
+
+.next a {
   float: right;
 }
 
@@ -1773,15 +1775,6 @@ Borrowed from inuit.css
 /* #Images */
 /* Common styling patterns for images to be applied to `<img` elements. */
 /* Please note that `.img-rounded` and `.img-circle` do not work in IE7-8. */
-.img-rounded, .img-polaroid, .img-circle {
-  display: -moz-inline-stack;
-  display: inline-block;
-  vertical-align: middle;
-  *vertical-align: auto;
-  zoom: 1;
-  *display: inline;
-}
-
 /* ##Rounded */
 /*
     <img src="http://www.placehold.it/200x200" class="img-rounded" />
@@ -2025,6 +2018,9 @@ html[xmlns] .slides {
   -o-transition: opacity 0.5s ease-out;
   transition: opacity 0.5s ease-out;
 }
+.lt-ie9 .site-logo img {
+  max-width: none;
+}
 
 /* #Site Credit */
 /* Useful pattern typically used to provide credit to the website developer in the footer of the website. */
@@ -2040,7 +2036,7 @@ html[xmlns] .slides {
   *display: inline;
   vertical-align: middle;
   background-position: 50% 50%;
-  background-image: url('/images/site-credit.png?1360339640');
+  background-image: url('/images/site-credit.png?1361267456');
   width: 117px;
   height: 18px;
 }
@@ -2174,6 +2170,20 @@ html[xmlns] .slides {
   margin: 0 0 1.5em 20px;
 }
 
+/* 	
+	<img src="http://www.placehold.it/200x200" class="img-center" />
+	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+	tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+	quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+	consequat.</p> 
+*/
+.img-center,
+.aligncenter {
+  float: none;
+  margin: 0 auto;
+  display: block;
+}
+
 /* ###Image Replacement */
 /* This is a safe way to replace HTML content with an image. Advice is not to set width and height via the `style` attribute. Rather achieve this via an additional CSS rule where possible. */
 /* 	
@@ -2182,7 +2192,8 @@ html[xmlns] .slides {
 	</span>
 */
 .img-replace,
-.ir {
+.ir,
+.site-credit {
   display: inline-block;
   text-indent: -999em;
   overflow: hidden;

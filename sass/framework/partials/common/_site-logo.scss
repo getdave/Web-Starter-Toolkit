@@ -33,4 +33,11 @@
 			transition: opacity 0.5s ease-out;
 		}
 	}
+
+	img {
+		// Fixes IE8 bug relating to max-width
+		.lt-ie9 & {
+			max-width: none;
+		}
+	}
 }

@@ -17,21 +17,26 @@
 	margin: 0;
 	padding:0;
 	list-style: none;
-
-	li {
-		display: inline;
-	}
-
-	a {
-		@include inline-block;
-			padding: 7px 12px 8px 12px;
-			text-decoration: none;
-			border: 1px solid #ccc;
-			line-height: 1;
-			float: left;
-	}
-
-	.next a {
-		float: right;
-	}
 }
+
+.pager li,
+.pager-item {
+	display: inline;
+}
+
+.pager-item a,
+.pager a {
+	@include inline-block;
+		padding: 7px 12px 8px 12px;
+		text-decoration: none;
+		border: 1px solid #ccc;
+		line-height: 1;
+		float: left;
+}
+
+.next a {
+	float: right;
+}
+
+
+
