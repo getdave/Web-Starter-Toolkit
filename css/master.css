@@ -150,7 +150,7 @@ img {
 /* 
 	<h1>Heading 1</h1> 
 */
-h1, .h1 {
+h1, .h1, .giga, .mega, .kilo {
   font-size: 36px;
   font-size: 2.25rem;
   line-height: 1.01811;
@@ -215,18 +215,6 @@ h6, .h6 {
 /* ###Misc Headings */
 /* A series of classes for setting massive type; for use in heroes, mastheads, promos, etc. */
 /* CSS classes to use are `.giga` (massive!), `.mega` (giant) and `.kilo` (large) */
-.giga {
-  font-size: 6em;
-}
-
-.mega {
-  font-size: 4.5em;
-}
-
-.kilo {
-  font-size: 3em;
-}
-
 /* #Forms */
 label {
   font-weight: bold;
@@ -1678,9 +1666,13 @@ Borrowed from inuit.css
   padding: 0;
   list-style: none;
 }
-.pager li {
+
+.pager li,
+.pager-item {
   display: inline;
 }
+
+.pager-item a,
 .pager a {
   display: -moz-inline-stack;
   display: inline-block;
@@ -1694,7 +1686,8 @@ Borrowed from inuit.css
   line-height: 1;
   float: left;
 }
-.pager .next a {
+
+.next a {
   float: right;
 }
 
